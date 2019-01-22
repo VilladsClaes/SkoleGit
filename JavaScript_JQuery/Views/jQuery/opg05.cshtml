@@ -1,0 +1,61 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>SIDENS TITEL</title>
+
+
+    <link href="~/Content/common.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $('#hjerte').click(function () {
+                var p = $('#info p')
+                p.html("Ingen roser uden torne ingen grise uden orne");
+                p.css('text-align', 'center');
+                p.css('font-style', 'italic');
+                
+            })
+        });
+    </script>
+
+</head>
+<body>
+
+    <div id="wrapper">
+
+
+        <div id="opgaven">
+
+            <h1>Opgave 5 - udskift tekst når der klikkes på en "knap"</h1>
+
+            <ol>
+                <li>Når man klikker på "hjerte-knappen" skal teksten udskiftes med et smukt digt efter eget valg ;)</li>
+                <li>Du må meget gerne style teksten, så den matcher det smukke digt</li>
+            </ol>
+
+        </div>
+
+        <h2>jQuery is a new kind of JavaScript Library</h2>
+
+        <h4>jQuery is a fast and concise JavaScript Library that simplifies HTML document traversing, event handling, animating, and Ajax interactions for rapid web development</h4>
+
+        <div id="visskjul" class="centertxt">
+            <img src="/Img/hjerte.png" id="hjerte" alt="Knuzzer til dig" title="Knuzzer til dig :-)" />
+        </div>
+
+        <div id="info">
+            <p>Ever since the Behaviour code was released, some time ago, my mind has been churning this powerful topic over. The premise for the module is as follows: Using the power of Pseudo-CSS Selectors, bind your Javascript functions to various HTML elements in the DOM. Looking at how Behaviour works, I've never been completely happy - it simply seems too tedious and verbose for everyday use. I've since begun to tinker with different styles of code layout - trying to find an optimal solution. </p>
+        </div>
+
+        <p id="naeste"><a href="Opg06">Næste >></a></p>
+
+    </div>
+</body>
+</html>

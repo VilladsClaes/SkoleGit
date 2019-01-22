@@ -1,0 +1,62 @@
+﻿@{
+    ViewBag.Title = "Opgave 7";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h1>Datoer og betingelser - hvilken slags dag er det</h1>
+<div id="opgaven">
+
+    <h4>Opgaven</h4>
+    <ol>
+        <li>Når man klikker på knappen:</li>
+        <li>Skal dagens dato vises i id=dato</li>
+        <li>
+            Og der skal i id=slagsdag ske en af følgende:
+            <ul>
+                <li>HVIS det er mandag, tirsdag, onsdag eller torsdag: "Øv det er hverdag"</li>
+                <li>HVIS det er fredag: "Hverdag men NÆSTEN weekend"</li>
+                <li>HVIS det er lørdag eller søndag: "Hurra - det er weekend"</li>
+                <li>Og ellers skal der være en tekst med "Der er sket en fejl"</li>
+            </ul>
+        </li>
+    </ol>
+ 
+    <p id="help">
+        Få hjælp fx her:
+        <a href="http://www.w3schools.com/js/js_dates.asp" target="_blank">JavaScript Dates</a>, <a href="http://www.w3schools.com/jsref/jsref_obj_date.asp">JavaScript Date Reference</a> og <a href="http://www.w3schools.com/js/js_date_methods.asp">JavaScript Date Methods</a>
+    </p>
+
+</div>
+
+<h2>Er det hverdag eller weekend?</h2>
+<p id="dato">Hvilken dato er det mon i dag?</p>
+<p id="slagsdag">Og hvilken slags dag er det?</p>
+
+<input type="button" value="Klik her" id="knap" onclick="myFunction()" />
+
+<script>
+
+    function myFunction() {
+
+
+        document.getElementById("dato").innerHTML = new Date();
+
+        var day = new Date().getDay();
+
+
+        if (day == 1, 2, 3, 4) {
+            document.getElementById("slagsdag").innerHTML = '"Øv det er hverdag"';
+        }
+        else if (day == 5) {
+            document.getElementById("slagsdag").innerHTML = '"Hverdag men NÆSTEN weekend"';
+        }
+        else if (day == 6, 0) {
+            document.getElementById("slagsdag").innerHTML = '"Hurra - det er weekend"';
+        }
+        else {
+            document.getElementById("slagsdag").innerHTML = '"Der er sket en fejl"';
+        }
+
+
+
+    }
+</script>

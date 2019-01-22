@@ -1,0 +1,38 @@
+﻿@{
+    ViewBag.Title = "Opgave 1";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1 id="overskrift">Skift farve på denne overskrift</h1>
+
+<div id="opgaven">
+
+    <h4>Opgaven</h4>
+
+    <ol>
+        <li>Når der klikkes på knappen:</li>
+        <li>Skal overskriften skifte til rød og have grå baggrund</li>
+    </ol>
+
+    <p id="help">
+        Få hjælp fx her:
+        <a href="http://www.w3schools.com/jsref/prop_style_color.asp" target="_blank">Noget om skifte style</a> og <a href="http://www.w3schools.com/jsref/event_onclick.asp" target="_blank">her er noget om click-event</a>
+    </p>
+
+</div>
+
+<h2>Dette er ikke "overskriften" ;-)</h2>
+<input type="button" id="knap" value="Klik her" onclick="myFunction()" />
+
+<script>
+
+    function myFunction() {
+        document.getElementById("overskrift").style.color = "red";
+
+        document.getElementsByTagName("h1")[0].style.backgroundColor = "gray";
+    }
+
+</script>
+
+
+

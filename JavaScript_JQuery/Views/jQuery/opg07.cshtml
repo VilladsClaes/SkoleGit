@@ -1,0 +1,88 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>SIDENS TITEL</title>
+
+    <link href="~/Content/common.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script>
+        $(function () {
+            $('input:button').click(function (e) {
+
+                var ind1 = parseInt($('#tal1').val(), 10);
+                var ind2 = parseInt($('#tal2').val(), 10);
+                var ope = $('select option:selected').text();
+                var resultat = eval(ind1 + ope + ind2);
+                var span = $('#resultat');
+
+
+                if (isNaN(resultat)) {
+                    span.html(" ");
+                    alert("skriv kun tal");
+                }
+                else {
+
+                    span.html(resultat);
+                }
+  
+
+            });
+        });
+    </script>
+
+</head>
+<body>
+
+    <div id="wrapper">
+
+
+
+
+        <div id="opgaven">
+
+            <h1>Opgave 7 - lav en beregning</h1>
+
+            <ol>
+                <li>Brugeren skal indtaste nogle tal/værdier i de to tekstbokse</li>
+                <li>Og brugeren kan vælge (i dropdown'en) mellem at plusse, minusse, gange og dividere</li>
+                <li>Når brugeren klikker på knappen (Vis resultat)</li>
+                <li>... skal de to tal enten plusses, minusses, ganges eller diveres (alt efter brugerens valg) og resultatet vises i span#resultat</li>
+                <li>Prøv evt. at tjekke på bruger-inputtet, så der kommer en advarsel, hvis der ikke er tastet tal ind i tekstboksene</li>
+            </ol>
+
+        </div>
+
+        <h2>Udfyld med nogle tal herunder og vælg en regnemetode</h2>
+
+        <p>
+            <input type="text" id="tal1" placeholder="Indtast et tal" value="" />
+
+            <select>
+                <option value="plus">+</option>
+                <option value="minus">-</option>
+                <option value="gange">*</option>
+                <option value="divider">/</option>
+            </select>
+
+            <input type="text" id="tal2" placeholder="Indtast et tal mere" value="" />
+
+            = <span class="alert" id="resultat"></span>
+        </p>
+
+        <input type="button"  value="Vis resultat" />
+
+        <p id="naeste"><a href="Opg08">Næste >></a></p>
+
+
+
+    </div>
+</body>
+</html>

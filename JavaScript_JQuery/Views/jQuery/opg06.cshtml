@@ -1,0 +1,71 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>SIDENS TITEL</title>
+
+    <link href="~/Content/common.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $('#beregn').click(function (e) {
+                var ind1 = parseInt($('#tal1').val(), 10);
+                var ind2 = parseInt($('#tal2').val(), 10);
+                var resultat = ind1 + ind2;
+                var res = $('#resultat');
+                
+                if (isNaN(resultat)) {
+                    res.html(" ");
+                    alert("skriv kun tal")
+                }
+                else {
+
+                   res.html(resultat);
+                }
+                
+         
+            });
+        });
+    </script>
+
+</head>
+<body>
+
+    <div id="wrapper">
+
+        <div id="opgaven">
+
+            <h1>Opgave 6 - lav en beregning</h1>
+
+            <ol>
+                <li>Brugeren skal indtaste nogle tal/værdier i de to tekstbokse</li>
+                <li>Når brugeren klikker på knappen (Vis resultat)</li>
+                <li>... skal de to tal lægges sammen og resultatet vises i span#resultat</li>
+                <li>Prøv evt. at tjekke på bruger-inputtet, så der kommer en advarsel, hvis der ikke er tastet tal ind i tekstboksene</li>
+            </ol>
+
+        </div>
+
+        <h2>Udfyld med nogle tal herunder: </h2>
+
+        <p>
+            <input type="text" id="tal1" placeholder="Indtast et tal" value="" />
+            +
+            <input type="text" id="tal2" placeholder="Indtast et tal mere" value="" />
+            =
+            <span class="alert" id="resultat"></span>
+        </p>
+
+        <input type="button" id="beregn" value="Vis resultat" />
+
+        <p id="naeste"><a href="Opg07">Næste >></a></p>
+
+    </div>
+</body>
+</html>

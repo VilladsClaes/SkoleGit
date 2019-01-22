@@ -1,0 +1,50 @@
+﻿@{
+    ViewBag.Title = "Opgave 9";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1 id="overskrift">Alert og confirm</h1>
+
+<div id="opgaven">
+
+    <h4>Opgaven</h4>
+
+    <ol>
+        <li>Når man klikker på Google-linket:</li>
+        <li>Skal skal man modtage en "advarsel"/alert-box om, at man nu bliver sendt til fx Google</li>
+    </ol>
+    <ol start="3">
+        <li>Når man klikker på Bing-linket:</li>
+        <li>Skal man have en confirm-box, hvor man bliver spurgt "om man er sikker"</li>
+    </ol>
+
+    <p id="help">
+        Få hjælp fx her:
+        <a href="http://www.w3schools.com/jsref/met_win_alert.asp" target="_blank">Alert</a> og her <a href="http://www.w3schools.com/jsref/met_win_confirm.asp" target="_blank">Confirm</a>
+    </p>
+
+</div>
+
+<h2>Alert eller confirm?</h2>
+<p><a onclick="google()" href="http://google.dk">Klik for at besøge Google</a></p>
+<p><a id="bing" href="http://bing.com">Klik for at besøge Bing</a></p>
+
+<script>
+
+
+    function google() {
+        alert("du bliver nu sendt videre til google")
+    }
+
+    var bing = document.getElementById("bing");
+
+    bing.onclick = function (e) {
+        var r = confirm("vil du videre til bing?");
+
+        if (r == false) {
+            e.preventDefault();
+        }
+         
+    }
+</script>
+

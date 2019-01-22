@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>@ViewBag.Title</title>
+    <link type="text/css" rel="Stylesheet" href="/Content/common.css" />
+    <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Gochi+Hand" rel="stylesheet" />
+
+    @RenderSection("styles", false)
+    @RenderSection("scripts", required: false)
+
+</head>
+<body>
+
+    <div id="wrapper">
+
+        @RenderBody()
+
+    </div>
+
+</body>
+</html>

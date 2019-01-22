@@ -1,0 +1,102 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Opgave 13</title>
+    <link type="text/css" rel="Stylesheet" href="~/Content/common.css" />
+
+</head>
+<body>
+
+    <div id="wrapper">
+        <h1>Validering #2 - POSTNUMMER - RANGE</h1>
+
+        <div id="opgaven">
+
+            <p>Forsøg at løse følgende:</p>
+
+            <ol>
+                <li>Når man klikker på send-knappen:</li>
+            </ol>
+
+            <ol start="2">
+                <li>HVIS inputfeltet er <b>TOMT</b> - ELLER HVIS tallet er <b>MINDRE end 1000 eller STØRRE end 9999</b>:</li>
+                <li>Skal der i &lt;span&gt; være en rød tekst fx "Udfyld korrekt postnummer" i </li>
+                <li>OG cursoren skal blinke i feltet (fokus på feltet)</li>
+            </ol>
+
+            <ol start="6">
+                <li>
+                    HVIS inputfeltet er udfyldt med et tal <b>mellem 1000 og 9999</b> (begge inkl.):
+                </li>
+                <li>Skal der være et grønt flueben, et OK el.lign. i &lt;span&gt;</li>
+            </ol>
+
+            <ol start="8">
+                <li>EKSTRA: Kan du evt. forhindre brugeren i at taste mere end 4 tegn i input-feltet?</li>
+            </ol>
+
+            <p id="help">
+                Få hjælp fx her: <br />
+                Måle på længden af en value/et input: <a href="http://www.w3schools.com/jsref/jsref_length_string.asp" target="_blank">JavaScript String length Property</a>.<br />
+                Fokus på et felt: <a href="http://www.w3schools.com/jsref/met_html_focus.asp" target="_blank">HTML DOM focus()</a>.<br />
+                Tjek om et tal er et hel-tal (ok) eller decimal-tal (ikke ok): <a href="http://stackoverflow.com/questions/2304052/check-if-a-number-has-a-decimal-place-is-a-whole-number" target="_blank">Check if a number has a decimal place...</a>
+            </p>
+
+        </div>
+
+        <h2>Udfyld venligst:</h2>
+
+        <form>
+
+            <fieldset>
+
+                <legend>Personlige oplysninger</legend>
+
+                <div>
+                    <label for="navn">Dit postnummer:</label>
+                    <input type="text" name="postnr" id="postnr" value="" placeholder="Dit postnummer" />*
+                    <span id="obspostnr" class="alert"></span>
+                </div>
+
+                <input type="button" id="submit" value="Send" />
+
+            </fieldset>
+
+        </form>
+
+    </div>
+
+    <script>
+        var submit = document.getElementById("submit");
+        var input = document.getElementById("postnr");
+        var node = document.getElementById("obspostnr");
+     
+
+        submit.onclick = function (e) {
+    
+            var zipCode = input.value;
+            var code = parseInt(zipCode, 10);
+
+            console.log(code);
+            if (code < 1000 || code > 9999 || code % 1 != 0) {
+                node.innerHTML = "Udfyld korrekt postnummer";
+                node.style.color = "red";
+                input.focus();
+            }
+            else {
+         
+                node.innerHTML = "&radic;";
+                node.style.color = "green";
+
+            }
+        }
+
+    </script>
+</body>
+</html>

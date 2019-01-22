@@ -1,0 +1,76 @@
+﻿@{
+    ViewBag.Title = "Opgave 8";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section scripts {
+    <script>
+        document.addEventListener("DOMContentLoaded", function load() {
+
+            var div = document.getElementById("seasonimage");
+            var h1 = document.getElementById("overskrift");
+            var mm = new Date().getMonth();
+
+            switch (mm) {
+                case 1:
+                case 11:
+                case 0:
+                    div.firstElementChild.src = "/Img/winter.jpg";
+                    h1.innerHTML = "Vinter";
+                    break;
+
+                case 2:
+                case 3:
+                case 4:
+                    div.firstElementChild.src = "/Img/spring.jpg";
+                    h1.innerHTML = "Forår";
+                    break;
+
+                case 5:
+                case 6:
+                case 7:
+                    div.firstElementChild.src = "/Img/summer.jpg";
+                    h1.innerHTML = "Sommer";
+                    break;
+
+                case 8:
+                case 9:
+                case 10:
+                    div.firstElementChild.src = "/Img/autumn.jpg";
+                    h1.innerHTML = "Efterår";
+                    break;
+
+                default:
+                    div.firstElementChild.src = "/Img/tt2.gif";
+                    break;
+
+            }
+        })
+
+    </script>
+
+}
+<h1 id="overskrift">Datoer og betingelser - skift image efter årstid</h1>
+
+<div id="opgaven">
+
+    <h2>Opgaven</h2>
+
+    <ol>
+        <li>Når siden loader:</li>
+        <li>Skal div'en (id=seasonimage) indeholde det image, som passer til årstiden</li>
+        <li>Og h2-tag'et (id=seasontext) skal indeholde en passende overskrift (fx Sommer, Efterår, Vinter eller Forår)</li>
+    </ol>
+
+    <p class="i">I image-mappen finder du fire årstids-images: spring.jpg, summer.jpg, autumn.jpg og winter.jpg</p>
+
+    <p id="help">
+        Få hjælp fx her:
+        <a href="http://www.w3schools.com/js/js_dates.asp" target="_blank">JavaScript Dates</a>, <a href="http://www.w3schools.com/js/js_date_methods.asp" target="_blank">JavaScript Date Methods</a> og <a href="http://www.w3schools.com/js/js_if_else.asp" target="_blank">conditions/if-else</a> og/eller <a href="http://www.w3schools.com/js/js_switch.asp" target="_blank">switch</a>
+    </p>
+
+</div>
+
+<h2 id="seasontext">Hvilken årstid?</h2>
+<div id="seasonimage">
+    <img src="../img/default.jpg" />
+</div>

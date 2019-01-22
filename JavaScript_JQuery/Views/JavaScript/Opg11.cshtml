@@ -1,0 +1,237 @@
+﻿@{
+    ViewBag.Title = "Opgave 11";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1 id="overskrift" style="margin-top:50px;">Flip ud og find selv på noget vildt</h1>
+
+<div id="opgaven">
+
+    <h2>Opgaven</h2>
+
+
+    <p id="historie"></p>
+
+</div>
+<div id="vaek">
+    <h3>Freestyle</h3>
+    <p>Hent et billede/flere billeder, tekst, datoer eller andet ... og gør et eller andet med det her.</p>
+    <p><span class="b">Arbejd evt. videre med pacman-opgaven</span> - udvid scriptet, så det kan lidt mere (stoppes, pauses, sætte fart op/ned) ... der kan blive et helt lille spil ud af det</p>
+</div>
+
+
+
+<p id="into"></p>
+
+<script>
+    //timeout på en alert med instukser
+    setTimeout(function () {
+        alert("hover over overskriften");
+    }, 1500)
+    window.setInterval(BlinkIt, 500);
+
+    function BlinkIt() {
+
+        color = (color == "#ffffff") ? "#000000" : "#ffffff";
+        h1.style.color = color;
+    }
+    //variabler
+    var h1 = document.getElementById("overskrift");
+    var opg = document.getElementById("opgaven");
+    var img = document.createElement("img");
+    var h2 = document.getElementsByTagName("h2").item(0);
+    var body = document.getElementsByTagName("body").item(0);
+    var hist = document.getElementById("historie");
+    var vaek = document.querySelector("#vaek");              
+    var into = document.getElementById("into");
+    var pos = 30;
+    var counter = 0;
+    var color = "#ffffff";
+
+    //hover på h1
+    h1.onmouseover = function (e) {
+        h1.style.backgroundColor = "#005";
+        h1.style.color = "#fff";
+        h1.innerHTML = "Klik på teksten 'OPGAVEN'";
+        h1.style.width = "100%"
+        h1.style.textAlign = "center"
+        h2.style.cursor = "pointer";
+
+    }
+    //når du klikke på opgaven
+    opg.onclick = function (e) {
+        body.style.fontFamily = "Shadows Into Light";
+        hist.style.fontFamily = 'Gochi Hand';
+        hist.style.fontSize = "1.8em";
+        h1.parentNode.removeChild(h1);
+
+        h2.innerHTML = "Der var en gang.....";
+        h2.style.fontSize = "3em";
+        opg.appendChild(img);
+        vaek.parentNode.removeChild(vaek);
+        img.style.width = "40%";
+        img.style.marginLeft = pos + "%";
+        hist.innerHTML = "Da en kat en gang gik sig en tur i skoven, mødte den ræven.";
+        img.src = "/img/HvidKat.jpg";
+
+        //tæller hvorlang vi er kommet (så vi looper i den sammefuntion) og sætter counteren til 1
+        if (counter === 0) {
+            setTimeout(function () {
+                into.innerHTML = "Aee katten med musen og se hvor glade den bliver";
+
+                img.onmouseover = function (e) {
+                    img.src = "/img/happyCat.jpg";
+
+                    into.innerHTML = "Fjern musen igen!";
+
+                    counter = 1;
+                }
+            }, 1700)
+        }
+
+
+
+    }
+    //img mouse over
+    img.onmouseout = function (e) {
+
+
+        if (counter === 1) {
+            setTimeout(function () {
+                h2.innerHTML = "Historien om katten og ræven";
+                hist.innerHTML = '"Den er klog og har stor indflydelse her i verden, " tænkte katten og hilste venligt på den. "God morgen, hr.Ræv, " sagde den, "hvordan går det ? Kan I klare jer i disse dyre tider." ';
+                img.src = "/img/kong.jpg";
+                into.innerHTML = "Prøv at aee ræven";
+            }, 500)
+
+
+
+            img.onmouseover = function (e) {
+                //billedet virker ikke på firefox men på crome køre det (ved ikke hvorfor)
+                img.src = "/img/sraev.jpg";
+                into.innerHTML = "RÆVE ER IKKE KÆLEDYR!! -- så fjern venligst musen";
+                counter = 2;
+            }
+
+        }
+
+
+        if (counter === 2) {
+            h2.innerHTML = "";
+
+            setTimeout(function () {
+                hist.innerHTML = ' Den hovmodige ræv betragtede katten fra top til tå og vidste først slet ikke, om den ville svare. "Din sølle, skæggede fyr," sagde den endelig, "din forsultne, brogede nar, din musejæger, hvad bilder du dig ind. Hvor tør du spørge, hvordan det går mig? Hvad har du lært? Hvad for kunster kan du gøre?"';
+                img.src = "/img/foxNcat.jpg";
+                into.innerHTML = "Mon hovmod er smart? klik her og tjek";
+                into.style.cursor = "pointer";
+
+
+            }, 500)
+            //for at sikre Tat man ikke hover over billedet og der går tilbage til en tidligere hover funtion
+            img.onmouseover = undefined;
+
+
+            into.onclick = function (e) {
+                img.src = "/img/nej.jpg";
+                img.style.width = "100%";
+                img.style.marginLeft = "0";
+                into.innerHTML = "Nej det er det nok ikke, men klik igen for resten af historien";
+                counter = 3;
+            }
+        }
+
+        if (counter === 3) {
+            counter = 4;
+
+            into.onclick = function (e) {
+
+                hist.innerHTML = ' "Jeg kan kun en eneste," svarede katten beskedent. "Hvad er det for en?" spurgte ræven. "Når hundene er efter mig kan jeg frelse mig ved at springe op i et træ." ';
+                into.innerHTML = "prøv at trykke space ";
+                img.src = "/img/cat-flugt.jpg";
+                into.style.cursor = "auto";
+
+
+                if (counter === 4) {
+                    document.onkeyup = function space(e) {
+                        var keyCode = e.keyCode;
+                        // for at få switchen til at vikke har jeg den for både count 4 & 5 = jeg satser på at man kun taster på det man bliver bedt om (riski - men jeg har ikke fundet en anden måde der virker)
+                        switch (keyCode) {
+                            case 32:
+                                img.src = "/img/Genbrugspose_Raev.jpg";
+                                hist.innerHTML = ' "Er det det hele," sagde ræven, "jeg kan hundrede kunster og har desforuden en hel pose fuld af list. Men jeg har ondt af dig. Kom med mig, så skal jeg lære dig, hvordan man slipper fra hundene." I samme øjeblik kom en jæger gående med fire hunde.';
+                                into.innerHTML = "hva mon der sker!!! tryk enter og læs videre";
+                                counter = 5;
+                                break;
+                            case 13:
+                                img.src = "/img/trae.jpg";
+                                hist.innerHTML = ' Katten sprang behændigt op i et træ og satte sig helt oppe i toppen, fuldstændig skjult af grene og blade. "Luk posen op, hr. Ræv, luk posen op," råbte katten';
+                                into.innerHTML = "Klare ræven det?? klik her og læs videre";
+                                into.style.cursor = "pointer";
+                                counter = 6;
+
+                                document.onkeyup = undefined;
+                                break;
+
+
+                        }
+                    }
+                }
+                if (counter === 6) {
+
+                    hist.innerHTML = ' Men hundene havde allerede fat i ræven og holdt fast i den. "I havde nok ikke meget gavn af jeres hundrede kunststykker," råbte katten, "hvis I havde kunnet klatre som jeg, havde I nok kunnet frelse livet." ';
+                    into.innerHTML = "fjern musen fra billede";
+                    img.src = "/img/hund.jpg";
+
+
+
+                    img.onmouseout = function (e) {
+                        hist.innerHTML = ""
+                        into.innerHTML = "klik på billedet";
+                        img.src = "/img/aaaa.jpg";
+                        img.style.cursor = "pointer";
+                        into.style.cursor ="auto"
+
+                        counter = 7;
+
+                        //mit billede galleri til sidst. med et loop ved at sætte counter tilbage til 7 ved sidste img.
+                        img.onclick = function () {
+
+                            if (counter === 7) {
+                                hist.innerHTML = "Klik på billedet"
+                                img.src = "/img/kat1.jpg";
+
+                            }
+                            if (counter === 8) {
+                                img.src = "/img/kat2.jpg";
+
+                            }
+                            if (counter === 9) {
+                                img.src = "/img/kat3.jpg";
+
+                            }
+                            if (counter === 10) {
+                                img.src = "/img/kat4.jpg";
+
+                            }
+                            if (counter === 11) {
+                                img.src = "/img/kat5.jpg";
+
+                            }
+                            if (counter === 12) {
+                                img.src = "/img/kat6.jpg";
+
+                            }
+                            if (counter === 13) {
+                                img.src = "/img/kat7.jpg";
+                                counter = 6;
+
+                            }
+                            counter++;
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+</script>

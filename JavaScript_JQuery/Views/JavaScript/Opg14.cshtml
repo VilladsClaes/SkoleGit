@@ -1,0 +1,92 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Opgave 14</title>
+    <link type="text/css" rel="Stylesheet" href="~/Content/common.css" />
+
+</head>
+<body>
+
+    <div id="wrapper">
+        <h1>Validering #3 - ALDER - RANGE</h1>
+
+        <div id="opgaven">
+            <p>Forsøg at løse følgende:</p>
+
+            <ol>
+                <li>Når man klikker på send-knappen:</li>
+            </ol>
+
+            <ol start="2">
+                <li>HVIS inputfeltet er tomt ELLER HVIS indtastningen er MINDRE end 18 eller større end 130:</li>
+                <li>Skal der stå en rød tekst fx "Udfyld korrekt alder" i &lt;span&gt; </li>
+                <li>OG cursoren skal blinke i feltet (fokus på feltet)</li>
+            </ol>
+
+            <ol>
+                <li>HVIS inputfeltet er UDFYLDT korrekt (alder 18-130)</li>
+                <li>Skal der være et grønt flueben, et OK el.lign. i &lt;span&gt;</li>
+            </ol>
+
+            <p id="help">
+                Se henvisninger i de tidligere opgaver - du får fx måske brug for noget if-else og compare/sammenligning (om noget er større end, lig med eller mindre end), focus mv.
+            </p>
+
+        </div>
+
+
+        <h2>Udfyld venligst:</h2>
+
+        <form>
+
+            <h4>Du skal være mellem min. 18 og max. 130 år for at være med i klubben!</h4>
+
+            <fieldset>
+
+                <legend>Personlige oplysninger</legend>
+
+                <div>
+                    <label for="alder">Din alder:</label>
+                    <input type="text" name="alder" id="alder" value="" placeholder="Din alder" />
+                    <span id="obsalder" class="alert"></span>
+                </div>
+                <input type="button" id="submit" value="Send" />
+
+            </fieldset>
+
+        </form>
+    </div>
+
+    <script>
+        var submit = document.getElementById("submit");
+        var input = document.getElementById("alder");
+        var node = document.getElementById("obsalder");
+
+        submit.onclick = function (e) {
+
+            var test = input.value;
+            var code = parseInt(test, 10);
+
+            console.log(code);
+            if (code < 18 || code > 130 || code % 1 != 0) {
+                node.innerHTML = "Udfyld korrekt postnummer";
+                node.style.color = "red";
+                input.focus();
+            }
+            else {
+
+                node.innerHTML = "&radic;";
+                node.style.color = "green";
+
+            }
+        }
+
+    </script>
+</body>
+</html>
