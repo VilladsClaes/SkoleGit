@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.IO;
 
 namespace JavaS.Controllers
 {
@@ -63,6 +64,11 @@ namespace JavaS.Controllers
         }
         public ActionResult slider()
         {
+            return View();
+        }
+
+        public ActionResult Vendespil()
+        {    
             return View();
         }
     }

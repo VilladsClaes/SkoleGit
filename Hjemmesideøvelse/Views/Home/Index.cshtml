@@ -1,0 +1,307 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+}
+
+
+
+<!-- Carousel -->
+<section id="carousel">
+    <div id="indicator" class="carousel slide " data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#indicator" data-slide-to="0" class="active"></li>
+            <li data-target="#indicator" data-slide-to="1"></li>
+            <li data-target="#indicator" data-slide-to="2"></li>
+            <li data-target="#indicator" data-slide-to="3"></li>
+
+        </ol>
+        <div class="carousel-inner " role="listbox">
+            <div class="carousel-item active">
+                <img class="d-block img-fluid" src="/img/slide1.jpg" alt="First slide">
+                <div class="carousel-caption d-none d-md-block">
+                    <h1>Blink Bootstrap 4 Theme</h1>
+                    <p>Download blink theme and start build your site today!!!</p>
+                    <button href="https://www.webnots.com/blink-bootstrap-4-theme/" class="btn btn-lg btn-info btn-md">Download Now</button>
+                    <button href="#" class="btn btn-lg btn-success btn-md">Contact Us</button>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="d-block img-fluid" src="/img/slide2.jpg" alt="Second slide">
+                <div class="carousel-caption d-none d-md-block">
+                    <h1>Blink Bootstrap 4 Theme</h1>
+                    <p>Download blink theme and start build your site today!!!</p>
+                    <button href="https://www.webnots.com/blink-bootstrap-4-theme/" class="btn btn-lg btn-info btn-md">Download Now</button>
+                    <button href="#" class="btn btn-lg btn-success btn-md">Contact Us</button>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="d-block img-fluid" src="/img/slide3.jpg" alt="Third slide">
+                <div class="carousel-caption d-none d-md-block">
+                    <h1>Blink Bootstrap 4 Theme</h1>
+                    <p>Download blink theme and start build your site today!!!</p>
+                    <button href="https://www.webnots.com/blink-bootstrap-4-theme/" class="btn btn-lg btn-info btn-md">Download Now</button>
+                    <button href="#" class="btn btn-lg btn-success btn-md">Contact Us</button>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="d-block img-fluid" src="/img/slide4.jpg" alt="Fourth slide">
+                <div class="carousel-caption d-none d-md-block">
+                    <h1>Blink Bootstrap 4 Theme</h1>
+                    <p>Download blink theme and start build your site today!!!</p>
+                    <button href="https://www.webnots.com/blink-bootstrap-4-theme/" class="btn btn-lg btn-info btn-md">Download Now</button>
+                    <button href="#" class="btn btn-lg btn-success btn-md">Contact Us</button>
+                </div>
+            </div>
+
+        </div>
+        <a class="carousel-control-prev" href="#indicator" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#indicator" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</section>
+<!-- Call to Action Section 1 -->
+<section id="calltoaction">
+    <div class="jumbotron">
+        <h1 class="display-3">Welcome to Blink</h1>
+        <p class="lead">Add welcome message to your visitors and description, some description and some more description......</p>
+        <hr class="my-4">
+        <p>You can change the background color of this section in style.css file.</p>
+        <button type="button" class="btn btn-danger btn-lg btn-md" data-toggle="modal" data-target="#WelcomeModal">
+            Read more...
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="WelcomeModal" tabindex="-1" role="dialog" aria-labelledby="ModalTitle" aria-hidden="true" style="color:black;">
+
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="ModalTitle">Travel </h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Travel is the movement of people between relatively distant geographical locations, and can involve travel by foot, bicycle, automobile, train, boat, airplane, or other means, with or without luggage, and can be one way or round trip . Travel can also include relatively short stays between successive movements. Travel is the movement of people between relatively distant geographical locations, and can involve travel by foot, bicycle, automobile, train, boat, airplane, or other means, with or without luggage.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Featured Section -->
+<section id="featured">
+    <div class="parallax">
+        <!-- Visit Cards-->
+        <div class="container-fluid">
+            <div class="card-deck">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img class="card-img-top" src="/img/new.jpg" alt="Card image cap">
+                        <h4><span class="badge badge-success pull-right">New</span></h4>
+                        <div class="card-block">
+                            <h4 class="card-title">Product 1</h4>
+                            <p class="card-text">Showcase your product in an elegant Bootstrap 4 card widget. You can multiple rows if you have more products.</p>
+                            <!-- Order Button -->
+                            <button type="button" class="btn btn-danger btn-md" data-toggle="modal" data-target="#ModalNewProduct">Order Now $0</button>
+
+                            <div class="modal fade" id="ModalNewProduct" tabindex="-1" role="dialog" aria-labelledby="ModalNewProduct" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title">NEW PRODUCT</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form>
+                                                <div class="form-group">
+                                                    <label for="recipient-name" class="form-control-label">Recipient:</label>
+                                                    <input type="text" class="form-control" id="recipient-name">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="message-text" class="form-control-label">Message:</label>
+                                                    <textarea class="form-control" id="message-text"></textarea>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-danger btn-md" data-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-success btn-md">Send message</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Order Button -->
+                        </div>
+                        <div class="card-footer">
+                            <small>This is a new product.</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img class="card-img-top" src="/img/popular.jpg" alt="Card image cap">
+                        <h4><span class="badge badge-info pull-right">Popular</span></h4>
+                        <div class="card-block">
+                            <h4 class="card-title">Product 2</h4>
+                            <p class="card-text">Showcase your product in an elegant Bootstrap 4 card widget. You can multiple rows if you have more products.</p>
+                            <!-- Order Button -->
+                            <button type="button" class="btn btn-primary btn-md" data-toggle="modal" data-target="#ModalPopularProduct">Order Now $0</button>
+                            <div class="modal fade" id="ModalPopularProduct" tabindex="-1" role="dialog" aria-labelledby="ModalPopularProduct" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title">POPULAR PRODUCT</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form>
+                                                <div class="form-group">
+                                                    <label for="recipient-name" class="form-control-label">Recipient:</label>
+                                                    <input type="text" class="form-control" id="recipient-name">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="message-text" class="form-control-label">Message:</label>
+                                                    <textarea class="form-control" id="message-text"></textarea>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-danger btn-md" data-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-success btn-md">Send message</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Order Button -->
+                        </div>
+                        <div class="card-footer">
+                            <small>This is a popular product.</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img class="card-img-top" src="/img/cheap.jpg" alt="Card image cap">
+                        <h4><span class="badge badge-warning pull-right">Cheap</span></h4>
+                        <div class="card-block">
+                            <h4 class="card-title">Product 3</h4>
+                            <p class="card-text">Showcase your product in an elegant Bootstrap 4 card widget. You can multiple rows if you have more products.</p>
+                            <!-- Order Button -->
+                            <button type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#ModalCheapProduct">Order Now $0</button>
+
+                            <div class="modal fade" id="ModalCheapProduct" tabindex="-1" role="dialog" aria-labelledby="ModalCheapProduct" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title">CHEAP PRODUCT</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form>
+                                                <div class="form-group">
+                                                    <label for="recipient-name" class="form-control-label">Recipient:</label>
+                                                    <input type="text" class="form-control" id="recipient-name">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="message-text" class="form-control-label">Message:</label>
+                                                    <textarea class="form-control" id="message-text"></textarea>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-danger btn-md" data-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-success btn-md">Send message</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Order Button -->
+                        </div>
+                        <div class="card-footer">
+                            <small>This is a cheap product.</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Gallery -->
+<section id="gallery_image">
+    <div class="container">
+        <h1> Add Your Image Gallery Here </h1>
+        <div class="row">
+            <div class="col-md-3">
+                <img href="#" data-toggle="tooltip" title="Title of Image 1" data-placement="bottom" src="/img/image1.jpg" alt="Image 1" class="img-thumbnail">
+            </div>
+
+            <div class="col-md-3">
+                <img href="#" data-toggle="tooltip" title="Title of Image 2" data-placement="bottom" src="/img/image2.jpg" alt="Image 2" class="img-thumbnail">
+            </div>
+
+            <div class="col-md-3">
+                <img href="#" data-toggle="tooltip" title="Title of Image 3" data-placement="bottom" src="/img/image3.jpg" alt="Image 3" class="img-thumbnail">
+            </div>
+
+            <div class="col-md-3">
+                <img href="#" data-toggle="tooltip" title="Title of Image 4" data-placement="bottom" src="/img/image4.jpg" alt="Image 4" class="img-thumbnail">
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Call to Action Section 2 -->
+<div class="continer-fluid">
+    <div class="card card-inverse text-center" style="background:#607D8B; padding:30px;">
+        <div class="card-header">
+            Fullwidth Section
+        </div>
+        <div class="card-block">
+            <h1 class="card-title">This is a call to action section</h1>
+            <p class="card-text">Enter the short description for your call to action section here...</p>
+            <a href="/Home/Service" class="btn btn-lg btn-success btn-md">SERVICES</a>
+        </div>
+        <div class="card-footer">
+            <small>This is an awesome theme!!!</small>
+        </div>
+    </div>
+</div>
+<!-- Subscription Form -->
+<section id="submitform">
+    <div class="container-fluid">
+        <form class="form-inline">
+            <label class="sr-only" for="inlineFormInput">Name</label>
+            <div class="input-group input-group-lg mb-3 mr-sm-2 mb-sm-0">
+                <div class="input-group-addon"></div>
+                <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Name">
+            </div>
+
+            <label class="sr-only" for="inlineFormInputGroup">Email</label>
+            <div class="input-group input-group-lg mb-3 mr-sm-2 mb-sm-0">
+                <div class="input-group-addon"></div>
+                <input type="email" class="form-control" id="inlineFormInputGroup" placeholder="Email">
+            </div>
+            <label class="sr-only" for="inlineFormInputGroup">Address</label>
+            <div class="input-group input-group-lg mb-3 mr-sm-2 mb-sm-0">
+                <div class="input-group-addon"></div>
+                <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Address">
+            </div>
+            <button type="submit" class="btn btn-danger btn-lg btn-md">Submit</button>
+        </form>
+    </div>
+</section>

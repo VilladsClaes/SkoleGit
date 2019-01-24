@@ -1,0 +1,79 @@
+﻿
+@import url('https://fonts.googleapis.com/css?family=Coming+Soon|Luckiest+Guy');
+
+* {
+    font-family: 'Coming Soon', Verdana, Geneva, Tahoma, sans-serif;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h1 *, h2, h2 *, h3, h3 *, h4, h4 * {
+    font-family: 'Luckiest Guy', Verdana, Geneva, Tahoma, sans-serif;
+}
+
+    h1, h1 * {
+        font-size: 40px;
+    }
+
+#wrapper {
+    width: 980px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: auto;
+    padding: 30px 50px 30px 50px;
+    background-color: #a1b7a2;
+}
+
+#left {
+    width: 200px;
+}
+
+#right {
+    width: 700px;
+}
+
+#vendespil {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+    width: 660px;
+    background: #000;
+    margin: 0;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.kort {
+    position: relative;
+    width: 210px;
+    height: 140px;
+    margin: 4px;
+    padding: 0;
+}
+
+    .kort img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 210px;
+        margin: 0;
+        padding: 0;
+        border: 1px solid #FFF;
+    }
+
+.billedside {
+    display: none; /* skjul billedsiden – skal kun vises ved klik på kortet */
+}
+
+jo
+.bagside {
+    color: wheat;
+}
+
+.clear {
+    clear: both;
+}
