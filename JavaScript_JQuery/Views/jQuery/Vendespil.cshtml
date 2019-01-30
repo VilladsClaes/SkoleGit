@@ -21,13 +21,14 @@
     <h2 id="tid">Sekunder: <span>0</span></h2>
     <select id="level">
         <option>Let (6 kort)</option>
-        <option selected>Mellem (12 kort)</option>
+        <option>Mellem (12 kort)</option>
         <option>Svær (18 kort)</option>
     </select>
 </div>
 <div id="right">
     <div id="vendespil">
-        <div class="kort">
+        <div class="kort" style="color: white;">
+            DU SKAL VÆLGE EN SVÆRHEDSGRAD UDE TIL VENSTRE
         </div>
     </div>
 </div>
@@ -37,7 +38,7 @@
 
     $(document).ready(function () {
         var antalforskelligekort = 22;  //Antallet af kort. Alternativt kunne man tælle indholdet med C# System.IO.Directory
-        var ventetid = 2000; //Tiden i millisekunder
+        var ventetid = 1200; //Tiden i millisekunder
 
         var t; //Spillets varighed. Det styres af TimeOut
         var antalkort; //Kort på spillepladen. Styres af sværhedsgrad
@@ -46,33 +47,48 @@
         var foerstekortvendt; //Sammenlignes med næste kort
         var parfundet; //antal af matches
         var sekunder; //timer for omgangen
-
         var kortpulje = []; //et array til at lægge kortene i
-        console.log(kortpulje);
+
         for (var i = 1; i <= antalforskelligekort; i++) { //hvert trin er 1 og vi starter ved 1 og tæller så længe der er mindre eller lig med 22 kort
             kortpulje.push("i" + i + ".jpg") //https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_push lægger billeder med navnene i1.jpg til i22.jpg ind i array'et
         }
 
-        function GenstartSpil() { //Funktionen: nulstilling af spillet
 
-            level = $("#level").prop('selectedIndex') //gemmer sværhedsgraden fra select-tagget
+
+        $("#level").change(function () { //hvis der er forandring i html-option-selected så spillet genstartes
+            console.log("spillet er genstartet fordi du har valgt ny sværhedsgrad")
+            nulstilSpil(); //kør funktion
+            GenstartSpil(); //kør funktion
+        });
+
+        function nulstilSpil() {//funktion der nulstiller variablerne
+
+            clearInterval(t);
+            $(document).off(); //fjern alle .on()
+            $("h1").html("Et nyt spil Vendespil");
+            console.log("Stopuret er nulstillet igen til " + sekunder + " sekunder");  
+            console.log("Nu har du nulstillet spillet så " + kortpulje + " er i spil igen");
+        };
+
+
+        function GenstartSpil() { //Funktionen: påbegynder et nyt spil
+
+            level = $("#level").prop('selectedIndex') + 1; //gemmer sværhedsgraden fra select-tagget
+
+            antalkort = 6+ ((level - 1) * 6); //ændrer antal kort afhængigt af den valgte html-option-index
+
             if (level == 1) {
-                antalkort = 6; //mellemsværhedsgrad. LAV EN IF med selectedindex
-                alert("Du har valgt level " + level)
+                console.log("Du har valgt level " + level)
             }
-            else if (level == 2) {
-                antalkort = 12;
-                alert("Du har valgt den mellemsvære " + level)
+            if (level == 2) {
+                console.log("Du har valgt den mellemsvære " + level)
 
             }
-            else if (level == 3) {
-                antalkort = 18;
-                alert("du har valgt den svære udgave! level " + level)
+            if (level == 3) {
+                console.log("du har valgt den svære udgave! level " + level)
             }
-            else {
-                antalkort = 12;
-                alert("jeg har valgt mellemsværhedsgrad for dig");
-            }
+
+
             kort = [];
             antalkortvendt = 0;
             foerstekortvendt = "";
@@ -80,6 +96,7 @@
             sekunder = 0;
 
             $("#status b").text(parfundet + " ud af " + (antalkort / 2)); //skriver til et tekstfelt baseret på antalkort og parfundet
+
 
             StartSpil(); //Kører startfunktionen
 
@@ -99,11 +116,12 @@
             });
 
             t = setInterval(function () { //ændrer spillets varighed med funktionen, for hvert 1000 millisekunder (næste argument)
-                console.log("timeren er gået igang");
                 ++sekunder //lægger 1 til sekunder-variablen
+                //console.log("Der er gået et sekund");
                 $("#tid span").text(sekunder); //udskriver variablen sekunder i html-span-element
 
             }, 1000); //Gentag intervallet for hvert 1000 ms.
+            console.log("timeren er gået igang");
 
         };
 
@@ -113,50 +131,41 @@
 
                 var tilfaeldigtkort = Math.floor(Math.random() * kortpulje.length) //tager kortpuljen (22) og ganger med et tilfældigt tal mellem 0 og 1 (fx 0,1415) = 3,113. Runder dette tal ned til nærmeste heltal = 3
                 var blandedekort = kortpulje[tilfaeldigtkort]; //fylder array'et med det tilfældige kort så man har en stak blandede kort
-                console.log("de blandede kort er nu" + blandedekort);
+                console.log(blandedekort + " blev udvalgt til dette spil");
 
                 kort.push(blandedekort, blandedekort); //laver to af hvert kort og lægger i kort-arrayet så man har par
                 kortpulje.splice(tilfaeldigtkort, 1) //splice fjerner det tilfældigt valgte kort fra kortpulje-arrayet. 1 betyder, at kortet skal fjernes
 
             }
+            console.log("Så nu ligger de udvalgte kort i par på bordet: " + kort);
 
         };
 
         function lavKortHtml() {
-
+            console.log("Nu bliver " + kort + " blandet");
             $("#vendespil").html(""); //erstatter det indhold der står i html-div'en
             $(kort).each(function (i) {
 
                 var tilfaeldigtkort = Math.floor(Math.random() * kort.length) //tager de udvalgte kort (22) og ganger med et tilfældigt tal mellem 0 og 1 (fx 0,1415) = 3,113. Runder dette tal ned til nærmeste heltal = 3
-                console.log("Der er udvalgt et fældigtkort, nummer " + tilfaeldigtkort);
 
                 kortet = kort.splice(tilfaeldigtkort, 1); //vælger det kort og fjerner det fra stakken af udvalgte kort
-                console.log("Der har trukket " + kortet); //Hvilket kort har jeg valgt
+                console.log("Bland " + kortet + " som lå på plads nummer " + tilfaeldigtkort + " i de ublandede kort"); //Hvilket kort har jeg valgt
 
                 var bagside = '<img src="/img/Vendespil/bagside.jpg" class="bagside" />';
                 var forside = '<img src="/img/Vendespil/' + kortet + '" class="billedside" />'; //sender det valgte kort ind i img-src
 
                 $("#vendespil").append('<div class="kort">' + bagside + forside + '</div > '); //lægger de to img-tags ind i div'en
+                //console.log("så mangler vi bare at blande " + kort);
             });
-
+            console.log("Så er alle kort blandet")
         };
 
-        $(document).on("click", ".bagside", function () { //når der klikkes på ethvert img-class .bagside
-            kortKlikket(this); //kør klikfunktionen på dette kort
 
-        });
-
-        t = setInterval(function () { //starter en tæller
-            ++sekunder;
-            $("#tid span").text(sekunder); //ændrer tallet i html-span
-
-        }, 1000); //for hvert sekunder der er gået
 
         function kortKlikket(kortklikketpaa) {
-            console.log("Det kort du har klikket på var " + kortklikketpaa);
-            antalkortvendt++; //tæller hvor mange gang .bagside er blevet klikket
-            console.log("Nu er der vendt " + antalkortvendt);
 
+            antalkortvendt++; //tæller hvor mange gang .bagside er blevet klikket
+            console.log("Du har bedt om at vende et kort igen");
             if (antalkortvendt > 2) {
 
                 return false; //afbryder hvis der er klikket mere end to kort
@@ -164,50 +173,60 @@
             }
 
             visKort(kortklikketpaa);
+            console.log("Kortet er vendt nu")
 
             if (antalkortvendt == 1) {
 
                 foerstekortvendt = $(kortklikketpaa).siblings(); //finder det img-tag som ligger i samme scope (man klikker på bagsiden og vil have gemt forsiden)
+                console.log("Der er vendt " + antalkortvendt + " kort");
 
             }
             else if (antalkortvendt == 2) {
+                console.log("Der er vendt " + antalkortvendt + " kort");
 
-                    if ($(kortklikketpaa).siblings().attr("src") == foerstekortvendt) { //hvis det andet kort der vendes har samme billedsti, altså har samme forside, så
 
-                        $(kortklikketpaa).siblings().removeAttr("class"); //fjern .bagside så man kan se .forside
-                        foerstekortvendt.removeAttr("class"); //fjern .bagside på det første kort man vendte så man kan se .forside
-                        parfundet++ //tæl 1 mere til fundne par, da src er ens på antalkortvendt
-                        $("#status b").text(parfundet + " ud af " + (antalkort / 2)); //opdatér html-div-span
+                if ($(kortklikketpaa).siblings().attr("src") == foerstekortvendt.attr("src")) { //hvis det andet kort der vendes har samme billedsti, altså har samme forside, så
+                    console.log("du fandt et par!");
+                    $(kortklikketpaa).siblings().removeAttr("class"); //fjern .bagside så man kan se .forside
+                    foerstekortvendt.removeAttr("class"); //fjern .bagside på det første kort man vendte så man kan se .forside
+                    console.log("Du får lov til at se begge kort nu, fordi du fandt et par");
+                    parfundet++ //tæl 1 mere til fundne par, da src er ens på antalkortvendt
+                    console.log("Der er fundet " + parfundet + " par nu");
+                    $("#status b").text(parfundet + " ud af " + (antalkort / 2)); //opdatér html-div-span
 
-                        if (parfundet == (antalkort / 2)) { //hvis parfundet svarer til alle kortene så har man vundet
-                            clearInterval(t);
-                            $("h1").html('Tillykke. Det tog <span class="info">' + sekunder + '</span > ')
-                        } else {
-                            antalkortvendt = 0; //Så længe at ikke alle par er fundne skal man lede efter flere par. Dette gælder for hvert træk
-                        }
-
-                    } 
-                    else { //hvis kortklikketpaa ikke er ens med sibling
-                        setTimeout(vendtilbage, ventetid); //kalder en funktion efter ventetid = 1200
+                    if (parfundet == (antalkort / 2)) { //hvis parfundet svarer til alle kortene så har man vundet
+                        console.log("Nu er der ikke flere par tilbage at lede efter. Du fandt " + parfundet + " par");
+                        clearInterval(t);
+                        $("#tid span").html("FÆRDIG");
+                        $("h1").html('Tillykke. Det tog <span class="info">' + sekunder + '</span > sekunder');
                     }
+                    else {
+                        antalkortvendt = 0; //Så længe at ikke alle par er fundne skal man lede efter flere par. Dette gælder for hvert træk
+                    }
+
+                }
+                else { //hvis kortklikketpaa ikke er ens med sibling
+                    console.log("det andet kort var ikke ens med det første kort");
+                    setTimeout(vendtilbage, ventetid); //kalder en funktion der vender begge kort om efter ventetid = 1200
+                }
 
             }
             else {
                 alert("Du har ikke vendt et kort?!");
-                alert(antalkortvendt);
             }
 
             function visKort(kortklikketpaa) {
-                console.log("Nu blev " + kortklikketpaa + " vendt");
+                console.log("nu vises et kort");
 
-                $(kortklikketpaa).fadeOut("fast"); //fjerner bagsiden
-                $(kortklikketpaa).siblings().fadeIn("fast"); // viser forsiden kan også laves med en anden animation.
+                $(kortklikketpaa).fadeOut(); //fjerner bagsiden
+                $(kortklikketpaa).siblings().fadeIn(); // viser forsiden kan også laves med en anden animation.
 
             };
 
             function vendtilbage() {
-                $(".billedside").fadeOut("fast");
-                $(".bagside").fadeIn("fast");
+                console.log("du fik ikke noget stik")
+                $(".billedside").fadeOut();
+                $(".bagside").fadeIn();
                 antalkortvendt = 0;
             };
         };
