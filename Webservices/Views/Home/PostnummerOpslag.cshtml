@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewBag.Title = "PostnummerOpslag";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>PostnummerOpslag</h2>
+
+<div>
+    <label for="postnr">Postnummer</label>
+    <input type="text" list="forslagsliste" id="inpPostnr" value="" autocomplete="off" />
+    <datalist id="forslagsliste">
+    </datalist>
+</div>
+
+<script src="~/Scripts/postnummeropslag.js"></script>

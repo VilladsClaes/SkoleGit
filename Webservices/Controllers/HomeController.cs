@@ -20,10 +20,23 @@ namespace Webservices.Controllers
             return View();
         }
 
-        public ActionResult Contact()
+        public ActionResult Byvejr()
         {
-            ViewBag.Message = "Your contact page.";
+            return View();
+        }
 
+        public ActionResult PostnummerOpslag()
+        {
+            return View();
+        }
+
+        public ActionResult FilmAPI()
+        {
+            return View();
+        }
+
+        public ActionResult Folketinget()
+        {
             return View();
         }
     }

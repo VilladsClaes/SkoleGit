@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CitaterModelStoreContainer" CdmEntityContainer="CitaterEntities">
+    <EntitySetMapping Name="Brugere">
+      <EntityTypeMapping TypeName="CitaterModel.Brugere">
+        <MappingFragment StoreEntitySet="Brugere">
+          <ScalarProperty Name="BrugerID" ColumnName="BrugerID" />
+          <ScalarProperty Name="Navn" ColumnName="Navn" />
+          <ScalarProperty Name="Brugernavn" ColumnName="Brugernavn" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Citat">
+      <EntityTypeMapping TypeName="CitaterModel.Citat">
+        <MappingFragment StoreEntitySet="Citat">
+          <ScalarProperty Name="CitatID" ColumnName="CitatID" />
+          <ScalarProperty Name="Citat_Overskrift" ColumnName="Citat Overskrift" />
+          <ScalarProperty Name="Citat_Tekst" ColumnName="Citat Tekst" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

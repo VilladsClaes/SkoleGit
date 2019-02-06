@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "Byvejr";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+<script src="~/Scripts/jquery-3.3.1.js"></script>
+<script src="~/Scripts/ByvejrAJAX.js"></script>
+<div>
+    <label for="soeg">Søg på din by</label>
+    <input type="text" id="soeg" name="soeg" value="" />
+    <button type="submit" name="soeg" id="soegknap">Søg by</button>
+</div>
+
+
+<div class="well">
+    <h2 id="byvejr">Byvejr</h2>
+
+    <img id="vejrikon" src="" alt="Vejrikon" class="float-left" />
+    <div id="byvejrspecific"></div>
+
+</div>
+

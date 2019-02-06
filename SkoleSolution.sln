@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hjemmesideøvelse1", "Hjemm
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Webservices", "Webservices\Webservices.csproj", "{632A8834-3A69-4338-9128-C8E744870FD2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MinegenAPI", "MinegenAPI\MinegenAPI.csproj", "{4D412531-695D-4A0B-BBD3-FA4623795600}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Opgave REST CRUD API", "Opgave REST CRUD API\Opgave REST CRUD API.csproj", "{CA8EE669-27E5-411A-B414-4204B2344F48}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{632A8834-3A69-4338-9128-C8E744870FD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{632A8834-3A69-4338-9128-C8E744870FD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{632A8834-3A69-4338-9128-C8E744870FD2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D412531-695D-4A0B-BBD3-FA4623795600}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D412531-695D-4A0B-BBD3-FA4623795600}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D412531-695D-4A0B-BBD3-FA4623795600}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D412531-695D-4A0B-BBD3-FA4623795600}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA8EE669-27E5-411A-B414-4204B2344F48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA8EE669-27E5-411A-B414-4204B2344F48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA8EE669-27E5-411A-B414-4204B2344F48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA8EE669-27E5-411A-B414-4204B2344F48}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

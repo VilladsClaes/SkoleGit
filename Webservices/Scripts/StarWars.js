@@ -4,7 +4,14 @@
     var wsurl = "https://swapi.co/api/people/";
 
 
-    $.ajax({ type: "GET", dataType: "json", url: wsurl, success: function (data) { console.log(wsurl); udskrivData(data); } })
+    $.ajax({
+        type: "GET",
+        dataType: "json",
+        url: wsurl,
+        success: function (data) {
+            console.log(wsurl); udskrivData(data);
+        }
+    })
 
 
     function udskrivData(data) {
@@ -70,14 +77,14 @@
 
         var soegeurl = wsurl + "?search=" + soegeord;
 
-        
+
         if (soegeord.length > 0) {
 
 
 
             $.ajax({ type: "GET", dataType: "json", url: soegeurl, success: function (data) { console.log(soegeurl); FundneData(data); } })
 
-            
+
             function FundneData(data) {
 
                 for (var x in data.results) {
@@ -85,13 +92,18 @@
                     $("#Starwarsresultat").append("<div>Skabningen hedder " + data.results[x].name + " </div>")
 
 
+
                 };
+
+                if (data.count == 0) {
+                    $("#Starwarsresultat").append("<div>Ingen resultater</div>");
+                }
 
             };
 
         };
 
-        
+
 
 
     };

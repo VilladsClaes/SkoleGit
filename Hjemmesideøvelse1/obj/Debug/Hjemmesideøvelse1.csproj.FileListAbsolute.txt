@@ -68,7 +68,6 @@ C:\Users\vill0281\source\repos\SkoleGit\Hjemmesideøvelse1\bin\Antlr3.Runtime.pd
 C:\Users\vill0281\source\repos\SkoleGit\Hjemmesideøvelse1\bin\System.Diagnostics.DiagnosticSource.xml
 C:\Users\vill0281\source\repos\SkoleGit\Hjemmesideøvelse1\bin\Microsoft.AspNet.TelemetryCorrelation.xml
 C:\Users\vill0281\source\repos\SkoleGit\Hjemmesideøvelse1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\vill0281\source\repos\SkoleGit\Hjemmesideøvelse1\obj\Debug\Hjemmesideøvelse1.csprojAssemblyReference.cache
 C:\Users\vill0281\source\repos\SkoleGit\Hjemmesideøvelse1\obj\Debug\Hjemmesideøvelse1.csproj.CoreCompileInputs.cache
 C:\Users\vill0281\source\repos\SkoleGit\Hjemmesideøvelse1\obj\Debug\Hjemmesideøvelse1.csproj.CopyComplete
 C:\Users\vill0281\source\repos\SkoleGit\Hjemmesideøvelse1\obj\Debug\Hjemmesideøvelse1.dll
@@ -134,3 +133,4 @@ C:\Users\vill0281\source\repos\SkoleGit\Hjemmesideøvelse1\bin\System.Memory.xml
 C:\Users\vill0281\source\repos\SkoleGit\Hjemmesideøvelse1\bin\System.Numerics.Vectors.xml
 C:\Users\vill0281\source\repos\SkoleGit\Hjemmesideøvelse1\bin\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\vill0281\source\repos\SkoleGit\Hjemmesideøvelse1\bin\System.ValueTuple.xml
+C:\Users\vill0281\source\repos\SkoleGit\Hjemmesideøvelse1\obj\Debug\Hjemmesideøvelse1.csprojAssemblyReference.cache
