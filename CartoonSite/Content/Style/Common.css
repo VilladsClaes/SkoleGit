@@ -1,0 +1,30 @@
+﻿body {
+    background-color:#5ef59e;
+    
+}
+.container{
+    /*margin:0 30% !important;*/
+}
+h3{
+    text-align:center;
+    padding: 20px 0;
+     background-color:#808080;
+    
+}
+div#overskrift img{
+    width:100%;
+    display:block;
+}
+#overskrift{
+    width:40%;
+    float:left;
+    padding-top:50px;
+    margin:0 10px;
+}
+p{
+    font-size:17px;
+  
+}
+#info{
+    padding: 0 20%;
+}

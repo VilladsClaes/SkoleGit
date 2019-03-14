@@ -1,0 +1,58 @@
+﻿@model List<PotteryWeb.Models.tbProduct>
+
+@{
+    ViewBag.Title = "ProductRev";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+    if (TempData["besked"] != null)
+    {
+        ViewBag.Besked = TempData["besked"];
+    }
+}
+
+
+<div class="container p-5 bg-light">
+    <h2 class="text-center">Admin</h2>
+    <a class="btn bg-info text-white float-right my-5" href="/Admin/POpret">Opret ny</a>
+
+
+    <h3 class="lead alert-danger my-3 ">@ViewBag.Besked</h3>
+
+    <table class="table border">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Navn</th>
+                <th scope="col">Pris</th>
+                <th scope="col">Kategori</th>
+
+                <th scope="col">Slet</th>
+                <th scope="col">Ret</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+
+                <tr>
+                    <th scope="row">@item.IdProduct</th>
+                    <td>@item.ProductName</td>
+                    <td>@item.AboutProduct</td>
+                    <td>@item.tbCategory.Category</td>
+
+                    <td>
+                        <a href="/Admin/PSlet/@item.IdProduct">
+                            <img src="~/Content/gfx/if_delete_678153.png" />
+                        </a>
+                    </td>
+                    <td>
+                        <a href="/Admin/PRet/@item.IdProduct">
+                            <img src="~/Content/gfx/if_pen-checkbox_353430.png" />
+                        </a>
+                    </td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+</div>
+

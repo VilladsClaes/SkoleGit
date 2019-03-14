@@ -1,0 +1,14 @@
+﻿@model MVCcitater.Models.Citater
+@{
+    ViewBag.Title = "SletCitat";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2 class="alert alert-danger" role="alert">Advarsel</h2>
+<h3>Du er ved at slette Citatet : @Model.CitatOverskrift</h3>
+<form action="/ADMIN/SletCitat" method="post">
+    <input type="hidden" name="CitatID" value="@Model.CitatID" id="CitatID" />
+    <button type="submit">Slet</button>
+    <a class="btn btn-link" href="/ADMIN/">Fortryde(uden at slette noget)</a>
+</form>
+

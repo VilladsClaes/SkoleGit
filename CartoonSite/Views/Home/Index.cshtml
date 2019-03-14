@@ -1,0 +1,15 @@
+﻿@model List<CartoonSite.Models.CartoonTable>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container">
+    <h2>Cartoon List </h2>
+    @foreach (var Item in Model)
+    {
+    <div id="overskrift">
+        <h3><a href="/Home/CartoonInfo/@Item.CartoonID">@Item.CartoonName</a></h3>
+        <img class="" src="~/Content/Img/@Item.Photo" alt="Foto af @Item.CartoonName" />
+    </div>
+    }
+</div>

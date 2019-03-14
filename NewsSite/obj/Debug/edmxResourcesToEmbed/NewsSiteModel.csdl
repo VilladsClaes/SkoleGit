@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="NewsSiteModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="NyhederTable">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NyhederOverskrift" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="NyhederTeaser" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="NyhederTekst" Type="String" MaxLength="650" FixedLength="false" Unicode="true" />
+    <Property Name="NyhederImage" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NyhederDato" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="VidsteDuTable">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="VidsteDuOverskrift" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="VidsteDuTekst" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="NewsSiteEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="NyhederTable" EntityType="Self.NyhederTable" />
+    <EntitySet Name="VidsteDuTable" EntityType="Self.VidsteDuTable" />
+    <EntitySet Name="Kontaktoplysninger" EntityType="NewsSiteModel.Kontaktoplysninger" />
+  </EntityContainer>
+  <EntityType Name="Kontaktoplysninger">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Firmanavn" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Adresse" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Postnummer" Type="Int32" />
+    <Property Name="City" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="telefon" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="email" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+  </EntityType>
+</Schema>

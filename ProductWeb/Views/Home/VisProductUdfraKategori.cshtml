@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "VisProductUdfraKategori";
+    Layout = "~/Views/Shared/_HomeLayout.cshtml";
+}
+<div class="container">
+    <h2 class="text-center">Vis Product i den valgte kategori</h2>
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-sm-6">
+                <div class="card mb-4" style="width:18em;">
+                    <img class="card-img-top" src="~/Content/Img/@item.Photo" />
+                    <h5 class="card-title pl-3">@item.ProductName</h5>
+
+                    <span class="alert-dark font-weight-bold text-lg-center">@item.Price DKK</span>
+                    <a href="/Home/VisProduct/@item.ProductID" class="btn btn-primary">Read More</a>
+                </div>
+            </div>
+
+        }
+    </div>
+</div>

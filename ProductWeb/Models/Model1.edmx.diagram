@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ec0905e35f42400cad0775dfab8d9cb9" Name="Diagram1">
+        <EntityTypeShape EntityType="ProductDbModel.BrugerTable" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProductDbModel.kategoriTable" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProductDbModel.ProductTable" Width="1.75" PointX="5.875" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="ProductDbModel.FK_ProductTable_kategoriTable" />
+        <AssociationConnector Association="ProductDbModel.FK_ProductTable_ProductTable" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,5 @@
+﻿@model List<ProductWeb.Models.kategoriTable>
+@foreach(var item in Model)
+{
+    <a class="dropdown-item" href="/Home/VisProductUdFraKategori/@item.KategoriID">@item.KategoriName</a>
+}

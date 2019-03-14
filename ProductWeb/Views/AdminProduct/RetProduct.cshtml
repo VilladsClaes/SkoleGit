@@ -1,0 +1,78 @@
+﻿@model ProductWeb.Models.AdminProductViewModel
+@{
+    ViewBag.Title = "RetProduct";
+    Layout = "~/Views/Shared/_ProductAdminLayout.cshtml";
+}
+
+<div class="container bg-light p-5">
+    <h2>ret  Product</h2>
+    <form action="/AdminProduct/RetProduct" method="post" enctype="multipart/form-data">
+        <div class="text-danger">@Html.ValidationSummary()</div>
+        <div class="form-row">
+
+            <div class="form-group col-md-6">
+                <label for="ProductID">Product ID</label>
+                <input type="text" readonly name="Product.ProductID" id="PoductID" value="@Model.Product.ProductID" class="form-control" />
+
+            </div>
+
+            <div class="form-group col-md-6">
+                <label for="ProductName">Product Name</label>
+                <input type="text" name="Product.ProductName" id="ProductName" value="@Model.Product.ProductName" class="form-control" />
+                <span class="text-danger">@Html.ValidationMessageFor(m => m.Product.ProductName)</span>
+            </div>
+
+            <div class="form-group col-md-6">
+                <label for="Price"> Price</label>
+                <input type="number" name="Product.Price" id="Price" value="@Model.Product.Price" class="form-control" />
+                <span class="text-danger">@Html.ValidationMessageFor(m => m.Product.Price)</span>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <label for="CartoonsSubscribe">Product Subscribe</label>
+            <textarea class="form-control" id="ProductSubscribe" name="Product.ProductSubscribe" rows="4">@Model.Product.ProductSubscribe</textarea>
+
+        </div>
+
+        @*billede filtet*@
+        <div class="form-row">
+            <div class="form-group col-md-6">
+
+                @*nuværende billede*@
+                <img src="~/Content/Img/@Model.Product.Photo" width="100" />
+
+
+                @*hvis brugeren vil beholde det eksistende billede*@
+                <input type="hidden" name="Product.Photo" id="Photo" value="@Model.Product.Photo" />
+
+                @*hvis brugeren vil have et andet billede*@
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="Photo">Vælg en Photo</label>
+                        <input type="file" name="NyPhoto" id="Photo" class="form-control" />
+                        <span class="text-danger">@Html.ValidationMessageFor(m => m.Product.Photo)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="Kategori">Vælg Kategori</label>
+                <select id="Kategori" name="Product.FK_KategoriID" class="form-control">
+                    @foreach (var item in Model.KategoriListe)
+                    {
+                        <option value="@item.KategoriID">@item.KategoriName</option>
+                            
+                    }
+                </select>
+                <span class="text-danger">@Html.ValidationMessageFor(m => m.Product.FK_KategoriID)</span>
+                @*Loop alle kategorier ud som option i dropdown'en*@
+
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Ret Productet</button>
+    </form>
+</div>
+

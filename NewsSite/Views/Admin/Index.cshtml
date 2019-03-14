@@ -1,0 +1,55 @@
+﻿@model NewsSite.Models.MyViewModel
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+
+    if (TempData["Besked"] != null)
+    {
+        ViewBag.Besked = TempData["Besked"];
+    }
+}
+
+<h2>Velkommen i Admin side</h2>
+
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">Nyhed ID</th>
+            <th scope="col">Nyhed Navn</th>
+            <th scope="col">Ret</th>
+            <th scope="col">Slet</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+
+            <td colspan="2"><a href="/Admin/OpretNyNyhed" class="btn btn-primary">Opret Ny</a></td>
+            <td colspan="2"><Span class="text-danger">besked til admin:@ViewBag.Besked</Span></td>
+
+        </tr>
+        @foreach (var item in Model.AllNews)
+        {
+            <tr>
+                <th scope="row">@item.NyhederOverskrift</th>
+                <td>
+                    @item.NyhederTekst
+                </td>
+
+                <td>
+                    @item.NyhederDato
+                </td>
+
+                <td>
+                    <a href="/Admin/RetNyhed/@item.id"> <img src="~/Content/img/ret.png" alt="Alternate Text" /></a>
+                </td>
+
+
+                <td>
+                    <a href="/Admin/SletNyhed/@item.id"> <img src="~/Content/img/slet.png" alt="Alternate Text" /></a>
+                </td>
+            </tr>
+        }
+
+
+    </tbody>
+</table>

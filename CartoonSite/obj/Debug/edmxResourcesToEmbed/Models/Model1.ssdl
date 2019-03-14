@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CartoonDbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="CartoonTable">
+    <Key>
+      <PropertyRef Name="CartoonID" />
+    </Key>
+    <Property Name="CartoonID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CartoonName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="CartoonsSubscribe" Type="nvarchar" MaxLength="1000" Nullable="false" />
+    <Property Name="CreatedYear" Type="int" />
+    <Property Name="Photo" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="CartoonDbModelStoreContainer">
+    <EntitySet Name="CartoonTable" EntityType="Self.CartoonTable" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

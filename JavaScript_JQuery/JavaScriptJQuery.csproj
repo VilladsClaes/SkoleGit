@@ -224,10 +224,27 @@
       <DependentUpon>PopupModel.edmx</DependentUpon>
       <LastGenOutput>PopupModel.cs</LastGenOutput>
     </Content>
+    <Content Include="sample.snippet" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="XML\Film.xml" />
+    <EntityDeploy Include="Models\PopupModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>PopupModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\PopupModel.edmx.diagram">
+      <DependentUpon>PopupModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="Scripts\esm\popper-utils.js" />
+    <Content Include="Scripts\esm\popper-utils.min.js" />
+    <Content Include="Scripts\esm\popper.js" />
+    <Content Include="Scripts\esm\popper.min.js" />
+    <Content Include="Scripts\esm\popper.min.js.map" />
+    <Content Include="Scripts\esm\popper.js.map" />
+    <Content Include="Scripts\esm\popper-utils.min.js.map" />
+    <Content Include="Scripts\esm\popper-utils.js.map" />
     <Content Include="Scripts\bootstrap.min.js.map" />
     <Content Include="Scripts\bootstrap.js.map" />
     <Content Include="Scripts\bootstrap.bundle.min.js.map" />
@@ -269,8 +286,10 @@
     <Content Include="Content\Bootstrap\_breadcrumb.scss" />
     <Content Include="Content\Bootstrap\_badge.scss" />
     <Content Include="Content\Bootstrap\_alert.scss" />
+    <Content Include="Content\Bootstrap\vendor\_rfs.scss" />
     <Content Include="Content\Bootstrap\utilities\_visibility.scss" />
     <Content Include="Content\Bootstrap\utilities\_text.scss" />
+    <Content Include="Content\Bootstrap\utilities\_stretched-link.scss" />
     <Content Include="Content\Bootstrap\utilities\_spacing.scss" />
     <Content Include="Content\Bootstrap\utilities\_sizing.scss" />
     <Content Include="Content\Bootstrap\utilities\_shadows.scss" />
@@ -306,6 +325,7 @@
     <Content Include="Content\Bootstrap\mixins\_gradients.scss" />
     <Content Include="Content\Bootstrap\mixins\_forms.scss" />
     <Content Include="Content\Bootstrap\mixins\_float.scss" />
+    <Content Include="Content\Bootstrap\mixins\_deprecate.scss" />
     <Content Include="Content\Bootstrap\mixins\_clearfix.scss" />
     <Content Include="Content\Bootstrap\mixins\_caret.scss" />
     <Content Include="Content\Bootstrap\mixins\_buttons.scss" />
@@ -318,23 +338,6 @@
     <Content Include="Content\Bootstrap\bootstrap.scss" />
     <Content Include="Content\Bootstrap\bootstrap-reboot.scss" />
     <Content Include="Content\Bootstrap\bootstrap-grid.scss" />
-    <Content Include="sample.snippet" />
-    <Content Include="XML\Film.xml" />
-    <EntityDeploy Include="Models\PopupModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>PopupModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\PopupModel.edmx.diagram">
-      <DependentUpon>PopupModel.edmx</DependentUpon>
-    </Content>
-    <Content Include="Scripts\esm\popper-utils.js" />
-    <Content Include="Scripts\esm\popper-utils.min.js" />
-    <Content Include="Scripts\esm\popper.js" />
-    <Content Include="Scripts\esm\popper.min.js" />
-    <Content Include="Scripts\esm\popper.min.js.map" />
-    <Content Include="Scripts\esm\popper.js.map" />
-    <Content Include="Scripts\esm\popper-utils.min.js.map" />
-    <Content Include="Scripts\esm\popper-utils.js.map" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />

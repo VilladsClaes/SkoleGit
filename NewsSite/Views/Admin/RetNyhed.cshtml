@@ -1,0 +1,63 @@
+﻿@model NewsSite.Models.NyhederTable
+@{
+    ViewBag.Title = "RetCartoon";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<div class="container bg-light">
+    <h2>Ret Cartoon</h2>
+    <form action="/Admin/RetNyhed" method="post" enctype="multipart/form-data">
+        <div class="text-danger">@Html.ValidationSummary()</div>
+        <div class="form-row">
+            @*ID*@
+            <div class="form-group col-md-6">
+                <label for="id">ID:</label>
+                <input type="text" name="id" id="id" readonly value="@Model.id" />
+            </div>
+        </div>
+            @*navn*@
+            <div class="form-group col-md-6">
+                <label for="NyhederOverskrift">Overskrift:</label>
+                <input type="text" name="NyhederOverskrift" id="NyhederOverskrift" value="@Model.NyhederOverskrift" class="form-control" />
+                <span class="text-danger">@Html.ValidationMessageFor(m => m.NyhederOverskrift)</span>
+            </div>
+
+            @*tekst*@
+            <div class="form-row">
+                <label for="NyhederTekst">Tekst: </label>
+                <textarea class="form-control" id="NyhederTekst" name="NyhederTekst" va rows="3">@Model.NyhederTekst</textarea>
+                <span class="text-danger">@Html.ValidationMessageFor(m => m.NyhederTekst)</span>
+            </div>
+        
+            @*billede filtet*@
+        <div class="form-row">
+            <div class="form-group col-md-6">
+
+                @*nuværende billede*@
+                <img src="~/Content/img/Nyheder/@Model.NyhederImage" width="100" />
+
+
+                @*hvis brugeren vil beholde det eksistende billede*@
+                <input type="hidden" name="NyhederImage" id="NyhederImage" value="@Model.NyhederImage" />
+
+                @*hvis brugeren vil have et andet billede*@
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="NytNyhederImage">Vælg en Photo</label>
+                        <input type="file" name="NytNyhederImage" id="NytNyhederImage" class="form-control" />
+                        <span class="text-danger">@Html.ValidationMessageFor(m => m.NyhederImage)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+                    @*submit button*@
+                    <div class="form-row ">
+                        <div class="form-group col-md-6">
+                            <button type="submit" class="btn btn-primary">Ret Nyheden</button>
+                            <a href="/Admin/" class="btn btn-success">fortryd uden Retelse</a>
+                        </div>
+                    </div>
+                
+            
+        
+    </form>
+</div>

@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="NewsSiteModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Kontaktoplysninger">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Firmanavn" Type="nvarchar" MaxLength="150" />
+          <Property Name="Adresse" Type="nvarchar" MaxLength="150" />
+          <Property Name="Postnummer" Type="int" />
+          <Property Name="City" Type="nvarchar" MaxLength="150" />
+          <Property Name="telefon" Type="nvarchar" MaxLength="150" />
+          <Property Name="email" Type="nvarchar" MaxLength="150" />
+        </EntityType>
+        <EntityType Name="NyhederTable">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NyhederOverskrift" Type="nvarchar" MaxLength="150" />
+          <Property Name="NyhederTeaser" Type="nvarchar" MaxLength="250" />
+          <Property Name="NyhederTekst" Type="nvarchar" MaxLength="650" />
+          <Property Name="NyhederImage" Type="nvarchar" MaxLength="50" />
+          <Property Name="NyhederDato" Type="date" />
+        </EntityType>
+        <EntityType Name="VidsteDuTable">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="VidsteDuOverskrift" Type="nvarchar" MaxLength="50" />
+          <Property Name="VidsteDuTekst" Type="nvarchar" MaxLength="250" />
+        </EntityType>
+        <EntityContainer Name="NewsSiteModelStoreContainer">
+          <EntitySet Name="Kontaktoplysninger" EntityType="Self.Kontaktoplysninger" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="NyhederTable" EntityType="Self.NyhederTable" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="VidsteDuTable" EntityType="Self.VidsteDuTable" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="NewsSiteModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="NyhederTable">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NyhederOverskrift" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="NyhederTeaser" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="NyhederTekst" Type="String" MaxLength="650" FixedLength="false" Unicode="true" />
+          <Property Name="NyhederImage" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NyhederDato" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="VidsteDuTable">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="VidsteDuOverskrift" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="VidsteDuTekst" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="NewsSiteEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="NyhederTable" EntityType="Self.NyhederTable" />
+          <EntitySet Name="VidsteDuTable" EntityType="Self.VidsteDuTable" />
+          <EntitySet Name="Kontaktoplysninger" EntityType="NewsSiteModel.Kontaktoplysninger" />
+        </EntityContainer>
+        <EntityType Name="Kontaktoplysninger">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Firmanavn" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="Adresse" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="Postnummer" Type="Int32" />
+          <Property Name="City" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="telefon" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="email" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="NewsSiteModelStoreContainer" CdmEntityContainer="NewsSiteEntities">
+          <EntitySetMapping Name="NyhederTable">
+            <EntityTypeMapping TypeName="NewsSiteModel.NyhederTable">
+              <MappingFragment StoreEntitySet="NyhederTable">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="NyhederOverskrift" ColumnName="NyhederOverskrift" />
+                <ScalarProperty Name="NyhederTeaser" ColumnName="NyhederTeaser" />
+                <ScalarProperty Name="NyhederTekst" ColumnName="NyhederTekst" />
+                <ScalarProperty Name="NyhederImage" ColumnName="NyhederImage" />
+                <ScalarProperty Name="NyhederDato" ColumnName="NyhederDato" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VidsteDuTable">
+            <EntityTypeMapping TypeName="NewsSiteModel.VidsteDuTable">
+              <MappingFragment StoreEntitySet="VidsteDuTable">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="VidsteDuOverskrift" ColumnName="VidsteDuOverskrift" />
+                <ScalarProperty Name="VidsteDuTekst" ColumnName="VidsteDuTekst" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Kontaktoplysninger">
+            <EntityTypeMapping TypeName="NewsSiteModel.Kontaktoplysninger">
+              <MappingFragment StoreEntitySet="Kontaktoplysninger">
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="telefon" ColumnName="telefon" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Postnummer" ColumnName="Postnummer" />
+                <ScalarProperty Name="Adresse" ColumnName="Adresse" />
+                <ScalarProperty Name="Firmanavn" ColumnName="Firmanavn" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

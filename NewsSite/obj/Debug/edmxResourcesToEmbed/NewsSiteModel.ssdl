@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="NewsSiteModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Kontaktoplysninger">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Firmanavn" Type="nvarchar" MaxLength="150" />
+    <Property Name="Adresse" Type="nvarchar" MaxLength="150" />
+    <Property Name="Postnummer" Type="int" />
+    <Property Name="City" Type="nvarchar" MaxLength="150" />
+    <Property Name="telefon" Type="nvarchar" MaxLength="150" />
+    <Property Name="email" Type="nvarchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="NyhederTable">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NyhederOverskrift" Type="nvarchar" MaxLength="150" />
+    <Property Name="NyhederTeaser" Type="nvarchar" MaxLength="250" />
+    <Property Name="NyhederTekst" Type="nvarchar" MaxLength="650" />
+    <Property Name="NyhederImage" Type="nvarchar" MaxLength="50" />
+    <Property Name="NyhederDato" Type="date" />
+  </EntityType>
+  <EntityType Name="VidsteDuTable">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="VidsteDuOverskrift" Type="nvarchar" MaxLength="50" />
+    <Property Name="VidsteDuTekst" Type="nvarchar" MaxLength="250" />
+  </EntityType>
+  <EntityContainer Name="NewsSiteModelStoreContainer">
+    <EntitySet Name="Kontaktoplysninger" EntityType="Self.Kontaktoplysninger" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NyhederTable" EntityType="Self.NyhederTable" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="VidsteDuTable" EntityType="Self.VidsteDuTable" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

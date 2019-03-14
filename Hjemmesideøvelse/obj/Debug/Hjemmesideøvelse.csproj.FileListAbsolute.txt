@@ -69,3 +69,4 @@ C:\Users\vill0281\source\repos\SkoleGit\Hjemmesideøvelse\bin\roslyn\System.Net.
 C:\Users\vill0281\source\repos\SkoleGit\Hjemmesideøvelse\bin\roslyn\System.Net.Sockets.dll
 C:\Users\vill0281\source\repos\SkoleGit\Hjemmesideøvelse\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
 C:\Users\vill0281\source\repos\SkoleGit\Hjemmesideøvelse\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\vill0281\source\repos\SkoleGit\Hjemmesideøvelse\obj\Debug\Hjemmesideøvelse.csprojAssemblyReference.cache

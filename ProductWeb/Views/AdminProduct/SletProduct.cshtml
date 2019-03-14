@@ -1,0 +1,18 @@
+﻿@model ProductWeb.Models.ProductTable
+@{
+    ViewBag.Title = "SletProduct";
+    Layout = "~/Views/Shared/_ProductAdminLayout.cshtml";
+}
+
+<h2 class="alert-danger">Advarsel for sletning</h2>
+<h4>Er du sikker at du vil slette Cartoonen</h4>
+<div class="card my-4">
+    <div class="card-body">
+        <h4>@Model.ProductName</h4>
+    </div>
+</div>
+<form action="/AdminProduct/SletProduct" method="post">
+    <input type="hidden" name="ProductID" id="ProductID" value="@Model.ProductID" />
+    <button type="submit" class="btn btn-danger">Slet</button>
+    <a href="/AdminProduct/" class="btn btn-success">fortryd uden sletning</a>
+</form>

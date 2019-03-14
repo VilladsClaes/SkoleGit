@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dbPotteryModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="tbCategory">
+    <Key>
+      <PropertyRef Name="IdCategory" />
+    </Key>
+    <Property Name="IdCategory" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Category" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="tbProduct" Relationship="Self.FK_tbProduct_tbCategory" FromRole="tbCategory" ToRole="tbProduct" />
+  </EntityType>
+  <EntityType Name="tbProduct">
+    <Key>
+      <PropertyRef Name="IdProduct" />
+    </Key>
+    <Property Name="IdProduct" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProductName" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="AboutProduct" Type="String" MaxLength="800" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Price" Type="Int32" Nullable="false" />
+    <Property Name="ProductImg" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ProcuctCategory" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="tbCategory" Relationship="Self.FK_tbProduct_tbCategory" FromRole="tbProduct" ToRole="tbCategory" />
+  </EntityType>
+  <EntityType Name="tbUser">
+    <Key>
+      <PropertyRef Name="IdUser" />
+    </Key>
+    <Property Name="IdUser" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Username" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="12" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_tbProduct_tbCategory">
+    <End Role="tbCategory" Type="Self.tbCategory" Multiplicity="1" />
+    <End Role="tbProduct" Type="Self.tbProduct" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbCategory">
+        <PropertyRef Name="IdCategory" />
+      </Principal>
+      <Dependent Role="tbProduct">
+        <PropertyRef Name="ProcuctCategory" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="dbPotteryEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="tbCategory" EntityType="Self.tbCategory" />
+    <EntitySet Name="tbProduct" EntityType="Self.tbProduct" />
+    <EntitySet Name="tbUser" EntityType="Self.tbUser" />
+    <AssociationSet Name="FK_tbProduct_tbCategory" Association="Self.FK_tbProduct_tbCategory">
+      <End Role="tbCategory" EntitySet="tbCategory" />
+      <End Role="tbProduct" EntitySet="tbProduct" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,31 @@
+﻿@model PotteryWeb.Models.tbCategory
+@{
+    ViewBag.Title = "COpret";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+
+
+<div class="container p-5 bg-light text-center ">
+    <h2>Opret</h2>
+
+    <form action="/Admin/COpret" method="post" class="border px-5 py-3" enctype="multipart/form-data">
+        <span>@ViewBag.Besked</span>
+        @Html.ValidationSummary()
+        <div class="my-5">
+            <label for="Name">Kategori navn</label> <br />
+            <input type="text" name="Category" value="@Model.Category" id="Name" class="form-control" required />
+
+        </div>
+
+
+        <input type="submit" name="name" value="send til database" />
+        <div>
+            <a class="btn bg-info text-white my-3" href="/Admin/CategoryRev">Fortryd og gå til forsiden</a>
+        </div>
+    </form>
+</div>
+
+
+
+

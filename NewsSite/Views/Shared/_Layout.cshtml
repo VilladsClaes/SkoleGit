@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>NewsSite - @ViewBag.Title</title>
+    @* Stilskema-link til ekstern CSS-fil *@
+    <link href="~/Content/bootstrap/bootstrap.css" rel="stylesheet" />
+
+
+</head>
+<body>
+    
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            @Html.Action("Footer")
+        </footer>
+    </div>
+
+
+    @* JavsScript ved slutning af body-tag *@
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

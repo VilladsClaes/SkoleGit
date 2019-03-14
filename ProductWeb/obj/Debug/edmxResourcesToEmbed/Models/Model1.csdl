@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ProductDbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="BrugerTable">
+    <Key>
+      <PropertyRef Name="BrugerID" />
+    </Key>
+    <Property Name="BrugerID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Navn" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="BrugerNavn" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PassWord" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="kategoriTable">
+    <Key>
+      <PropertyRef Name="KategoriID" />
+    </Key>
+    <Property Name="KategoriID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="KategoriName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="ProductTable" Relationship="ProductDbModel.FK_ProductTable_kategoriTable" FromRole="kategoriTable" ToRole="ProductTable" />
+  </EntityType>
+  <EntityType Name="ProductTable">
+    <Key>
+      <PropertyRef Name="ProductID" />
+    </Key>
+    <Property Name="ProductID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProductName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ProductSubscribe" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="Price" Type="Int32" Nullable="false" />
+    <Property Name="Photo" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="FK_KategoriID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="kategoriTable" Relationship="ProductDbModel.FK_ProductTable_kategoriTable" FromRole="ProductTable" ToRole="kategoriTable" />
+  </EntityType>
+  <EntityContainer Name="ProductDbEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="BrugerTable" EntityType="Self.BrugerTable" />
+    <EntitySet Name="kategoriTable" EntityType="Self.kategoriTable" />
+    <EntitySet Name="ProductTable" EntityType="Self.ProductTable" />
+    <AssociationSet Name="FK_ProductTable_kategoriTable" Association="ProductDbModel.FK_ProductTable_kategoriTable">
+      <End Role="kategoriTable" EntitySet="kategoriTable" />
+      <End Role="ProductTable" EntitySet="ProductTable" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProductTable_ProductTable" Association="ProductDbModel.FK_ProductTable_ProductTable">
+      <End Role="ProductTable" EntitySet="ProductTable" />
+      <End Role="ProductTable1" EntitySet="ProductTable" />
+    </AssociationSet>
+  </EntityContainer>
+  <Association Name="FK_ProductTable_kategoriTable">
+    <End Type="ProductDbModel.kategoriTable" Role="kategoriTable" Multiplicity="1" />
+    <End Type="ProductDbModel.ProductTable" Role="ProductTable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="kategoriTable">
+        <PropertyRef Name="KategoriID" />
+      </Principal>
+      <Dependent Role="ProductTable">
+        <PropertyRef Name="FK_KategoriID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProductTable_ProductTable">
+    <End Type="ProductDbModel.ProductTable" Role="ProductTable" Multiplicity="1" />
+    <End Type="ProductDbModel.ProductTable" Role="ProductTable1" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="ProductTable">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="ProductTable1">
+        <PropertyRef Name="ProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

@@ -4,6 +4,109 @@
     ViewBag.Title = "SoegCitater";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<script src="~/Scripts/jquery-3.3.1.js"></script>
+<script>
+
+    $(document).ready(function () { //Vent til siden er indlæst
+
+        var apiurl = "/api/CitatAPI"; //Gem adressen til API'en
+
+
+        function GenafspilAPIkald() { //GET fra API'en i form af JSON fra apiurl og kør udskrivdata
+
+
+            $.ajax({
+                type: "GET",
+                dataType: "json",
+                url: apiurl,
+                success: function (detdufandt) {
+                    console.log(apiurl); //API-adressen
+                    console.log(detdufandt); //Se hvad der gemmer sig i den API
+                    SendAPIdata(detdufandt); //Gør noget med den data
+                },
+                error: function () { alert("Måske virker: " + detdufandt + " ikke") }
+            })
+        }
+
+        GenafspilAPIkald(); //Print til skærmen
+
+
+
+        function SendAPIdata(nogetfraAPIopkaldet) {
+
+            console.log("Der sendes API-data");
+            
+
+            for (var x in nogetfraAPIopkaldet) {
+
+                $("#resultat").append("<h2>" + nogetfraAPIopkaldet[x].Citat_Overskrift + " </h2>").append("<p>" + nogetfraAPIopkaldet[x].Citat_Tekst + " </p>")
+                
+            };
+
+        };
+
+        
+        //Søgeinputfelt
+        $("input").keyup(Soeg);
+
+
+        function Soeg() {
+
+            $("#resultat").html("<h2 style='color:green;' >Søgeresultater</h2>");
+
+            var soegeord = $("input").val();
+            var soegeurl = apiurl + "?soegeord=" + soegeord;
+
+
+            if (soegeord.length > 0) {
+
+
+
+                $.ajax({
+                    type: "GET",
+                    dataType: "json",
+                    url: soegeurl,
+                    success: function (detsomderblevsoegt) {
+                        console.log(soegeurl);
+                        FundneData(detsomderblevsoegt);
+                    }
+                })
+
+
+                function FundneData(detderblevfundet) {
+
+                    for (var x in detderblevfundet) {
+
+                        $("#resultat").append("<h2>" + detderblevfundet[x].Citat_Overskrift + " </h2>").append("<p>" + detderblevfundet[x].Citat_Tekst + " </p>")
+
+
+
+                    };
+
+                    if (detderblevfundet.count == 0) {
+                        $("#resultat").append("<div>Ingen resultater</div>");
+                    }
+
+                };
+
+            };
+
+
+
+
+        };
+
+    });
+</script>
+
 
 <h2>SoegCitater</h2>
 
+<label for="soegefelt">Søg i citater</label>
+<input type="text" name="soegefelt" placeholder="skriv her..." value="" />
+
+<div id="citatboks">
+
+    <div id="resultat"></div>
+
+</div>

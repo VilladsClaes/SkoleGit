@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DbCitaterModelStoreContainer" CdmEntityContainer="DbCitaterEntities">
+    <EntitySetMapping Name="Citater">
+      <EntityTypeMapping TypeName="DbCitaterModel.Citater">
+        <MappingFragment StoreEntitySet="Citater">
+          <ScalarProperty Name="CitatID" ColumnName="CitatID" />
+          <ScalarProperty Name="CitatOverskrift" ColumnName="CitatOverskrift" />
+          <ScalarProperty Name="CitatTekst" ColumnName="CitatTekst" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

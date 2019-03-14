@@ -1,0 +1,35 @@
+﻿@model MVCcitater.Models.Citater
+@{
+    ViewBag.Title = "OpretCitat";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+  
+
+}
+
+<h2>Opret nyt citat</h2>
+<form action="/ADMIN/RetCitat"  method="post">
+    <div>
+        <input type="hidden" name="id" id="id" value="@Model.CitatID" />
+    </div>
+
+    @*Citat overskrift*@
+    <div>
+        <label for="CitatOverskrift">Overskrift</label>
+        <input type="text" name="CitatOverskrift" id="CitatOverskrift" value="@Model.CitatOverskrift" placeholder="Skriv en over skrift" />
+        <span>@Html.ValidationMessage("CitatOverskrift")</span>
+
+    </div>
+    @*Citat tekst*@
+    <div>
+        <label for="CitatTekst">Citat:</label>
+        <input type="text" name="CitatTekst" id="CitatTekst" value="@Model.CitatTekst" placeholder="Skriv en Tekst" />
+        <span>@Html.ValidationMessage("CitatTekst")</span>
+
+    </div>
+
+
+    @*submit*@
+
+    <button type="submit">Opret Ny</button>
+
+</form>

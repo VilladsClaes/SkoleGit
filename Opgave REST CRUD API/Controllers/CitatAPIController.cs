@@ -23,11 +23,16 @@ namespace Opgave_REST_CRUD_API.Controllers
             return CitaterPaaListe;
         }
 
-        // GET api/CitatAPI/5
-        public string Get(int id)
+        // GET api/CitatAPI?soegeord=er
+        public List<Citat> Get(string soegeord)
         {
-            return "value";
+            List<Citat> CitaterPaaListe = new List<Citat>();
+            CitaterPaaListe = db.Citat.Where(x => x.Citat_Tekst.Contains(soegeord) || x.Citat_Overskrift.Contains(soegeord)).ToList(); //fyld ny instans af citat-modellen med indhold fra databasen
+
+            return CitaterPaaListe;
         }
+
+
 
         // POST api/CitatAPI
         public void Post([FromBody]string value)

@@ -1,0 +1,41 @@
+﻿@model NewsSite.Models.NyhederTable
+@{
+    ViewBag.Title = "Opret Ny Nyhed";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<div class="container bg-light p-5">
+    <h2 >Opret Ny Cartoon</h2>
+    <form action="/Admin/OpretNyhed" method="post" enctype="multipart/form-data">
+        <div class="text-danger">@Html.ValidationSummary()</div>
+        <div class="form-row">
+
+            <div class="form-group col-md-6">
+                <label for="NyhederOverskrift">Overskrift</label>
+                <input type="text" name="NyhederOverskrift" id="NyhederOverskrift" value="@Model.NyhederOverskrift" class="form-control" />
+                <span class="text-danger">@Html.ValidationMessageFor(m => m.NyhederOverskrift)</span>
+            </div>
+
+            <div class="form-group col-md-6">
+                <label for="NyhederDato">Dato for nyhed</label>
+                <input type="datetime" name="NyhederDato" id="NyhederDato" value="@Model.NyhederDato" class="form-control" />
+            </div>
+        </div>
+
+        <div class="form-row">
+            <label for="NyhederTekst">Nyhedstekst</label>
+            <textarea class="form-control" id="NyhederTekst" name="NyhederTekst" rows="3">@Model.NyhederTekst</textarea>
+            <span class="text-danger">@Html.ValidationMessageFor(m => m.NyhederTekst)</span>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="NyhederImage">Vælg et billede</label>
+                <input type="file" name="NyhederImage" id="NyhederImage"  class="form-control" />
+                <span class="text-danger">@Html.ValidationMessageFor(m => m.NyhederImage)</span>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Opret ny</button>
+    </form>
+</div>

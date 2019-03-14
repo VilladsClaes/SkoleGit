@@ -1,0 +1,18 @@
+﻿body {
+    
+    background: url('../Img/gf.jpg')no-repeat;
+    background-size: cover;
+}
+.card-img-top {
+    height: 150px;
+    object-fit: contain;
+}
+.container{
+    padding:30px 10% !important;
+}
+.text-success {
+    color: #ffffff !important;
+    background-color: #3c0404 !important;
+    -webkit-clip-path: polygon(0 0, 73% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 73% 0, 100% 100%, 0% 100%);
+}

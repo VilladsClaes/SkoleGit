@@ -1,0 +1,75 @@
+﻿@model PotteryWeb.Models.VM
+@{
+    ViewBag.Title = "PRet";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+
+<div class="container p-5 bg-light text-center ">
+    <h2>Opret</h2>
+
+    <form action="/Admin/PRet" method="post" class="border px-5 py-3" enctype="multipart/form-data">
+        <span>@ViewBag.Besked</span>
+        @Html.ValidationSummary()
+
+        @*id som kun kan ses*@
+        <div>
+            <label for="id">id</label> <br />
+            <input type="text" readonly name="tbProduct.IdProduct" value="@Model.tbProduct.IdProduct" id="id" class="form-control" required />
+
+        </div>
+        @*navn*@ 
+        <div>
+            <label for="Name">Vare navn</label> <br />
+            <input type="text" name="tbProduct.ProductName" value="@Model.tbProduct.ProductName" id="Name" class="form-control" required />
+
+        </div>
+        @*om produktet*@
+        <div>
+            <label for="om">om produktet</label> <br />
+            <textarea type="text" name="tbProduct.AboutProduct" id="om" class="form-control" required>@Model.tbProduct.AboutProduct</textarea>
+
+        </div>
+        @*prisen*@
+        <div>
+            <label for="Price">Pris</label> <br />
+            <input type="number" name="tbProduct.Price" value="@Model.tbProduct.Price" id="Price" class="form-control" required />
+
+        </div>
+        @*vælg kategori*@
+        <div>
+            <label for="Category">Vælg category</label> <br />
+            <select id="Category" name="tbProduct.ProcuctCategory">
+                @foreach (var item in Model.CategoryList)
+                {
+
+                    <option value="@item.IdCategory">
+                        @item.Category
+                    </option>
+                }
+            </select>
+
+        </div> <br />
+        @*billede*@
+        <div>
+            <h4>Nuværende billede</h4>
+            <img src="~/Content/img/@Model.tbProduct.ProductImg" alt="" width="100" />
+            <input type="hidden" name="tbProduct.ProductImg" value="@Model.tbProduct.ProductImg" id="Img" />
+
+
+            @*hvis der skal et nyt billede til*@
+            <label for="NytImg">Vælg et andet billede</label> <br />
+            <input type="file" name="NytImg" id="NytImg" class="form-control" />
+
+        </div> <br />
+
+
+        <input type="submit" name="name" value="send til database" />
+        <div>
+            <a class="btn bg-info text-white my-3" href="/Admin/ProductRev">Fortryd og gå til forsiden</a>
+        </div>
+    </form>
+</div>
+
+
+

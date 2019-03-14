@@ -1,0 +1,13 @@
+﻿@model CartoonSite.Models.CartoonTable
+@{
+    ViewBag.Title = "CartoonInfo";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<a href="/Home/Index">Tilbage til forsiden</a>
+<div class="container" id="info">
+    <h3>@Model.CartoonName (@Model.CreatedYear)</h3>
+    <p>@Model.CartoonsSubscribe</p>
+    <img src="~/Content/Img/@Model.Photo" alt="Foto af @Model.CartoonName" />
+
+    
+</div>

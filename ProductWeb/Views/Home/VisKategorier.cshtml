@@ -1,0 +1,21 @@
+﻿@model List<ProductWeb.Models.kategoriTable>
+@{
+    ViewBag.Title = "VisKategorier";
+    Layout = "~/Views/Shared/_HomeLayout.cshtml";
+}
+
+<div class="container">
+    <h1>Vis alle kategorier med link til Producter(i kategorien)</h1>
+
+    <ul class="list-group">
+
+        @foreach (var item in Model)
+        {
+            <li class="list-group-item">
+                <a href="~/Home/VisProductUdfraKategori/@item.KategoriID">@item.KategoriName</a>
+            </li>
+        }
+
+    </ul>
+
+</div>

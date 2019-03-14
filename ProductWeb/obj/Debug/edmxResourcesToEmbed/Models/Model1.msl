@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ProductDbModelStoreContainer" CdmEntityContainer="ProductDbEntities1">
+    <EntitySetMapping Name="BrugerTable">
+      <EntityTypeMapping TypeName="ProductDbModel.BrugerTable">
+        <MappingFragment StoreEntitySet="BrugerTable">
+          <ScalarProperty Name="BrugerID" ColumnName="BrugerID" />
+          <ScalarProperty Name="Navn" ColumnName="Navn" />
+          <ScalarProperty Name="BrugerNavn" ColumnName="BrugerNavn" />
+          <ScalarProperty Name="PassWord" ColumnName="PassWord" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="kategoriTable">
+      <EntityTypeMapping TypeName="ProductDbModel.kategoriTable">
+        <MappingFragment StoreEntitySet="kategoriTable">
+          <ScalarProperty Name="KategoriID" ColumnName="KategoriID" />
+          <ScalarProperty Name="KategoriName" ColumnName="KategoriName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductTable">
+      <EntityTypeMapping TypeName="ProductDbModel.ProductTable">
+        <MappingFragment StoreEntitySet="ProductTable">
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="ProductSubscribe" ColumnName="ProductSubscribe" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Photo" ColumnName="Photo" />
+          <ScalarProperty Name="FK_KategoriID" ColumnName="FK_KategoriID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

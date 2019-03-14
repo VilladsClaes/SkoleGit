@@ -1,0 +1,39 @@
+﻿@model List<MVCcitater.Models.Citater>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+    if (TempData["Besked"] != null)
+    {
+        ViewBag.Besked = TempData["Besked"].ToString();
+    }
+}
+
+<h2>Admin Side</h2>
+
+
+<a class="btn btn-primary" href="~/ADMIN/OpretCitat"></a>
+
+<p class="alert alert-success" role="alert">Beskeden til Admin:  @ViewBag.Besked</p>
+
+<table class="table table-dark">
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td  scope="col">@item.CitatOverskrift</td>
+            <td  scope="col">
+                <a href="/ADMIN/RetCitat/@item.CitatID"><img src="~/Content/img/ret.png" /></a>
+                
+
+            </td>
+            <td>
+                <a href="/ADMIN/SletCitat/@item.CitatID"><img src="~/Content/img/slet.png" /></a>
+                
+            </td>
+        </tr>
+
+
+    }
+
+
+
+</table>

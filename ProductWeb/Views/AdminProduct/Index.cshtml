@@ -1,0 +1,50 @@
+﻿@model List<ProductWeb.Models.ProductTable>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_ProductAdminLayout.cshtml";
+    if(TempData["Besked"] != null)
+    {
+        ViewBag.Besked = TempData["Besked"];
+    }
+}
+
+
+<h2>Velkommen i Admin side</h2>
+
+<table class="table bg-light">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">Product ID</th>
+            <th scope="col">Product Navn</th>
+            <th scope="col">Ret</th>
+            <th scope="col">slet</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+
+            <td colspan="2"><a href="/AdminProduct/OpretNyProduct" class="btn btn-primary">Opret Ny Product</a></td>
+            <td colspan="2"><Span class="text-danger">besked til admin:@ViewBag.Besked</Span></td>
+
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <th scope="row">@item.ProductID</th>
+                <td>@item.ProductName</td>
+
+
+                <td>
+                    <a href="/AdminProduct/RetProduct/@item.ProductID"> <img src="~/Content/Img/ret.png" alt="Alternate Text" /></a>
+                </td>
+
+
+                <td>
+                    <a href="/AdminProduct/SletProduct/@item.ProductID"> <img src="~/Content/Img/slet.png" alt="Alternate Text" /></a>
+                </td>
+            </tr>
+        }
+
+
+    </tbody>
+</table>

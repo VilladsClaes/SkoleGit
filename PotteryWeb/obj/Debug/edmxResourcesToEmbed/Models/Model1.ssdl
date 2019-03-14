@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dbPotteryModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="tbCategory">
+    <Key>
+      <PropertyRef Name="IdCategory" />
+    </Key>
+    <Property Name="IdCategory" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Category" Type="nvarchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbProduct">
+    <Key>
+      <PropertyRef Name="IdProduct" />
+    </Key>
+    <Property Name="IdProduct" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProductName" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="AboutProduct" Type="nvarchar" MaxLength="800" Nullable="false" />
+    <Property Name="Price" Type="int" Nullable="false" />
+    <Property Name="ProductImg" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="ProcuctCategory" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbUser">
+    <Key>
+      <PropertyRef Name="IdUser" />
+    </Key>
+    <Property Name="IdUser" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Username" Type="nvarchar" MaxLength="40" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" MaxLength="12" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_tbProduct_tbCategory">
+    <End Role="tbCategory" Type="Self.tbCategory" Multiplicity="1" />
+    <End Role="tbProduct" Type="Self.tbProduct" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbCategory">
+        <PropertyRef Name="IdCategory" />
+      </Principal>
+      <Dependent Role="tbProduct">
+        <PropertyRef Name="ProcuctCategory" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="dbPotteryModelStoreContainer">
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbCategory" EntityType="Self.tbCategory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbProduct" EntityType="Self.tbProduct" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbUser" EntityType="Self.tbUser" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_tbProduct_tbCategory" Association="Self.FK_tbProduct_tbCategory">
+      <End Role="tbCategory" EntitySet="tbCategory" />
+      <End Role="tbProduct" EntitySet="tbProduct" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

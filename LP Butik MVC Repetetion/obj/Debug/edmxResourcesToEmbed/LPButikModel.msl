@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="LoginDatabaseModelStoreContainer" CdmEntityContainer="LoginDatabaseEntities">
+    <EntitySetMapping Name="Logins">
+      <EntityTypeMapping TypeName="LoginDatabaseModel.Logins">
+        <MappingFragment StoreEntitySet="Logins">
+          <ScalarProperty Name="Salt" ColumnName="Salt" />
+          <ScalarProperty Name="Kodeord" ColumnName="Kodeord" />
+          <ScalarProperty Name="BrugerNavn" ColumnName="BrugerNavn" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

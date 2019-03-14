@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dbkg218_13Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Help">
+    <Key>
+      <PropertyRef Name="HelpID" />
+    </Key>
+    <Property Name="HelpID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="HelpText" Type="String" MaxLength="1150" FixedLength="false" Unicode="true" />
+    <Property Name="HelpType_FK" Type="Int32" />
+    <Property Name="HelpDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="HelpType" Relationship="Self.FK_Help_HelpType" FromRole="Help" ToRole="HelpType" />
+    <Property Name="Helper_FK" Type="Int32" />
+    <NavigationProperty Name="Helper" Relationship="dbkg218_13Model.FK_Help_Helper" FromRole="Help" ToRole="Helper" />
+    <NavigationProperty Name="HelpMatch" Relationship="dbkg218_13Model.FK_HelpMatch1_Help" FromRole="Help" ToRole="HelpMatch" />
+    <NavigationProperty Name="HelpMatch1" Relationship="dbkg218_13Model.FK_HelpMatch2_Help" FromRole="Help" ToRole="HelpMatch" />
+  </EntityType>
+  <EntityType Name="HelpType">
+    <Key>
+      <PropertyRef Name="HelpTypeID" />
+    </Key>
+    <Property Name="HelpTypeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="HelpType1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Help" Relationship="Self.FK_Help_HelpType" FromRole="HelpType" ToRole="Help" />
+  </EntityType>
+  <Association Name="FK_Help_HelpType">
+    <End Role="HelpType" Type="Self.HelpType" Multiplicity="0..1" />
+    <End Role="Help" Type="Self.Help" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HelpType">
+        <PropertyRef Name="HelpTypeID" />
+      </Principal>
+      <Dependent Role="Help">
+        <PropertyRef Name="HelpType_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="dbkg218_13Entities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Help" EntityType="Self.Help" />
+    <EntitySet Name="HelpType" EntityType="Self.HelpType" />
+    <AssociationSet Name="FK_Help_HelpType" Association="Self.FK_Help_HelpType">
+      <End Role="HelpType" EntitySet="HelpType" />
+      <End Role="Help" EntitySet="Help" />
+    </AssociationSet>
+    <EntitySet Name="Helper" EntityType="dbkg218_13Model.Helper" />
+    <AssociationSet Name="FK_Help_Helper" Association="dbkg218_13Model.FK_Help_Helper">
+      <End Role="Helper" EntitySet="Helper" />
+      <End Role="Help" EntitySet="Help" />
+    </AssociationSet>
+    <EntitySet Name="HelpMatch" EntityType="dbkg218_13Model.HelpMatch" />
+    <AssociationSet Name="FK_HelpMatch1_Help" Association="dbkg218_13Model.FK_HelpMatch1_Help">
+      <End Role="Help" EntitySet="Help" />
+      <End Role="HelpMatch" EntitySet="HelpMatch" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HelpMatch2_Help" Association="dbkg218_13Model.FK_HelpMatch2_Help">
+      <End Role="Help" EntitySet="Help" />
+      <End Role="HelpMatch" EntitySet="HelpMatch" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Helper">
+    <Key>
+      <PropertyRef Name="HelperID" />
+    </Key>
+    <Property Name="HelperID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Postnummer" Type="Int32" />
+    <Property Name="Email" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Telefonnummer" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Navn" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Help" Relationship="dbkg218_13Model.FK_Help_Helper" FromRole="Helper" ToRole="Help" />
+  </EntityType>
+  <Association Name="FK_Help_Helper">
+    <End Type="dbkg218_13Model.Helper" Role="Helper" Multiplicity="0..1" />
+    <End Type="dbkg218_13Model.Help" Role="Help" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Helper">
+        <PropertyRef Name="HelperID" />
+      </Principal>
+      <Dependent Role="Help">
+        <PropertyRef Name="Helper_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="HelpMatch">
+    <Key>
+      <PropertyRef Name="HelpMatchID" />
+    </Key>
+    <Property Name="HelpMatchID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="HelpMatch1_FK" Type="Int32" />
+    <Property Name="HelpMatch2_FK" Type="Int32" />
+    <NavigationProperty Name="Help" Relationship="dbkg218_13Model.FK_HelpMatch1_Help" FromRole="HelpMatch" ToRole="Help" />
+    <NavigationProperty Name="Help1" Relationship="dbkg218_13Model.FK_HelpMatch2_Help" FromRole="HelpMatch" ToRole="Help" />
+  </EntityType>
+  <Association Name="FK_HelpMatch1_Help">
+    <End Type="dbkg218_13Model.Help" Role="Help" Multiplicity="0..1" />
+    <End Type="dbkg218_13Model.HelpMatch" Role="HelpMatch" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Help">
+        <PropertyRef Name="HelpID" />
+      </Principal>
+      <Dependent Role="HelpMatch">
+        <PropertyRef Name="HelpMatch1_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HelpMatch2_Help">
+    <End Type="dbkg218_13Model.Help" Role="Help" Multiplicity="0..1" />
+    <End Type="dbkg218_13Model.HelpMatch" Role="HelpMatch" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Help">
+        <PropertyRef Name="HelpID" />
+      </Principal>
+      <Dependent Role="HelpMatch">
+        <PropertyRef Name="HelpMatch2_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

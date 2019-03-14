@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="NewsSiteModelStoreContainer" CdmEntityContainer="NewsSiteEntities">
+    <EntitySetMapping Name="NyhederTable">
+      <EntityTypeMapping TypeName="NewsSiteModel.NyhederTable">
+        <MappingFragment StoreEntitySet="NyhederTable">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="NyhederOverskrift" ColumnName="NyhederOverskrift" />
+          <ScalarProperty Name="NyhederTeaser" ColumnName="NyhederTeaser" />
+          <ScalarProperty Name="NyhederTekst" ColumnName="NyhederTekst" />
+          <ScalarProperty Name="NyhederImage" ColumnName="NyhederImage" />
+          <ScalarProperty Name="NyhederDato" ColumnName="NyhederDato" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VidsteDuTable">
+      <EntityTypeMapping TypeName="NewsSiteModel.VidsteDuTable">
+        <MappingFragment StoreEntitySet="VidsteDuTable">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="VidsteDuOverskrift" ColumnName="VidsteDuOverskrift" />
+          <ScalarProperty Name="VidsteDuTekst" ColumnName="VidsteDuTekst" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Kontaktoplysninger">
+      <EntityTypeMapping TypeName="NewsSiteModel.Kontaktoplysninger">
+        <MappingFragment StoreEntitySet="Kontaktoplysninger">
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="telefon" ColumnName="telefon" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Postnummer" ColumnName="Postnummer" />
+          <ScalarProperty Name="Adresse" ColumnName="Adresse" />
+          <ScalarProperty Name="Firmanavn" ColumnName="Firmanavn" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

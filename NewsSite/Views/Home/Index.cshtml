@@ -1,0 +1,17 @@
+﻿@model NewsSite.Models.MyViewModel
+<div class="jumbotron" id="forsidebanner">
+    <h1>NewsSite</h1>
+    <p class="lead">Nyheder fra hele verden</p>
+    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+</div>
+<div class="row">
+    @foreach (var item in Model.AllNews)
+    {
+        <div class="col-md-4">
+            <h2>@item.NyhederOverskrift</h2>
+            <p>@item.NyhederTekst</p>
+            <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301870">Learn more &raquo;</a></p>
+        </div>
+    }
+
+</div>

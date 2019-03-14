@@ -1,0 +1,35 @@
+﻿@model List<PotteryWeb.Models.tbProduct>
+@{
+
+    ViewBag.Title = "ByPrice";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>ByPrice</h2>
+
+
+<div class="container">
+    <h2 class="text-center my-5">
+        The Shop
+    </h2>
+    <div class="row bg-light">
+        @foreach (var item in Model)
+        {
+            <a href="/Home/TheItem/@item.IdProduct" class="col-6 p-5 border-0 nounderline">
+                <div class="border p-5 row bg-white  ">
+                    <div class="col-6 p-2">
+                        <img class=" img-thumbnail border-0" src="~/Content/img/@item.ProductImg" />
+                    </div>
+                    <div class="col-6 p-2">
+                        <h3 class="h3 border-bottom text-center text-dark">@item.ProductName</h3>
+                        <p class="lead text-black-50">@item.AboutProduct.Substring(0, Math.Min(70, @item.AboutProduct.Length))...</p>
+
+                    </div>
+
+                    <p class=" border-bottom col-12 text-right text-dark font-weight-bold">pris: @item.Price</p>
+                </div>
+            </a>
+
+        }
+    </div>
+</div>
