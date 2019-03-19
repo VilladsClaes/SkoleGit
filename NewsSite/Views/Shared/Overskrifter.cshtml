@@ -1,0 +1,11 @@
+﻿@model NewsSite.Models.MyViewModel
+
+
+@foreach (var item in Model.AllNews)
+{
+    <a class="dropdown-item" href="~/Home/EnkeltNyhed/@item.id">@item.NyhederOverskrift</a>
+}
+<div class="dropdown-divider"></div>
+<a class="dropdown-item" href="#">Ikke flere overskrifter</a>
+
+

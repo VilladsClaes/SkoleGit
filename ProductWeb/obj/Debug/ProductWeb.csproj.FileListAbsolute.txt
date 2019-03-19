@@ -145,7 +145,6 @@ C:\Users\vill0281\source\repos\SkoleGit\ProductWeb\bin\System.Web.Razor.xml
 C:\Users\vill0281\source\repos\SkoleGit\ProductWeb\bin\System.Web.WebPages.xml
 C:\Users\vill0281\source\repos\SkoleGit\ProductWeb\bin\System.Web.WebPages.Deployment.xml
 C:\Users\vill0281\source\repos\SkoleGit\ProductWeb\bin\System.Web.WebPages.Razor.xml
-C:\Users\vill0281\source\repos\SkoleGit\ProductWeb\obj\Debug\ProductWeb.csprojAssemblyReference.cache
 C:\Users\vill0281\source\repos\SkoleGit\ProductWeb\obj\Debug\ProductWeb.csproj.CoreCompileInputs.cache
 C:\Users\vill0281\source\repos\SkoleGit\ProductWeb\obj\Debug\ProductWeb.csproj.CopyComplete
 C:\Users\vill0281\source\repos\SkoleGit\ProductWeb\obj\Debug\ProductWeb.dll

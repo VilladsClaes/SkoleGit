@@ -11,41 +11,60 @@ namespace NewsSite.Controllers
     
     public class AdminController : Controller
     {
+        //Forhindr adgang til siden hvis der ikke er en session
+        protected override void OnActionExecuted(ActionExecutedContext filterContext)
+        {
+            if (Session["LoginBruger"] == null)
+            {
+                filterContext.Result = new RedirectResult("~/login/");
+            }
+        }
+
         NewsSiteEntities db = new NewsSiteEntities();
 
         // Vis OpretNyhed-siden
         public ActionResult Index()
         {
+           
 
             MyViewModel viewModel = new MyViewModel();
             viewModel.AllNews = db.NyhederTable.ToList();
 
+
+
             return View(viewModel);
         }
-        public ActionResult OpretNyNyhed()
+
+
+       
+        public ActionResult OpretNyhed()
         {
             NyhederTable NyNyhed = new NyhederTable();
+            NyNyhed.NyhederDato = DateTime.Now;
             return View(NyNyhed);
         }
 
         //OPRET NYHED
         [HttpPost]
-        public ActionResult OpretNyNyhed(NyhederTable NyNyhed, HttpPostedFileBase BilledeTilNyhed)
+        public ActionResult OpretNyhed(NyhederTable NyNyhed, HttpPostedFileBase NyhederImage)
         {
-          if(!ModelState.IsValid || BilledeTilNyhed == null)
+          if(!ModelState.IsValid || NyhederImage == null)
             {
-                ViewBag.Besked = "Noget gik galt,Prøv igen....";
+                ViewBag.Besked = "Noget gik galt, prøv igen...";
                 return View(NyNyhed); // retur til formularen - send den allerede- udfyldt med retur
             }
           //formularen er korrekt udfyldt -data gemmes i Db og fil uploads i korrekt mappe i webprojekt
 
             // Håndtere filen (snup filnavn til Db + gem filen i img mappe)
-            string ImgNavn = System.IO.Path.GetFileName(BilledeTilNyhed.FileName);
+            string ImgNavn = System.IO.Path.GetFileName(NyhederImage.FileName);
             string ImgSti = System.IO.Path.Combine(Server.MapPath("~/Content/Img/Nyheder/"), ImgNavn);
 
 
             // gem filen
-            BilledeTilNyhed.SaveAs(ImgSti);
+            NyhederImage.SaveAs(ImgSti);
+
+           
+
 
             // gem i Db
             NyNyhed.NyhederImage = ImgNavn; // fx hest.jpg
@@ -59,6 +78,9 @@ namespace NewsSite.Controllers
 
             return RedirectToAction("Index","Admin");
         }
+
+        
+
 
         //Vis SletNyhed-siden
         public ActionResult SletNyhed(int? id)
@@ -147,7 +169,7 @@ namespace NewsSite.Controllers
 
 
                 string ImgNavn = System.IO.Path.GetFileName(NytPhoto.FileName);
-                imgsti = System.IO.Path.Combine(Server.MapPath("~/Content/Img/Nyheder"), ImgNavn);
+                imgsti = System.IO.Path.Combine(Server.MapPath("~/Content/Img/Nyheder/"), ImgNavn);
 
                 NytPhoto.SaveAs(imgsti);//gemme selve filen
                 NyhedRettes.NyhederImage = ImgNavn; // gemme navnet i modellen -som næste step sends til Db

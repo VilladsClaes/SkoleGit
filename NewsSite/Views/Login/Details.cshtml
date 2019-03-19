@@ -1,0 +1,34 @@
+﻿@model NewsSite.Models.MyViewModel
+
+@{
+    ViewBag.Title = "Din Profil";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<div>
+    <h4>Din Bruger</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Logins.BrugerNavn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Logins.BrugerNavn)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Logins.Kodeord)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Logins.Kodeord)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Logins.Id }) |
+    @Html.ActionLink("Tilbage til forsiden", "Index")
+</p>

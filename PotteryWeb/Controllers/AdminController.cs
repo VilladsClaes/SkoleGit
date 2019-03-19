@@ -1,4 +1,4 @@
-﻿using PotteryWeb.Models;
+﻿using NewsSite.Models;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity.Migrations;
@@ -6,7 +6,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace PotteryWeb.Controllers
+namespace NewsSite.Controllers
 {
     public class AdminController : Controller
     {
@@ -17,6 +17,8 @@ namespace PotteryWeb.Controllers
                 filterContext.Result = new RedirectResult("~/login/");
             }
         }
+
+
         dbPotteryEntities db = new dbPotteryEntities();
         // GET: Admin
         public ActionResult Index()

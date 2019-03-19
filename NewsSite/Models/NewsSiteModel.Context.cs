@@ -28,5 +28,9 @@ namespace NewsSite.Models
         public virtual DbSet<NyhederTable> NyhederTable { get; set; }
         public virtual DbSet<VidsteDuTable> VidsteDuTable { get; set; }
         public virtual DbSet<Kontaktoplysninger> Kontaktoplysninger { get; set; }
+        public virtual DbSet<GaadeTabel> GaadeTabel { get; set; }
+        public virtual DbSet<KategoriTabel> KategoriTabel { get; set; }
+        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
+        public virtual DbSet<Logins> Logins { get; set; }
     }
 }

@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace PotteryWeb.Models
+namespace NewsSite.Models
 {
     using System;
     using System.Collections.Generic;

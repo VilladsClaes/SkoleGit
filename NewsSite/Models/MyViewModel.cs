@@ -12,5 +12,14 @@ namespace NewsSite.Models
 
         public List<NyhederTable> AllNews { get; set; }
 
+        public VidsteDuTable VidsteDu { get; set; }
+
+        public List<VidsteDuTable> AllVidsteDu { get; set; }
+
+        public Logins Logins { get; set; }
+
+        public Kontaktoplysninger Kontaktoplysning { get; set; }
+
+
     }
 }

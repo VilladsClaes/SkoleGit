@@ -11,11 +11,15 @@
 
 <h2>Velkommen i Admin side</h2>
 
+
+@* CRUD på NyhederTable *@
 <table class="table">
     <thead class="thead-dark">
         <tr>
             <th scope="col">Nyhed ID</th>
-            <th scope="col">Nyhed Navn</th>
+            <th scope="col">Nyhedstekst</th>
+            <th scope="col">Dato for nyhed</th>
+            <th scope="col">teaser</th>
             <th scope="col">Ret</th>
             <th scope="col">Slet</th>
         </tr>
@@ -23,33 +27,43 @@
     <tbody>
         <tr>
 
-            <td colspan="2"><a href="/Admin/OpretNyNyhed" class="btn btn-primary">Opret Ny</a></td>
+            <td colspan="2"><a href="/Admin/OpretNyhed" class="btn btn-primary">Opret Ny</a></td>
             <td colspan="2"><Span class="text-danger">besked til admin:@ViewBag.Besked</Span></td>
 
         </tr>
         @foreach (var item in Model.AllNews)
         {
-            <tr>
-                <th scope="row">@item.NyhederOverskrift</th>
-                <td>
-                    @item.NyhederTekst
-                </td>
-
-                <td>
-                    @item.NyhederDato
-                </td>
-
-                <td>
-                    <a href="/Admin/RetNyhed/@item.id"> <img src="~/Content/img/ret.png" alt="Alternate Text" /></a>
-                </td>
-
-
-                <td>
-                    <a href="/Admin/SletNyhed/@item.id"> <img src="~/Content/img/slet.png" alt="Alternate Text" /></a>
-                </td>
-            </tr>
+        <tr>
+            @* Første kolonne *@
+            <th scope="row" style="width: 20%">
+                @item.NyhederOverskrift
+            </th>
+            @* Anden kolonne *@
+            <td style="width: 40%">
+                @item.NyhederTekst
+            </td>
+            @* Tredje kolonne *@
+            <td style="width: 10%">
+                @item.NyhederDato
+            </td>
+            @* Fjerde kolonne *@
+            <td>
+                @item.NyhederTeaser
+            </td>
+            @* femte kolonne *@
+            <td>
+                <a href="/Admin/RetNyhed/@item.id"> <img src="~/Content/img/ret.png" alt="Alternate Text" /></a>
+            </td>
+            @* sjette kolonne *@
+            <td>
+                <a href="/Admin/SletNyhed/@item.id"> <img src="~/Content/img/slet.png" alt="Alternate Text" /></a>
+            </td>
+        </tr>
         }
 
 
     </tbody>
+
+
 </table>
+

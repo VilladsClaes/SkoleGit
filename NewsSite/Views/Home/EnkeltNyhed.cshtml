@@ -1,0 +1,30 @@
+﻿@model NewsSite.Models.NyhederTable
+@{
+    ViewBag.Title = "Den enkelte nyhed";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="container bg-light p-2 my-2">
+    <div class="border-bottom mb-2 p-2 row">
+        <div class="col-6">
+            <img src="~/Content/img/Nyheder/@Model.NyhederImage" class="" />
+        </div>
+        <div class="col-6 ">
+            <h3 class="mb-3">
+                @Model.NyhederOverskrift
+            </h3>
+            <p class="lead">
+                @Model.NyhederTekst
+            </p>
+
+
+        </div>
+        <p class="w-100 font-weight-bold text-right">pris @Model.NyhederDato</p>
+    </div>
+    
+    <form action="/Home/Index" method="post">
+        <input type="submit" name="name" value="Tilbage tíl forsiden" class="p-2" />
+    </form>
+</div>
+

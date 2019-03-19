@@ -3,12 +3,24 @@
     ViewBag.Title = "Opret Ny Nyhed";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
-
-
 <div class="container bg-light p-5">
-    <h2 >Opret Ny Cartoon</h2>
+    <h2 >Opret Nyhed</h2>
     <form action="/Admin/OpretNyhed" method="post" enctype="multipart/form-data">
         <div class="text-danger">@Html.ValidationSummary()</div>
+
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="NyhederImage">Vælg et billede</label>
+                <input type="file" name="NyhederImage" id="NyhederImage" class="form-control" />
+                <span class="text-danger">@Html.ValidationMessageFor(m => m.NyhederImage)</span>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="NyhederTeaser">Teaser</label>
+                <input type="text" name="NyhederTeaser" id="NyhederTeaser" value="@Model.NyhederTeaser" class="form-control" />
+                <span class="text-danger">@Html.ValidationMessageFor(m => m.NyhederTeaser)</span>
+            </div>
+        </div>
+
         <div class="form-row">
 
             <div class="form-group col-md-6">
@@ -29,13 +41,8 @@
             <span class="text-danger">@Html.ValidationMessageFor(m => m.NyhederTekst)</span>
         </div>
 
-        <div class="form-row">
-            <div class="form-group col-md-6">
-                <label for="NyhederImage">Vælg et billede</label>
-                <input type="file" name="NyhederImage" id="NyhederImage"  class="form-control" />
-                <span class="text-danger">@Html.ValidationMessageFor(m => m.NyhederImage)</span>
-            </div>
-        </div>
-        <button type="submit" class="btn btn-primary">Opret ny</button>
+
+        <button type="submit" class="btn btn-primary">Opret</button>
+        <a href="/Admin/" class="btn btn-success">fortryd oprettelse</a>
     </form>
 </div>

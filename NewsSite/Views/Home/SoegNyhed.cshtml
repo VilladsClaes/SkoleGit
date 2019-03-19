@@ -1,0 +1,27 @@
+﻿@model List<NewsSite.Models.NyhederTable>
+@{ 
+    ViewBag.Title = "Søg på Nyheder";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2> Søgeresultat </h2>
+@*Hvis der er noget i modellen...den ikke er tom / null *@
+@if (Model != null)
+{
+    <p>
+        Du har søgt på:  <b>@Request["Soegetxt"]</b>
+        ...
+    </p>
+    // Hvis modellen rummer mere end 0/nul resultater
+    if (Model.Count > 0)
+    {
+        foreach (var item in Model)
+        {
+            <h3>@item.id - @item.NyhederOverskrift</h3>
+            <p>@item.NyhederTeaser</p>
+        }
+    }
+    else
+    { <p>Der var desværre ikke et match - prøv at søge på noget andet og mindre specifikt.</p> }
+}
+else
+{ <p>Du skal foretage en søgning i søgefeltet øverst!</p>}

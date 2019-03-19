@@ -1,11 +1,11 @@
-﻿using PotteryWeb.Models;
+﻿using NewsSite.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace PotteryWeb.Controllers
+namespace NewsSite.Controllers
 {
     public class LoginController : Controller
     {

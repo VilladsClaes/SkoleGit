@@ -5,9 +5,14 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="c79402d94ac04c8f89c1f11e395ce460" Name="Diagram1">
-        <EntityTypeShape EntityType="NewsSiteModel.NyhederTable" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="NewsSiteModel.VidsteDuTable" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="NewsSiteModel.Kontaktoplysninger" Width="1.5" PointX="0.75" PointY="3.75" />
+        <EntityTypeShape EntityType="NewsSiteModel.NyhederTable" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NewsSiteModel.VidsteDuTable" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NewsSiteModel.Kontaktoplysninger" Width="1.5" PointX="4.75" PointY="3.75" />
+        <EntityTypeShape EntityType="NewsSiteModel.GaadeTabel" Width="2.75" PointX="4.25" PointY="0.875" />
+        <EntityTypeShape EntityType="NewsSiteModel.KategoriTabel" Width="2.75" PointX="0.75" PointY="1.125" />
+        <EntityTypeShape EntityType="NewsSiteModel.sysdiagrams" Width="2.75" PointX="0.75" PointY="6.75" />
+        <AssociationConnector Association="NewsSiteModel.FK_GaadeTabel_KategoriTabel" />
+        <EntityTypeShape EntityType="NewsSiteModel.Logins" Width="1.5" PointX="7.375" PointY="3.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

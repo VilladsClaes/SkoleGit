@@ -91,3 +91,4 @@ C:\Users\vill0281\source\repos\SkoleGit\NewsSite\obj\Debug\NewsSite.csproj.CoreC
 C:\Users\vill0281\source\repos\SkoleGit\NewsSite\obj\Debug\NewsSite.csproj.CopyComplete
 C:\Users\vill0281\source\repos\SkoleGit\NewsSite\obj\Debug\NewsSite.dll
 C:\Users\vill0281\source\repos\SkoleGit\NewsSite\obj\Debug\NewsSite.pdb
+C:\Users\vill0281\source\repos\SkoleGit\NewsSite\obj\Debug\NewsSite.csprojAssemblyReference.cache

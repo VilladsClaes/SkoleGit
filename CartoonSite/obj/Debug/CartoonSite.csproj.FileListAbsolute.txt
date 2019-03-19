@@ -139,8 +139,8 @@ C:\Users\vill0281\source\repos\SkoleGit\CartoonSite\bin\System.Web.Webpages.Razo
 C:\Users\vill0281\source\repos\SkoleGit\CartoonSite\bin\System.Web.Helpers.xml
 C:\Users\vill0281\source\repos\SkoleGit\CartoonSite\bin\System.Web.Mvc.xml
 C:\Users\vill0281\source\repos\SkoleGit\CartoonSite\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\vill0281\source\repos\SkoleGit\CartoonSite\obj\Debug\CartoonSite.csprojAssemblyReference.cache
 C:\Users\vill0281\source\repos\SkoleGit\CartoonSite\obj\Debug\CartoonSite.csproj.CoreCompileInputs.cache
 C:\Users\vill0281\source\repos\SkoleGit\CartoonSite\obj\Debug\CartoonSite.csproj.CopyComplete
 C:\Users\vill0281\source\repos\SkoleGit\CartoonSite\obj\Debug\CartoonSite.dll
 C:\Users\vill0281\source\repos\SkoleGit\CartoonSite\obj\Debug\CartoonSite.pdb
+C:\Users\vill0281\source\repos\SkoleGit\CartoonSite\obj\Debug\CartoonSite.csprojAssemblyReference.cache

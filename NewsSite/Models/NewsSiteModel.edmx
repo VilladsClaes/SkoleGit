@@ -5,6 +5,22 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="NewsSiteModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="GaadeTabel">
+          <Key>
+            <PropertyRef Name="GaadeID" />
+          </Key>
+          <Property Name="GaadeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="GaadeSpoergsmaal" Type="nvarchar" MaxLength="550" />
+          <Property Name="GaadeSvar" Type="nvarchar" MaxLength="150" />
+          <Property Name="FK_Kategori" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="KategoriTabel">
+          <Key>
+            <PropertyRef Name="KategoriID" />
+          </Key>
+          <Property Name="KategoriID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="KategoriNavn" Type="nvarchar" MaxLength="120" />
+        </EntityType>
         <EntityType Name="Kontaktoplysninger">
           <Key>
             <PropertyRef Name="id" />
@@ -17,6 +33,15 @@
           <Property Name="telefon" Type="nvarchar" MaxLength="150" />
           <Property Name="email" Type="nvarchar" MaxLength="150" />
         </EntityType>
+        <EntityType Name="Logins">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="BrugerNavn" Type="nvarchar" MaxLength="50" />
+          <Property Name="Kodeord" Type="nvarchar" MaxLength="150" />
+          <Property Name="Salt" Type="nvarchar" MaxLength="150" />
+        </EntityType>
         <EntityType Name="NyhederTable">
           <Key>
             <PropertyRef Name="id" />
@@ -28,6 +53,16 @@
           <Property Name="NyhederImage" Type="nvarchar" MaxLength="50" />
           <Property Name="NyhederDato" Type="date" />
         </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
         <EntityType Name="VidsteDuTable">
           <Key>
             <PropertyRef Name="id" />
@@ -36,10 +71,30 @@
           <Property Name="VidsteDuOverskrift" Type="nvarchar" MaxLength="50" />
           <Property Name="VidsteDuTekst" Type="nvarchar" MaxLength="250" />
         </EntityType>
+        <Association Name="FK_GaadeTabel_KategoriTabel">
+          <End Role="KategoriTabel" Type="Self.KategoriTabel" Multiplicity="1" />
+          <End Role="GaadeTabel" Type="Self.GaadeTabel" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="KategoriTabel">
+              <PropertyRef Name="KategoriID" />
+            </Principal>
+            <Dependent Role="GaadeTabel">
+              <PropertyRef Name="FK_Kategori" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <EntityContainer Name="NewsSiteModelStoreContainer">
+          <EntitySet Name="GaadeTabel" EntityType="Self.GaadeTabel" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="KategoriTabel" EntityType="Self.KategoriTabel" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Kontaktoplysninger" EntityType="Self.Kontaktoplysninger" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Logins" EntityType="Self.Logins" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="NyhederTable" EntityType="Self.NyhederTable" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="VidsteDuTable" EntityType="Self.VidsteDuTable" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_GaadeTabel_KategoriTabel" Association="Self.FK_GaadeTabel_KategoriTabel">
+            <End Role="KategoriTabel" EntitySet="KategoriTabel" />
+            <End Role="GaadeTabel" EntitySet="GaadeTabel" />
+          </AssociationSet>
         </EntityContainer>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
@@ -68,6 +123,14 @@
           <EntitySet Name="NyhederTable" EntityType="Self.NyhederTable" />
           <EntitySet Name="VidsteDuTable" EntityType="Self.VidsteDuTable" />
           <EntitySet Name="Kontaktoplysninger" EntityType="NewsSiteModel.Kontaktoplysninger" />
+          <EntitySet Name="GaadeTabel" EntityType="NewsSiteModel.GaadeTabel" />
+          <EntitySet Name="KategoriTabel" EntityType="NewsSiteModel.KategoriTabel" />
+          <EntitySet Name="sysdiagrams" EntityType="NewsSiteModel.sysdiagrams" />
+          <AssociationSet Name="FK_GaadeTabel_KategoriTabel" Association="NewsSiteModel.FK_GaadeTabel_KategoriTabel">
+            <End Role="KategoriTabel" EntitySet="KategoriTabel" />
+            <End Role="GaadeTabel" EntitySet="GaadeTabel" />
+          </AssociationSet>
+          <EntitySet Name="Logins" EntityType="NewsSiteModel.Logins" />
         </EntityContainer>
         <EntityType Name="Kontaktoplysninger">
           <Key>
@@ -80,6 +143,55 @@
           <Property Name="City" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
           <Property Name="telefon" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
           <Property Name="email" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="GaadeTabel">
+          <Key>
+            <PropertyRef Name="GaadeID" />
+          </Key>
+          <Property Name="GaadeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="GaadeSpoergsmaal" Type="String" MaxLength="550" FixedLength="false" Unicode="true" />
+          <Property Name="GaadeSvar" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="FK_Kategori" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="KategoriTabel" Relationship="NewsSiteModel.FK_GaadeTabel_KategoriTabel" FromRole="GaadeTabel" ToRole="KategoriTabel" />
+        </EntityType>
+        <EntityType Name="KategoriTabel">
+          <Key>
+            <PropertyRef Name="KategoriID" />
+          </Key>
+          <Property Name="KategoriID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="KategoriNavn" Type="String" MaxLength="120" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="GaadeTabel" Relationship="NewsSiteModel.FK_GaadeTabel_KategoriTabel" FromRole="KategoriTabel" ToRole="GaadeTabel" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <Association Name="FK_GaadeTabel_KategoriTabel">
+          <End Type="NewsSiteModel.KategoriTabel" Role="KategoriTabel" Multiplicity="1" />
+          <End Type="NewsSiteModel.GaadeTabel" Role="GaadeTabel" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="KategoriTabel">
+              <PropertyRef Name="KategoriID" />
+            </Principal>
+            <Dependent Role="GaadeTabel">
+              <PropertyRef Name="FK_Kategori" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Logins">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BrugerNavn" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Kodeord" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="Salt" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -118,6 +230,45 @@
                 <ScalarProperty Name="Adresse" ColumnName="Adresse" />
                 <ScalarProperty Name="Firmanavn" ColumnName="Firmanavn" />
                 <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GaadeTabel">
+            <EntityTypeMapping TypeName="NewsSiteModel.GaadeTabel">
+              <MappingFragment StoreEntitySet="GaadeTabel">
+                <ScalarProperty Name="FK_Kategori" ColumnName="FK_Kategori" />
+                <ScalarProperty Name="GaadeSvar" ColumnName="GaadeSvar" />
+                <ScalarProperty Name="GaadeSpoergsmaal" ColumnName="GaadeSpoergsmaal" />
+                <ScalarProperty Name="GaadeID" ColumnName="GaadeID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="KategoriTabel">
+            <EntityTypeMapping TypeName="NewsSiteModel.KategoriTabel">
+              <MappingFragment StoreEntitySet="KategoriTabel">
+                <ScalarProperty Name="KategoriNavn" ColumnName="KategoriNavn" />
+                <ScalarProperty Name="KategoriID" ColumnName="KategoriID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="NewsSiteModel.sysdiagrams">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="definition" ColumnName="definition" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Logins">
+            <EntityTypeMapping TypeName="NewsSiteModel.Logins">
+              <MappingFragment StoreEntitySet="Logins">
+                <ScalarProperty Name="Salt" ColumnName="Salt" />
+                <ScalarProperty Name="Kodeord" ColumnName="Kodeord" />
+                <ScalarProperty Name="BrugerNavn" ColumnName="BrugerNavn" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

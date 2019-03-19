@@ -1,17 +1,53 @@
 ﻿@model NewsSite.Models.MyViewModel
+@{
+    ViewBag.Title = "NewsSite";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
 <div class="jumbotron" id="forsidebanner">
-    <h1>NewsSite</h1>
+    <h1>Forsiden @ViewBag.Title</h1>
     <p class="lead">Nyheder fra hele verden</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+    <p><a href="#nyhedsbrev" class="btn btn-primary btn-lg">Få tilsendt pr mail &raquo;</a></p>
 </div>
+
+@* Nyheder fra Database NyhederTable spyttet ud via model *@
 <div class="row">
     @foreach (var item in Model.AllNews)
     {
-        <div class="col-md-4">
-            <h2>@item.NyhederOverskrift</h2>
-            <p>@item.NyhederTekst</p>
-            <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301870">Learn more &raquo;</a></p>
+        <div class="col-sm-6 col-lg-4">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="~/Content/img/Nyheder/@item.NyhederImage" alt="Billede til nyhed nummer @item.id">
+                <div class="card-body">
+                    <h5 class="card-title">@item.NyhederOverskrift</h5>
+                    <p class="card-text">@item.NyhederTeaser</p>
+                    <a href="/Home/EnkeltNyhed/@item.id" class="btn btn-primary">Læs resten...</a>
+                </div>
+            </div>
         </div>
     }
-
 </div>
+
+<div class="row">
+    @* VidsteDuTable spyttet ud i en løkke  *@
+    @foreach (var fact in Model.AllVidsteDu)
+    {
+        <div class="col-sm-3 col-lg-2">
+
+            <p>
+                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#fact-@fact.id" aria-expanded="false" aria-controls="collapseExample">
+                    @fact.VidsteDuOverskrift
+                </button>
+            </p>
+            <div class="collapse" id="fact-@fact.id">
+                <div class="card card-body">
+                    @fact.VidsteDuTekst
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+
+
+
+
+
