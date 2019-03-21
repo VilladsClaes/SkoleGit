@@ -28,7 +28,10 @@ namespace NewsSite.Controllers
            
 
             MyViewModel viewModel = new MyViewModel();
+            //Til at spytte nyhederne ud
             viewModel.AllNews = db.NyhederTable.ToList();
+            //Til at sende filerne til
+            viewModel.MyFileInfo = IOTools.DirInfo("~/Uploads");
 
 
 
@@ -180,6 +183,23 @@ namespace NewsSite.Controllers
             TempData["besked"] = "Nyhed er Rettet";
 
             return RedirectToAction("Index", "Admin");
+        }
+
+
+        // Bruges sammen med IOTools og MyViewModel-Filelist
+      
+        [HttpPost]
+        public ActionResult Filupload(HttpPostedFileBase MyFile)
+        {
+
+            Models.MyViewModel MyViewModel = new Models.MyViewModel();
+
+            string[] Ex = { ".jpg", ".png", ".gif" };
+            MyViewModel.Msg = IOTools.FileUplader("~/Uploads", MyFile, Ex);
+
+            MyViewModel.MyFileInfo = IOTools.DirInfo("~/Uploads");
+
+            return View(MyViewModel);
         }
 
     }

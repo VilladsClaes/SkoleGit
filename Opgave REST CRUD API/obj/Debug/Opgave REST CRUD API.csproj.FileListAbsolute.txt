@@ -82,3 +82,4 @@ C:\Users\vill0281\source\repos\SkoleGit\Opgave REST CRUD API\bin\roslyn\System.N
 C:\Users\vill0281\source\repos\SkoleGit\Opgave REST CRUD API\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
 C:\Users\vill0281\source\repos\SkoleGit\Opgave REST CRUD API\bin\roslyn\System.Threading.Tasks.Extensions.dll
 C:\Users\vill0281\source\repos\SkoleGit\Opgave REST CRUD API\bin\Newtonsoft.Json.pdb
+C:\Users\vill0281\source\repos\SkoleGit\Opgave REST CRUD API\obj\Debug\Opgave REST CRUD API.csprojAssemblyReference.cache

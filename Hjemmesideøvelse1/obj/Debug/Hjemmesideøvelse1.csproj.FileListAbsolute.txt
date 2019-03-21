@@ -133,3 +133,4 @@ C:\Users\vill0281\source\repos\SkoleGit\Hjemmesideøvelse1\bin\System.Memory.xml
 C:\Users\vill0281\source\repos\SkoleGit\Hjemmesideøvelse1\bin\System.Numerics.Vectors.xml
 C:\Users\vill0281\source\repos\SkoleGit\Hjemmesideøvelse1\bin\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\vill0281\source\repos\SkoleGit\Hjemmesideøvelse1\bin\System.ValueTuple.xml
+C:\Users\vill0281\source\repos\SkoleGit\Hjemmesideøvelse1\obj\Debug\Hjemmesideøvelse1.csprojAssemblyReference.cache

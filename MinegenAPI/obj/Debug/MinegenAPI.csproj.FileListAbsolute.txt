@@ -91,3 +91,4 @@ C:\Users\vill0281\source\repos\SkoleGit\MinegenAPI\bin\roslyn\System.Net.Sockets
 C:\Users\vill0281\source\repos\SkoleGit\MinegenAPI\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
 C:\Users\vill0281\source\repos\SkoleGit\MinegenAPI\bin\roslyn\System.Threading.Tasks.Extensions.dll
 C:\Users\vill0281\source\repos\SkoleGit\MinegenAPI\bin\Newtonsoft.Json.pdb
+C:\Users\vill0281\source\repos\SkoleGit\MinegenAPI\obj\Debug\MinegenAPI.csprojAssemblyReference.cache

@@ -33,32 +33,32 @@
         </tr>
         @foreach (var item in Model.AllNews)
         {
-        <tr>
-            @* Første kolonne *@
-            <th scope="row" style="width: 20%">
-                @item.NyhederOverskrift
-            </th>
-            @* Anden kolonne *@
-            <td style="width: 40%">
-                @item.NyhederTekst
-            </td>
-            @* Tredje kolonne *@
-            <td style="width: 10%">
-                @item.NyhederDato
-            </td>
-            @* Fjerde kolonne *@
-            <td>
-                @item.NyhederTeaser
-            </td>
-            @* femte kolonne *@
-            <td>
-                <a href="/Admin/RetNyhed/@item.id"> <img src="~/Content/img/ret.png" alt="Alternate Text" /></a>
-            </td>
-            @* sjette kolonne *@
-            <td>
-                <a href="/Admin/SletNyhed/@item.id"> <img src="~/Content/img/slet.png" alt="Alternate Text" /></a>
-            </td>
-        </tr>
+            <tr>
+                @* Første kolonne *@
+                <th scope="row" style="width: 20%">
+                    @item.NyhederOverskrift
+                </th>
+                @* Anden kolonne *@
+                <td style="width: 40%">
+                    @item.NyhederTekst
+                </td>
+                @* Tredje kolonne *@
+                <td style="width: 10%">
+                    @item.NyhederDato
+                </td>
+                @* Fjerde kolonne *@
+                <td>
+                    @item.NyhederTeaser
+                </td>
+                @* femte kolonne *@
+                <td>
+                    <a href="/Admin/RetNyhed/@item.id"> <img src="~/Content/img/ret.png" alt="Knap der åbner ændringsformular" /></a>
+                </td>
+                @* sjette kolonne *@
+                <td>
+                    <a href="/Admin/SletNyhed/@item.id"> <img src="~/Content/img/slet.png" alt="Knap der åbner sletningsdialogboks" /></a>
+                </td>
+            </tr>
         }
 
 
@@ -66,4 +66,26 @@
 
 
 </table>
+
+<hr />
+
+
+@* Formular til at uploade filer til hjemmesiden *@
+<h2>Læg Filer op i mappen</h2>
+<form action="~/Admin/Filupload" method="post" enctype="multipart/form-data">
+
+    <input type="file" name="MyFile" />
+    <br />
+    <input type="submit" name="BtnSubmit" value="Upload filen" />
+    <p>@Model.Msg</p>
+</form>
+
+
+@foreach (var File in Model.MyFileInfo)
+{
+    <p>@File.Name</p>
+    <img src="~/Uploads/@File.Name" alt="" />
+}
+
+
 

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 
@@ -24,8 +25,9 @@ namespace NewsSite.Models
 
         public List<GaadeTabel> AllGaader { get; set; }
 
-
-
+        //Oplist filer som uploades via Admin-index
+        public List<FileInfo> MyFileInfo { get; set; }
+        public string Msg { get; set; }
 
     }
 }

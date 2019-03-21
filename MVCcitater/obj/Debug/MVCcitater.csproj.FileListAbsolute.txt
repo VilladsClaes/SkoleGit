@@ -143,3 +143,4 @@ C:\Users\vill0281\source\repos\SkoleGit\MVCcitater\bin\roslyn\vbc.exe.config
 C:\Users\vill0281\source\repos\SkoleGit\MVCcitater\bin\roslyn\vbc.rsp
 C:\Users\vill0281\source\repos\SkoleGit\MVCcitater\bin\roslyn\VBCSCompiler.exe
 C:\Users\vill0281\source\repos\SkoleGit\MVCcitater\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\vill0281\source\repos\SkoleGit\MVCcitater\obj\Debug\MVCcitater.csprojAssemblyReference.cache

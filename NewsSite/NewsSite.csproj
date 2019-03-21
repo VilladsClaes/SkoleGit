@@ -172,6 +172,8 @@
     <Compile Include="HashSalt.cs" />
     <Compile Include="Controllers\FilController.cs" />
     <Compile Include="IOTools.cs" />
+    <Compile Include="MailTool.cs" />
+    <Compile Include="Models\EksempelNyhed.cs" />
     <Compile Include="Models\GaadeTabel.cs">
       <DependentUpon>NewsSiteModel.tt</DependentUpon>
     </Compile>
@@ -208,7 +210,6 @@
     <Compile Include="Models\sysdiagrams.cs">
       <DependentUpon>NewsSiteModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\ViewModelFile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Models\VidsteDuTable.cs">
       <DependentUpon>NewsSiteModel.tt</DependentUpon>
@@ -455,7 +456,7 @@
     <Content Include="Views\Login\YourName.cshtml" />
     <Content Include="Views\Home\Newsletter.cshtml" />
     <Content Include="Views\Home\ContactForm.cshtml" />
-    <Content Include="Views\Fil\Index.cshtml" />
+    <Content Include="Views\Home\EksempelNyheder.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

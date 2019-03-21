@@ -120,17 +120,7 @@ namespace NewsSite.Controllers
             {
                 if (NewsletterSend.CheckNewsLetter)
                 {
-                    NewsletterSend.Message = "du er nu tilmeld - din gamle idiot";
-
-                    NewsletterSend.MailAdressFrom = NewsletterSend.MailAdressFrom;
-
-                    NewsletterSend.MailAdressTo = NewsletterSend.MailAdressFrom;
-
-                    NewsletterSend.MailSubject = "Nyhedsbrev";
-
-                    NewsletterSend.MailBody = "Du er nu tilmeldt nyhedsmailen";
-
-                    SendMail(NewsletterSend);
+                    NewsletterSend.Message = MailTool.SendMail(NewsletterSend.MailAdressFrom, NewsletterSend.MailAdressFrom, "Nyhedsbrev", "Du er nu tilmeldt nyhedsmailen", "smtp.gmail.com", 587, "ditmitkundeservice@gmail.com", "Ballevej27");
                 }
                 else
                 {
@@ -159,16 +149,14 @@ namespace NewsSite.Controllers
         public ActionResult ContactForm(NewsSite.Models.MailViewModel ContactSend)
         {
             if (ModelState.IsValid)
-            {
-                ContactSend.MailAdressFrom = ContactSend.MailAdressFrom;
-                ContactSend.MailAdressTo = "ditmitkundeservice@gmail.com";
-                ContactSend.MailSubject = "fra mailform " + ContactSend.MailSubject;
-                ContactSend.MailBody = @"Hej<b>" + ContactSend.MailName + "<br/> "
+            {                                
+                string MailBody = @"Hej<b>" + ContactSend.MailName + "<br/> "
                     + "</b>" +
                     "emne <b>" + ContactSend.MailSubject + "</b> <br/>" +
                     "Besked" + ContactSend.MailBody.Replace(Environment.NewLine, "<br/>");
 
-                SendMail(ContactSend);
+                //Returnerer "sendt" eller "ikke sendt" da der i MailTool er try-catch
+               ContactSend.Message = MailTool.SendMail(ContactSend.MailAdressFrom, "ditmitkundeservice@gmail.com", "fra mailform " + ContactSend.MailSubject, MailBody, "smtp.gmail.com", 587, "ditmitkundeservice@gmail.com", "Ballevej27"  );
 
                 return View(ContactSend);
             }
@@ -181,52 +169,105 @@ namespace NewsSite.Controllers
 
             return View(ContactSend);
         }
-        public void SendMail(NewsSite.Models.MailViewModel myMail)
+
+
+
+
+
+        //EKSEMPEL PÅ HARDCODEDE NYHEDER
+        //NYHEDER på FORSIDE
+        public ActionResult EksempelNyheder()
         {
-            //En instans af .net classen mailmessage (kend den på den grønne farve (kaldes et andet sted fra))
-            // starter på en ny mail (laver en ny instans af mailmessage).. 
-            //HUSK using (NameSpace eller bibliotek) Husk System.net.mail i toppen af controleren (intelesans tjek)
-            MailMessage mail = new MailMessage();
+            //Her kommer mine nyheder. 
+            //Instans af Nyhed i en Nyhedsliste
+            List<EksempelNyhed> Nyhedsliste = new List<EksempelNyhed>()
+            {
 
-            // From er = mailens afsender. Det er ikke mailens afsender når vi bruger gmails smtp, CHeck ved webhost.
-            mail.From = new MailAddress(myMail.MailAdressFrom);
 
-            //Dette er den mail som man besvare til (tilbage til kd efter kontakt med hjemmeside staf(input MailFrom i Contact form))
-            mail.ReplyToList.Add(myMail.MailAdressFrom);
+            new EksempelNyhed()
+            {
 
-            // Emnefelt på mail. VIGTIG, men ikke et ultimativt krav.
-            mail.Subject = myMail.MailSubject;
+                BilledeTilNyhed = "nyhed1.jpg",
+                AlternativTekstTilBillede = "Billede af nyhed1",
+                OverskriftTilNyhed = "Overskrift1",
+                UdgivelsesdatoTilNyhed = Convert.ToDateTime("21-10-1986"),
+                IndholdTilNyhed = "Nyhedsindholdet til denne nyhed"
 
-            //Er den besked der skrives i textarea. (Da vi har valgt at sende HTML kan vi erstate NewLine(Enviroment) med <br/>)
-            mail.Body = myMail.MailBody;
-            mail.IsBodyHtml = true;
+            },
 
-            //er den mail add der modtager mail fra form
-            //statisk i Contact form, dynamisk i newlettter = mail from.
-            mail.To.Add(myMail.MailAdressTo);
+             new EksempelNyhed()
+            {
 
-            //"smtp" er en instans af smtpClient,  Smtp = simpel mail transport protocol
-            SmtpClient smtp = new SmtpClient();
+                BilledeTilNyhed = "nyhed2.jpg",
+                AlternativTekstTilBillede = "Billede af nyhed1",
+                OverskriftTilNyhed = "Overskrift1",
+                UdgivelsesdatoTilNyhed = Convert.ToDateTime("21-10-1986"),
+                IndholdTilNyhed = "Nyhedsindholdet til denne nyhed"
 
-            //host er udbyderen udgående mailserver.
-            //her er der gmails smtp og port.
-            //tjek med webhost........!
-            smtp.Host = "smtp.gmail.com";
-            smtp.Port = 587;
+            },
 
-            //ssl er nøjvendigt  for gmail - tjek med udbyder..
-            smtp.EnableSsl = true;
+              new EksempelNyhed()
+            {
 
-            //Her slår vi standart longi-oplysningerne fra.. 
-            smtp.UseDefaultCredentials = false;
+                BilledeTilNyhed = "nyhed3.jpg",
+                AlternativTekstTilBillede = "Billede af nyhed1",
+                OverskriftTilNyhed = "Overskrift1",
+                UdgivelsesdatoTilNyhed = Convert.ToDateTime("21-10-1986"),
+                IndholdTilNyhed = "Nyhedsindholdet til denne nyhed"
 
-            //her skriver vi vores login oplysninger.
-            smtp.Credentials = new System.Net.NetworkCredential("ditmitkundeservice@gmail.com", "Ballevej27");
+            },
 
-            //Her pakker vi hele instansen(alt data tastet ovenfor) "mail" ned som parameter til metoden send.
-            smtp.Send(mail);
+               new EksempelNyhed()
+            {
 
+                BilledeTilNyhed = "nyhed4.jpg",
+                AlternativTekstTilBillede = "Billede af nyhed1",
+                OverskriftTilNyhed = "Overskrift1",
+                UdgivelsesdatoTilNyhed = Convert.ToDateTime("21-10-1986"),
+                IndholdTilNyhed = "Nyhedsindholdet til denne nyhed"
+
+            },
+
+                new EksempelNyhed()
+            {
+
+                BilledeTilNyhed = "nyhed5.jpg",
+                AlternativTekstTilBillede = "Billede af nyhed1",
+                OverskriftTilNyhed = "Overskrift1",
+                UdgivelsesdatoTilNyhed = Convert.ToDateTime("21-10-1986"),
+                IndholdTilNyhed = "Nyhedsindholdet til denne nyhed"
+
+            },
+
+                 new EksempelNyhed()
+            {
+
+                BilledeTilNyhed = "nyhed6.jpg",
+                AlternativTekstTilBillede = "Billede af nyhed1",
+                OverskriftTilNyhed = "Overskrift1",
+                UdgivelsesdatoTilNyhed = Convert.ToDateTime("21-10-1986"),
+                IndholdTilNyhed = "Nyhedsindholdet til denne nyhed"
+
+            },
+
+            new EksempelNyhed()
+            {
+
+                BilledeTilNyhed = "nyhed7.jpg",
+                AlternativTekstTilBillede = "Billede af nyhed2",
+                OverskriftTilNyhed = "Overskrift2",
+                UdgivelsesdatoTilNyhed = Convert.ToDateTime("02-10-1986"),
+                IndholdTilNyhed = "Nyhedsindholdet til denne nyhed"
+
+            }
+        };
+
+            //Husk at returnere et view.
+            //Medtag Nyhed-instansen til viewet
+            return View(Nyhedsliste);
         }
+
+
 
     }
 }

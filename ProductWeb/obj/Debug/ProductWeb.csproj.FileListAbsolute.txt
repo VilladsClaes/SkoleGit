@@ -149,3 +149,4 @@ C:\Users\vill0281\source\repos\SkoleGit\ProductWeb\obj\Debug\ProductWeb.csproj.C
 C:\Users\vill0281\source\repos\SkoleGit\ProductWeb\obj\Debug\ProductWeb.csproj.CopyComplete
 C:\Users\vill0281\source\repos\SkoleGit\ProductWeb\obj\Debug\ProductWeb.dll
 C:\Users\vill0281\source\repos\SkoleGit\ProductWeb\obj\Debug\ProductWeb.pdb
+C:\Users\vill0281\source\repos\SkoleGit\ProductWeb\obj\Debug\ProductWeb.csprojAssemblyReference.cache

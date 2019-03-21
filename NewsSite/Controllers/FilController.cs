@@ -8,10 +8,10 @@ namespace NewsSite.Controllers
 {
     public class FilController : Controller
     {
-        // GET: Home
+        // Bruges sammen med IOTools og MyViewModel-Filelist
         public ActionResult Index()
         {
-            Models.ViewModelFile Files = new Models.ViewModelFile();
+            Models.MyViewModel Files = new Models.MyViewModel();
             Files.MyFileInfo = IOTools.DirInfo("~/Uploads");
             return View(Files);
         }
@@ -20,7 +20,7 @@ namespace NewsSite.Controllers
         public ActionResult Index(HttpPostedFileBase MyFile)
         {
 
-            Models.ViewModelFile MyViewModel = new Models.ViewModelFile();
+            Models.MyViewModel MyViewModel = new Models.MyViewModel();
 
             string[] Ex = { ".jpg", ".png", ".gif" };
             MyViewModel.Msg = IOTools.FileUplader("~/Uploads", MyFile, Ex);

@@ -149,3 +149,4 @@ C:\Users\vill0281\source\repos\SkoleGit\JavaScript_JQuery\obj\Debug\JavaScriptJQ
 C:\Users\vill0281\source\repos\SkoleGit\JavaScript_JQuery\obj\Debug\JavaScriptJQuery.csproj.CopyComplete
 C:\Users\vill0281\source\repos\SkoleGit\JavaScript_JQuery\obj\Debug\JavaS.dll
 C:\Users\vill0281\source\repos\SkoleGit\JavaScript_JQuery\obj\Debug\JavaS.pdb
+C:\Users\vill0281\source\repos\SkoleGit\JavaScript_JQuery\obj\Debug\JavaScriptJQuery.csprojAssemblyReference.cache
