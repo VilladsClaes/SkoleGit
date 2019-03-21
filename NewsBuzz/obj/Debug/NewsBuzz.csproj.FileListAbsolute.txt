@@ -187,8 +187,8 @@ C:\Users\vill0281\source\repos\SkoleGit\NewsBuzz\bin\System.Web.WebPages.Deploym
 C:\Users\vill0281\source\repos\SkoleGit\NewsBuzz\bin\System.Web.WebPages.Razor.xml
 C:\Users\vill0281\source\repos\SkoleGit\NewsBuzz\bin\System.Web.Optimization.xml
 C:\Users\vill0281\source\repos\SkoleGit\NewsBuzz\bin\Antlr3.Runtime.pdb
-C:\Users\vill0281\source\repos\SkoleGit\NewsBuzz\obj\Debug\NewsBuzz.csprojAssemblyReference.cache
 C:\Users\vill0281\source\repos\SkoleGit\NewsBuzz\obj\Debug\NewsBuzz.csproj.CoreCompileInputs.cache
 C:\Users\vill0281\source\repos\SkoleGit\NewsBuzz\obj\Debug\NewsBuzz.csproj.CopyComplete
 C:\Users\vill0281\source\repos\SkoleGit\NewsBuzz\obj\Debug\NewsBuzz.dll
 C:\Users\vill0281\source\repos\SkoleGit\NewsBuzz\obj\Debug\NewsBuzz.pdb
+C:\Users\vill0281\source\repos\SkoleGit\NewsBuzz\obj\Debug\NewsBuzz.csprojAssemblyReference.cache

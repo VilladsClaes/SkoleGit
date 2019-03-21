@@ -6,38 +6,40 @@
 <div class="container bg-light p-5">
     <h2 >Opret Nyhed</h2>
     <form action="/Admin/OpretNyhed" method="post" enctype="multipart/form-data">
-        <div class="text-danger">@Html.ValidationSummary()</div>
+        <div class="text-danger">@Html.ValidationSummary() @ViewBag.Besked</div>
 
         <div class="form-row">
             <div class="form-group col-md-6">
+            @* Indsæt billede *@
                 <label for="NyhederImage">Vælg et billede</label>
                 <input type="file" name="NyhederImage" id="NyhederImage" class="form-control" />
                 <span class="text-danger">@Html.ValidationMessageFor(m => m.NyhederImage)</span>
             </div>
+            @* Indsæt teaser *@
             <div class="form-group col-md-6">
                 <label for="NyhederTeaser">Teaser</label>
-                <input type="text" name="NyhederTeaser" id="NyhederTeaser" value="@Model.NyhederTeaser" class="form-control" />
+                @* Dette felt har attributten "required" som validerer om feltet er fyldt eller tomt *@
+                <input type="text" name="NyhederTeaser" id="NyhederTeaser" pattern=".{50,500}" required title="Skriv mere end 50 tegn og under 500 tegn" value="@Model.NyhederTeaser" class="form-control" /> 
                 <span class="text-danger">@Html.ValidationMessageFor(m => m.NyhederTeaser)</span>
             </div>
         </div>
-
         <div class="form-row">
-
+            @* Indsæt overskrift *@
             <div class="form-group col-md-6">
                 <label for="NyhederOverskrift">Overskrift</label>
-                <input type="text" name="NyhederOverskrift" id="NyhederOverskrift" value="@Model.NyhederOverskrift" class="form-control" />
+                <input type="text" name="NyhederOverskrift" id="NyhederOverskrift" pattern=".{5,100}" required title="Mellem 5 og 100 tegn"   value="@Model.NyhederOverskrift" class="form-control" />
                 <span class="text-danger">@Html.ValidationMessageFor(m => m.NyhederOverskrift)</span>
             </div>
-
+            @* Indsæt dato *@
             <div class="form-group col-md-6">
                 <label for="NyhederDato">Dato for nyhed</label>
-                <input type="datetime" name="NyhederDato" id="NyhederDato" value="@Model.NyhederDato" class="form-control" />
+                <input type="datetime" name="NyhederDato" id="NyhederDato"  value="@Model.NyhederDato" class="form-control" />
             </div>
         </div>
-
+        @* Indsæt nyhedsteskt *@
         <div class="form-row">
             <label for="NyhederTekst">Nyhedstekst</label>
-            <textarea class="form-control" id="NyhederTekst" name="NyhederTekst" rows="3">@Model.NyhederTekst</textarea>
+            <textarea class="form-control" id="NyhederTekst"  name="NyhederTekst" required rows="3">@Model.NyhederTekst</textarea>
             <span class="text-danger">@Html.ValidationMessageFor(m => m.NyhederTekst)</span>
         </div>
 

@@ -21,43 +21,53 @@
                 <span class="text-danger">@Html.ValidationMessageFor(m => m.NyhederOverskrift)</span>
             </div>
 
-            @*tekst*@
+          
             <div class="form-row">
-                <label for="NyhederTekst">Tekst: </label>
-                <textarea class="form-control" id="NyhederTekst" name="NyhederTekst" va rows="3">@Model.NyhederTekst</textarea>
-                <span class="text-danger">@Html.ValidationMessageFor(m => m.NyhederTekst)</span>
+                @* Indsæt teaser *@
+                <div class="form-group col-md-4">
+                    <label for="NyhederTeaser">Teaser</label>
+                    @* Dette felt har attributten "required" som validerer om feltet er fyldt eller tomt *@
+                    <input type="text" name="NyhederTeaser" id="NyhederTeaser" pattern=".{50,500}" required title="Skriv mere end 50 tegn og under 500 tegn" value="@Model.NyhederTeaser" class="form-control" />
+                    <span class="text-danger">@Html.ValidationMessageFor(m => m.NyhederTeaser)</span>
+                </div>
+                @*tekst*@
+                <div class="form-group col-md-8">
+                    <label for="NyhederTekst">Tekst: </label>
+                    <textarea class="form-control" id="NyhederTekst" name="NyhederTekst" va rows="3">@Model.NyhederTekst</textarea>
+                    <span class="text-danger">@Html.ValidationMessageFor(m => m.NyhederTekst)</span>
+                </div>
             </div>
-        
+
             @*billede filtet*@
-        <div class="form-row">
-            <div class="form-group col-md-6">
+            <div class="form-row">
+                <div class="form-group col-md-6">
 
-                @*nuværende billede*@
-                <img src="~/Content/img/Nyheder/@Model.NyhederImage" width="100" />
+                    @*nuværende billede*@
+                    <img src="~/Content/img/Nyheder/@Model.NyhederImage" width="100" />
 
 
-                @*hvis brugeren vil beholde det eksistende billede*@
-                <input type="hidden" name="NyhederImage" id="NyhederImage" value="@Model.NyhederImage" />
+                    @*hvis brugeren vil beholde det eksistende billede*@
+                    <input type="hidden" name="NyhederImage" id="NyhederImage" value="@Model.NyhederImage" />
 
-                @*hvis brugeren vil have et andet billede*@
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label for="NytNyhederImage">Vælg en Photo</label>
-                        <input type="file" name="NytNyhederImage" id="NytNyhederImage" class="form-control" />
-                        <span class="text-danger">@Html.ValidationMessageFor(m => m.NyhederImage)</span>
+                    @*hvis brugeren vil have et andet billede*@
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="NytNyhederImage">Vælg en Photo</label>
+                            <input type="file" name="NytNyhederImage" id="NytNyhederImage" class="form-control" />
+                            <span class="text-danger">@Html.ValidationMessageFor(m => m.NyhederImage)</span>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-                    @*submit button*@
-                    <div class="form-row ">
-                        <div class="form-group col-md-6">
-                            <button type="submit" class="btn btn-primary">Ret Nyheden</button>
-                            <a href="/Admin/" class="btn btn-success">fortryd uden Retelse</a>
-                        </div>
-                    </div>
-                
-            
-        
-    </form>
+            @*submit button*@
+            <div class="form-row ">
+                <div class="form-group col-md-6">
+                    <button type="submit" class="btn btn-primary">Ret Nyheden</button>
+                    <a href="/Admin/" class="btn btn-success">fortryd uden Retelse</a>
+                </div>
+            </div>
+
+
+
+</form>
 </div>

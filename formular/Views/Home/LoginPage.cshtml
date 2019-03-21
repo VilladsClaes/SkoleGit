@@ -1,0 +1,19 @@
+﻿@model formular.Models.LoginViewModell
+
+@{
+    ViewBag.Title = "LoginPage";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>LoginPage</h2>
+
+<form action="/Home/LoginPage" method="post">
+    <label for="Username">Brugernavn</label>
+    <input type="text" name="Username" id="Username" value="" />
+
+    <label for="Password">Adgangskode</label>
+    <input type="password" name="Password" id="Password" value="" />
+
+    <input type="submit" name="btnLogin" value="Login" />
+</form>
+@Model.Message

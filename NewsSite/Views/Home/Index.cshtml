@@ -5,7 +5,9 @@
 }
 <div class="jumbotron" id="forsidebanner">
     <h1>Forsiden @ViewBag.Title</h1>
-    <p class="lead">Nyheder fra hele verden</p>
+    @* Viser et partial view med ChildActionOnly *@
+    
+    <p class="lead">Dagens Sjove Joke: @Html.Action("DagensGaade", "Home")</p>
     <p><a href="#nyhedsbrev" class="btn btn-primary btn-lg">Få tilsendt pr mail &raquo;</a></p>
 </div>
 
@@ -26,7 +28,11 @@
     }
 </div>
 
+@* Kontaktformular *@
 <div class="row">
+    @Html.Action("ContactForm", "Home")
+</div>
+<div class="row" id="gaader">
     @* VidsteDuTable spyttet ud i en løkke  *@
     @foreach (var fact in Model.AllVidsteDu)
     {
@@ -40,6 +46,22 @@
             <div class="collapse" id="fact-@fact.id">
                 <div class="card card-body">
                     @fact.VidsteDuTekst
+                </div>
+            </div>
+        </div>
+    }
+    @foreach (var gaade in Model.AllGaader)
+    {
+        <div class="col-sm-3 col-lg-2">
+
+            <p>
+                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#gaade-@gaade.GaadeID" aria-expanded="false" aria-controls="collapseExample">
+                    @gaade.GaadeSpoergsmaal
+                </button>
+            </p>
+            <div class="collapse" id="gaade-@gaade.GaadeID">
+                <div class="card card-body">
+                    @gaade.GaadeSvar
                 </div>
             </div>
         </div>

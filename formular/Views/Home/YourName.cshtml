@@ -1,0 +1,33 @@
+﻿@model formular.Models.NameViewModel
+    
+@{
+    ViewBag.Title = "YourName";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+
+    DateTime now = DateTime.Now;
+    DateTime nextBirth = Convert.ToDateTime(Model.Birth.ToString("dd-MM") + "-" + (now.AddYears(1).Year));
+
+}
+
+
+<h2>YourName</h2>
+
+<form action="/Home/YourName" method="post">
+    <label for="FirstName">Dit fornavn:</label>
+    <input type="text" name="FirstName" id="FirstName" />
+
+
+    <label for="Birth">Din fødselsdag</label>
+    <input type="date"  name="Birth" id="Birth" value="@Model.Birth.ToString("yyyy-MM-dd")" min="@Model.Birth.AddYears(-100).ToString("yyyy-MM-dd")" max="@Model.Birth.AddDays(1).ToString("yyyy-MM-dd")" /> 
+    @*<input type="date"  name="Birth" id="Birth" value="@Model.Birth.ToString("yyyy-MM-dd")" min="@Model.Birth.ToString("yyyy-MM-dd")" max="@Model.Birth.AddDays(DaysAdd).ToString("yyyy-MM-dd")" />*@
+
+    <input type="submit" name="btnName" id="btnName" value="Dit navn" />
+</form>
+<ul class="feedback">
+    <li>Du heder <span> @Model.FirstName</span></li>
+    <li>Du er født på en <span> @Model.Birth.DayOfWeek</span></li>
+    <li>Næste år har du fødselsdag på en <span>@nextBirth.DayOfWeek</span> </li>
+    <li><span>@Model.Message</span></li>
+</ul>
+

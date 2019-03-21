@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Net;
 using System.Web;
@@ -121,8 +122,10 @@ namespace NewsSite.Controllers
 
                 editbruger.Logins.Salt = NytSalt; //Lægger salt'en ind i databasen for brugeren.
                 editbruger.Logins.Kodeord = HashSalt.HashPassword(editbruger.Logins.Kodeord, NytSalt); //tager metode fra cs-filen med to argumenter
+                editbruger.Logins.Id = (int)Session["BrugerID"];               
+                db.Entry(editbruger.Logins).State = EntityState.Modified; // kan også skrives db.Logins.AddOrUpdate(editbruger.Logins);
 
-                db.Entry(editbruger.Logins).State = EntityState.Modified;
+
                 db.SaveChanges();
                 return RedirectToAction("Index", "Admin");
             }
@@ -163,5 +166,38 @@ namespace NewsSite.Controllers
             base.Dispose(disposing);
         }
 
+        [ChildActionOnly]
+        //navne form
+        public ActionResult YourName()
+        {
+            //hvorfor er den her oprettet som var? og ikke som alle de andre instanster.
+            var ViewModel = new NewsSite.Models.NameViewModel();
+
+            ViewModel.Message = "skriv dit fornavn";
+            //ViewModel.Message += "<h1>bla bla bla</h1>";
+            ViewModel.Birth = DateTime.Now;
+            return PartialView(ViewModel);
+        }
+
+
+        //Et post af brugerens navn
+        [HttpPost]
+        public ActionResult YourName(NewsSite.Models.NameViewModel viewModel)
+        {
+            viewModel.Message = viewModel.FirstName + " godt klaret ";
+            viewModel.Message += viewModel.Birth.ToLongDateString();
+
+            return PartialView(viewModel);
+        }
+
+
+        //En logud-metode
+        public ActionResult Logud()
+        {
+            //Fjern alle sessioner
+            Session.RemoveAll();
+            //Går tilbage til det view vi kalder Index (over dette actionresult) i den controller der hedder Admin (den her controller)
+            return RedirectToAction("Index", "Home");
+        }
     }
 }

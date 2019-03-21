@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+@{ 
+    if (Session["Login"] == null)
+    {
+        Response.Redirect("/Home/LoginPage");
+    }
+
+}
+<html>
+<head>
+    <link href="~/Content/css/Main.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul class="nav">
+                <li class="nav-li"><a href="/Home/Index">Back to Home</a></li>
+                <li class="nav-li"><a href="/Admin/AddProduct">Add product</a></li>
+
+            </ul>
+        </nav>
+        <form action="/Admin/Logud" method="post">
+            <input type="submit" name="btnlogud" value="Logud" />
+        </form>
+    </header>
+   
+    <div>
+        <h2>Velkommen til admin-site</h2>
+        <h3>Du er logget ind som: @Session["Login"]</h3>
+        <h4>Dit password er @Session["Password"]</h4>
+    </div>
+    <a href="~/Views/Shared/_LayoutAdmin.cshtml">~/Views/Shared/_LayoutAdmin.cshtml</a>
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>

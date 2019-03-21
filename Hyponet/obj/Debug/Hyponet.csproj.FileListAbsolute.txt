@@ -87,4 +87,3 @@ C:\Users\vill0281\source\repos\SkoleGit\Hyponet\obj\Debug\Hyponet.csproj.CoreCom
 C:\Users\vill0281\source\repos\SkoleGit\Hyponet\obj\Debug\Hyponet.csproj.CopyComplete
 C:\Users\vill0281\source\repos\SkoleGit\Hyponet\obj\Debug\Hyponet.dll
 C:\Users\vill0281\source\repos\SkoleGit\Hyponet\obj\Debug\Hyponet.pdb
-C:\Users\vill0281\source\repos\SkoleGit\Hyponet\obj\Debug\Hyponet.csprojAssemblyReference.cache

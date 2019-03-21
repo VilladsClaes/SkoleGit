@@ -76,7 +76,7 @@ namespace NewsSite.Controllers
             TempData["Besked"] = "Nyhed er oprettet";
 
 
-            return RedirectToAction("Index","Admin");
+            return RedirectToAction("Index", "Admin");
         }
 
         
@@ -93,8 +93,8 @@ namespace NewsSite.Controllers
 
             //Hente noget som måske skal slettes, og send den med til viewet.
             NyhederTable SletNyheden = db.NyhederTable.Find(id);
-            if(SletNyheden == null) //hvis der er ikke Cartoon som matcher Id
-                return RedirectToAction("Index");
+            if(SletNyheden == null) //hvis der er ikke er noget som matcher Id
+                return RedirectToAction("Index", "Admin");
 
 
             return View(SletNyheden);
@@ -102,7 +102,7 @@ namespace NewsSite.Controllers
 
         //SLET NYHED
         [HttpPost]
-        public ActionResult SletNyheden(NyhederTable SletNyheden)
+        public ActionResult SletNyhed(NyhederTable SletNyheden)
         {
             //Hente noget som måske skal slettes. og sende den til viewet...
             //det har kun en id . så resten skal slåes op med "find"
@@ -110,7 +110,7 @@ namespace NewsSite.Controllers
             
 
             if (SletNyheden == null)// hvis der er ikke noget som matcher id 
-                return RedirectToAction("Index");
+                return RedirectToAction("Index", "Admin");
 
             // slet fysisk fil/img
             string ImgSti = System.IO.Path.Combine(Server.MapPath("~/Content/Img/Nyheder/"),SletNyheden.NyhederImage);

@@ -8,11 +8,11 @@
 <h4>Er du sikker at du vil slette Nyheden</h4>
 <div class="card my-4">
     <div class="card-body">
-        <h4>@Model.NyhederOverskrift</h4>
+        <a class="card-header" href="~/Home/EnkeltNyhed/@Model.id">@Model.NyhederOverskrift</a>
     </div>
 </div>
 <form action="/Admin/SletNyhed" method="post">
-    <input type="hidden" name="id" id="id"  value="@Model.id" />
+    <input type="hidden" name="id" id="id" value="@Model.id"/>
     <button type="submit" class="btn btn-danger">Slet</button>
     <a href="/Admin/" class="btn btn-success">fortryd uden sletning</a>
 </form>

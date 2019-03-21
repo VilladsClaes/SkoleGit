@@ -1,0 +1,21 @@
+﻿@model NewsSite.Models.MailViewModel
+
+<h2>Contact Form</h2>
+
+<form action="/Home/ContactForm" method="post">
+    <label for="MailName">Dit fornavn:</label>
+    <input type="text" name="MailName" id="MailName" />
+
+    <label for="MailSubject">Emne:</label>
+    <input type="text" name="MailSubject" id="MailSubject" />
+
+    <label for="MailAdressFrom">Din email</label>
+    <input type="text" name="MailAdressFrom" id="MailAdressFrom" value="" />
+
+    <label for="MailBody">Skriv her</label>
+    <textarea name="MailBody" id="MailBody" placeholder="Skriv din henvendelse her"></textarea>
+
+    <input type="submit" name="btnSendNews" value="Send besked" />
+    @* Her vises evt fejlbesked *@
+    @Model.Message 
+</form>

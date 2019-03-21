@@ -20,6 +20,12 @@ namespace NewsSite.Models
 
         public Kontaktoplysninger Kontaktoplysning { get; set; }
 
+        public GaadeTabel Gaade { get; set; }
+
+        public List<GaadeTabel> AllGaader { get; set; }
+
+
+
 
     }
 }
