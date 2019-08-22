@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<filmoversigt>
+  <film>
+    <titel>Villads vender tilbage</titel>
+    <aarstal>2018</aarstal>
+    <instruktoer>Villads Claes</instruktoer>
+    <land>Danmarks</land>
+    <censur>A</censur>
+    <Ranking>5</Ranking>
+  </film>
+  <film>
+    <titel>Villads vender tilbage</titel>
+    <aarstal>2018</aarstal>
+    <instruktoer>Villads Claes</instruktoer>
+    <land>Danmark</land>
+    <censur>A</censur>
+    <Ranking>5</Ranking>
+  </film>
+  <film>
+    <titel>Villads 2</titel>
+    <aarstal>2013</aarstal>
+    <instruktoer>Villads Claes</instruktoer>
+    <land>USA</land>
+    <censur>7</censur>
+    <Ranking>3</Ranking>
+  </film>
+  <film>
+    <titel>Den store Villads</titel>
+    <aarstal>2000</aarstal>
+    <instruktoer>Villads Claes</instruktoer>
+    <land>Rusland</land>
+    <censur>11</censur>
+    <Ranking>8</Ranking>
+  </film>
+  <film>
+    <titel>Villads: unlimited</titel>
+    <aarstal>2011</aarstal>
+    <instruktoer>Villads Claes</instruktoer>
+    <land>Sverige</land>
+    <censur>A</censur>
+    <Ranking>9</Ranking>
+  </film>
+</filmoversigt>

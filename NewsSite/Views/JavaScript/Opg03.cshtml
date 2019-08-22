@@ -1,0 +1,48 @@
+﻿@{
+    ViewBag.Title = "Opgave 3";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Skift baggrundsfarve på wrapper</h1>
+
+<div id="opgaven">
+
+    <h4>Opgaven</h4>
+
+    <ol>
+        <li>Når der klikkes på knappen:</li>
+        <li>Skal id=wrapper (wrapper er på _Layout-filen) skifte baggrundsfarve til svag grøn</li>
+        <li>Skal knappen selv have blå baggrundsfarve og hvid tekst</li>
+        <li>Skal knappen selv disable's (ikke-klikbar)</li>
+    </ol>
+
+    <p id="help">
+        Få hjælp fx her:
+        <a href="http://www.w3schools.com/jsref/prop_style_backgroundcolor.asp" target="_blank">Noget om style</a> og
+        <a href="http://www.w3schools.com/jsref/prop_pushbutton_disabled.asp" target="_blank">om at disable en knap</a>
+
+    </p>
+
+</div>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce quis lectus quis sem lacinia nonummy.</p>
+
+<div>
+    <h2>Underoverskrift af en slags</h2>
+    <p>Proin mollis lorem non dolor. In hac habitasse platea dictumst. Nulla ultrices odio. Donec augue. Phasellus dui. </p>
+</div>
+
+<input type="button" value="Klik her" id="knap" onclick="myFunction()" />
+
+<script>
+
+    function myFunction() {
+        document.getElementById("wrapper").style.backgroundColor = "#abc6b4";
+        document.getElementById("knap").style.backgroundColor = "blue";
+        document.getElementById("knap").style.color = "white";
+
+        document.getElementById("knap").disabled = true;
+    }
+
+</script>
+

@@ -1,0 +1,103 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Opgave 12</title>
+    <link type="text/css" rel="Stylesheet" href="~/Content/common.css" />
+    <style>
+        input:focus {
+            background-color: #f2e593;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="wrapper">
+		<h1>Validering #1 - NAVN - REQUESTED FIELD</h1>
+
+        <div id="opgaven">
+
+            <p>Forsøg at løse følgende:</p>
+
+            <ol>
+                <li>Når man har <b>fokus</b> på (står i) inputfeltet:</li>
+                <li>Skal baggrundsfarven i denne skifte til lys gul (evt. med en class)</li>
+            </ol>
+
+            <ol start="3">
+                <li>Når man <b>klikker</b> på send-knappen:</li>
+            </ol>
+
+            <ol start="4">
+                <li>HVIS inputfeltet er TOMT:</li>
+                <li>Skal baggrundsfarven i denne være lys rød (styr det evt. med en class)</li>
+                <li>Skal der i &lt;span&gt; stå en besked fx "Du skal skrive dit fornavn"</li>
+            </ol>
+
+            <ol>
+                <li>HVIS inputfeltet er UDFYLDT:</li>
+                <li>Skal inputfeltet være 'default' (ingen rød farve)</li>
+                <li>Og &lt;span&gt; skal være uden besked - eller med et OK el.lign.</li>
+            </ol>
+
+            <p id="help">
+                Få hjælp fx her: <br />
+                Sammenlign/mål fx om den indtastede tekst er tom "": <a href="http://www.w3schools.com/js/js_comparisons.asp" target="_blank">Comparison Operators</a><br />
+                Mål på længden af teksten: <a href="http://www.w3schools.com/jsref/jsref_length_string.asp" target="_blank">String length Property</a>
+            </p>
+
+        </div>
+
+        <h2>Udfyld venligst:</h2>
+
+        <form>
+
+            <fieldset>
+                <legend>Personlige oplysninger</legend>
+
+                <div>
+                    <label for="navn">Udfyld dit fornavn:</label>
+                    <input type="text" name="navn" id="navn" value="" placeholder="Dit fornavn" />*
+                    <span id="obsnavn" class="alert"></span>
+                </div>
+
+                <input id="submit" type="button" value="Send" />
+
+            </fieldset>
+
+        </form>
+
+
+    </div>
+
+    @*--Javascript--*@
+    <script>
+        var submit = document.getElementById("submit");
+
+
+        submit.onclick = function (e) {
+
+            var name = document.getElementById("navn").value;
+
+            if (name.length < 2) {
+                e.preventDefault();
+                document.getElementById("navn").style.backgroundColor = "#e8827a";
+                document.getElementById("obsnavn").innerHTML = "Du skal skrive dit fornavn";
+
+            }
+            else {
+                document.getElementById("navn").style.backgroundColor = "white";
+                document.getElementById("obsnavn").innerHTML = "ok";
+            }
+        }
+
+
+    </script>
+
+</body>
+</html>

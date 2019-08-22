@@ -162,14 +162,22 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
-    <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\NyhederAdminController.cs" />
+    <Compile Include="Controllers\API3Controller.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\JavaScriptController.cs" />
+    <Compile Include="Controllers\jQueryController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
-    <Compile Include="Controllers\ValuesController.cs" />
+    <Compile Include="Controllers\API1Controller.cs" />
+    <Compile Include="Controllers\API2Controller.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="HashSalt.cs" />
+    <Compile Include="Controllers\FilController.cs" />
+    <Compile Include="IOTools.cs" />
+    <Compile Include="MailTool.cs" />
+    <Compile Include="Models\EksempelNyhed.cs" />
     <Compile Include="Models\GaadeTabel.cs">
       <DependentUpon>NewsSiteModel.tt</DependentUpon>
     </Compile>
@@ -182,26 +190,35 @@
     <Compile Include="Models\Logins.cs">
       <DependentUpon>NewsSiteModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\MailViewModel.cs" />
     <Compile Include="Models\MyViewModel.cs" />
+    <Compile Include="Models\NameViewModel.cs" />
     <Compile Include="Models\NewsSiteModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>NewsSiteModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\NewsSiteModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>NewsSiteModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\NewsSiteModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>NewsSiteModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\NoteTabel.cs">
+      <DependentUpon>NewsSiteModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\NyhederTable.cs">
       <DependentUpon>NewsSiteModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>NewsSiteModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_helpdiagrams_Result.cs">
+      <DependentUpon>NewsSiteModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\sysdiagrams.cs">
+      <DependentUpon>NewsSiteModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblPopup.cs">
       <DependentUpon>NewsSiteModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -211,21 +228,73 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\HelpPage\HelpPage.css" />
-    <Content Include="Content\bootstrap\bootstrap.css">
-      <DependentUpon>bootstrap.scss</DependentUpon>
-    </Content>
-    <Content Include="Content\bootstrap\bootstrap.min.css">
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css">
       <DependentUpon>bootstrap.css</DependentUpon>
     </Content>
+    <Content Include="Content\common.css" />
+    <Content Include="Content\css\main.css" />
+    <Content Include="Content\css\main.min.css">
+      <DependentUpon>main.css</DependentUpon>
+    </Content>
+    <Content Include="Content\css\popup.css" />
+    <Content Include="Content\css\slider.css" />
+    <Content Include="Content\css\vendespil.css" />
+    <Content Include="Content\img\001_01.png" />
+    <Content Include="Content\img\001_02.png" />
+    <Content Include="Content\img\001_14.png" />
+    <Content Include="Content\img\001_34.png" />
+    <Content Include="Content\img\001_35.png" />
+    <Content Include="Content\img\001_36.png" />
+    <Content Include="Content\img\aaaa.jpg" />
+    <Content Include="Content\img\autumn.jpg" />
+    <Content Include="Content\img\autumn_small.jpg" />
+    <Content Include="Content\img\Big\Bohr.jpg" />
+    <Content Include="Content\img\Big\Curie.jpg" />
+    <Content Include="Content\img\Big\Edison.jpg" />
+    <Content Include="Content\img\Big\Einstein.jpg" />
+    <Content Include="Content\img\blaa.png" />
+    <Content Include="Content\img\blaamusling1_51bf.jpg" />
+    <Content Include="Content\img\blaeretang_92e4.jpg" />
+    <Content Include="Content\img\cat-flugt.jpg" />
     <Content Include="Content\img\Cat\indland.png" />
     <Content Include="Content\img\Cat\krimi.png" />
     <Content Include="Content\img\Cat\sport.png" />
     <Content Include="Content\img\Cat\udland.png" />
     <Content Include="Content\img\Cat\underholdning.png" />
+    <Content Include="Content\img\default.jpg" />
+    <Content Include="Content\img\digesvaler_4417.jpg" />
+    <Content Include="Content\img\ene_7f43.jpg" />
+    <Content Include="Content\img\engelskgraes_a65e.jpg" />
+    <Content Include="Content\img\eremitkrebs_b9e0.jpg" />
+    <Content Include="Content\img\fjaesing_0232.jpg" />
+    <Content Include="Content\img\foxNcat.jpg" />
+    <Content Include="Content\img\Genbrugspose_Raev.jpg" />
     <Content Include="Content\img\Gfx\delete.png" />
     <Content Include="Content\img\Gfx\edit.png" />
     <Content Include="Content\img\Gfx\q1.jpg" />
     <Content Include="Content\img\Gfx\search.png" />
+    <Content Include="Content\img\groen.png" />
+    <Content Include="Content\img\happyCat.jpg" />
+    <Content Include="Content\img\hjerte.png" />
+    <Content Include="Content\img\hoejre.png" />
+    <Content Include="Content\img\hund.jpg" />
+    <Content Include="Content\img\HvidKat.jpg" />
+    <Content Include="Content\img\jquery.png" />
+    <Content Include="Content\img\kat1.jpg" />
+    <Content Include="Content\img\kat2.jpg" />
+    <Content Include="Content\img\kat3.jpg" />
+    <Content Include="Content\img\kat4.jpg" />
+    <Content Include="Content\img\kat5.jpg" />
+    <Content Include="Content\img\kat6.jpg" />
+    <Content Include="Content\img\kat7.jpg" />
+    <Content Include="Content\img\kong.jpg" />
+    <Content Include="Content\img\left.png" />
+    <Content Include="Content\img\lions-mane-jellyfish_fc88.jpg" />
+    <Content Include="Content\img\luk.gif" />
+    <Content Include="Content\img\ned.png" />
+    <Content Include="Content\img\ned2.png" />
+    <Content Include="Content\img\nej.jpg" />
     <Content Include="Content\img\news.jpg" />
     <Content Include="Content\img\Nyheder\2017-04-20_130142_1705151117526372.jpg" />
     <Content Include="Content\img\Nyheder\afstraffelse_1705151110204215.jpg" />
@@ -241,8 +310,59 @@
     <Content Include="Content\img\Nyheder\royal.jpg" />
     <Content Include="Content\img\Nyheder\saudi.jpg" />
     <Content Include="Content\img\Nyheder\skrald.jpg" />
+    <Content Include="Content\img\op-ned.png" />
+    <Content Include="Content\img\op.png" />
+    <Content Include="Content\img\op2.png" />
+    <Content Include="Content\img\pacman.png" />
     <Content Include="Content\img\ret.png" />
+    <Content Include="Content\img\right.png" />
+    <Content Include="Content\img\roed.png" />
     <Content Include="Content\img\slet.png" />
+    <Content Include="Content\img\soepindsvin_1168.jpg" />
+    <Content Include="Content\img\spring.jpg" />
+    <Content Include="Content\img\spring_small.jpg" />
+    <Content Include="Content\img\sraev.jpg" />
+    <Content Include="Content\img\stenurt_479a.jpg" />
+    <Content Include="Content\img\stop.png" />
+    <Content Include="Content\img\summer.jpg" />
+    <Content Include="Content\img\summer_small.jpg" />
+    <Content Include="Content\img\surRaev.jpg" />
+    <Content Include="Content\img\tappet.jpg" />
+    <Content Include="Content\img\Thumb\Bohr.jpg" />
+    <Content Include="Content\img\Thumb\Curie.jpg" />
+    <Content Include="Content\img\Thumb\Edison.jpg" />
+    <Content Include="Content\img\Thumb\Einstein.jpg" />
+    <Content Include="Content\img\trae.jpg" />
+    <Content Include="Content\img\tt1.gif" />
+    <Content Include="Content\img\tt2.gif" />
+    <Content Include="Content\img\tt3.gif" />
+    <Content Include="Content\img\Vendespil\bagside.jpg" />
+    <Content Include="Content\img\Vendespil\i1.jpg" />
+    <Content Include="Content\img\Vendespil\i10.jpg" />
+    <Content Include="Content\img\Vendespil\i11.jpg" />
+    <Content Include="Content\img\Vendespil\i12.jpg" />
+    <Content Include="Content\img\Vendespil\i13.jpg" />
+    <Content Include="Content\img\Vendespil\i14.jpg" />
+    <Content Include="Content\img\Vendespil\i15.jpg" />
+    <Content Include="Content\img\Vendespil\i16.jpg" />
+    <Content Include="Content\img\Vendespil\i17.jpg" />
+    <Content Include="Content\img\Vendespil\i18.jpg" />
+    <Content Include="Content\img\Vendespil\i19.jpg" />
+    <Content Include="Content\img\Vendespil\i2.jpg" />
+    <Content Include="Content\img\Vendespil\i20.jpg" />
+    <Content Include="Content\img\Vendespil\i21.jpg" />
+    <Content Include="Content\img\Vendespil\i22.jpg" />
+    <Content Include="Content\img\Vendespil\i23.jpg" />
+    <Content Include="Content\img\Vendespil\i3.jpg" />
+    <Content Include="Content\img\Vendespil\i4.jpg" />
+    <Content Include="Content\img\Vendespil\i5.jpg" />
+    <Content Include="Content\img\Vendespil\i6.jpg" />
+    <Content Include="Content\img\Vendespil\i7.jpg" />
+    <Content Include="Content\img\Vendespil\i8.jpg" />
+    <Content Include="Content\img\Vendespil\i9.jpg" />
+    <Content Include="Content\img\venstre.png" />
+    <Content Include="Content\img\winter.jpg" />
+    <Content Include="Content\img\winter_small.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Models\NewsSiteModel.Context.tt">
@@ -255,6 +375,16 @@
       <DependentUpon>NewsSiteModel.edmx</DependentUpon>
       <LastGenOutput>NewsSiteModel.cs</LastGenOutput>
     </Content>
+    <Content Include="Scripts\ajax-ex.js" />
+    <Content Include="Scripts\ByvejrAJAX.js" />
+    <Content Include="Scripts\DFI-credentials-film.js" />
+    <Content Include="Scripts\Fetch-ex.js" />
+    <Content Include="Scripts\FolketingetAPI.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Scripts\StarWars.js" />
+    <Content Include="Scripts\XHR-ex.js" />
+    <Content Include="XML\Film.xml" />
     <EntityDeploy Include="Models\NewsSiteModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>NewsSiteModel.Designer.cs</LastGenOutput>
@@ -417,9 +547,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="Areas\HelpPage\Views\_ViewStart.cshtml" />
-    <Content Include="Content\NewsSiteCSS.css" />
     <Content Include="Views\Web.config" />
-    <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
@@ -432,13 +560,13 @@
     <Content Include="Scripts\popper.js.map" />
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
-    <Content Include="Views\Shared\Footer.cshtml" />
-    <Content Include="Views\Admin\Index.cshtml" />
-    <None Include="Views\Admin\OpretNyhed.cshtml" />
-    <None Include="Views\Admin\RetNyhed.cshtml" />
-    <Content Include="Views\Admin\SletNyhed.cshtml" />
+    <Content Include="Views\Shared\_Footer.cshtml" />
+    <Content Include="Views\NyhederAdmin\Index.cshtml" />
+    <None Include="Views\NyhederAdmin\OpretNyhed.cshtml" />
+    <None Include="Views\NyhederAdmin\RetNyhed.cshtml" />
+    <Content Include="Views\NyhederAdmin\SletNyhed.cshtml" />
     <Content Include="Views\Shared\_AdminLayout.cshtml" />
-    <Content Include="Views\Shared\Overskrifter.cshtml" />
+    <Content Include="Views\Shared\_Overskrifter.cshtml" />
     <Content Include="Views\Home\SoegNyhed.cshtml" />
     <Content Include="Views\Home\EnkeltNyhed.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
@@ -446,6 +574,52 @@
     <Content Include="Views\Login\Delete.cshtml" />
     <Content Include="Views\Login\Details.cshtml" />
     <Content Include="Views\Login\Edit.cshtml" />
+    <Content Include="Views\Shared\_DagensGaade.cshtml" />
+    <Content Include="Views\Login\YourName.cshtml" />
+    <Content Include="Views\Shared\_Newsletter.cshtml" />
+    <Content Include="Views\Shared\_ContactForm.cshtml" />
+    <Content Include="Views\Shared\EksempelNyheder.cshtml" />
+    <Content Include="Views\Home\APIsiden.cshtml" />
+    <Content Include="Views\Shared\_SoegVidsteDu.cshtml" />
+    <Content Include="Views\Home\VisGaaderUdFraKategori.cshtml" />
+    <Content Include="Views\JavaScript\fotogalleri.cshtml" />
+    <Content Include="Views\JavaScript\Opg01.cshtml" />
+    <Content Include="Views\JavaScript\Opg02.cshtml" />
+    <Content Include="Views\JavaScript\Opg03.cshtml" />
+    <Content Include="Views\JavaScript\Opg04.cshtml" />
+    <Content Include="Views\JavaScript\Opg05.cshtml" />
+    <Content Include="Views\JavaScript\Opg06.cshtml" />
+    <Content Include="Views\JavaScript\Opg07.cshtml" />
+    <Content Include="Views\JavaScript\Opg08.cshtml" />
+    <Content Include="Views\JavaScript\Opg09.cshtml" />
+    <Content Include="Views\JavaScript\Opg10.cshtml" />
+    <Content Include="Views\JavaScript\Opg11.cshtml" />
+    <Content Include="Views\JavaScript\Opg12.cshtml" />
+    <Content Include="Views\JavaScript\Opg13.cshtml" />
+    <Content Include="Views\JavaScript\Opg14.cshtml" />
+    <Content Include="Views\JavaScript\Opg15.cshtml" />
+    <Content Include="Views\JavaScript\Opg16.cshtml" />
+    <Content Include="Views\JavaScript\Opg17.cshtml" />
+    <Content Include="Views\jQuery\opg01.cshtml" />
+    <Content Include="Views\jQuery\opg02.cshtml" />
+    <Content Include="Views\jQuery\opg03.cshtml" />
+    <Content Include="Views\jQuery\opg04.cshtml" />
+    <Content Include="Views\jQuery\opg05.cshtml" />
+    <Content Include="Views\jQuery\opg06.cshtml" />
+    <Content Include="Views\jQuery\opg07.cshtml" />
+    <Content Include="Views\jQuery\opg08.cshtml" />
+    <Content Include="Views\jQuery\opg09.cshtml" />
+    <Content Include="Views\jQuery\opg10.cshtml" />
+    <Content Include="Views\jQuery\Popup.cshtml" />
+    <Content Include="Views\jQuery\slider.cshtml" />
+    <Content Include="Views\jQuery\Vendespil.cshtml" />
+    <Content Include="XML\json.json" />
+    <Content Include="Views\WebAPI\Byvejr.cshtml" />
+    <Content Include="Views\WebAPI\FilmAPI.cshtml" />
+    <Content Include="Views\WebAPI\Folketinget.cshtml" />
+    <Content Include="Views\WebAPI\Index.cshtml" />
+    <Content Include="Views\WebAPI\PostnummerOpslag.cshtml" />
+    <Content Include="Views\WebAPI\Starwars.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

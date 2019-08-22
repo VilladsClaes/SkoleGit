@@ -1,0 +1,27 @@
+﻿@model WebApplication1.Models.SizeTable
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>SizeTable</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.SizeNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SizeNumber)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.SizeID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

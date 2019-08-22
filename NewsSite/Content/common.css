@@ -1,0 +1,209 @@
+﻿/* ELEMENTS/TAGS */
+
+body {
+    font-size: 12px;
+    background: #CCC;
+    font-family: Verdana, Sans-Serif;
+}
+
+ol {
+    padding-bottom: 10px;
+}
+
+li {
+    line-height: 16px;
+    color: #364E6F;
+    font-family: Courier, Monospace;
+}
+
+p {
+    line-height: 20px;
+}
+
+a {
+    color: #1c3446;
+    border-bottom: 1px dashed #1c3446;
+    text-decoration: none;
+    padding: 3px;
+}
+
+    a:hover {
+        background-color: #DBEAF9;
+    }
+
+samp {
+    font-family: Courier, Monospace;
+    font-weight: bold;
+    color: Blue;
+    font-size: 16px;
+}
+
+fieldset {
+    padding: 15px;
+    padding-bottom: 25px;
+    position: relative;
+    background: #F0F7E3;
+}
+
+legend {
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #6E9242;
+}
+
+label {
+    display: block;
+    font-size: 11px;
+    margin-top: 20px;
+}
+
+input {
+    margin-top: 20px;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    background: #333;
+    background-image: -webkit-linear-gradient(left, #ccc, #333, #ccc);
+    background-image: -moz-linear-gradient(left, #ccc, #333, #ccc);
+    background-image: -ms-linear-gradient(left, #ccc, #333, #ccc);
+    background-image: -o-linear-gradient(left, #ccc, #333, #ccc);
+}
+
+#into {
+    font-size: 2em;
+    width: 100%;
+    text-align: center;
+    border-radius: 5px;
+    background-color: cadetblue;
+    color: white;
+}
+
+/* IDs etc */
+#wrapper {
+    width: 800px;
+    margin: auto;
+    padding: 40px 30px;
+    background: #FFF;
+    border: 1px solid #6E9242;
+    border-radius: 4px;
+    box-shadow: 5px 5px 10px #000;
+}
+
+#visskjul {
+    background: #C1EDC1;
+    padding: 4px 20px;
+    border-radius: 5px;
+}
+
+    #visskjul img {
+        margin: 2px 30px;
+    }
+
+#naeste {
+    margin-top: 30px;
+    padding: 10px;
+    text-align: right;
+    border-top: 1px dashed #6E9242;
+}
+
+#boxcontainer {
+    position: relative;
+    height: 400px;
+    background: #BFF2BF;
+    border-radius: 10px;
+}
+
+#box {
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    height: 100px;
+    width: 100px;
+    background: #E6145D url(img/gradient.png);
+    border: 1px solid #E6145D;
+    border-radius: 5px;
+}
+
+#opgaven {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px dashed #6E9242;
+}
+
+    #opgaven h4, #opgaven p, #opgaven li, #opgaven a {
+        font-family: Courier New, Courier, monospace;
+    }
+
+#help {
+}
+
+    #help:before {
+        content: '\2316';
+    }
+
+#control {
+    margin: 10px 20px 10px 10px;
+}
+
+#board {
+    position: relative;
+    width: 500px;
+    height: 300px;
+    background-color: #F0F0F0;
+}
+
+#pacman {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}
+
+#bog {
+    cursor: pointer;
+   
+}
+
+
+/* MISC */
+.centertxt {
+    text-align: center;
+}
+
+.i {
+    font-style: italic;
+}
+
+.b {
+    font-weight: bold;
+    color: #11111d;
+}
+
+.dispnone {
+    display: none;
+}
+
+.alert {
+    color: Red;
+    font-weight: bold;
+  opacity
+}
+
+.hilite {
+    background-color: #FFFFA5;
+}
+
+.big {
+    font-size: 2em;
+}
+
+.clear {
+    clear: both;
+}
+
+.pointer {
+    cursor: pointer;
+}

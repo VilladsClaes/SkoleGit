@@ -1,0 +1,24 @@
+﻿@model NewsSite.Models.MyViewModel
+
+
+<h2>Newsletter</h2>
+
+<form action="/Home/NewsletterTilmeldt" method="post">
+    <label for="MailAdressFrom">Din email</label>
+    <input type="email" name="MailAdressFrom" id="MailAdressFrom" value="" required />
+
+    <input type="checkbox" name="CheckNewsletter" id="CheckNewsletter" value="true" />
+    <label for="CheckNewsletter">Få en månedelig nyhedsmail</label>
+
+
+    <input type="submit" name="btnSendNews" value="Tilmeld nyhedsbrev" />
+    <div class="alert-danger w-25 p-3">
+        @Html.ValidationSummary() @Model.Message  @Html.ValidationMessage("CheckNewsletter")  @Html.ValidationMessage("MailAdressFrom")
+
+
+    </div>
+
+</form>
+
+
+

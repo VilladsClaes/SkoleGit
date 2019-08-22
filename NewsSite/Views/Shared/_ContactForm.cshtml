@@ -1,0 +1,57 @@
+﻿@model NewsSite.Models.MyViewModel
+
+<h2>Contact Form</h2>
+
+@using (Ajax.BeginForm("ContactFormSendt", "Home", new AjaxOptions { UpdateTargetId = "dataset" }))
+
+{<div id="dataset">
+
+
+    @*  emailadressefelt *@
+    <div class="form-group">
+        <label for="MailAdressFrom">Emailadresse:</label>
+        <input class="form-control" type="text" name="MailAdressFrom" id="MailAdressFrom" placeholder="Skriv Din Email" />
+    </div>
+    @* Her kommer en fejlmeddelelese hvis emailadressen ikke er valid *@
+    <div class="alert-danger w-25 p-3">
+        @Html.ValidationMessage("MailAdressFrom")
+    </div>
+
+    @* Brugerens navn *@
+    <div class="form-group">
+        <label for="MailName">Navn:</label>
+        <input class="form-control" type="text" name="MailName" id="MailName" placeholder="Skriv Dit Navn" />
+    </div>
+    @* Her kommer en fejlmeddelelese hvis afsendernavnet ikke er valid *@
+    <div class="alert-danger w-25 p-3">
+        @Html.ValidationMessage("MailName")
+    </div>
+
+    @* Emnefeltet *@
+    <div class="form-group">
+        <label for="MailSubject">Emne:</label>
+        <input class="form-control" type="text" name="MailSubject" id="MailSubject" placeholder="Emnet" />
+    </div>
+    <div class="alert-danger w-25 p-3">
+        @Html.ValidationMessage("MailSubject")
+    </div>
+
+
+    @* Beskeden *@
+    <div class="form-group">
+        <label for="MailBody">Besked:</label>
+        <textarea class="form-control" type="text" name="MailBody" id="MailBody" placeholder="Skriv din henvendelse her" rows="6"></textarea>
+    </div>
+    <div class="alert-danger w-25 p-3">
+        @Html.ValidationMessage("MailBody")
+    </div>
+
+
+    @* knap til at afsende alle form-groups *@
+    <input class="btn btn-dark w-25 sort" type="submit" name="btnSendMail" value="Send besked" />
+
+    @* Her vises evt fejlbesked *@
+    <div class="alert-danger w-25 p-3">@Model.Message</div>
+
+
+</div>}

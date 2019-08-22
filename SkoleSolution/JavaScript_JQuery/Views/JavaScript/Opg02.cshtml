@@ -1,0 +1,37 @@
+﻿@{
+    ViewBag.Title = "Opgave 2";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Skift paragraph-teksten herunder til kursiv tekst</h1>
+
+<div id="opgaven">
+
+    <h4>Opgaven</h4>
+
+    <ol>
+        <li>Når der klikkes på knappen:</li>
+        <li>Skal brødteksten (paragraph - p-tag) skifte til kursiv tekst</li>
+    </ol>
+
+    <p id="help">
+        Få hjælp fx her:
+        <a href="http://www.w3schools.com/jsref/prop_style_fontstyle.asp" target="_blank">Noget om style</a>
+    </p>
+
+</div>
+
+<h2>Vigtig overskrift</h2>
+
+<p id="teksten">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce quis lectus quis sem lacinia nonummy. Proin mollis lorem non dolor. In hac habitasse platea dictumst. Nulla ultrices odio. Donec augue. Phasellus dui. Maecenas facilisis nisl vitae nibh. Proin vel est vitae eros pretium dignissim. Aliquam aliquam sodales orci. Suspendisse potenti. Nunc adipiscing euismod arcu. Quisque facilisis mattis lacus. Fusce bibendum, velit in venenatis viverra, tellus ligula dignissim felis, quis euismod mauris tellus ut urna. Proin scelerisque. Nulla in mi. Integer ac leo. Nunc urna ligula, gravida a, pretium vitae, bibendum nec, ante. Aliquam ullamcorper iaculis lectus. Sed vel dui. Etiam lacinia risus vitae lacus. </p>
+
+<input type="button" value="Klik her" id="knap" onclick="myFunction()" />
+
+<script>
+
+    function myFunction() {
+        document.getElementById("teksten").style.fontStyle = "italic";
+    }
+
+</script>
+

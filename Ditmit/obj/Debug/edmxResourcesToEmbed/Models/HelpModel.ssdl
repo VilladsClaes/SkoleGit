@@ -7,26 +7,7 @@
     <Property Name="HelpID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="HelpText" Type="nvarchar" MaxLength="1150" />
     <Property Name="HelpType_FK" Type="int" />
-    <Property Name="HelpDate" Type="datetime" />
-    <Property Name="Helper_FK" Type="int" />
-  </EntityType>
-  <EntityType Name="Helper">
-    <Key>
-      <PropertyRef Name="HelperID" />
-    </Key>
-    <Property Name="HelperID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Postnummer" Type="int" />
-    <Property Name="Email" Type="nvarchar" MaxLength="150" />
-    <Property Name="Telefonnummer" Type="nvarchar" MaxLength="20" />
-    <Property Name="Navn" Type="nvarchar" MaxLength="250" />
-  </EntityType>
-  <EntityType Name="HelpMatch">
-    <Key>
-      <PropertyRef Name="HelpMatchID" />
-    </Key>
-    <Property Name="HelpMatchID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="HelpMatch1_FK" Type="int" />
-    <Property Name="HelpMatch2_FK" Type="int" />
+    <Property Name="HelpDate" Type="date" />
   </EntityType>
   <EntityType Name="HelpType">
     <Key>
@@ -35,18 +16,6 @@
     <Property Name="HelpTypeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="HelpType" Type="nvarchar" MaxLength="50" Nullable="false" />
   </EntityType>
-  <Association Name="FK_Help_Helper">
-    <End Role="Helper" Type="Self.Helper" Multiplicity="0..1" />
-    <End Role="Help" Type="Self.Help" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Helper">
-        <PropertyRef Name="HelperID" />
-      </Principal>
-      <Dependent Role="Help">
-        <PropertyRef Name="Helper_FK" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_Help_HelpType">
     <End Role="HelpType" Type="Self.HelpType" Multiplicity="0..1" />
     <End Role="Help" Type="Self.Help" Multiplicity="*" />
@@ -59,50 +28,12 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_HelpMatch1_Help">
-    <End Role="Help" Type="Self.Help" Multiplicity="0..1" />
-    <End Role="HelpMatch" Type="Self.HelpMatch" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Help">
-        <PropertyRef Name="HelpID" />
-      </Principal>
-      <Dependent Role="HelpMatch">
-        <PropertyRef Name="HelpMatch1_FK" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_HelpMatch2_Help">
-    <End Role="Help" Type="Self.Help" Multiplicity="0..1" />
-    <End Role="HelpMatch" Type="Self.HelpMatch" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Help">
-        <PropertyRef Name="HelpID" />
-      </Principal>
-      <Dependent Role="HelpMatch">
-        <PropertyRef Name="HelpMatch2_FK" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <EntityContainer Name="dbkg218_13ModelStoreContainer">
     <EntitySet Name="Help" EntityType="Self.Help" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="Helper" EntityType="Self.Helper" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="HelpMatch" EntityType="Self.HelpMatch" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="HelpType" EntityType="Self.HelpType" Schema="dbo" store:Type="Tables" />
-    <AssociationSet Name="FK_Help_Helper" Association="Self.FK_Help_Helper">
-      <End Role="Helper" EntitySet="Helper" />
-      <End Role="Help" EntitySet="Help" />
-    </AssociationSet>
     <AssociationSet Name="FK_Help_HelpType" Association="Self.FK_Help_HelpType">
       <End Role="HelpType" EntitySet="HelpType" />
       <End Role="Help" EntitySet="Help" />
-    </AssociationSet>
-    <AssociationSet Name="FK_HelpMatch1_Help" Association="Self.FK_HelpMatch1_Help">
-      <End Role="Help" EntitySet="Help" />
-      <End Role="HelpMatch" EntitySet="HelpMatch" />
-    </AssociationSet>
-    <AssociationSet Name="FK_HelpMatch2_Help" Association="Self.FK_HelpMatch2_Help">
-      <End Role="Help" EntitySet="Help" />
-      <End Role="HelpMatch" EntitySet="HelpMatch" />
     </AssociationSet>
   </EntityContainer>
 </Schema>

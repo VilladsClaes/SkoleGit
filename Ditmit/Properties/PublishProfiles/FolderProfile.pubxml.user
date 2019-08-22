@@ -22,10 +22,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/04/2018 21:02:37</publishTime>
     </File>
     <File Include="bin/Ditmit.dll">
-      <publishTime>12/20/2018 23:33:24</publishTime>
+      <publishTime>12/07/2018 10:50:40</publishTime>
     </File>
     <File Include="bin/Ditmit.pdb">
-      <publishTime>12/20/2018 23:33:24</publishTime>
+      <publishTime>12/07/2018 10:50:40</publishTime>
     </File>
     <File Include="bin/EntityFramework.dll">
       <publishTime>10/23/2017 13:15:18</publishTime>
@@ -528,20 +528,17 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Content/bootstrap/_variables.scss">
       <publishTime>12/04/2018 21:05:13</publishTime>
     </File>
-    <File Include="Content/logo.png">
-      <publishTime>12/19/2018 20:04:47</publishTime>
-    </File>
     <File Include="Content/Site.css">
-      <publishTime>12/10/2018 19:08:01</publishTime>
+      <publishTime>12/05/2018 12:09:55</publishTime>
     </File>
     <File Include="favicon.ico">
-      <publishTime>12/19/2018 20:11:59</publishTime>
+      <publishTime>12/04/2018 20:56:18</publishTime>
     </File>
     <File Include="Global.asax">
       <publishTime>12/04/2018 20:56:18</publishTime>
     </File>
     <File Include="Models/HelpModel.edmx.diagram">
-      <publishTime>12/19/2018 18:37:12</publishTime>
+      <publishTime>12/05/2018 11:41:08</publishTime>
     </File>
     <File Include="Scripts/bootstrap.bundle.js">
       <publishTime>12/04/2018 21:05:13</publishTime>
@@ -676,28 +673,19 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/04/2018 21:03:08</publishTime>
     </File>
     <File Include="Views/Home/AltingTabel.cshtml">
-      <publishTime>12/20/2018 22:54:27</publishTime>
-    </File>
-    <File Include="Views/Home/Cookies.cshtml">
-      <publishTime>12/19/2018 19:45:34</publishTime>
+      <publishTime>12/06/2018 10:04:48</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>12/20/2018 22:28:03</publishTime>
-    </File>
-    <File Include="Views/Home/LavCookie.cshtml">
-      <publishTime>12/17/2018 16:46:54</publishTime>
+      <publishTime>12/07/2018 10:42:19</publishTime>
     </File>
     <File Include="Views/Home/Search.cshtml">
-      <publishTime>12/19/2018 19:00:37</publishTime>
-    </File>
-    <File Include="Views/Home/SpecifikHelp.cshtml">
-      <publishTime>12/20/2018 22:29:45</publishTime>
+      <publishTime>12/06/2018 11:55:39</publishTime>
     </File>
     <File Include="Views/Shared/Error.cshtml">
       <publishTime>12/04/2018 20:56:18</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>12/20/2018 22:38:28</publishTime>
+      <publishTime>12/06/2018 12:18:01</publishTime>
     </File>
     <File Include="Views/Web.config">
       <publishTime>12/04/2018 20:56:18</publishTime>
@@ -706,7 +694,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/04/2018 20:56:18</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>12/10/2018 20:09:37</publishTime>
+      <publishTime>12/07/2018 10:50:41</publishTime>
     </File>
   </ItemGroup>
 </Project>

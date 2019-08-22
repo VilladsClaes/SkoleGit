@@ -1,0 +1,63 @@
+﻿@model NewsSite.Models.NyhederTable
+@{
+    ViewBag.Title = "Slet Nyheden";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Advarsel for sletning</h2>
+<h4>Er du sikker at du vil slette Nyheden</h4>
+<div class="card my-4">
+    <div class="card-body">
+        <a class="card-header" href="~/Home/EnkeltNyhed/@Model.id">@Model.NyhederOverskrift</a>
+    </div>
+</div>
+<form action="/NyhederAdmin/SletNyhed" method="post">
+    <input type="hidden" name="id" id="id" value="@Model.id" />
+    <button type="submit" class="btn btn-danger">Slet</button>
+    <a href="/NyhederAdmin/" class="btn btn-success">fortryd uden sletning</a>
+</form>
+
+
+@* ANDEN MÅDE AT VISE SLET PÅ *@
+<div class="container p-5 bg-light">
+    <h2 class="text-center">Slet</h2>
+    <a class="btn bg-info text-white float-right my-5" href="/Admin/POpret">Opret ny</a>
+
+
+    <h3 class="lead alert-danger my-3 ">@ViewBag.Besked</h3>
+
+    <table class="table border">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Navn</th>
+
+
+
+
+            </tr>
+        </thead>
+        <tbody>
+
+
+            <tr>
+                <th scope="row">@Model.IdCategory</th>
+                <td>@Model.Category</td>
+
+
+
+            </tr>
+
+        </tbody>
+    </table>
+    <form action="/Admin/CSlet" method="post" class="my-5 py-3">
+        <input type="hidden" name="id" id="id" value="@Model.IdCategory" />
+        <div class="float-right">
+
+            <input type="submit" name="name" id="slet" value="SLET - kan ikke fortrydes" class="btn bg-danger text-white px-5 text-right" />
+        </div>
+        <div>
+            <a class="btn bg-info text-white float-left" href="/Admin/CategoryRev">Fortryd og gå til forsiden</a>
+        </div>
+    </form>
+</div>

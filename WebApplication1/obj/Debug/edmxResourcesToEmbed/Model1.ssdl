@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SkoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="BrandTable">
+    <Key>
+      <PropertyRef Name="BrandID" />
+    </Key>
+    <Property Name="BrandID" Type="int" Nullable="false" />
+    <Property Name="BrandName" Type="nvarchar" MaxLength="50" />
+    <Property Name="BrandLogo" Type="nvarchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="ColorProductRelationTable">
+    <Key>
+      <PropertyRef Name="ColorProductID" />
+    </Key>
+    <Property Name="ColorProductID" Type="int" Nullable="false" />
+    <Property Name="ColorID" Type="int" />
+    <Property Name="ProductID" Type="int" />
+  </EntityType>
+  <EntityType Name="ColorTable">
+    <Key>
+      <PropertyRef Name="ColorID" />
+    </Key>
+    <Property Name="ColorID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ColorHexCode" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ProductTable">
+    <Key>
+      <PropertyRef Name="ProductID" />
+    </Key>
+    <Property Name="ProductID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProductName" Type="nvarchar" MaxLength="50" />
+    <Property Name="ProductPrice" Type="float" />
+    <Property Name="ProductBrandID" Type="int" />
+  </EntityType>
+  <EntityType Name="SizeProductRelationTable">
+    <Key>
+      <PropertyRef Name="SizeProductID" />
+    </Key>
+    <Property Name="SizeProductID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SizeID" Type="int" />
+    <Property Name="ProductID" Type="int" />
+  </EntityType>
+  <EntityType Name="SizeTable">
+    <Key>
+      <PropertyRef Name="SizeID" />
+    </Key>
+    <Property Name="SizeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SizeNumber" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <Association Name="FK_ColorProductRelationTable_ColorProductRelationTable">
+    <End Role="ColorProductRelationTable" Type="Self.ColorProductRelationTable" Multiplicity="1" />
+    <End Role="ColorProductRelationTable1" Type="Self.ColorProductRelationTable" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="ColorProductRelationTable">
+        <PropertyRef Name="ColorProductID" />
+      </Principal>
+      <Dependent Role="ColorProductRelationTable1">
+        <PropertyRef Name="ColorProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ColorProductRelationTable_ColorTable">
+    <End Role="ColorTable" Type="Self.ColorTable" Multiplicity="0..1" />
+    <End Role="ColorProductRelationTable" Type="Self.ColorProductRelationTable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ColorTable">
+        <PropertyRef Name="ColorID" />
+      </Principal>
+      <Dependent Role="ColorProductRelationTable">
+        <PropertyRef Name="ColorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ColorProductRelationTable_ProductTable">
+    <End Role="ProductTable" Type="Self.ProductTable" Multiplicity="0..1" />
+    <End Role="ColorProductRelationTable" Type="Self.ColorProductRelationTable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductTable">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="ColorProductRelationTable">
+        <PropertyRef Name="ProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProductTable_BrandTable">
+    <End Role="BrandTable" Type="Self.BrandTable" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ProductTable" Type="Self.ProductTable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BrandTable">
+        <PropertyRef Name="BrandID" />
+      </Principal>
+      <Dependent Role="ProductTable">
+        <PropertyRef Name="ProductBrandID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SizeProductRelationTable_ProductTable">
+    <End Role="ProductTable" Type="Self.ProductTable" Multiplicity="0..1" />
+    <End Role="SizeProductRelationTable" Type="Self.SizeProductRelationTable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductTable">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="SizeProductRelationTable">
+        <PropertyRef Name="ProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SizeProductRelationTable_SizeTable">
+    <End Role="SizeTable" Type="Self.SizeTable" Multiplicity="0..1" />
+    <End Role="SizeProductRelationTable" Type="Self.SizeProductRelationTable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SizeTable">
+        <PropertyRef Name="SizeID" />
+      </Principal>
+      <Dependent Role="SizeProductRelationTable">
+        <PropertyRef Name="SizeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <EntityContainer Name="SkoModelStoreContainer">
+    <EntitySet Name="BrandTable" EntityType="Self.BrandTable" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ColorProductRelationTable" EntityType="Self.ColorProductRelationTable" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ColorTable" EntityType="Self.ColorTable" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProductTable" EntityType="Self.ProductTable" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SizeProductRelationTable" EntityType="Self.SizeProductRelationTable" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SizeTable" EntityType="Self.SizeTable" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_ColorProductRelationTable_ColorProductRelationTable" Association="Self.FK_ColorProductRelationTable_ColorProductRelationTable">
+      <End Role="ColorProductRelationTable" EntitySet="ColorProductRelationTable" />
+      <End Role="ColorProductRelationTable1" EntitySet="ColorProductRelationTable" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ColorProductRelationTable_ColorTable" Association="Self.FK_ColorProductRelationTable_ColorTable">
+      <End Role="ColorTable" EntitySet="ColorTable" />
+      <End Role="ColorProductRelationTable" EntitySet="ColorProductRelationTable" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ColorProductRelationTable_ProductTable" Association="Self.FK_ColorProductRelationTable_ProductTable">
+      <End Role="ProductTable" EntitySet="ProductTable" />
+      <End Role="ColorProductRelationTable" EntitySet="ColorProductRelationTable" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProductTable_BrandTable" Association="Self.FK_ProductTable_BrandTable">
+      <End Role="BrandTable" EntitySet="BrandTable" />
+      <End Role="ProductTable" EntitySet="ProductTable" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SizeProductRelationTable_ProductTable" Association="Self.FK_SizeProductRelationTable_ProductTable">
+      <End Role="ProductTable" EntitySet="ProductTable" />
+      <End Role="SizeProductRelationTable" EntitySet="SizeProductRelationTable" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SizeProductRelationTable_SizeTable" Association="Self.FK_SizeProductRelationTable_SizeTable">
+      <End Role="SizeTable" EntitySet="SizeTable" />
+      <End Role="SizeProductRelationTable" EntitySet="SizeProductRelationTable" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

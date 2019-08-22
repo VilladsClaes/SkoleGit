@@ -1,0 +1,68 @@
+C:\Marianne\asp.net\_MVC\0_UXundervisning\UX-opstart_sep2018\UX-opstart_sep2018-temp\bin\roslyn\csc.exe
+C:\Marianne\asp.net\_MVC\0_UXundervisning\UX-opstart_sep2018\UX-opstart_sep2018-temp\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Marianne\asp.net\_MVC\0_UXundervisning\UX-opstart_sep2018\UX-opstart_sep2018-temp\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Marianne\asp.net\_MVC\0_UXundervisning\UX-opstart_sep2018\UX-opstart_sep2018-temp\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Marianne\asp.net\_MVC\0_UXundervisning\UX-opstart_sep2018\UX-opstart_sep2018-temp\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Marianne\asp.net\_MVC\0_UXundervisning\UX-opstart_sep2018\UX-opstart_sep2018-temp\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Marianne\asp.net\_MVC\0_UXundervisning\UX-opstart_sep2018\UX-opstart_sep2018-temp\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Marianne\asp.net\_MVC\0_UXundervisning\UX-opstart_sep2018\UX-opstart_sep2018-temp\bin\roslyn\System.Collections.Immutable.dll
+C:\Marianne\asp.net\_MVC\0_UXundervisning\UX-opstart_sep2018\UX-opstart_sep2018-temp\bin\roslyn\System.Reflection.Metadata.dll
+C:\Marianne\asp.net\_MVC\0_UXundervisning\UX-opstart_sep2018\UX-opstart_sep2018-temp\bin\roslyn\vbc.exe
+C:\Marianne\asp.net\_MVC\0_UXundervisning\UX-opstart_sep2018\UX-opstart_sep2018-temp\bin\roslyn\VBCSCompiler.exe
+C:\Marianne\asp.net\_MVC\0_UXundervisning\UX-opstart_sep2018\UX-opstart_sep2018-temp\bin\roslyn\VBCSCompiler.exe.config
+C:\Marianne\asp.net\_MVC\0_UXundervisning\UX-opstart_sep2018\UX-opstart_sep2018-temp\bin\UX-opstart_sep2018-temp.dll.config
+C:\Marianne\asp.net\_MVC\0_UXundervisning\UX-opstart_sep2018\UX-opstart_sep2018-temp\bin\UX-opstart_sep2018-temp.dll
+C:\Marianne\asp.net\_MVC\0_UXundervisning\UX-opstart_sep2018\UX-opstart_sep2018-temp\bin\UX-opstart_sep2018-temp.pdb
+C:\Marianne\asp.net\_MVC\0_UXundervisning\UX-opstart_sep2018\UX-opstart_sep2018-temp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Marianne\asp.net\_MVC\0_UXundervisning\UX-opstart_sep2018\UX-opstart_sep2018-temp\bin\Microsoft.Web.Infrastructure.dll
+C:\Marianne\asp.net\_MVC\0_UXundervisning\UX-opstart_sep2018\UX-opstart_sep2018-temp\bin\System.Web.Helpers.dll
+C:\Marianne\asp.net\_MVC\0_UXundervisning\UX-opstart_sep2018\UX-opstart_sep2018-temp\bin\System.Web.Mvc.dll
+C:\Marianne\asp.net\_MVC\0_UXundervisning\UX-opstart_sep2018\UX-opstart_sep2018-temp\bin\System.Web.Razor.dll
+C:\Marianne\asp.net\_MVC\0_UXundervisning\UX-opstart_sep2018\UX-opstart_sep2018-temp\bin\System.Web.Webpages.Deployment.dll
+C:\Marianne\asp.net\_MVC\0_UXundervisning\UX-opstart_sep2018\UX-opstart_sep2018-temp\bin\System.Web.Webpages.dll
+C:\Marianne\asp.net\_MVC\0_UXundervisning\UX-opstart_sep2018\UX-opstart_sep2018-temp\bin\System.Web.Webpages.Razor.dll
+C:\Marianne\asp.net\_MVC\0_UXundervisning\UX-opstart_sep2018\UX-opstart_sep2018-temp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Marianne\asp.net\_MVC\0_UXundervisning\UX-opstart_sep2018\UX-opstart_sep2018-temp\bin\System.Web.Razor.xml
+C:\Marianne\asp.net\_MVC\0_UXundervisning\UX-opstart_sep2018\UX-opstart_sep2018-temp\bin\System.Web.Webpages.xml
+C:\Marianne\asp.net\_MVC\0_UXundervisning\UX-opstart_sep2018\UX-opstart_sep2018-temp\bin\System.Web.Webpages.Deployment.xml
+C:\Marianne\asp.net\_MVC\0_UXundervisning\UX-opstart_sep2018\UX-opstart_sep2018-temp\bin\System.Web.Webpages.Razor.xml
+C:\Marianne\asp.net\_MVC\0_UXundervisning\UX-opstart_sep2018\UX-opstart_sep2018-temp\bin\System.Web.Helpers.xml
+C:\Marianne\asp.net\_MVC\0_UXundervisning\UX-opstart_sep2018\UX-opstart_sep2018-temp\bin\System.Web.Mvc.xml
+C:\Marianne\asp.net\_MVC\0_UXundervisning\UX-opstart_sep2018\UX-opstart_sep2018-temp\obj\Debug\UX-opstart_sep2018-temp.csprojResolveAssemblyReference.cache
+C:\Marianne\asp.net\_MVC\0_UXundervisning\UX-opstart_sep2018\UX-opstart_sep2018-temp\obj\Debug\UX-opstart_sep2018-temp.dll
+C:\Marianne\asp.net\_MVC\0_UXundervisning\UX-opstart_sep2018\UX-opstart_sep2018-temp\obj\Debug\UX-opstart_sep2018-temp.pdb
+C:\Users\vill0281\OneDrive - Viden Djurs\UX\UX-opstart_sep2018\UX-opstart_sep2018-temp\bin\roslyn\csc.exe
+C:\Users\vill0281\OneDrive - Viden Djurs\UX\UX-opstart_sep2018\UX-opstart_sep2018-temp\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\vill0281\OneDrive - Viden Djurs\UX\UX-opstart_sep2018\UX-opstart_sep2018-temp\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\vill0281\OneDrive - Viden Djurs\UX\UX-opstart_sep2018\UX-opstart_sep2018-temp\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\vill0281\OneDrive - Viden Djurs\UX\UX-opstart_sep2018\UX-opstart_sep2018-temp\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\vill0281\OneDrive - Viden Djurs\UX\UX-opstart_sep2018\UX-opstart_sep2018-temp\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\vill0281\OneDrive - Viden Djurs\UX\UX-opstart_sep2018\UX-opstart_sep2018-temp\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\vill0281\OneDrive - Viden Djurs\UX\UX-opstart_sep2018\UX-opstart_sep2018-temp\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\vill0281\OneDrive - Viden Djurs\UX\UX-opstart_sep2018\UX-opstart_sep2018-temp\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\vill0281\OneDrive - Viden Djurs\UX\UX-opstart_sep2018\UX-opstart_sep2018-temp\bin\roslyn\vbc.exe
+C:\Users\vill0281\OneDrive - Viden Djurs\UX\UX-opstart_sep2018\UX-opstart_sep2018-temp\bin\roslyn\VBCSCompiler.exe
+C:\Users\vill0281\OneDrive - Viden Djurs\UX\UX-opstart_sep2018\UX-opstart_sep2018-temp\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\vill0281\OneDrive - Viden Djurs\UX\UX-opstart_sep2018\UX-opstart_sep2018-temp\bin\UX-opstart_sep2018-temp.dll.config
+C:\Users\vill0281\OneDrive - Viden Djurs\UX\UX-opstart_sep2018\UX-opstart_sep2018-temp\bin\UX-opstart_sep2018-temp.dll
+C:\Users\vill0281\OneDrive - Viden Djurs\UX\UX-opstart_sep2018\UX-opstart_sep2018-temp\bin\UX-opstart_sep2018-temp.pdb
+C:\Users\vill0281\OneDrive - Viden Djurs\UX\UX-opstart_sep2018\UX-opstart_sep2018-temp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\vill0281\OneDrive - Viden Djurs\UX\UX-opstart_sep2018\UX-opstart_sep2018-temp\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\vill0281\OneDrive - Viden Djurs\UX\UX-opstart_sep2018\UX-opstart_sep2018-temp\bin\System.Web.Helpers.dll
+C:\Users\vill0281\OneDrive - Viden Djurs\UX\UX-opstart_sep2018\UX-opstart_sep2018-temp\bin\System.Web.Mvc.dll
+C:\Users\vill0281\OneDrive - Viden Djurs\UX\UX-opstart_sep2018\UX-opstart_sep2018-temp\bin\System.Web.Razor.dll
+C:\Users\vill0281\OneDrive - Viden Djurs\UX\UX-opstart_sep2018\UX-opstart_sep2018-temp\bin\System.Web.Webpages.Deployment.dll
+C:\Users\vill0281\OneDrive - Viden Djurs\UX\UX-opstart_sep2018\UX-opstart_sep2018-temp\bin\System.Web.Webpages.dll
+C:\Users\vill0281\OneDrive - Viden Djurs\UX\UX-opstart_sep2018\UX-opstart_sep2018-temp\bin\System.Web.Webpages.Razor.dll
+C:\Users\vill0281\OneDrive - Viden Djurs\UX\UX-opstart_sep2018\UX-opstart_sep2018-temp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\vill0281\OneDrive - Viden Djurs\UX\UX-opstart_sep2018\UX-opstart_sep2018-temp\bin\System.Web.Razor.xml
+C:\Users\vill0281\OneDrive - Viden Djurs\UX\UX-opstart_sep2018\UX-opstart_sep2018-temp\bin\System.Web.Webpages.xml
+C:\Users\vill0281\OneDrive - Viden Djurs\UX\UX-opstart_sep2018\UX-opstart_sep2018-temp\bin\System.Web.Webpages.Deployment.xml
+C:\Users\vill0281\OneDrive - Viden Djurs\UX\UX-opstart_sep2018\UX-opstart_sep2018-temp\bin\System.Web.Webpages.Razor.xml
+C:\Users\vill0281\OneDrive - Viden Djurs\UX\UX-opstart_sep2018\UX-opstart_sep2018-temp\bin\System.Web.Helpers.xml
+C:\Users\vill0281\OneDrive - Viden Djurs\UX\UX-opstart_sep2018\UX-opstart_sep2018-temp\bin\System.Web.Mvc.xml
+C:\Users\vill0281\OneDrive - Viden Djurs\UX\UX-opstart_sep2018\UX-opstart_sep2018-temp\obj\Debug\UX-opstart_sep2018-temp.csprojAssemblyReference.cache
+C:\Users\vill0281\OneDrive - Viden Djurs\UX\UX-opstart_sep2018\UX-opstart_sep2018-temp\obj\Debug\UX-opstart_sep2018-temp.csproj.CoreCompileInputs.cache
+C:\Users\vill0281\OneDrive - Viden Djurs\UX\UX-opstart_sep2018\UX-opstart_sep2018-temp\obj\Debug\UX-opstart_sep2018-temp.csproj.CopyComplete
+C:\Users\vill0281\OneDrive - Viden Djurs\UX\UX-opstart_sep2018\UX-opstart_sep2018-temp\obj\Debug\UX-opstart_sep2018-temp.dll
+C:\Users\vill0281\OneDrive - Viden Djurs\UX\UX-opstart_sep2018\UX-opstart_sep2018-temp\obj\Debug\UX-opstart_sep2018-temp.pdb

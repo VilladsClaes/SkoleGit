@@ -1,0 +1,140 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>SIDENS TITEL</title>
+
+    <link href="~/Content/common.css" rel="stylesheet" />
+    <style>
+
+        #boxcontainer {
+            position: relative;
+            height: 400px;
+            background: #BFF2BF;
+            border-radius: 10px;
+        }
+
+        #box {
+            position: absolute;
+            top: 20%;
+            left: 20%;
+            height: 100px;
+            width: 100px;
+            background: #E6145D url(img/gradient.png);
+            border: 1px solid #E6145D;
+            border-radius: 5px;
+            cursor:pointer;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(function () {
+            var box = $('#box');
+
+
+            box.click(function () {
+                var h = parseInt($('#h1').val(), 10);
+                var b = parseInt($('#b1').val(), 10);
+                var a = parseInt($('#g1').val(), 10);
+                var o = a / 100;
+                var l = parseInt($('#vp1').val(), 10);
+                var t = parseInt($('#lp1').val(), 10);
+                var hb = parseInt($('#hb1').val(), 10);
+                var check = eval(h + b + a + l + t + hb);
+
+                if (isNaN(check)) {
+                    alert('Intast kun tal');
+                }
+                else {
+                    if (h < 1 || h > 300 || b < 1 || b > 300 || a < 1 || a > 100 || l < 1 || l > 300 || t < 1 || t > 300 || hb < 1 || hb > 200) {
+                        alert("Intast tal inden for referancerammen.")
+                    }
+                    else {
+
+                        box.animate({ height: h }, "slow");
+                        box.animate({ width: b }, "slow");
+                        box.animate({ opacity: o }, "slow");
+                        box.animate({ left: l }, "slow");
+                        box.animate({ top: t }, "slow");
+                        box.animate({ height: hb, width: hb}, "slow", function () {
+                            alert('tak for turen')
+                        });
+                     
+
+                    }
+                }
+
+            })
+
+        });
+
+    </script>
+</head>
+<body>
+
+    <div id="wrapper">
+
+        @* Husk <div id="wrapper"> her ELLER på _Layout-siden *@
+
+        <h1>Opgave 10 - lav en animation</h1>
+
+        <ol>
+            <li>Brugeren skal indtaste nogle tal/værdier i tekstboksene</li>
+            <li>Når brugeren klikker på boxen, skal der påbegyndes en animation (læs om det f.eks. på w3schools.com)</li>
+            <li>Animationen skal gennemløbes en værdi ad gangen (altså ikke alle "animationer" herunder på én gang)</li>
+            <li>Den sidste af animationerne skal rumme en "dobbelt-animation" - så BÅDE højde og bredde bliver animeret samtidig</li>
+            <li>Udvid gerne med flere animationer og muligheder, når du har fået ovenstående til at virke</li>
+            <li>Forsøg at validere inputfelterne, så animationen ikke bliver igangsat, hvis brugeren har tastet f.eks. -1, hest eller 900 i et felt, hvor det skal være et tal mellem 1 og 200</li>
+            <li>Prøv også om du kan kode sådan, at der kommer en besked til brugeren, når alle animationer er afsluttet - f.eks. en alert-box med teksten "Tak for turen ..."</li>
+        </ol>
+
+
+        <h2>jQuery is a new kind of JavaScript Library</h2>
+
+        <h4>Udfyld med nogle tal herunder: </h4>
+
+        <p>
+            Højde (1-300)
+            <input type="text" id="h1" placeholder="Højde (1-300)" value="" />
+        </p>
+        <p>
+            Bredde (1-300)
+            <input type="text" id="b1" placeholder="Bredde (1-300)" value="" />
+        </p>
+        <p>
+            Gennemsigtighed (1-100)
+            <input type="text" id="g1" placeholder="Gennemsigtighed (1-100)" value="" />
+        </p>
+        <p>
+            Vandret position (1-300)
+            <input type="text" id="vp1" placeholder="Vandret positio (1-300)" value="" />
+        </p>
+        <p>
+            Lodret position (1-300)
+            <input type="text" id="lp1" placeholder="Lodret position (1-300)" value="" />
+        </p>
+        <p>
+            Sluthøjde og -bredde (1-200)
+            <input type="text" id="hb1" placeholder="Højde (1-200)" value="" />
+        </p>
+
+        <p class="i">Klik på boxen for at starte animationen</p>
+
+        <div id="boxcontainer">
+            <div id="box"></div>
+        </div>
+
+        <p id="naeste"><a href="Opg1">Forfra til opgave 1 >></a></p>
+
+
+
+
+    </div>
+</body>
+</html>

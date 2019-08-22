@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CandyDatabaseModelStoreContainer" CdmEntityContainer="CandyDatabaseEntities">
+    <EntitySetMapping Name="BrugerLoginTabel">
+      <EntityTypeMapping TypeName="CandyDatabaseModel.BrugerLoginTabel">
+        <MappingFragment StoreEntitySet="BrugerLoginTabel">
+          <ScalarProperty Name="BrugerID" ColumnName="BrugerID" />
+          <ScalarProperty Name="Brugernavn" ColumnName="Brugernavn" />
+          <ScalarProperty Name="Navn" ColumnName="Navn" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProduktKategori">
+      <EntityTypeMapping TypeName="CandyDatabaseModel.ProduktKategori">
+        <MappingFragment StoreEntitySet="ProduktKategori">
+          <ScalarProperty Name="KategoriID" ColumnName="KategoriID" />
+          <ScalarProperty Name="KategoriNavn" ColumnName="KategoriNavn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProduktTabel">
+      <EntityTypeMapping TypeName="CandyDatabaseModel.ProduktTabel">
+        <MappingFragment StoreEntitySet="ProduktTabel">
+          <ScalarProperty Name="ProduktID" ColumnName="ProduktID" />
+          <ScalarProperty Name="ProduktNavn" ColumnName="ProduktNavn" />
+          <ScalarProperty Name="ProduktBeskrivelse" ColumnName="ProduktBeskrivelse" />
+          <ScalarProperty Name="ProduktPris" ColumnName="ProduktPris" />
+          <ScalarProperty Name="ProduktBillede" ColumnName="ProduktBillede" />
+          <ScalarProperty Name="FK_ProduktKategoriID" ColumnName="FK_ProduktKategoriID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

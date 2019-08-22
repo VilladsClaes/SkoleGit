@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="VikingeDatabaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="BrugerTabel">
+    <Key>
+      <PropertyRef Name="BrugerID" />
+    </Key>
+    <Property Name="BrugerID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Brugernavn" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="FuldtNavn" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="InformationTabel">
+    <Key>
+      <PropertyRef Name="InformationID" />
+    </Key>
+    <Property Name="InformationID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="InformationOpenhours" Type="String" MaxLength="450" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="InformationAdresse" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="InformationEmail" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="InformationWebsite" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="InformationGoogleMaps" Type="String" MaxLength="610" FixedLength="true" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="KategoriTabel">
+    <Key>
+      <PropertyRef Name="KategoriID" />
+    </Key>
+    <Property Name="KategoriID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="KategoriNavn" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="TemaTabel" Relationship="Self.FK_TemaTabel_KategoriTabel" FromRole="KategoriTabel" ToRole="TemaTabel" />
+  </EntityType>
+  <EntityType Name="TekstTabel">
+    <Key>
+      <PropertyRef Name="IndholdID" />
+    </Key>
+    <Property Name="IndholdID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IndholdOverskrift" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="IndholdTekst" Type="String" MaxLength="550" FixedLength="false" Unicode="true" />
+    <Property Name="IndholdBillede" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TemaTabel">
+    <Key>
+      <PropertyRef Name="TemaID" />
+    </Key>
+    <Property Name="TemaID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TemaOverskrift" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TemaBeskrivelse" Type="String" MaxLength="3250" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TemaBillede" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FK_Kategori" Type="Int32" />
+    <Property Name="TemaAlternativbilledetekst" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="KategoriTabel" Relationship="Self.FK_TemaTabel_KategoriTabel" FromRole="TemaTabel" ToRole="KategoriTabel" />
+  </EntityType>
+  <Association Name="FK_TemaTabel_KategoriTabel">
+    <End Role="KategoriTabel" Type="Self.KategoriTabel" Multiplicity="0..1" />
+    <End Role="TemaTabel" Type="Self.TemaTabel" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KategoriTabel">
+        <PropertyRef Name="KategoriID" />
+      </Principal>
+      <Dependent Role="TemaTabel">
+        <PropertyRef Name="FK_Kategori" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="VikingeDatabaseEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="BrugerTabel" EntityType="Self.BrugerTabel" />
+    <EntitySet Name="InformationTabel" EntityType="Self.InformationTabel" />
+    <EntitySet Name="KategoriTabel" EntityType="Self.KategoriTabel" />
+    <EntitySet Name="TekstTabel" EntityType="Self.TekstTabel" />
+    <EntitySet Name="TemaTabel" EntityType="Self.TemaTabel" />
+    <AssociationSet Name="FK_TemaTabel_KategoriTabel" Association="Self.FK_TemaTabel_KategoriTabel">
+      <End Role="KategoriTabel" EntitySet="KategoriTabel" />
+      <End Role="TemaTabel" EntitySet="TemaTabel" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,65 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>SIDENS TITEL</title>
+
+    <link href="~/Content/common.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $('h2,h4,p').hover(function () {
+                $(this).toggleClass('hilite');
+
+            });
+        });
+    </script>
+
+</head>
+<body>
+
+    <div id="wrapper">
+
+
+        @* Husk <div id="wrapper"> her ELLER på _Layout-siden *@
+
+
+        <div id="opgaven">
+
+            <h1>Opgave 9 - fremhæv et html-tag ved mouseover/hover</h1>
+
+            <ol>
+                <li>Når der er mouseover (eller hover) på et h2, h4 eller p</li>
+                <li>... skal det pågældende html-tag fremhæves (fx med class=hilite)</li>
+                <li>Gør gerne sådan, at alle andre tidligere fremhævninger forsvinder, når en ny fremhævning aktiveres</li>
+            </ol>
+
+        </div>
+
+        <h2>Dette er en h2-overskrift</h2>
+        <p>
+            Lorem ipsum dolor sit amet, <span class="i">consectetur</span> adipiscing elit fusce vel sapien elit in malesuada semper mi, id sollicitudin urna fermentum ut fusce varius nisl ac ipsum gravida vel pretium tellus.
+        </p>
+
+        <h4>Dette er en h4-overskrift</h4>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit <span class="b">fusce</span> vel sapien elit in malesuada semper mi, id sollicitudin urna fermentum.
+        </p>
+
+        <h4>Dette er en h4-overskrift</h4>
+        <p>
+            Lorem ipsum dolor <span class="alert">sit amet</span>, consectetur adipiscing elit fusce vel sapien elit in malesuada semper mi, id sollicitudin urna fermentum.
+        </p>
+
+        <p id="naeste"><a href="Opg10">Næste >></a></p>
+
+
+    </div>
+</body>
+</html>

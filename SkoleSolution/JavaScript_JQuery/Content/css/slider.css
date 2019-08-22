@@ -1,0 +1,70 @@
+﻿
+/* "Skærmen" vi kigger gennem */
+#slider {
+    position: relative;
+    height: 400px;
+    width: 700px;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* "Fotostrimmel" */
+#slidecon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 400px;
+    
+}
+
+/* Div rundt om hvert image */
+.slide {
+    float: left;
+    width: 700px;
+    height: 400px;
+    background: #CCC;
+}
+.slide img{
+    width:100%;
+    display:block;
+}
+
+#circles {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+    #circles div {
+        float: left;
+        width: 15px;
+        height: 15px;
+        margin-left: 10px;
+        background: rgba(255,255,255,.3);
+        border-radius: 50%;
+        border: 1px solid #FFF;
+        cursor: pointer;
+    }
+
+        #circles div.hilite {
+            background: rgba(255, 255, 255, 0.73);
+            border: 1px solid rgba(255, 255, 255, 0.73);
+        }
+
+/* MED TEKST */
+
+.slide h4 {
+    position: absolute;
+    bottom: 0;
+    width: 700px;
+    height: 60px;
+    margin: 0;
+    padding: 0;
+    line-height: 60px;
+    text-align: center;
+    background: rgba(255,255,255,.5);
+    color: #215864;
+    font-size: 20px;
+    z-index: 10;
+    text-transform: uppercase;
+}

@@ -1,0 +1,20 @@
+﻿
+@model NewsSite.Models.MyViewModel
+
+
+@foreach (var dagens in Model.AllGaader)
+{
+    <p>
+        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#dagens-@dagens.GaadeID" aria-expanded="false" aria-controls="collapseExample">
+            @dagens.GaadeSpoergsmaal
+        </button>
+    </p>
+    <div class="collapse" id="dagens-@dagens.GaadeID">
+        <div class="card card-body">
+            @dagens.GaadeSvar
+        </div>
+    </div>
+}
+
+
+

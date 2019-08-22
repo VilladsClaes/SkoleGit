@@ -1,0 +1,68 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>SIDENS TITEL</title>
+
+    <link href="~/Content/common.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(function () {
+
+            $('#roed').click(function () {
+                $('#info').css('color', 'red');
+            });
+
+            $('#blaa').click(function () {
+                $('#info').css('color', 'blue');
+            });
+
+            $('#groen').click(function () {
+                $('#info').css('color', 'green');
+            });
+
+        })
+    </script>
+
+</head>
+<body>
+
+    <div id="wrapper">
+
+        <div id="opgaven">
+
+            <h1>Opgave 4 - 3 knapper til at skifte farve på teksten</h1>
+
+            <ol>
+                <li>Når man klikker på "rød-knappen" skal teksten i div'en (id=info) blive rød</li>
+                <li>Når man klikker på "blå-knappen" skal teksten i div'en (id=info) blive blå</li>
+                <li>Når man klikker på "grøn-knappen" skal teksten i div'en (id=info) blive grøn</li>
+            </ol>
+        </div>
+
+        <h2>jQuery is a new kind of JavaScript Library</h2>
+
+        <h4>jQuery is a fast and concise JavaScript Library that simplifies HTML document traversing, event handling, animating, and Ajax interactions for rapid web development</h4>
+
+        <div id="visskjul">
+            <img src="/Img/roed.png" id="roed" alt="Gør teksten rød" title="Gør teksten rød" />
+            <img src="/Img/blaa.png" id="blaa" alt="Gør teksten blå" title="Gør teksten blå" />
+            <img src="/Img/groen.png" id="groen" alt="Gør teksten grøn" title="Gør teksten grøn" />
+        </div>
+
+        <div id="info">
+            <p>Ever since the Behaviour code was released, some time ago, my mind has been churning this powerful topic over. The premise for the module is as follows: Using the power of Pseudo-CSS Selectors, bind your Javascript functions to various HTML elements in the DOM. Looking at how Behaviour works, I've never been completely happy - it simply seems too tedious and verbose for everyday use. I've since begun to tinker with different styles of code layout - trying to find an optimal solution. </p>
+        </div>
+
+        <p id="naeste"><a href="Opg05">Næste >></a></p>
+
+
+
+    </div>
+</body>
+</html>

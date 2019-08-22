@@ -4,7 +4,6 @@
     <EntitySetMapping Name="Help">
       <EntityTypeMapping TypeName="dbkg218_13Model.Help">
         <MappingFragment StoreEntitySet="Help">
-          <ScalarProperty Name="Helper_FK" ColumnName="Helper_FK" />
           <ScalarProperty Name="HelpID" ColumnName="HelpID" />
           <ScalarProperty Name="HelpText" ColumnName="HelpText" />
           <ScalarProperty Name="HelpType_FK" ColumnName="HelpType_FK" />
@@ -17,26 +16,6 @@
         <MappingFragment StoreEntitySet="HelpType">
           <ScalarProperty Name="HelpTypeID" ColumnName="HelpTypeID" />
           <ScalarProperty Name="HelpType1" ColumnName="HelpType" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Helper">
-      <EntityTypeMapping TypeName="dbkg218_13Model.Helper">
-        <MappingFragment StoreEntitySet="Helper">
-          <ScalarProperty Name="Navn" ColumnName="Navn" />
-          <ScalarProperty Name="Telefonnummer" ColumnName="Telefonnummer" />
-          <ScalarProperty Name="Email" ColumnName="Email" />
-          <ScalarProperty Name="Postnummer" ColumnName="Postnummer" />
-          <ScalarProperty Name="HelperID" ColumnName="HelperID" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="HelpMatch">
-      <EntityTypeMapping TypeName="dbkg218_13Model.HelpMatch">
-        <MappingFragment StoreEntitySet="HelpMatch">
-          <ScalarProperty Name="HelpMatch2_FK" ColumnName="HelpMatch2_FK" />
-          <ScalarProperty Name="HelpMatch1_FK" ColumnName="HelpMatch1_FK" />
-          <ScalarProperty Name="HelpMatchID" ColumnName="HelpMatchID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

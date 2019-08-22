@@ -1,7 +1,9 @@
 ﻿@model NewsSite.Models.NyhederTable
 @{
-    ViewBag.Title = "Den enkelte nyhed";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+                /**/
+
+                ViewBag.Title = "Den enkelte nyhed";
+                Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 
@@ -22,9 +24,11 @@
         </div>
         <p class="w-100 font-weight-bold text-right">pris @Model.NyhederDato</p>
     </div>
-    
+
     <form action="/Home/Index" method="post">
         <input type="submit" name="name" value="Tilbage tíl forsiden" class="p-2" />
     </form>
 </div>
+
+
 

@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="VikingeDatabaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="BrugerTabel">
+    <Key>
+      <PropertyRef Name="BrugerID" />
+    </Key>
+    <Property Name="BrugerID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Brugernavn" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="FuldtNavn" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="InformationTabel">
+    <Key>
+      <PropertyRef Name="InformationID" />
+    </Key>
+    <Property Name="InformationID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="InformationOpenhours" Type="nvarchar" MaxLength="450" Nullable="false" />
+    <Property Name="InformationAdresse" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="InformationEmail" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="InformationWebsite" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="InformationGoogleMaps" Type="nchar" MaxLength="610" Nullable="false" />
+  </EntityType>
+  <EntityType Name="KategoriTabel">
+    <Key>
+      <PropertyRef Name="KategoriID" />
+    </Key>
+    <Property Name="KategoriID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="KategoriNavn" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TekstTabel">
+    <Key>
+      <PropertyRef Name="IndholdID" />
+    </Key>
+    <Property Name="IndholdID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IndholdOverskrift" Type="nvarchar" MaxLength="150" />
+    <Property Name="IndholdTekst" Type="nvarchar" MaxLength="550" />
+    <Property Name="IndholdBillede" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TemaTabel">
+    <Key>
+      <PropertyRef Name="TemaID" />
+    </Key>
+    <Property Name="TemaID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TemaOverskrift" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="TemaBeskrivelse" Type="nvarchar" MaxLength="3250" Nullable="false" />
+    <Property Name="TemaBillede" Type="nvarchar" MaxLength="50" />
+    <Property Name="FK_Kategori" Type="int" />
+    <Property Name="TemaAlternativbilledetekst" Type="nvarchar" MaxLength="150" />
+  </EntityType>
+  <Association Name="FK_TemaTabel_KategoriTabel">
+    <End Role="KategoriTabel" Type="Self.KategoriTabel" Multiplicity="0..1" />
+    <End Role="TemaTabel" Type="Self.TemaTabel" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KategoriTabel">
+        <PropertyRef Name="KategoriID" />
+      </Principal>
+      <Dependent Role="TemaTabel">
+        <PropertyRef Name="FK_Kategori" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="VikingeDatabaseModelStoreContainer">
+    <EntitySet Name="BrugerTabel" EntityType="Self.BrugerTabel" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="InformationTabel" EntityType="Self.InformationTabel" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="KategoriTabel" EntityType="Self.KategoriTabel" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TekstTabel" EntityType="Self.TekstTabel" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TemaTabel" EntityType="Self.TemaTabel" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_TemaTabel_KategoriTabel" Association="Self.FK_TemaTabel_KategoriTabel">
+      <End Role="KategoriTabel" EntitySet="KategoriTabel" />
+      <End Role="TemaTabel" EntitySet="TemaTabel" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,28 @@
+﻿@* Modellen Nyhed skal tages med, fordi vi refererer til den i dette html-dokument *@
+@model List<NewsSite.Models.EksempelNyhed>
+<div class="container">
+    <section class="card-columns col-12 ">
+
+
+
+        @{ foreach (NewsSite.Models.EksempelNyhed nyhedpaaforside in Model)
+            {
+                //Gentag dette for hver Nyhed i Nyhedslisten i Controlleren
+                <div class="card">
+                    <div class="billederamme">
+                        <img class="card-img-top" src="/Content/img/@nyhedpaaforside.BilledeTilNyhed" alt="@nyhedpaaforside.AlternativTekstTilBillede">
+                    </div>
+                    <div class="card-body">
+                        <h2 class="card-title">@nyhedpaaforside.OverskriftTilNyhed</h2>
+                        <p>@nyhedpaaforside.UdgivelsesdatoTilNyhed.ToShortDateString()</p>
+                        <p class="card-text">@nyhedpaaforside.IndholdTilNyhed</p>
+                        <a href="#" class="btn btn-primary">Læs mere</a>
+                    </div>
+                </div>
+            }
+        }
+
+
+
+    </section>
+</div>

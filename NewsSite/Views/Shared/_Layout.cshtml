@@ -1,15 +1,43 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="da">
 <head>
+    <!-- Required meta tags -->
+
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>NewsSite - @ViewBag.Title</title>
-    @* Stilskema-link til ekstern CSS-fil *@
-    <link href="~/Content/bootstrap/bootstrap.css" rel="stylesheet" />
+    <!-- Bootstrap CSS -->
+    @* Stilskema-link til ekstern CSS-fil som er webcompiled af SCSS *@
+    <link type="text/css" rel="Stylesheet" href="/Content/common.css" />
+    <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Gochi+Hand" rel="stylesheet" />
+    <link href="~/Content/css/vendespil.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
 
 
+    @* STILSKEMA I HTML *@
+    <style>
+        .sletdiv {
+            background-color: red;
+            width: 30px;
+            height: 30px;
+            border: 2px solid black;
+            cursor: pointer;
+        }
+
+        .text-success {
+            color: #ffffff !important;
+            background-color: #3c0404 !important;
+            -webkit-clip-path: polygon(0 0, 73% 0, 100% 100%, 0% 100%);
+            clip-path: polygon(0 0, 73% 0, 100% 100%, 0% 100%);
+        }
+    </style>
+   
 </head>
 <body>
+    @* NAVIGATION  *@
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         @* HJEM-knap *@
@@ -21,23 +49,44 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Forsiden <span class="sr-only">(current)</span></a>
+                    @* FORSIDE-KNAP *@
+                    <a class="nav-link" href="/Home">Forsiden <span class="sr-only">(current)</span></a>
                 </li>
+                @* DROPDOWN-MENU *@
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" style="cursor: pointer" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Overskrifter
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         @* Viser et partial view med ChildActionOnly *@
-                        @Html.Action("Overskrifter", "Home")
+                        @* Findes i Home-controlleren *@
+                        @Html.Action("_Overskrifter", "Home")
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="~/Login/">Login</a>
+                    @* Login *@
+                    @{
+                        //Hvis Login ikke er tom, så må man gerne se Adminforsiden
+                        if (Session["LoginBruger"] != null)
+                        {
+                            ViewBag.knap = "Logud";
+                            Session.RemoveAll();
+                        }
+                        else
+                        {
+                            ViewBag.knap = "Login";
+                        }
+                    }
+                    <a class="nav-link" href="/Login/Index">@ViewBag.knap</a>
+
                 </li>
                 <li class="nav-item">
                     <a class="nav-link disabled" href="#">Admin</a>
                 </li>
+
+               
+
+
             </ul>
             @* SØGEFORMULAR *@
             <form action="~/Home/SoegNyhed" method="post" class="form-inline my-2 my-lg-0">
@@ -47,28 +96,32 @@
             @* API-opslag *@
             <form class="form-inline my-2 my-lg-0">
                 <label for="postnr">Postnummer</label>
+                @* Attributten list og id'et er aktiveret af postnummeropslag.js *@
                 <input type="text" list="forslagsliste" id="inpPostnr" value="" autocomplete="off" />
                 <datalist id="forslagsliste"></datalist>
             </form>
         </div>
     </nav>
     <div class="container body-content">
-        
+
 
         @RenderBody()
 
         <hr />
         <footer>
-            @Html.Action("Footer", "Home")
+            @Html.Action("_Footer", "Home")
+            @Html.Action("_Newsletter", "Home")
         </footer>
     </div>
 
-
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     @* JavsScript ved slutning af body-tag *@
+    <script src="~/Scripts/jquery-3.3.1.js"></script>
+    <script src="~/Scripts/popper.js"></script>
+    <script src="~/Scripts/bootstrap.js"></script>
     @* Javascript jquery API-opslag *@
     <script src="~/Scripts/postnummeropslag.js"></script>
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
 </body>
+
 </html>

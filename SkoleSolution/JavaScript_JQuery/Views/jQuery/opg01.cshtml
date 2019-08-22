@@ -1,0 +1,43 @@
+﻿
+@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>SIDENS TITEL</title>
+    <link href="~/Content/common.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $('img').click(function () {
+                $(this).hide();
+            })
+        });
+    </script>
+</head>
+<body>
+
+    <div id="wrapper">
+
+
+        <div id="opgaven">
+
+            <h1>Opgave 1 - skjul et image</h1>
+
+            <ol>
+                <li>Når man klikker på billedet skal det forsvinde</li>
+                <li>I CSS: Gør sådan, at cursoren bliver til en hånd, når cursoren er over billedet</li>
+            </ol>
+
+        </div>
+
+        <p> <img src="/Img/jquery.png" alt="En jquery-bog" id="bog"/></p>
+
+        <p id="naeste"><a href="Opg02">Næste >></a></p>
+    </div>
+</body>
+</html>

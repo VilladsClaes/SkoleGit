@@ -1,0 +1,128 @@
+﻿@model NewsSite.Models.MyViewModel
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+
+    if (TempData["Besked"] != null)
+    {
+        ViewBag.Besked = TempData["Besked"];
+    }
+}
+
+<h2>Velkommen i Nyheder-Administrationsside</h2>
+
+
+@* CRUD på NyhederTable *@
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">Nyhed ID</th>
+            <th scope="col">Nyhedstekst</th>
+            <th scope="col">Dato for nyhed</th>
+            <th scope="col">teaser</th>
+            <th scope="col">Ret</th>
+            <th scope="col">Slet</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+
+            <td colspan="2"><a href="/NyhederAdmin/OpretNyhed" class="btn btn-primary">Opret Ny</a></td>
+            <td colspan="2"><Span class="text-danger">besked til admin:@ViewBag.Besked</Span></td>
+
+        </tr>
+        @foreach (var item in Model.AllNews)
+        {
+            <tr>
+                @* Første kolonne *@
+                <th scope="row" style="width: 20%">
+                    @item.NyhederOverskrift
+                </th>
+                @* Anden kolonne *@
+                <td style="width: 40%">
+                    @item.NyhederTekst
+                </td>
+                @* Tredje kolonne *@
+                <td style="width: 10%">
+                    @item.NyhederDato
+                </td>
+                @* Fjerde kolonne *@
+                <td>
+                    @item.NyhederTeaser
+                </td>
+                @* femte kolonne *@
+                <td>
+                    <a href="/NyhederAdmin/RetNyhed/@item.id"> <img src="~/Content/img/ret.png" alt="Knap der åbner ændringsformular" /></a>
+                </td>
+                @* sjette kolonne *@
+                <td>
+                    <a href="/NyhederAdmin/SletNyhed/@item.id"> <img src="~/Content/img/slet.png" alt="Knap der åbner sletningsdialogboks" /></a>
+                </td>
+            </tr>
+        }
+
+
+    </tbody>
+
+
+</table>
+
+<hr />
+
+
+@* Formular til at uploade filer til hjemmesiden *@
+<h2>Læg Filer op i mappen</h2>
+<form action="~/Admin/Filupload" method="post" enctype="multipart/form-data">
+
+    <input type="file" name="MyFile" />
+    <br />
+    <input type="submit" name="BtnSubmit" value="Upload filen" />
+    <p>@Model.Msg</p>
+</form>
+
+<hr />
+
+@foreach (var File in Model.MyFileInfo)
+{
+    <p>@File.Name</p>
+    <a href="~/Admin/Sletfilen/@File.Name"> SLET DET LORT </a>
+
+    <img src="~/Uploads/@File.Name" alt="" />
+}
+
+@* CRUD på anden måde *@
+    <table class="table border">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Kategori navn</th>
+
+                <th scope="col">Slet</th>
+                <th scope="col">Ret</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+
+                <tr>
+                    <th scope="row">@item.IdCategory</th>
+                    <td>@item.Category</td>
+
+
+                    <td>
+                        <a href="/Admin/CSlet/@item.IdCategory">
+                            <img src="~/Content/gfx/if_delete_678153.png" />
+                        </a>
+                    </td>
+                    <td>
+                        <a href="/Admin/CRet/@item.IdCategory">
+                            <img src="~/Content/gfx/if_pen-checkbox_353430.png" />
+                        </a>
+                    </td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+

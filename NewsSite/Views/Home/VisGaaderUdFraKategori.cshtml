@@ -1,0 +1,51 @@
+﻿@model NewsSite.Models.MyViewModel
+@{
+    ViewBag.Title = "VisProductUdfraKategori";
+    Layout = "~/Views/Shared/_HomeLayout.cshtml";
+}
+<div class="container">
+    <h2 class="text-center">Vis Product i den valgte kategori</h2>
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-sm-6">
+                <div class="card mb-4" style="width:18em;">
+                    <img class="card-img-top" src="~/Content/Img/@item.Photo" />
+                    <h5 class="card-title pl-3">@item.ProductName</h5>
+
+                    <span class="alert-dark font-weight-bold text-lg-center">@item.Price DKK</span>
+                    <a href="/Home/VisProduct/@item.ProductID" class="btn btn-primary">Read More</a>
+                </div>
+            </div>
+
+        }
+    </div>
+</div>
+
+@* EN ANDEN MÅDE AT VISE  PÅ *@
+<div class="container">
+    <h2 class="text-center my-5">
+        The Shop
+    </h2>
+    <div class="row bg-light">
+        @foreach (var item in Model)
+        {
+            <a href="/Home/EnkeltNyhed/@item." class="col-6 p-5 border-0 nounderline">
+                <div class="border p-5 row bg-white  ">
+                    <div class="col-6 p-2">
+                        <img class=" img-thumbnail border-0" src="~/Content/img/@item.ProductImg" />
+                    </div>
+                    <div class="col-6 p-2">
+                        <h3 class="h3 border-bottom text-center text-dark">@item.ProductName</h3>
+                        @* Hvad betyder den her?? *@
+                        <p class="lead text-black-50">@item.AboutProduct.Substring(0, Math.Min(70, @item.AboutProduct.Length))...</p>
+
+                    </div>
+
+                    <p class=" border-bottom col-12 text-right text-dark font-weight-bold">pris: @item.Price</p>
+                </div>
+            </a>
+
+        }
+    </div>
+</div>

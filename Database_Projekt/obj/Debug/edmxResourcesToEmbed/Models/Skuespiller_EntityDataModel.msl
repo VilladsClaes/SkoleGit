@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DanskeSkuespillereModelStoreContainer" CdmEntityContainer="DanskeSkuespillereEntities">
+    <EntitySetMapping Name="Skuespiller">
+      <EntityTypeMapping TypeName="DanskeSkuespillereModel.Skuespiller">
+        <MappingFragment StoreEntitySet="Skuespiller">
+          <ScalarProperty Name="SkuespillerID" ColumnName="SkuespillerID" />
+          <ScalarProperty Name="Fornavn" ColumnName="Fornavn" />
+          <ScalarProperty Name="Efternavn" ColumnName="Efternavn" />
+          <ScalarProperty Name="Foedt" ColumnName="Foedt" />
+          <ScalarProperty Name="Doed" ColumnName="Doed" />
+          <ScalarProperty Name="FoedeBy" ColumnName="FoedeBy" />
+          <ScalarProperty Name="MedvirketAntalFilm" ColumnName="MedvirketAntalFilm" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

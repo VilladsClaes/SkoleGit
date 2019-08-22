@@ -1,0 +1,99 @@
+﻿
+@{
+    Layout = null;
+}
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>SIDENS TITEL</title>
+
+    <link href="~/Content/common.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <style>
+
+        #checkboxcontainer {
+            padding: 30px;
+            background-color: rgba(0,0,0,.1);
+        }
+
+            #checkboxcontainer label,
+            #checkboxcontainer input {
+                margin: 0;
+                padding: 0;
+            }
+
+            #checkboxcontainer .btn {
+                display: inline-block;
+                margin-right: 15px;
+                padding: 5px 15px;
+                cursor: pointer;
+                background-color: #5D768E;
+                color: #FFF;
+                border-radius: 6px;
+            }
+    </style>
+
+
+    <script>
+        $(function() {
+            var check = $('input')
+            var frav = $('.btn:first-child');
+            var tilv = $('.btn:last-of-type');
+
+
+            frav.click(function () {
+                check.attr('checked', false);
+
+            });
+            tilv.click(function () {
+                check.attr('checked', true);
+
+            });
+
+
+        })
+    </script>
+
+</head>
+<body>
+
+    <div id="wrapper">
+
+        @* Husk <div id="wrapper"> her ELLER på _Layout-siden *@
+
+        <div id="opgaven">
+
+            <h1>Opgave 8 - uncheck (fravælg) alle checkboxe</h1>
+            <ol>
+                <li>Når brugeren klikker på "Fravælg alle"</li>
+                <li>... skal alle checkboxe unchecked/fravalgt (flueben forsvinder i alle checkboxe)</li>
+                <li>Når brugeren klikker på "Vælg alle"</li>
+                <li>... skal alle checkboxe checked/valgt (flueben i alle checkboxe)</li>
+            </ol>
+
+        </div>
+
+        <div id="checkboxcontainer">
+
+            <p class="btn">Fravælg alle</p>
+            <p class="btn">Vælg alle</p>
+
+            <h2>Uncheck checkboxe: </h2>
+
+            <label><input type="checkbox" id="Checkbox1" checked="checked" value="" /> Valg eller fravalg - det er spørgsmålet 1</label><br />
+            <label><input type="checkbox" id="Checkbox2" checked="checked" value="" /> Valg eller fravalg - det er spørgsmålet 2</label><br />
+            <label><input type="checkbox" id="Checkbox3" checked="checked" value="" /> Valg eller fravalg - det er spørgsmålet 3</label><br />
+            <label><input type="checkbox" id="Checkbox4" checked="checked" value="" /> Valg eller fravalg - det er spørgsmålet 4</label><br />
+            <label><input type="checkbox" id="Checkbox5" checked="checked" value="" /> Valg eller fravalg - det er spørgsmålet 5</label><br />
+            <label><input type="checkbox" id="Checkbox6" checked="checked" value="" /> Valg eller fravalg - det er spørgsmålet 6</label><br />
+            <label><input type="checkbox" id="Checkbox7" checked="checked" value="" /> Valg eller fravalg - det er spørgsmålet 7</label>
+
+        </div>
+
+        <p id="naeste"><a href="Opg09">Næste >></a></p>
+
+    </div>
+</body>
+</html>

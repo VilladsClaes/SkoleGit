@@ -1,0 +1,155 @@
+﻿@model NewsSite.Models.NyhederTable
+@{
+    ViewBag.Title = "Ret Nyheden";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<div class="container bg-light">
+    <h2>Ret Cartoon</h2>
+    @* FORMULAR TIL RETTELSE AF ELEMENTER  *@
+    <form action="/NyhederAdmin/RetNyhed" method="post" enctype="multipart/form-data">
+        <div class="text-danger">@Html.ValidationSummary()</div>
+        <div class="form-row">
+
+            @*ID*@
+            <div class="form-group col-md-6">
+                <label for="id">ID:</label>
+                <input type="text" name="id" id="id" readonly value="@Model.id" />
+            </div>
+
+        </div>
+
+        @*Overskrift*@
+        <div class="form-group col-md-6">
+
+            <label for="NyhederOverskrift">Overskrift:</label>
+            <input type="text" name="NyhederOverskrift" id="NyhederOverskrift" value="@Model.NyhederOverskrift" class="form-control" />
+            <span class="text-danger">@Html.ValidationMessageFor(m => m.NyhederOverskrift)</span>
+
+        </div>
+
+
+        <div class="form-row">
+
+            @* Indsæt teaser *@
+            <div class="form-group col-md-4">
+                <label for="NyhederTeaser">Teaser</label>
+                @* Dette felt har attributten "required" som validerer om feltet er fyldt eller tomt *@
+                <input type="text" name="NyhederTeaser" id="NyhederTeaser" pattern=".{50,500}" required title="Skriv mere end 50 tegn og under 500 tegn" value="@Model.NyhederTeaser" class="form-control" />
+                <span class="text-danger">@Html.ValidationMessageFor(m => m.NyhederTeaser)</span>
+            </div>
+
+            @*tekst*@
+            <div class="form-group col-md-8">
+                <label for="NyhederTekst">Tekst: </label>
+                <textarea class="form-control" id="NyhederTekst" name="NyhederTekst" va rows="3">@Model.NyhederTekst</textarea>
+                <span class="text-danger">@Html.ValidationMessageFor(m => m.NyhederTekst)</span>
+            </div>
+
+        </div>
+
+        @*billede filtet*@
+        <div class="form-row">
+            <div class="form-group col-md-6">
+
+                @*nuværende billede*@
+                <img src="~/Content/img/Nyheder/@Model.NyhederImage" width="100" />
+
+
+                @*hvis brugeren vil beholde det eksistende billede*@
+                <input type="hidden" name="NyhederImage" id="NyhederImage" value="@Model.NyhederImage" />
+
+                @*hvis brugeren vil have et andet billede*@
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="NytNyhederImage">Vælg en Photo</label>
+                        <input type="file" name="NytNyhederImage" id="NytNyhederImage" class="form-control" />
+                        <span class="text-danger">@Html.ValidationMessageFor(m => m.NyhederImage)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        @*submit button*@
+        <div class="form-row ">
+            <div class="form-group col-md-6">
+                <button type="submit" class="btn btn-primary">Ret Nyheden</button>
+                <a href="/NyhederAdmin/" class="btn btn-success">fortryd uden Retelse</a>
+            </div>
+        </div>
+
+
+
+    </form>
+</div>
+
+
+
+@* ANDEN MÅDE AT VISE OPRET PÅ *@
+
+<div class="container p-5 bg-light text-center ">
+    <h2>Opret</h2>
+
+    <form action="/Admin/PRet" method="post" class="border px-5 py-3" enctype="multipart/form-data">
+        <span>@ViewBag.Besked</span>
+        @Html.ValidationSummary()
+
+        @*id som kun kan ses*@
+        <div>
+            <label for="id">id</label> <br />
+            <input type="text" readonly name="tbProduct.IdProduct" value="@Model.tbProduct.IdProduct" id="id" class="form-control" required />
+
+        </div>
+        @*navn*@
+        <div>
+            <label for="Name">Vare navn</label> <br />
+            <input type="text" name="tbProduct.ProductName" value="@Model.tbProduct.ProductName" id="Name" class="form-control" required />
+
+        </div>
+        @*om produktet*@
+        <div>
+            <label for="om">om produktet</label> <br />
+            <textarea type="text" name="tbProduct.AboutProduct" id="om" class="form-control" required>@Model.tbProduct.AboutProduct</textarea>
+
+        </div>
+        @*prisen*@
+        <div>
+            <label for="Price">Pris</label> <br />
+            <input type="number" name="tbProduct.Price" value="@Model.tbProduct.Price" id="Price" class="form-control" required />
+
+        </div>
+        @*vælg kategori*@
+        <div>
+            <label for="Category">Vælg category</label> <br />
+            <select id="Category" name="tbProduct.ProcuctCategory">
+                @foreach (var item in Model.CategoryList)
+                {
+
+                    <option value="@item.IdCategory">
+                        @item.Category
+                    </option>
+                }
+            </select>
+
+        </div> <br />
+        @*billede*@
+        <div>
+            <h4>Nuværende billede</h4>
+            <img src="~/Content/img/@Model.tbProduct.ProductImg" alt="" width="100" />
+            <input type="hidden" name="tbProduct.ProductImg" value="@Model.tbProduct.ProductImg" id="Img" />
+
+
+            @*hvis der skal et nyt billede til*@
+            <label for="NytImg">Vælg et andet billede</label> <br />
+            <input type="file" name="NytImg" id="NytImg" class="form-control" />
+
+        </div> <br />
+
+
+        <input type="submit" name="name" value="send til database" />
+        <div>
+            <a class="btn bg-info text-white my-3" href="/Admin/ProductRev">Fortryd og gå til forsiden</a>
+        </div>
+    </form>
+</div>
+
+

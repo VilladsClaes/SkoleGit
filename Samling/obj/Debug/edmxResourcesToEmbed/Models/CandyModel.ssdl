@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CandyDatabaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="BrugerLoginTabel">
+    <Key>
+      <PropertyRef Name="BrugerID" />
+    </Key>
+    <Property Name="BrugerID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Brugernavn" Type="nvarchar" MaxLength="50" />
+    <Property Name="Navn" Type="nvarchar" MaxLength="50" />
+    <Property Name="Password" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ProduktKategori">
+    <Key>
+      <PropertyRef Name="KategoriID" />
+    </Key>
+    <Property Name="KategoriID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="KategoriNavn" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ProduktTabel">
+    <Key>
+      <PropertyRef Name="ProduktID" />
+    </Key>
+    <Property Name="ProduktID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProduktNavn" Type="nvarchar" MaxLength="50" />
+    <Property Name="ProduktBeskrivelse" Type="nvarchar" MaxLength="250" />
+    <Property Name="ProduktPris" Type="int" />
+    <Property Name="ProduktBillede" Type="nvarchar" MaxLength="50" />
+    <Property Name="FK_ProduktKategoriID" Type="int" />
+  </EntityType>
+  <Association Name="FK_ProduktTabel_ProduktKategori">
+    <End Role="ProduktKategori" Type="Self.ProduktKategori" Multiplicity="0..1" />
+    <End Role="ProduktTabel" Type="Self.ProduktTabel" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProduktKategori">
+        <PropertyRef Name="KategoriID" />
+      </Principal>
+      <Dependent Role="ProduktTabel">
+        <PropertyRef Name="FK_ProduktKategoriID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="CandyDatabaseModelStoreContainer">
+    <EntitySet Name="BrugerLoginTabel" EntityType="Self.BrugerLoginTabel" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProduktKategori" EntityType="Self.ProduktKategori" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProduktTabel" EntityType="Self.ProduktTabel" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_ProduktTabel_ProduktKategori" Association="Self.FK_ProduktTabel_ProduktKategori">
+      <End Role="ProduktKategori" EntitySet="ProduktKategori" />
+      <End Role="ProduktTabel" EntitySet="ProduktTabel" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

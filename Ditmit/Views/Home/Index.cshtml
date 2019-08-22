@@ -1,0 +1,78 @@
+﻿@model Ditmit.Models.HelpViewModel
+@{
+
+    ViewBag.Title = "Nabotjenesten";
+    Layout = "/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="row">
+
+    @* KASSE HVOR FOLK SKRIVER HJÆLP *@
+    <div class="container col-6" id="forside">
+        <section class="m-4">
+            @* HJÆLP TILBYDES *@
+            @* attributten metode poster til action som ligger i HomeControllerens ActionResult ved navn AddHelpOffer *@
+            <form action="/Home/AddHelpOffer" role="form" method="post" class="border-info alert-info p-4">
+               
+                
+                <div class="card text-center form-group">
+                    @* Labelets attribut for="" henviser til modellen og bindes til input-tagget herunder  *@
+                    <label class="card-header bg-info tex" for="Helpitem.HelpText">Hvad kan du tilbyde</label>
+                    @* Inputtets type-attribut tager imod tekst. *@
+                    @*id-attributten bindes til label-for-attributten og til name-attributten. Alle bindes til modellen*@
+                    <div class="card-body">
+                        <input type="text" class="form-control card-title" name="Helpitem.HelpText" id="Helpitem.HelpText" aria-describedby="offeredHelp" placeholder="Hvad kan DU gøre for ANDRE">
+                        <small id="offeredHelp" class="form-text text-muted">Det du skriver vises hvis andre søger hjælp til netop det</small>
+                       
+                        <div class="form-group form-check card-text">
+                            <input type="checkbox" class="form-check-input" id="accepter1">
+                           
+                            <label class="form-check-label " for="accepter1">Acceptér at vi må kontakte dig når der er brug for din hjælp</label>
+                        </div>
+                    </div>
+                    @* submit-attributten afslutter postet i formularen *@
+                    <button type="submit" class="btn btn-primary">Send afsted</button>
+                   
+                </div>
+            </form>
+        </section>
+
+
+        @* MAGEN TIL OVENSTÅENDE *@
+        <section class="m-4">
+            @* HJÆLP ØNSKES *@
+
+            <form action="/Home/AddHelpWant" role="form" method="post" class="border-danger alert-danger p-4">
+                <div class="card text-center form-group">
+
+                    <label class="card-header bg-danger" for="Helpitem.HelpText">Hvad søger du hjælp til</label>
+                    <div class="card-body">
+                        <input type="text" class="form-control" name="Helpitem.HelpText" id="Helpitem.HelpText" aria-describedby="wantedhelp" placeholder="Hvad ANDRE kan gøre for DIG">
+                        <small id="wantedhelp" class="form-text text-muted">Det du skriver vises hvis andre vil hjælpe med netop det</small>
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="accepter2">
+                            <label class="form-check-label" for="accepter2">Acceptér at vi må kontakte dig når nogen vil hjælpe dig</label>
+                        </div>
+                    </div>
+                    @* submit-attributten afslutter postet i formularen *@
+                    <button type="submit" class="btn btn-primary">Send afsted</button>
+                </div>
+
+                
+                
+            </form>
+        </section>
+
+    </div>
+    @* KASSE HVOR OUTPUT KOMMER. Enten hele tabellen eller søgeresultaterne *@
+    <div class="container col-6">
+        <section class="m-4" style="border: 2px dashed gray;">
+           
+           @*@Html.Action("Search")*@
+            @Html.Action("AltingTabel")
+
+        </section>
+    </div>
+
+</div>

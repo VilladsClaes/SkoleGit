@@ -3,11 +3,54 @@
     ViewBag.Title = "NewsSite";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<div class="jumbotron" id="forsidebanner">
+<div class="jumbotron" id="forsidebanner" style=" background-image: url('/Content/img/news.jpg'); background-size: cover;">
     <h1>Forsiden @ViewBag.Title</h1>
-    <p class="lead">Nyheder fra hele verden</p>
+    @* Viser et partial view med ChildActionOnly *@
+    <p class="lead">Dagens Sjove Joke: @Html.Action("_DagensGaade", "Home")</p>
+    <p class="lead">Find fede fakta: @Html.Action("_SoegVidsteDu", "Home")</p>
+
     <p><a href="#nyhedsbrev" class="btn btn-primary btn-lg">Få tilsendt pr mail &raquo;</a></p>
+
 </div>
+
+
+@* Sider på dette site *@
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Navn</th>
+            <th scope="col">Adgang</th>
+            <th scope="col">Beskrivelse</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">1</th>
+            <td>Index</td>
+            <td>Forsiden på Home</td>
+            <td>Forsiden indeholder en række partialviews: _DagensGaade, _ContactForm og EksempelNyheder. Den looper elementer fra databasen ud via modeller som er beskrevet i MyViewmodel</td>
+        </tr>
+        <tr>
+            <th scope="row">2</th>
+            <td>EnkeltNyhed</td>
+            <td>Underside på Home.</td>
+            <td>Den viser EnkeltNyhed/id, ved at tage ID med fra den nyhed der trykkes på. Hvis intet ID er givet med som argument, vil man komme tilbage til Forsiden</td>
+        </tr>
+        <tr>
+            <th scope="row">3</th>
+            <td>SoegNyhed</td>
+            <td>Underside på Home. </td>
+            <td>Tager value fra inputfelt i _Layout og giver med som argument til http-post-Action som bruger et lambda-udtryk til at sortere databasen og returnere en visning med resultatet</td>
+        </tr>
+        <tr>
+            <th scope="row">4</th>
+            <td>SoegVidsteDu</td>
+            <td>Underside på Home. </td>
+            <td>Et partial view i Lead-div'en på forsiden. Der er et inputfelt med API ajax kald der bruger en API-controller (API3-controlleren). Soegning sker ved onkeyup</td>
+        </tr>
+    </tbody>
+</table>
 
 @* Nyheder fra Database NyhederTable spyttet ud via model *@
 <div class="row">
@@ -26,7 +69,12 @@
     }
 </div>
 
+@* Kontaktformular *@
 <div class="row">
+    @* Et Actionresult kan hedde ét men kalde et andet view. Denne kalder _ContactForm *@
+    @Html.Action("VisKontaktformular")
+</div>
+<div class="row" id="gaader">
     @* VidsteDuTable spyttet ud i en løkke  *@
     @foreach (var fact in Model.AllVidsteDu)
     {
@@ -44,10 +92,24 @@
             </div>
         </div>
     }
+    @foreach (var gaade in Model.AllGaader)
+    {
+        <div class="col-sm-3 col-lg-2">
+
+            <p>
+                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#gaade-@gaade.GaadeID" aria-expanded="false" aria-controls="collapseExample">
+                    @gaade.GaadeSpoergsmaal
+                </button>
+            </p>
+            <div class="collapse" id="gaade-@gaade.GaadeID">
+                <div class="card card-body">
+                    @gaade.GaadeSvar
+                </div>
+            </div>
+        </div>
+    }
 </div>
-
-
-
-
-
-
+<div class="row">
+    @* Viser et partial view med ChildActionOnly *@
+    @Html.Action("EksempelNyheder")
+</div>

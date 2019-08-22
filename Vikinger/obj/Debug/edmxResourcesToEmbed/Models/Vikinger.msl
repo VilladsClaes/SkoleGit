@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="VikingeDatabaseModelStoreContainer" CdmEntityContainer="VikingeDatabaseEntities">
+    <EntitySetMapping Name="BrugerTabel">
+      <EntityTypeMapping TypeName="VikingeDatabaseModel.BrugerTabel">
+        <MappingFragment StoreEntitySet="BrugerTabel">
+          <ScalarProperty Name="BrugerID" ColumnName="BrugerID" />
+          <ScalarProperty Name="Brugernavn" ColumnName="Brugernavn" />
+          <ScalarProperty Name="FuldtNavn" ColumnName="FuldtNavn" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InformationTabel">
+      <EntityTypeMapping TypeName="VikingeDatabaseModel.InformationTabel">
+        <MappingFragment StoreEntitySet="InformationTabel">
+          <ScalarProperty Name="InformationID" ColumnName="InformationID" />
+          <ScalarProperty Name="InformationOpenhours" ColumnName="InformationOpenhours" />
+          <ScalarProperty Name="InformationAdresse" ColumnName="InformationAdresse" />
+          <ScalarProperty Name="InformationEmail" ColumnName="InformationEmail" />
+          <ScalarProperty Name="InformationWebsite" ColumnName="InformationWebsite" />
+          <ScalarProperty Name="InformationGoogleMaps" ColumnName="InformationGoogleMaps" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KategoriTabel">
+      <EntityTypeMapping TypeName="VikingeDatabaseModel.KategoriTabel">
+        <MappingFragment StoreEntitySet="KategoriTabel">
+          <ScalarProperty Name="KategoriID" ColumnName="KategoriID" />
+          <ScalarProperty Name="KategoriNavn" ColumnName="KategoriNavn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TekstTabel">
+      <EntityTypeMapping TypeName="VikingeDatabaseModel.TekstTabel">
+        <MappingFragment StoreEntitySet="TekstTabel">
+          <ScalarProperty Name="IndholdID" ColumnName="IndholdID" />
+          <ScalarProperty Name="IndholdOverskrift" ColumnName="IndholdOverskrift" />
+          <ScalarProperty Name="IndholdTekst" ColumnName="IndholdTekst" />
+          <ScalarProperty Name="IndholdBillede" ColumnName="IndholdBillede" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TemaTabel">
+      <EntityTypeMapping TypeName="VikingeDatabaseModel.TemaTabel">
+        <MappingFragment StoreEntitySet="TemaTabel">
+          <ScalarProperty Name="TemaID" ColumnName="TemaID" />
+          <ScalarProperty Name="TemaOverskrift" ColumnName="TemaOverskrift" />
+          <ScalarProperty Name="TemaBeskrivelse" ColumnName="TemaBeskrivelse" />
+          <ScalarProperty Name="TemaBillede" ColumnName="TemaBillede" />
+          <ScalarProperty Name="FK_Kategori" ColumnName="FK_Kategori" />
+          <ScalarProperty Name="TemaAlternativbilledetekst" ColumnName="TemaAlternativbilledetekst" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

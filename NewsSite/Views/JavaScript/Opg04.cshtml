@@ -1,0 +1,54 @@
+﻿@{
+    ViewBag.Title = "Opgave 4";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1 id="overskrift">Skift tekst</h1>
+
+<div id="opgaven">
+
+    <h4>Opgaven</h4>
+
+    <ol>
+        <li>Når der klikkes på knappen:</li>
+        <li>Skal overskriftens tekst ændres til "En ny overskrift"</li>
+    </ol>
+    <ol start="3">
+        <li>Når man klikker igen:</li>
+        <li>skal overskriften skifte tilbage til den oprindelige tekst</li>
+    </ol>
+
+    <p id="help">
+        Få hjælp fx her:
+        <a href="http://www.w3schools.com/jsref/prop_html_innerhtml.asp" target="_blank">Noget om innerHTML</a> og <a href="http://www.w3schools.com/js/js_if_else.asp" target="_blank">conditions (if-else)</a>
+    </p>
+
+</div>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce quis lectus quis sem lacinia nonummy.</p>
+
+<div>
+    <h2>Underoverskrift af en slags</h2>
+    <p>Proin mollis lorem non dolor. In hac habitasse platea dictumst. Nulla ultrices odio. Donec augue. Phasellus dui. Maecenas facilisis nisl vitae nibh. Proin vel est vitae eros pretium dignissim. Aliquam aliquam sodales orci. Suspendisse potenti. Nunc adipiscing euismod arcu. Quisque facilisis mattis lacus. Fusce bibendum, velit in venenatis viverra, tellus ligula dignissim felis, quis euismod mauris tellus ut urna. Proin scelerisque. Nulla in mi. Integer ac leo. Nunc urna ligula, gravida a, pretium vitae, bibendum nec, ante. Aliquam ullamcorper iaculis lectus. Sed vel dui. Etiam lacinia risus vitae lacus. </p>
+</div>
+
+<input type="button" value="Klik her" id="knap" onclick="myFunction()" />
+
+<script>
+    var tjek = false
+    function myFunction() {
+
+
+        if (tjek === false) {
+            document.getElementById("overskrift").innerHTML = "klik igen";
+            tjek = true;
+            console.log(document.getElementById("overskrift"))
+        }
+        else {
+            document.getElementById("overskrift").innerHTML = "Skift tekst";
+            tjek = false;
+            console.log("Fire")
+        }
+
+    }
+</script>

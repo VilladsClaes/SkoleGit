@@ -1,0 +1,125 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link href="~/Content/css/reset.css" rel="stylesheet" />
+    <link href="~/Content/css/StyleSheet1.css" rel="stylesheet" />
+
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="~/Content/gfx/runinc_logo.svg" />
+   
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#shop">Shop</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="hero">
+            <img src="~/Content/gfx/hero.jpg" />
+            <div class="payoff"><h2>We <span class="colortext">Love</span> Running</h2></div>
+        </section>
+        <section id="events">
+            <img src="~/Content/gfx/event.jpg" />
+            <div class="payoff"><h2>Next event</h2></div>
+            <aside>
+                <h1>Events</h1>
+                
+         
+                <h2>Copenhage marathon</h2>
+                <h3><time datetime="2018-09-21">d. 21 september i år</time></h3>
+
+                <h2>Løbeløbet</h2>
+                <h3><time datetime="2018-09-21">d. 21 september i år</time></h3>
+
+                <h2>Copenhage marathon</h2>
+                <h3><time datetime="2018-09-21">d. 21 september i år</time></h3>
+
+
+            </aside>
+        </section>
+        <section id="shop">
+            <div class="payoff"><h2>shop</h2></div>
+            <aside>
+                <h1>Shop</h1>
+
+                <h2>Gratis fragt</h2>
+
+                <ul>
+                    <li><a href="#">Addidas</a></li>
+                    <li><a href="#">Nike</a></li>
+                    <li><a href="#">skomærke</a></li>
+                    <li><a href="#">Hummel</a></li>
+                    <li><a href="#">puma</a></li>
+                    <li><a href="#">Ecco</a></li>
+                </ul>
+
+            </aside>
+            <section id="products">
+                <figure>
+                    <img src="~/Content/img/shoe_01.jpg" />
+                    <figcaption>sko1</figcaption>
+                </figure>
+                <figure>
+                    <img src="~/Content/img/shoe_02.jpg" />               
+                    <figcaption>sko2</figcaption>
+                </figure>
+                <figure>
+                    <img src="~/Content/img/shoe_03.jpg" />
+                    <figcaption>sko3</figcaption>
+                </figure>
+                <figure>
+                    <img src="~/Content/img/shoe_04.jpg" />
+                    <figcaption>sko4</figcaption>
+                </figure>
+            </section>
+        </section>
+
+        <footer id="contact">
+            <img src="~/Content/gfx/map.JPG" />
+            <div class="payoff"><h2>Contact</h2></div>
+            <section id="info">
+                <address>
+                    <span class="colortext"></span>Runinc <br />
+                    Kannikegade 2 <br />
+                    8000 Aarhus C <br />
+                                  <a href="tel:+4560614309">60 61 43 09</a><br />
+                                                                           <a href="mailto:villadsclaes@villadsclaes.dk">Send en mail</a><br />
+
+                </address>
+            </section>
+            <form action="/" method="post">
+                <label for="navn">Dit Navn</label>
+                <input type="text" id="navn" required placeholder="Husk at det er dit fornavn" />
+                <label for="email">Din email</label>
+                <input type="text" id="email" value="" />
+                <label for="telefon">Dit telefonnummer</label>
+                <input type="text" id="telefon" value="" />
+                <label for="dato">Dagens dato</label>
+                <input type="date" id="dato" value="" />
+                <label for="besked">Din besked</label>
+                <textarea id="besked"></textarea>
+                <input type="submit" value="Send beskeden" />
+                <input type="reset" />
+
+            </form>
+        </footer>
+    </main>
+    
+</body>
+
+</html>

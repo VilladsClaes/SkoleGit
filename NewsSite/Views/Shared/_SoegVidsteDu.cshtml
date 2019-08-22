@@ -1,0 +1,82 @@
+﻿@model NewsSite.Models.VidsteDuTable
+
+@{
+    ViewBag.Title = "Søgning i 'Vidste Du?'";
+}
+<script>
+
+    $(document).ready(function () { //Vent til siden er indlæst
+
+        var apiurl = "/api/API3"; //Gem adressen til API'en
+
+        
+
+        
+        //Søgeinputfelt
+        $("#inputfeltet").keyup(Soeg);
+
+
+        function Soeg() {
+            
+            $("#resultat").html("<h2 style='color:green;' >Søgeresultater</h2>");
+
+            var soegeord = $("#inputfeltet").val(); //Hvis der skrives i input
+            var soegeurl = apiurl + "?soegeord=" + soegeord;
+            console.log($("#inputfeltet").val());
+            if (soegeord.length > 0) {
+
+
+
+                $.ajax({
+                    type: "GET",
+                    dataType: "json",
+                    url: soegeurl,
+                    success: function (detsomderblevsoegt) {
+                        console.log(detsomderblevsoegt); //Se hvad der gemmer sig i den API
+                        console.log(soegeurl);
+                        FundneData(detsomderblevsoegt);
+                    },
+                    error: function (e) {
+                        alert("Det virker ikke" + e);
+                    }
+                })
+
+
+                function FundneData(detderblevfundet) {
+                    console.log("Der sendes API-data");
+
+                    for (var x in detderblevfundet) {
+
+                        $("#resultat").append("<h2>" + detderblevfundet[x].VidsteDuOverskrift + " </h2>").append("<p>" + detderblevfundet[x].VidsteDuTekst + " </p>")
+
+
+
+                    };
+
+                    if (detderblevfundet.count == 0) {
+                        $("#resultat").append("<div>Ingen resultater</div>");
+                    }
+
+                };
+
+            };
+
+
+
+
+        };
+
+    });
+</script>
+
+
+<h2>@ViewBag.Title</h2>
+
+<label for="soegefelt">Søg i Vidste-Du'er</label>
+<input type="text" id="inputfeltet" name="soegefelt" placeholder="skriv her..." value="" />
+
+<div id="citatboks">
+
+    <div id="resultat"></div>
+
+</div>

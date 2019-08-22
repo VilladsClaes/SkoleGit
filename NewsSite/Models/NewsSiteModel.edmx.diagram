@@ -13,6 +13,8 @@
         <EntityTypeShape EntityType="NewsSiteModel.sysdiagrams" Width="2.75" PointX="0.75" PointY="6.75" />
         <AssociationConnector Association="NewsSiteModel.FK_GaadeTabel_KategoriTabel" />
         <EntityTypeShape EntityType="NewsSiteModel.Logins" Width="1.5" PointX="7.375" PointY="3.75" />
+        <EntityTypeShape EntityType="NewsSiteModel.NoteTabel" Width="1.5" PointX="4.375" PointY="7.75" />
+        <EntityTypeShape EntityType="NewsSiteModel.tblPopup" Width="1.5" PointX="7.375" PointY="6.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

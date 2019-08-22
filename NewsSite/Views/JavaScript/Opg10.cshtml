@@ -1,0 +1,122 @@
+﻿@{
+    ViewBag.Title = "Opgave 10";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1 id="overskrift">Flyt image</h1>
+
+<div id="opgaven">
+
+    <h4>Opgaven</h4>
+
+    <ol>
+        <li>Når man klikker på en af image-pilene:</li>
+        <li>Skal pacman flyttes 10 pixels i den retning som pilen peger</li>
+    </ol>
+
+    <ol>
+        <li>Når man klikker på en tastatur-pil</li>
+        <li>Skal pacman flyttes 10 pixels i den retning som pilen peger</li>
+    </ol>
+
+    <!--<p class="i">Kan du mon udvide  at gøre sådan at pacman'en fortsætter med at flytte sig i den samme retning - indtil man klikker på en anden pil (eller den rammer browservinduets "ramme")</p>-->
+
+    <p id="help">
+        Få hjælp fx her:
+        <a href="http://www.w3schools.com/jsref/prop_style_top.asp" target="_blank">Noget om style</a> og <a href="http://stackoverflow.com/questions/905222/enter-key-press-event-in-javascript#answers" target="_blank">"Enter key press event in JavaScript"</a> og <a href="http://keycode.info/" target="_blank">koderne til pile-tasterne </a>
+    </p>
+
+</div>
+
+<div id="board">
+    <img src="/Img/pacman.png" alt="pacman" id="pacman" />
+</div>
+
+<div id="control">
+    <img id="venstre" src="/Img/venstre.png" alt="Venstre" />
+    <img id="op" src="/Img/op.png" alt="Op" />
+    <img id="ned" src="/Img/ned.png" alt="Ned" />
+    <img id="hoejre" src="/Img/hoejre.png" alt="Højre" />
+</div>
+<script>
+
+    var startLeft = 50;
+    var startTop = 50;
+    var l = document.getElementById("venstre");
+    var t = document.getElementById("op");
+    var b = document.getElementById("ned");
+    var r = document.getElementById("hoejre");
+    var pacman = document.getElementById("pacman");
+
+    // mod venstre
+    l.onclick = function (e) {
+        pacman.style.transform = "scaleX(-1)"
+        if (startLeft < 10) {
+            pacman.style.transform = "scaleX(1)"
+            return
+        }
+        pacman.style.left = (startLeft + -10) + "px";
+        startLeft = startLeft - 10;
+ 
+
+    }
+    //mod toppen
+    t.onclick = function (e) {
+        pacman.style.transform = "rotate(270deg)";
+
+        if (startTop < 10) {
+            pacman.style.transform = "rotate(90deg)";
+            return
+        }
+        pacman.style.top = (startTop + -10) + "px";
+        startTop = startTop - 10;
+    }
+    //mod bunden
+    b.onclick = function (e) {
+        pacman.style.transform = "rotate(90deg)";
+        if (startTop > 220) {
+            pacman.style.transform = "rotate(270deg)";
+            return
+        }
+        pacman.style.top = (startTop + 10) + "px";
+        startTop = startTop + 10;
+    }
+    //mod højre 
+    r.onclick = function (e) {
+        pacman.style.transform = "scaleX(1)"
+        if (startLeft > 420) {
+            pacman.style.transform = "scaleX(-1)"
+            return
+        }
+        pacman.style.left = (startLeft + 10) + "px";
+        startLeft = startLeft + 10;
+
+    }
+
+    //når der du løfter fingerne fra knapperne gælder denne funktion
+    document.onkeyup = function arrow(e) {
+
+        var keyCode = e.keyCode;
+
+        //det tjekkes på keycode
+        switch (keyCode) {
+            case 37:
+                //click er en js funktion. Det svare til at der er blevet klikket på img med id venstre = altså sendes den til l.onclick funktionen.
+                l.click();
+                break;
+            case 38:
+                t.click();
+                break;
+            case 39:
+                r.click();
+                break
+            case 40:
+                b.click();
+                break;
+        }
+
+    }
+
+
+
+</script>

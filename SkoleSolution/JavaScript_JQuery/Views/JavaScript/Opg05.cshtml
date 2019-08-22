@@ -1,0 +1,46 @@
+﻿@{
+    ViewBag.Title = "Opgave 5";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h1 id="overskrift">Loop/gentag noget tekst</h1>
+
+<div id="opgaven">
+
+    <h4>Opgaven</h4>
+
+    <ol>
+        <li>For hver gang man klikker på knappen:</li>
+        <li>Skal teksten 'øller' LOOPES 5 gange ind i span-tag'et (id=svar) </li>
+    </ol>
+
+    <p class="i">HUSK mellemrum mellem hvert 'øller', så der fx står: øller øller øller øller øller</p>
+
+    <p id="help">
+        Få hjælp fx her:
+        <a href="http://www.w3schools.com/js/js_loop_for.asp" target="_blank">Noget om loops</a> og et simpelt eksempel <a href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_loop_for_ex" target="_blank">her</a>
+    </p>
+
+</div>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce quis lectus quis sem lacinia nonummy noget åndet om ekko.</p>
+
+<div>
+    <h2>Ekko</h2>
+    <p id="spm" class="b">Hvad drikker Møller?</p>
+    <p>Ekkoet svarer: <span id="svar" class="big"></span></p>
+</div>
+
+<input type="button" value="Klik her" id="knap" onclick="myFunction()" />
+
+<script>
+    var text = "";
+    var i;
+    function myFunction() {
+        for (i = 0; i < 5; i++) {
+            text += "Øller ";
+        }
+        document.getElementById("svar").innerHTML = text;
+    }
+</script>

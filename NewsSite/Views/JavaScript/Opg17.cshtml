@@ -1,0 +1,217 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Opgave 17</title>
+    <link type="text/css" rel="Stylesheet" href="~/Content/common.css" />
+
+</head>
+<body>
+
+    <div id="wrapper">
+        <h1>Validering #6 - DET HELE ... SAMLET ... SVÆR!!!</h1>
+
+        <div id="opgaven">
+
+            <p>Forsøg at løse opgaven, så al validering er samlet med validering på alle felter:</p>
+
+            <ol>
+                <li>HVIS der er fejl eller mangler i et eller flere felter:</li>
+                <li>Skal der stå en rød fejlbesked i de &lt;span&gt;, hvor der er fejl/mangler</li>
+            </ol>
+
+            <ol>
+                <li>HVIS formularen er udfyldt korrekt (intet mangler og alle tidligere regler er overholdt):</li>
+                <li>Skal der være et grønt flueben, et OK el.lign. i alle &lt;span&gt;</li>
+                <li>OG sørg for en alert-box, som giver besked om, at alt er OK - man er nu oprettet som medlem el.lign.</li>
+            </ol>
+
+        </div>
+
+        <h2>Udfyld venligst:</h2>
+
+        <form>
+
+            <fieldset>
+                <legend>Personlige oplysninger</legend>
+
+                <!-- NAVN -->
+                <label for="fornavn">Dit navn</label>
+                <input type="text" name="fornavn" id="navn" value="" placeholder="Dit navn" title="Indtast dit navn" />
+                <span id="obsnavn"></span>
+                <br />
+
+                <!-- ALDER -->
+                <label for="alder">Alder (min. 18 år og maks. 130 år)</label>
+                <input type="text" name="alder" id="alder" value="" placeholder="Din alder" />
+                <span id="obsalder"></span>
+                <br />
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Kontaktoplysninger</legend>
+
+                <!-- POSTNR -->
+                <label for="postnr">Postnummer (kun danske)</label>
+                <input type="text" name="postnr" id="postnr" value="" placeholder="Dit postnummer" />
+                <span id="obspostnr"></span>
+                <br />
+
+                <!-- EMAIL -->
+                <label for="email">E-mail</label>
+                <input type="text" name="email" id="email" value="" placeholder="Din e-mail-adresse" />
+                <span id="obsemail"></span>
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Sikkerhed</legend>
+                <br />
+
+                <!-- PASSWORD 1 -->
+                <label for="pw">Password (min. 6 tegn)</label>
+                <input type="text" name="pw" id="pw1" value="" placeholder="Skriv et password" />
+                <span id="obspw1"></span>
+                <br />
+
+                <!-- PASSWORD 2 -->
+                <label for="pw">Gentag password</label>
+                <input type="text" name="pw2" id="pw2" value="" placeholder="Gentag password" />
+                <span id="obspw2"></span>
+
+            </fieldset>
+
+            <input type="button" id="submit" value="Send" />
+
+        </form>
+
+        <div class="clear"></div>
+
+    </div>
+    <script>
+        //global variabler
+
+        var submit = document.getElementById("submit");
+
+        var inputAlder = document.getElementById("alder");
+        var nodeAlder = document.getElementById("obsalder");
+
+        var email = document.getElementById("email");
+        var nodeEmail = document.getElementById("obsemail");
+
+        var pw1 = document.getElementById("pw1");
+        var pw2 = document.getElementById("pw2");
+        var node1 = document.getElementById("obspw1");
+        var node2 = document.getElementById("obspw2");
+
+        var inputPost = document.getElementById("postnr");
+        var nodePost = document.getElementById("obspostnr");
+       
+
+        submit.onclick = function (e) {
+            //variabler
+
+            var mail = email.value;
+            // 2*snabel -A pga razor..
+            var regex = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+            var tjek = regex.test(mail);
+
+            var code1 = pw1.value;
+            var code2 = pw2.value;
+
+            var zipCode = inputPost.value;
+            var code = parseInt(zipCode, 10);
+
+            var testAlder = inputAlder.value;
+            var codeAlder = parseInt(testAlder, 10);
+
+            var name = document.getElementById("navn").value;
+
+            var count = 0;
+
+            //navn
+            if (name.length < 2) {
+                e.preventDefault();
+                document.getElementById("navn").style.backgroundColor = "#e8827a";
+                document.getElementById("obsnavn").innerHTML = "&radic;";
+
+            }
+            else {
+                document.getElementById("navn").style.backgroundColor = "white";
+                document.getElementById("obsnavn").innerHTML = "ok";
+                ++count;
+            }
+
+            //alder
+            if (codeAlder < 18 || codeAlder > 130 || codeAlder % 1 != 0) {
+                nodeAlder.innerHTML = "Udfyld korrekt alder ";
+                nodeAlder.style.color = "red";
+                inputAlder.focus();
+            }
+            else {
+
+                nodeAlder.innerHTML = "&radic;";
+                nodeAlder.style.color = "green";
+                ++count;
+
+            }
+
+            //zipcode
+            if (code < 1000 || code > 9999 || code % 1 != 0) {
+                nodePost.innerHTML = "Udfyld korrekt postnummer";
+                nodePost.style.color = "red";
+                inputPost.focus();
+            }
+            else {
+
+                nodePost.innerHTML = "&radic;";
+                nodePost.style.color = "green";
+                ++count;
+
+            }
+            //email
+            if (tjek != true) {
+                nodeEmail.innerHTML = "Udfyld med korrekt email";
+                nodeEmail.style.color = "red";
+                email.focus();
+            }
+            else {
+                nodeEmail.innerHTML = "&radic;";
+                nodeEmail.style.color = "green";
+                ++count;
+            }
+            //password
+            if (code1.length < 6) {
+                pw1.focus();
+                node1.innerHTML = "Udfyld et password på min. 6 tegn";
+                node2.innerHTML = "";
+                node1.style.color = "red";
+                node2.style.color = "red";
+            }
+            else if (code1 != code2) {
+                node1.innerHTML = "De to indtastninger skal være ens og midst på 6 tegn";
+                node2.innerHTML = "De to indtastninger skal være ens";
+                pw1.focus();
+            }
+            else if (code1 === code2) {
+                node1.innerHTML = "&radic;";
+                node2.innerHTML = "&radic;";
+                node1.style.color = "green";
+                node2.style.color = "green";
+                ++count;
+            }
+
+            if (count === 5) {
+                alert("Tillykke du er nu op taget i kluben for folk mellem 18-130 år");
+            }
+        }
+
+    </script>
+</body>
+</html>

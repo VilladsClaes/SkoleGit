@@ -1,0 +1,110 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Opgave 15</title>
+    <link type="text/css" rel="Stylesheet" href="~/Content/common.css" />
+
+</head>
+<body>
+
+    <div id="wrapper">
+        <h1>Validering - PASSWORD - COMPARE</h1>
+
+        <div id="opgaven">
+            <p>Forsøg at løse følgende:</p>
+
+            <ol>
+                <li>Når man klikker på send-knappen:</li>
+            </ol>
+
+            <ol start="2">
+                <li>HVIS et felt er tomt eller længden af passwordet er mindre end 6 tegn:</li>
+                <li>Skal der i &lt;span&gt; være en rød tekst "Udfyld et password på min. 6 tegn" el.lign.</li>
+                <li>OG cursoren skal blinke i det første felt (fokus på feltet)</li>
+            </ol>
+
+            <ol start="5">
+                <li>HVIS de to password ikke er ens:</li>
+                <li>Skal der i &lt;span&gt; stå en rød tekst fx "De to indtastninger skal være ens"</li>
+                <li>OG cursoren skal blinke i det første felt (fokus på feltet)</li>
+            </ol>
+
+            <ol start="8">
+                <li>HVIS begge inputfelte er udfyldt ens og er på min. 6 tegn:</li>
+                <li>Skal der i de to &lt;span&gt; være et grønt flueben, et OK el.lign.</li>
+            </ol>
+
+            <p id="help">
+                Se henvisninger i de tidligere opgaver - du får fx måske brug for noget if-else og compare/sammenligning (om noget er større end, lig med eller mindre end), focus mv.
+                Og måske noget med at måle length af en string: <a href="http://www.w3schools.com/jsref/jsref_length_string.asp" target="_blank">Læs om string length her </a>
+            </p>
+
+        </div>
+
+        <h2>Udfyld venligst:</h2>
+        <form>
+
+            <fieldset>
+                <legend>Sikkerhedsoplysninger</legend>
+
+                <div>
+                    <label for="pw1">Skriv et password (min. 6 tegn):</label>
+                    <input type="password" name="pw1" id="pw1" value="" placeholder="Password" />
+                    <span id="obspw1" class="alert"></span>
+                </div>
+                <div>
+                    <label for="pw2">Gentag password:</label>
+                    <input type="password" name="pw2" id="pw2" value="" placeholder="Gentag password" />
+                    <span id="obspw2" class="alert"></span>
+                </div>
+                <input type="button" id="submit" value="Send" />
+            </fieldset>
+
+        </form>
+
+        <div class="clear"></div>
+
+    </div>
+    <script>
+        var submit = document.getElementById("submit");
+        var pw1 = document.getElementById("pw1");
+        var pw2 = document.getElementById("pw2");
+        var node1 = document.getElementById("obspw1");
+        var node2 = document.getElementById("obspw2");
+
+
+        submit.onclick = function (e) {
+
+            var code1 = pw1.value;
+            var code2 = pw2.value;
+
+            if (code1.length < 6) {
+                pw1.focus();
+                node1.innerHTML = "Udfyld et password på min. 6 tegn";
+                node2.innerHTML = "";
+                node1.style.color = "red" ;
+                node2.style.color = "red";
+            }
+            else if (code1 != code2) {
+                node1.innerHTML = "De to indtastninger skal være ens og midst på 6 tegn";
+                node2.innerHTML = "De to indtastninger skal være ens";
+                pw1.focus();
+            }
+            else if (code1 === code2) {
+                node1.innerHTML = "&radic;";
+                node2.innerHTML = "&radic;";
+                node1.style.color = "green";
+                node2.style.color = "green";
+            }
+
+        }
+
+    </script>
+</body>
+</html>

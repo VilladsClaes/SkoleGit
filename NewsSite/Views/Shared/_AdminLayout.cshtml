@@ -25,14 +25,19 @@
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         @* Viser et partial view med ChildActionOnly *@
-                        @Html.Action("Overskrifter", "Home")
+                        @Html.Action("_Overskrifter", "Home")
                     </div>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link btn bg-info text-white mx-1" href="/Login/Edit">Ændr bruger</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link btn bg-info text-white mx-1" href="/Login/Details">Din Profil</a>
+                    <a class="nav-link btn bg-info text-white mx-1" href="/Login/Details">
+                        Din Profil: Du er logget ind som: @Session["LoginBruger"]
+                    </a>
+                    <a class="nav-link btn bg-info text-white mx-1" href="/Login/Logud">
+                        Log af
+                    </a>
                 </li>
             </ul>
             @* SØGEFORMULAR *@

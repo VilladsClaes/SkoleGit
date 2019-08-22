@@ -1,0 +1,29 @@
+﻿
+@model NewsSite.Models.MyViewModel
+
+@* dl er html-tag for description-list og indrammer termer og deres definitioner *@
+<dl>
+    @foreach (var dagens in Model.AllGaader)
+    {
+
+        @* dt er html-tag for description-term og opstiller navne på ting *@
+        <dt>
+            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#dagens-@dagens.GaadeID" aria-expanded="false" aria-controls="collapseExample">
+                @dagens.GaadeSpoergsmaal
+            </button>
+        </dt>
+        @* dd er html-tag for description-data og opstiller definitioner på ting *@
+        <dd>
+            <div class="collapse" id="dagens-@dagens.GaadeID">
+                <div class="card card-body">
+                    @dagens.GaadeSvar
+                </div>
+            </div>
+        </dd>
+
+    }
+</dl>
+
+
+
+

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="JokeDatabaseModelStoreContainer" CdmEntityContainer="JokeDatabaseEntities">
+    <EntitySetMapping Name="GaadeTabel">
+      <EntityTypeMapping TypeName="JokeDatabaseModel.GaadeTabel">
+        <MappingFragment StoreEntitySet="GaadeTabel">
+          <ScalarProperty Name="GaadeID" ColumnName="GaadeID" />
+          <ScalarProperty Name="GaadeSpoergsmaal" ColumnName="GaadeSpoergsmaal" />
+          <ScalarProperty Name="GaadeSvar" ColumnName="GaadeSvar" />
+          <ScalarProperty Name="FK_Kategori" ColumnName="FK_Kategori" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KategoriTabel">
+      <EntityTypeMapping TypeName="JokeDatabaseModel.KategoriTabel">
+        <MappingFragment StoreEntitySet="KategoriTabel">
+          <ScalarProperty Name="KategoriID" ColumnName="KategoriID" />
+          <ScalarProperty Name="KategoriNavn" ColumnName="KategoriNavn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

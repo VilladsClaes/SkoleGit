@@ -1,0 +1,76 @@
+﻿
+@{
+    ViewBag.Title = "FilmAPI";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    #custom-search-input {
+        padding: 3px;
+        border: solid 1px #E4E4E4;
+        border-radius: 6px;
+        background-color: #fff;
+    }
+
+        #custom-search-input input {
+            border: 0;
+            box-shadow: none;
+        }
+
+        #custom-search-input button {
+            margin: 2px 0 0 0;
+            background: none;
+            box-shadow: none;
+            border: 0;
+            color: #666666;
+            padding: 0 8px 0 10px;
+            border-left: solid 1px #ccc;
+        }
+
+            #custom-search-input button:hover {
+                border: 0;
+                box-shadow: none;
+                border-left: solid 1px #ccc;
+            }
+
+        #custom-search-input .glyphicon-search {
+            font-size: 23px;
+        }
+</style>
+<h2>FilmAPI</h2>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <h2>Custom search field</h2>
+            <div id="custom-search-input">
+                <div class="input-group col-md-12">
+                    <input type="text" id="soeg" class="form-control input-lg" placeholder="Søg på en film" />
+                    <span class="input-group-btn">
+                        <button class="btn btn-info btn-lg" type="button">
+                            <i class="glyphicon glyphicon-search"></i>
+                        </button>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="antalresultater"></div>
+
+
+<h1 id="titel"></h1>
+<p><b id="beskrivelse"></b></p>
+<ol id="medvirkende" start="1"></ol>
+
+<script src="~/Scripts/DFI-credentials-film.js"></script>
+
+
+<div class="card" style="width: 18rem; border: 2px solid black; padding: 10px;">
+    <div class="card-body">
+        <h5 class="card-title">Filmens titel</h5>
+        <h6 class="card-subtitle mb-2 text-muted">udgivelsesår</h6>
+        <p class="card-text">Beskrivelse</p>
+        <a href="#" class="card-link">Card link</a>
+        <a href="#" class="card-link">Another link</a>
+    </div>
+</div>

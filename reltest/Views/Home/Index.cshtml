@@ -1,0 +1,129 @@
+﻿@model IEnumerable<reltest.Models.ProductTable>
+
+
+@{
+    ViewBag.Title = "Index";
+
+}
+
+<h2>Index</h2>
+
+<form action="" method="post" enctype="multipart/form-data">
+
+
+    <div class="form-group">
+
+        <div class="form-row">
+            <div class="col-auto">
+                <div class="form-group">
+
+                    <label class="control-label col" for="ProductName">Produktnavn:</label>
+                    <input type="text" class="form-control" name="ProductName" id="ProductName" aria-describedby="produkthelp" placeholder="Skriv produktets navn her">
+                    <small id="produkthelp" class="form-text text-muted">Navnet på modellen på skoen, ikke mærket</small>
+                </div>
+            </div>
+           
+            <div class="col-auto">
+                <div class="form-group">
+                    <label class="control-label col" for="BrandTable.BrandName">Opret nyt Mærke:</label>
+                    <input type="text" class="form-control border-warning" name="BrandTable.BrandName" id="BrandTable.BrandName" placeholder="Skriv brandnavn her">
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="form-row">
+        <div class="col-auto">
+            @* Billeder *@
+            <div class="form-group">
+                <label class="control-label col" for="ProductImages">Produktbilleder:</label>
+                <input type="file" class="form-control-file" multiple name="ProductImages" id="ProductImages">
+            </div>
+        </div>
+        <div class="col-auto">
+            @* PRIS *@
+            <div class="form-group">
+                <label class="control-label col" for="ProductPrice">Pris:</label>
+                <div class="col">
+                    <input type="number" name="ProductPrice" min="0" max="9000" class="form-control" value="pris" />
+                </div>
+            </div>
+        </div>
+        <div class="col-auto">
+            @* BRAND *@
+            <div class="form-group">
+                <label class="control-label col" for="ProductBrandID">Mærke</label>
+                <div class="col">
+                    <div class="dropdown">
+                        <select id="ProductBrandID" name="ProductBrandID" class="form-control">
+                            @foreach (var item in Model)
+                            {
+                                <option class="dropdown-item" value="@item.ProductBrandID">@item.BrandTable.BrandName</option>
+                            }
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+        
+
+        
+
+        @* BESKRIVELSE *@
+        <div class="form-group">
+            <label class="control-label col-auto" for="ProductBeskrivelse">Beskrivelse</label>
+            <div class="col-md-10">
+                <textarea class="form-control rounded-0" id="ProductBeskrivelse" name="ProductBeskrivelse" maxlength="500" rows="10" cols="20" tabindex="0" autofocus="autofocus" draggable="true"></textarea>
+            </div>
+        </div>
+
+
+        <input type="submit" name="BtnSubmit" value="Ok" class="btn btn-primary mb-2" />
+
+</form>
+
+
+
+<table class="table">
+    <tr>
+        <th>
+            <h3>Produktnavn:</h3>
+        </th>
+        <th>
+            <h3>Produktpris:</h3>
+        </th>
+        <th>
+            <h3>Produktbeskrivelse:</h3>
+        </th>
+        <th>
+            <h3>Mærke:</h3>
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @item.ProductName
+            </td>
+            <td>
+                <strong>@item.ProductPrice</strong>
+            </td>
+            <td>
+                <p>@item.ProductBeskrivelse</p>
+            </td>
+            <td>
+                @item.BrandTable.BrandName
+
+            </td>
+        
+        </tr>
+    }
+
+</table>

@@ -1,0 +1,43 @@
+﻿
+@{
+    ViewBag.Title = "Opgave 6";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<h1 id="overskrift">Skift image</h1>
+
+<div id="opgaven">
+
+    <h4>Opgaven</h4>
+
+    <ol>
+        <li>Når man holder musen/cursoren over billedet:</li>
+        <li>Skal image tt1.gif erstattes med tt2.gif</li>
+    </ol>
+
+    <ol start="3">
+        <li>Når man fjerner musen/cursoren fra billedet:</li>
+        <li>Skal image erstattes med det oprindelige image (tt1.gif)</li>
+    </ol>
+
+    <p id="help">
+        Få hjælp fx her:
+        <a href="http://www.w3schools.com/jsref/prop_img_src.asp" target="_blank">Noget om src-attributten i image</a> (men der er andre måder) og <a href="http://www.w3schools.com/jsref/dom_obj_event.asp" target="_blank">noget om mouse-events</a>
+    </p>
+
+</div>
+
+<h2>Teletubbies</h2>
+<img src="/Img/tt1.gif" alt="Teletubbies" title="En fjerdedel teletubbies" id="myImg" onmouseover="hover()" onmouseout="normal()" />
+
+<script>
+    function hover() {
+
+        document.getElementById("myImg").src = "/Img/tt2.gif";
+    }
+    function normal() {
+        document.getElementById("myImg").src = "/Img/tt1.gif";
+    }
+</script>

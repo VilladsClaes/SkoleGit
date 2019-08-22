@@ -1,0 +1,43 @@
+﻿@model NewsSite.Models.MailViewModel
+
+<h2>Contact Form</h2>
+
+<form action="/Home/ContactForm" method="post">
+
+    @*  emailadressefelt *@
+    <div class="form-group">
+        <label for="MailAdressFrom">Emailadresse:</label>
+        <input class="form-control" type="text" name="MailAdressFrom" id="MailAdressFrom" placeholder="Skriv Din Email" />
+    </div>
+    @* Her kommer en fejlmeddelelese hvis emailadressen ikke er valid *@
+    @Html.ValidationMessage("MailadresseFrom")
+
+    @* Brugerens navn *@
+    <div class="form-group">
+        <label for="MailName">Navn:</label>
+        <input class="form-control" type="text" name="MailName" id="MailName" placeholder="Skriv Dit Navn" />
+    </div>
+    @* Her kommer en fejlmeddelelese hvis afsendernavnet ikke er valid *@
+    @Html.ValidationMessage("MailSenderName")
+
+    @* Emnefeltet *@
+    <div class="form-group">
+        <label for="MailSubject">Emne:</label>
+        <input class="form-control" type="text" name="MailSubject" id="MailSubject" placeholder="Emnet" />
+    </div>
+    @Html.ValidationMessage("MailSubject")
+
+    @* Beskeden *@
+    <div class="form-group">
+        <label for="MailBody">Besked:</label>
+        <textarea class="form-control" type="text" name="MailBody" id="MailBody" placeholder="Skriv din henvendelse her" rows="6"></textarea>
+    </div>
+    @Html.ValidationMessage("MailBody")
+
+    @* knap *@
+    <input class="btn btn-dark w-25 sort" type="submit" name="btnSendMail" value="Send besked" />
+
+    @* Her vises evt fejlbesked *@
+    <div class="w-25 p-3">@Model.Message</div>
+
+</form>

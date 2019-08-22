@@ -4,15 +4,11 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="9acaad5c096341cbb814c099ff22a708" Name="Diagram1">
-        <EntityTypeShape EntityType="dbkg218_13Model.Help" Width="1.5" PointX="3" PointY="0.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="dbkg218_13Model.HelpType" Width="1.5" PointX="0.75" PointY="1.125" IsExpanded="true" />
-        <AssociationConnector Association="dbkg218_13Model.FK_Help_HelpType" ManuallyRouted="false" />
-        <EntityTypeShape EntityType="dbkg218_13Model.Helper" Width="1.5" PointX="0.75" PointY="4.875" />
-        <AssociationConnector Association="dbkg218_13Model.FK_Help_Helper" />
-        <EntityTypeShape EntityType="dbkg218_13Model.HelpMatch" Width="1.5" PointX="5.25" PointY="1.25" />
-        <AssociationConnector Association="dbkg218_13Model.FK_HelpMatch1_Help" />
-        <AssociationConnector Association="dbkg218_13Model.FK_HelpMatch2_Help" />
+      <Diagram DiagramId="1ea59638f1524a4781027c6efce24a7c" Name="Diagram1">
+        <EntityTypeShape EntityType="HelpModelNamespace.HelpOffer" Width="1.5" PointX="0.75" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HelpModelNamespace.HelpWant" Width="1.5" PointX="3" PointY="0.875" IsExpanded="true" />
+        <AssociationConnector Association="HelpModelNamespace.FK_HelpOffer_HelpWant" ManuallyRouted="false" />
+        <AssociationConnector Association="HelpModelNamespace.FK_HelpWant_HelpOffer" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

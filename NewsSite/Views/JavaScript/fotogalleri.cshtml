@@ -1,0 +1,76 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>fotogalleri</title>
+    <link type="text/css" rel="Stylesheet" href="~/Content/Main.css" />
+
+</head>
+<body>
+    <div id="imgmenucontainer">
+
+        <div id="imgpusher">
+            <img id="left" src="~/img/left.png" />
+            <img id="right" src="~/img/right.png" />
+        </div>
+
+        <div id="imgmenu">
+            <img src="~/img/Thumb/Bohr.jpg" onclick="goBig(this)" />
+            <img src="~/img/Thumb/Curie.jpg" onclick="goBig(this)" />
+            <img src="~/img/Thumb/Edison.jpg" onclick="goBig(this)" />
+            <img src="~/img/Thumb/Einstein.jpg" onclick="goBig(this)" />
+        </div>
+
+    </div>
+
+    <div id="imgcontainer">
+        <img src="~/img/Big/Bohr.jpg" id="bigImg" alt="foto"/>
+    </div>
+
+    <script>
+        function goBig(thumb) {
+            document.querySelector('#imgcontainer img').src = thumb.src.replace("Thumb", "Big");
+
+        }
+
+        var left = document.getElementById('left');
+        var right = document.getElementById('right');
+
+        left.onclick = function moveLeft(e) {
+
+            var imgmenu = document.getElementById('imgmenucontainer');
+            var imgmenupostition = imgmenu.offsetLeft;
+
+            if (imgmenupostition > -170) {
+                imgmenu.style.left = imgmenupostition - 5 + 'px';
+                setTimeout(moveLeft, 10);
+            }
+            else {
+                left.style.display = "none";
+                right.style.display = "inline";
+            }
+      
+
+        }
+        right.onclick = function moveRight (e) {
+            var imgmenu = document.getElementById('imgmenucontainer');
+            var imgmenupostition = imgmenu.offsetLeft;
+
+            if (imgmenupostition < 0) {
+                imgmenu.style.left = imgmenupostition + 5 + 'px';
+                setTimeout(moveRight, 10);
+            }
+            else {
+                left.style.display = "inline";
+                right.style.display = "none";
+            }
+        }
+      
+    </script>
+</body>
+</html>
