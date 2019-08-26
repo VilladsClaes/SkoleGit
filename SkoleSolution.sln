@@ -155,6 +155,8 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Festival grid", "Festival g
 		SlnRelativePath = "Festival grid\"
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hjemmesideøvelse 1", "Hjemmesideøvelse 1\Hjemmesideøvelse 1.csproj", "{6FB23AFA-5757-4682-AD69-D25CA0285039}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -237,6 +239,10 @@ Global
 		{3853487D-B312-451D-A750-F978F5576C3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3853487D-B312-451D-A750-F978F5576C3A}.Release|Any CPU.ActiveCfg = Debug|Any CPU
 		{3853487D-B312-451D-A750-F978F5576C3A}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{6FB23AFA-5757-4682-AD69-D25CA0285039}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FB23AFA-5757-4682-AD69-D25CA0285039}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FB23AFA-5757-4682-AD69-D25CA0285039}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FB23AFA-5757-4682-AD69-D25CA0285039}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
