@@ -1,4 +1,4 @@
-﻿@model CartoonSite.Models.CartoonTable
+﻿@model CartoonSite.Models.TegnefilmsfigurTabel
 @{
     ViewBag.Title = "RetCartoon";
     Layout = "~/Views/Shared/_AdminLayout1.cshtml";
@@ -10,22 +10,22 @@
         <div class="form-row">
             @*CartoonID*@
             <div class="form-group col-md-6">
-                <label for="CartoonID">ID:</label>
-                <input type="text" name="CartoonID" id="CartoonID" readonly value="@Model.CartoonID" />
+                <label for="TegnefilmsfigurID">ID:</label>
+                <input type="text" name="TegnefilmsfigurID" id="TegnefilmsfigurID" readonly value="@Model.TegnefilmsfigurID" />
             </div>
         </div>
             @*Cartoon navn*@
             <div class="form-group col-md-6">
-                <label for="CartoonName">Cartoon navn:</label>
-                <input type="text" name="CartoonName" id="CartoonName" value="@Model.CartoonName" class="form-control" />
-                <span class="text-danger">@Html.ValidationMessageFor(m => m.CartoonName)</span>
+                <label for="TegnefilmfigurNavn">Cartoon navn:</label>
+                <input type="text" name="TegnefilmfigurNavn" id="TegnefilmfigurNavn" value="@Model.TegnefilmfigurNavn" class="form-control" />
+                <span class="text-danger">@Html.ValidationMessageFor(m => m.TegnefilmfigurNavn)</span>
             </div>
 
             @*Cartoon Beskrivelse*@
             <div class="form-row">
-                <label for="CartoonsSubscribe">Cartoons Subscribe</label>
-                <textarea class="form-control" id="CartoonsSubscribe" name="CartoonsSubscribe" va rows="3">@Model.CartoonsSubscribe</textarea>
-                <span class="text-danger">@Html.ValidationMessageFor(m => m.CartoonsSubscribe)</span>
+                <label for="TegnefilmfigurBeskrivelse">Cartoons Subscribe</label>
+                <textarea class="form-control" id="TegnefilmfigurBeskrivelse" name="TegnefilmfigurBeskrivelse" va rows="3">@Model.CartoonsSubscribe</textarea>
+                <span class="text-danger">@Html.ValidationMessageFor(m => m.TegnefilmfigurBeskrivelse)</span>
             </div>
         
             @*billede filtet*@
@@ -33,18 +33,18 @@
             <div class="form-group col-md-6">
 
                 @*nuværende billede*@
-                <img src="~/Content/Img/@Model.Photo" width="100" />
+                <img src="~/Content/Img/@Model.TegnefilmfigurBillede" width="100" />
 
 
                 @*hvis brugeren vil beholde det eksistende billede*@
-                <input type="hidden" name="Photo" id="Photo" value="@Model.Photo" />
+                <input type="hidden" name="Photo" id="Photo" value="@Model.TegnefilmfigurBillede" />
 
                 @*hvis brugeren vil have et andet billede*@
                 <div class="form-row">
                     <div class="form-group col-md-6">
-                        <label for="NytPhoto">Vælg en Photo</label>
-                        <input type="file" name="NytPhoto" id="Photo" class="form-control" />
-                        <span class="text-danger">@Html.ValidationMessageFor(m => m.Photo)</span>
+                        <label for="TegnefilmfigurBillede">Vælg en Photo</label>
+                        <input type="file" name="TegnefilmfigurBillede" id="TegnefilmfigurBillede" class="form-control" />
+                        <span class="text-danger">@Html.ValidationMessageFor(m => m.TegnefilmfigurBillede)</span>
                     </div>
                 </div>
             </div>

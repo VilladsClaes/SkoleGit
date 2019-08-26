@@ -11,22 +11,22 @@ namespace CartoonSite.Controllers
     
     public class AdminController : Controller
     {
-        CartoonDbEntities1 Db = new CartoonDbEntities1();
+        TegnefilmsfigurerEntities Db = new TegnefilmsfigurerEntities();
 
         // GET: Admin
         public ActionResult Index()
         {
-            List<CartoonTable> CartoonList = new List<CartoonTable>();
-            CartoonList = Db.CartoonTable.ToList();
+            List<TegnefilmsfigurTabel> CartoonList = new List<TegnefilmsfigurTabel>();
+            CartoonList = Db.TegnefilmsfigurTabel.ToList();
             return View(CartoonList);
         }
         public ActionResult OpretNyCartoon()
         {
-            CartoonTable NyCartoon = new CartoonTable();
+            TegnefilmsfigurTabel NyCartoon = new TegnefilmsfigurTabel();
             return View(NyCartoon);
         }
         [HttpPost]
-        public ActionResult OpretNyCartoon(CartoonTable NyCartoon, HttpPostedFileBase Photo)
+        public ActionResult OpretNyCartoon(TegnefilmsfigurTabel NyCartoon, HttpPostedFileBase Photo)
         {
           if(!ModelState.IsValid || Photo == null)
             {
@@ -45,7 +45,7 @@ namespace CartoonSite.Controllers
 
             // gem i Db
             NyCartoon.Photo = ImgNavn; // fx hest.jpg
-            Db.CartoonTable.Add(NyCartoon);
+            Db.TegnefilmsfigurTabel.Add(NyCartoon);
             Db.SaveChanges();
 
 
@@ -64,7 +64,7 @@ namespace CartoonSite.Controllers
 
 
             //Hente Cartoon som måske skal slettes, og send den med til viewet.
-            CartoonTable CartoonSlettes = Db.CartoonTable.Find(Id);
+            TegnefilmsfigurTabel CartoonSlettes = Db.TegnefilmsfigurTabel.Find(Id);
             if(CartoonSlettes == null) //hvis der er ikke Cartoon som matcher Id
                 return RedirectToAction("Index");
 
@@ -72,11 +72,11 @@ namespace CartoonSite.Controllers
             return View(CartoonSlettes);
         }
         [HttpPost]
-        public ActionResult SletCartoon(CartoonTable CartoonSlettes)
+        public ActionResult SletCartoon(TegnefilmsfigurTabel CartoonSlettes)
         {
             //Hente Cartoon som måske skal slettes. og sende den til viewet...
             //Cartoon har kun en id . så resten skla slås op med "find"
-            CartoonSlettes = Db.CartoonTable.Find(CartoonSlettes.CartoonID);
+            CartoonSlettes = Db.TegnefilmsfigurTabel.Find(CartoonSlettes.TegnefilmsfigurID);
 
 
             //CartoonTable SC = Db.CartoonTable.Find(Id);
@@ -94,7 +94,7 @@ namespace CartoonSite.Controllers
 
 
             // slet fra Db
-            Db.CartoonTable.Remove(CartoonSlettes);
+            Db.TegnefilmsfigurTabel.Remove(CartoonSlettes);
             Db.SaveChanges();
 
             TempData["Besked"] = "Cartoon er slettet";
@@ -109,7 +109,7 @@ namespace CartoonSite.Controllers
 
 
             //Hente Cartoon som måske skal Rettes, og send den med til viewet.
-            CartoonTable CartoonRettet = Db.CartoonTable.Find(Id);
+            TegnefilmsfigurTabel CartoonRettet = Db.TegnefilmsfigurTabel.Find(Id);
             if (CartoonRettet == null) //hvis der er ikke Cartoon som matcher Id
                 return RedirectToAction("Index");
 
@@ -117,7 +117,7 @@ namespace CartoonSite.Controllers
             return View(CartoonRettet);
         }
         [HttpPost]
-        public ActionResult RetCartoon(CartoonTable CartoonRettet, HttpPostedFileBase NytPhoto)
+        public ActionResult RetCartoon(TegnefilmsfigurTabel CartoonRettet, HttpPostedFileBase NytPhoto)
         {
             NytPhoto = Request.Files["NytPhoto"];
             //hvis det er ikke udfyldt korrekt
@@ -128,7 +128,7 @@ namespace CartoonSite.Controllers
             }
             if(NytPhoto != null)
             {
-                string imgsti = System.IO.Path.Combine(Server.MapPath("~/Content/Img/"), CartoonRettet.Photo);
+                string imgsti = System.IO.Path.Combine(Server.MapPath("~/Content/Img/"), CartoonRettet.TegnefilmfigurBillede);
 
                 if (System.IO.File.Exists(imgsti))
                     System.IO.File.Delete(imgsti);// imgsti slettet
@@ -139,9 +139,9 @@ namespace CartoonSite.Controllers
                 imgsti = System.IO.Path.Combine(Server.MapPath("~/Content/Img/"), ImgNavn);
 
                 NytPhoto.SaveAs(imgsti);//gemme selve filen
-                CartoonRettet.Photo = ImgNavn; // gemme navnet i modellen -som næste step sends til Db
+                CartoonRettet.TegnefilmfigurBillede = ImgNavn; // gemme navnet i modellen -som næste step sends til Db
             }
-            Db.CartoonTable.AddOrUpdate(CartoonRettet);
+            Db.TegnefilmsfigurTabel.AddOrUpdate(CartoonRettet);
             Db.SaveChanges();
 
             TempData["besked"] = "Cartoon er Rettet";

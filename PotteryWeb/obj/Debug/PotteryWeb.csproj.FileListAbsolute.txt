@@ -211,8 +211,8 @@ C:\Users\vill0281\source\repos\SkoleGit\PotteryWeb\bin\System.Web.Webpages.Razor
 C:\Users\vill0281\source\repos\SkoleGit\PotteryWeb\bin\System.Web.Helpers.xml
 C:\Users\vill0281\source\repos\SkoleGit\PotteryWeb\bin\System.Web.Mvc.xml
 C:\Users\vill0281\source\repos\SkoleGit\PotteryWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\vill0281\source\repos\SkoleGit\PotteryWeb\obj\Debug\PotteryWeb.csprojAssemblyReference.cache
 C:\Users\vill0281\source\repos\SkoleGit\PotteryWeb\obj\Debug\PotteryWeb.csproj.CoreCompileInputs.cache
 C:\Users\vill0281\source\repos\SkoleGit\PotteryWeb\obj\Debug\PotteryWeb.csproj.CopyComplete
 C:\Users\vill0281\source\repos\SkoleGit\PotteryWeb\obj\Debug\PotteryWeb.dll
 C:\Users\vill0281\source\repos\SkoleGit\PotteryWeb\obj\Debug\PotteryWeb.pdb
+C:\Users\vill0281\source\repos\SkoleGit\PotteryWeb\obj\Debug\PotteryWeb.csprojAssemblyReference.cache

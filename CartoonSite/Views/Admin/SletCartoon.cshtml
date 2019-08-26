@@ -1,4 +1,4 @@
-﻿@model CartoonSite.Models.CartoonTable
+﻿@model CartoonSite.Models.TegnefilmsfigurTabel
 @{
     ViewBag.Title = "SletCartoon";
     Layout = "~/Views/Shared/_AdminLayout1.cshtml";
@@ -8,11 +8,11 @@
 <h4>Er du sikker at du vil slette Cartoonen</h4>
 <div class="card my-4">
     <div class="card-body">
-        <h4>@Model.CartoonName</h4>
+        <h4>@Model.TegnefilmfigurNavn</h4>
     </div>
 </div>
 <form action="/Admin/SletCartoon" method="post">
-    <input type="hidden" name="CartoonID" id="CartoonID"  value="@Model.CartoonID" />
+    <input type="hidden" name="CartoonID" id="CartoonID"  value="@Model.TegnefilmsfigurID" />
     <button type="submit" class="btn btn-danger">Slet</button>
     <a href="/Admin/" class="btn btn-success">fortryd uden sletning</a>
 </form>

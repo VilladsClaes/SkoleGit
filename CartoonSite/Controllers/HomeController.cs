@@ -9,20 +9,31 @@ namespace CartoonSite.Controllers
 {
     public class HomeController : Controller
     {
-        CartoonDbEntities1 Db = new CartoonDbEntities1();
+        TegnefilmsfigurerEntities Db = new TegnefilmsfigurerEntities();
         // GET: Home
         public ActionResult Index()
         {
-            List<CartoonTable> CartoonList = new List<CartoonTable>();
-            CartoonList = Db.CartoonTable.ToList();
+            object[] ArrayOfCartoons;
+
+            ArrayOfCartoons = Db.TegnefilmsfigurTabel.ToArray();
+
+            List<TegnefilmsfigurTabel> CartoonList = new List<TegnefilmsfigurTabel>();
+            CartoonList = Db.TegnefilmsfigurTabel.ToList();
+
+            for (int i = 0; i < ArrayOfCartoons.Length; i++)
+            {
+                ArrayOfCartoons[i].ToString();
+            }
+
+
             return View(CartoonList);
         }
         public ActionResult CartoonInfo(int? Id)
         {
             if (Id == null)
                 RedirectToAction("Index");
-            CartoonTable ChoosedCartoon = new CartoonTable();
-            ChoosedCartoon = Db.CartoonTable.Where(c => c.CartoonID == Id).FirstOrDefault();
+            TegnefilmsfigurTabel ChoosedCartoon = new TegnefilmsfigurTabel();
+            ChoosedCartoon = Db.TegnefilmsfigurTabel.Where(c => c.TegnefilmsfigurID == Id).FirstOrDefault();
 
             if (ChoosedCartoon == null)
             {
