@@ -1,0 +1,12 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.Pickers>
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@{
+	Layout = "master.cshtml";
+	var ValgtSide = Model.Content.GetPropertyValue<IPublishedContent>("ContentPicker");
+	if(ValgtSide != null)
+	{
+	    <h3>Siden er valg med content picker</h3>
+	    <p>@ValgtSide.Name</p>
+	}
+}
+

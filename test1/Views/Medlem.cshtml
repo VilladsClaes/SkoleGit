@@ -1,0 +1,9 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.Medlem>
+@using ContentModels = Umbraco.Web.PublishedModels;
+@{
+	Layout = "Medlemmer.cshtml";
+}
+
+<h2 style="font-style: italic">Forælder</h2>
+
+@Html.Partial("Vis forældre")

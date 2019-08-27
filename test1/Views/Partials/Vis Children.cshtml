@@ -1,0 +1,132 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage
+@using Umbraco.Core.Models.PublishedContent
+@using Umbraco.Web
+
+<div style="background-color: pink;">
+@* Her udskrives kun børn til Root *@
+<ul>
+    @foreach(var side in Model.Children)
+    {
+    <li><a href="@side.Url">@side.Name</a></li>
+    }
+</ul>
+
+KUN DEN FØRSTE CHILDREN TIL ROOT
+@* Her udskrives kun første barn til Root *@
+<ul>
+    @{
+    var firstnode = Model.Children.First();
+    <li><a href="@firstnode.Url">@firstnode.Name</a></li>
+    }
+</ul>
+
+TAG DE FØRSTE TO
+@* Her udskrives to barn til Root *@
+
+    @{
+        var valgtenoder = Model.Children.Take(2);
+
+    <ul>
+     @foreach(var side in valgtenoder)
+    {
+    <li><a href="@side.Url">@side.Name</a></li>
+    }
+    </ul>
+    }
+
+
+
+KUN MEDLEMMER
+@* Her udskrives alle undersider til Medlemmer *@
+<ul>
+    @foreach(var side in Model.Descendants<Medlem>().Where(x => x.IsVisible()).ToArray())
+    {
+    <li><a href="@side.Url">@side.Name</a></li>
+    }
+</ul>
+KUN BUTIK ELEMENTER
+<ul>
+    @foreach(var side in Model.Descendants<Mobiler>().Where(x => x.IsVisible()).ToArray())
+    {
+    <li><a href="@side.Url">@side.Name</a></li>
+    }
+</ul>
+STOP HER
+<br/>
+Her udskrives alle afkommere til Root
+<ul>
+    @foreach(var side in Model.Descendants())
+    {
+    <li><a href="@side.Url">@side.Name</a></li>
+    }
+</ul>
+
+TAG DE FØRSTE TO MEN SPRING 1 OVER
+@* Her udskrives to efterkommere til Root undtagen den første *@
+
+    @{
+        var plukkede = Model.Descendants().Skip(1).Take(2);
+
+    <ul>
+     @foreach(var side in plukkede)
+    {
+    <li><a href="@side.Url">@side.Name</a></li>
+    }
+    </ul>
+    }
+ 
+ SORTER EFTER
+ @* Sorterer nodes i stigende (asc) eller faldende (desc) orden, i forhold til propertyen ”Name”.
+ VIRKER IKKE I UMBRACO 8
+ <ul>
+    @foreach(var side in Model.Descendants("forside").OrderBy("Name desc"))
+    {
+    <li><a href="@side.Url">@side.Name</a></li>
+    }
+</ul>
+ *@
+
+
+<ul>
+    @foreach(var side in Model.Descendants("forside").OrderByDescending(x => x.Name))
+    {
+    <li><a href="@side.Url">@side.Name</a></li>
+    }
+</ul>
+
+
+ALLE EFTERKOMMERE TIL FORSIDEN
+@* Her udskrives alle afkommere af en bestemt type *@
+<ul>
+    @foreach(var side in Model.Descendants("forside"))
+    {
+    <li><a href="@side.Url">@side.Name</a></li>
+    }
+</ul>
+
+
+@* Her udskrives alle afkommere som har checkboxen for synlighed slået til
+
+Dette er droppet i Umbraco 8
+<ul>
+    @foreach(var side in Model.Descendants().Where("Visible"))
+    {
+    <li><a href="@side.Url">@side.Name</a></li>
+    }
+</ul>
+
+
+*@
+
+Her udskrives alle afkommere som har checkboxen for synlighed slået til
+SKREVET MED LINQ
+@* Her udskrives alle afkommere som har checkboxen for synlighed slået til, skrevet med LINQ *@
+<ul>
+    @foreach(var side in Model.Descendants().Where(x => x.IsVisible()))
+    {
+    <li><a href="@side.Url">@side.Name</a></li>
+    }
+</ul>
+
+
+</div>

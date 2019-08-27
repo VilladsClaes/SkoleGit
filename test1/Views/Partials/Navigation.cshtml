@@ -1,0 +1,19 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage
+
+@{var root = Model.Root(); }
+
+@*Menuen*@
+<ul style="background-color: yellow;">
+    
+        
+    <li class='@Model.Id == root.Id ? "active" : null'>
+        <a  href="@root.Url">Link til @root.Name</a>
+    </li>
+    @foreach(var side in root.Children.Where(x => x.IsVisible()).ToArray())
+    {
+        <li class='@(side.IsAncestorOrSelf(Model) ? "active" : null)'>
+            <a href="@side.Url">@side.Name</a>
+        </li>
+    }
+</ul>
+

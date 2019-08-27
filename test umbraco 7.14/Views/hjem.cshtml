@@ -1,0 +1,19 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.Hjem>
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@{
+	Layout = "master.cshtml";
+}
+
+    @* Her kommer RTE-indholdet *@
+
+@Model.Content.GetPropertyValue("bodyText")
+
+    @* Her kommer contentpicker-indholdet *@
+
+@{
+    var ValgtContent = Model.Content.GetPropertyValue<IPublishedContent>("contentPicker");
+    
+    
+}
+
+@ValgtContent.GetPropertyValue("bodyText")

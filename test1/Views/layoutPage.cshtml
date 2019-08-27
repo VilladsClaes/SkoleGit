@@ -1,0 +1,27 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage
+@{
+	Layout = null;
+	var dagsdato = DateTime.Now;
+}
+
+<!doctype html>
+<html>
+    <head>
+        <title></title>
+        <link rel="stylesheet" href="css/style.css">
+
+    </head>
+    <body style="background-color: lightblue;">
+        <nav>
+            @Html.Partial("Navigation")
+        </nav>
+        @Html.Partial("header")
+        Dato idag: @dagsdato.ToString("dd. MMMM yyyy")
+       @RenderBody() 
+       @Umbraco.RenderMacro("SiteInfo")
+       <footer>
+           <p>@Model.Value("adresse", fallback: Fallback.ToAncestors)</p>
+       </footer>
+    </body>
+</html>
+

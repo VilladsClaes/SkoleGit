@@ -1,0 +1,42 @@
+﻿@model Ditmit.Models.HelpViewModel
+@{
+
+    ViewBag.Title = "Søgeresultater på ord påtværs af databassen";
+    Layout = "/Views/Shared/_Layout.cshtml";
+}
+
+@* 8e. Loop listen med søgeresultater   *@
+@if (Model != null)
+{
+
+    if (Model.helpitems.Count > 0)
+    {
+        @* 8f. Lav en kasse til hvert resultat   *@
+        foreach (var Soegeresultat in Model.helpitems)
+        {
+            <div class="container m-3">
+                <div class="card">
+                    <div class="card-header">@Soegeresultat.HelpDate</div>
+                    <div class="card-body">@Soegeresultat.HelpText</div>
+                    @* HVIS DET MATCHER ET HELPWANT SKAL DET STÅ HERUNDER *@
+                    @*<div class="card-footer">Matcher med <a href="/Home/VisMatch/@Soegeresultat.FK_HelpWantID">@Soegeresultat.HelpWant.HelpWantDate</a></div>*@
+                </div>
+            </div>
+
+        }
+    }
+    @* 8g. Fortæl hvis der ikke er noget i listen (Model.Count = 0)   *@
+    else
+    {
+            <p>Der var ikke noget match på @Request["searchstring"]</p>
+    }
+
+}
+else
+{
+    <h2>Tag lige at søge på noget!</h2>
+}
+
+
+
+

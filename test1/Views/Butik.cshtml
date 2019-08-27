@@ -1,0 +1,16 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.Butik>
+@using ContentModels = Umbraco.Web.PublishedModels;
+@{
+	Layout = "layoutPage.cshtml";
+}
+
+<h2>Velkommen til min butik: @Model.Value("pageName") eller som vi kalder den <span style="color:blue;"><strong> @Model.Value("sidetitel")</strong></span> </h2>
+<div>
+<h3>Her er nogle proodukter som vi sælger.</h3>
+<ul>
+   @foreach(var produkt in Model.Children.Where(x => x.NodeType.Alias == "Computere" && x.IsVisible()))
+   {
+   <li>@produkt.Name</li>
+   }
+</ul>
+</div>

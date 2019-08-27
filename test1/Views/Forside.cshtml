@@ -1,0 +1,21 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.Forside>
+@using ContentModels = Umbraco.Web.PublishedModels;
+@{
+	Layout = "layoutPage.cshtml";
+	var Billede = Model.Value<IPublishedContent>("billede");
+}
+
+<div class="jumbotron" id="forsidebanner" style=" background-image: url(@(Billede.Url)); background-size: cover;">
+    <h1>@Model.Value("overskrift")</h1>
+    <p>@Model.Value("velkomst")</p>
+
+</div>
+
+<div>
+    @Model.Value("skidegodtEgon")
+</div>
+
+<strong>Sidetræ</strong>
+@Html.Partial("Vis Children")
+
+

@@ -1,0 +1,39 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+	Layout = null;
+}
+
+
+
+<!doctype html>
+<html>
+    @* META *@
+    <head>
+        <title></title>
+        <link rel="stylesheet" href="css/style.css">
+
+    </head>
+    
+    @* INDHOLD *@
+    <body style="background-color: lightblue;">
+        <header>
+            <a href="@Model.Content.Site().Url">
+                <img src="@Umbraco.Field("uploadEtLogo", recursive: true)" alt="logo til min frække site" />
+            </a>
+        </header>
+        <nav>
+        @* INDSÆT FÆLLES NAVIGATION *@
+
+        </nav>
+        
+        
+       @RenderBody()
+       
+       
+       <footer>
+       @* INDSÆT FÆLLES FOOTER *@
+
+       </footer>
+    </body>
+</html>
+
