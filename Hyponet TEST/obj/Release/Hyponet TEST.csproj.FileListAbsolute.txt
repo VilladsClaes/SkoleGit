@@ -1,0 +1,2 @@
+C:\Users\VilladsClaes\source\repos\SkoleGit\Hyponet TEST\obj\Release\Hyponet TEST.csprojAssemblyReference.cache
+C:\Users\VilladsClaes\source\repos\SkoleGit\Hyponet TEST\obj\Release\Hyponet TEST.csproj.CoreCompileInputs.cache

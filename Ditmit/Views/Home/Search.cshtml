@@ -7,15 +7,15 @@
 @if (Model != null)
 {
 
-    if (Model.helpOffers.Count > 0)
+    if (Model.helpitems.Count > 0)
     {
         @* 8f. Lav en kasse til hvert resultat   *@
-        foreach (var Soegeresultat in Model.helpOffers)
+        foreach (var Soegeresultat in Model.helpitems)
         {
             <div class="container m-3">
                 <div class="card">
-                    <div class="card-header">@Soegeresultat.HelpOfferDate</div>
-                    <div class="card-body">@Soegeresultat.HelpOfferText</div>
+                    <div class="card-header">@Soegeresultat.HelpDate</div>
+                    <div class="card-body">@Soegeresultat.HelpText</div>
                     @* HVIS DET MATCHER ET HELPWANT SKAL DET STÅ HERUNDER *@
                     @*<div class="card-footer">Matcher med <a href="/Home/VisMatch/@Soegeresultat.FK_HelpWantID">@Soegeresultat.HelpWant.HelpWantDate</a></div>*@
                 </div>
