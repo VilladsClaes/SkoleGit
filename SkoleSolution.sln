@@ -141,8 +141,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ditmit", "Ditmit\Ditmit.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hjemmesideøvelse 1", "Hjemmesideøvelse 1\Hjemmesideøvelse 1.csproj", "{6FB23AFA-5757-4682-AD69-D25CA0285039}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hyponet TEST", "Hyponet TEST\Hyponet TEST.csproj", "{7F88E760-CFA0-4D95-ACD2-3CB76C9E4AE2}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JavaScriptJQuery", "JavaScript_JQuery\JavaScriptJQuery.csproj", "{38F49288-79C5-44A9-842D-412C8BE473FC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "myIo", "myIo\myIo.csproj", "{EB14965B-2641-485C-A90E-A734A3488425}"
@@ -150,6 +148,35 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "reltest", "reltest\reltest.csproj", "{F031A561-13A5-43EB-935C-6042EE20BDD4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{4774C7F0-CEC9-430E-98BA-3BA400328158}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "ftp://villadsclaes.dk", "ftp://villadsclaes.dk", "{AF3164DD-2902-49C5-B787-10FE45CEFC1C}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/villadsclaes.dk"
+		Debug.AspNetCompiler.PhysicalPath = "..\..\..\AppData\Local\Temp\VWDWebCache\ftp_villadsclaes.dk_villadsclaes.dk\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\villadsclaes.dk\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/villadsclaes.dk"
+		Release.AspNetCompiler.PhysicalPath = "..\..\..\AppData\Local\Temp\VWDWebCache\ftp_villadsclaes.dk_villadsclaes.dk\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\villadsclaes.dk\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CartoonSite", "CartoonSite\CartoonSite.csproj", "{07D69098-64F1-4653-93AD-1CC9CC669846}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Girafsite", "Girafsite\Girafsite.csproj", "{BAF22885-9792-4D01-995A-BBF80E223447}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hyponet", "Hyponet\Hyponet.csproj", "{FAC3E847-3D58-40FA-A62A-2A912DC79314}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LP Butik MVC Repetetion", "LP Butik MVC Repetetion\LP Butik MVC Repetetion.csproj", "{88160DAF-9E67-4723-B771-79E94107C8D6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MinegenAPI", "MinegenAPI\MinegenAPI.csproj", "{4D412531-695D-4A0B-BBD3-FA4623795600}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -205,10 +232,6 @@ Global
 		{6FB23AFA-5757-4682-AD69-D25CA0285039}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6FB23AFA-5757-4682-AD69-D25CA0285039}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6FB23AFA-5757-4682-AD69-D25CA0285039}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7F88E760-CFA0-4D95-ACD2-3CB76C9E4AE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7F88E760-CFA0-4D95-ACD2-3CB76C9E4AE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7F88E760-CFA0-4D95-ACD2-3CB76C9E4AE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7F88E760-CFA0-4D95-ACD2-3CB76C9E4AE2}.Release|Any CPU.Build.0 = Release|Any CPU
 		{38F49288-79C5-44A9-842D-412C8BE473FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{38F49288-79C5-44A9-842D-412C8BE473FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{38F49288-79C5-44A9-842D-412C8BE473FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -225,6 +248,30 @@ Global
 		{4774C7F0-CEC9-430E-98BA-3BA400328158}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4774C7F0-CEC9-430E-98BA-3BA400328158}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4774C7F0-CEC9-430E-98BA-3BA400328158}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF3164DD-2902-49C5-B787-10FE45CEFC1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF3164DD-2902-49C5-B787-10FE45CEFC1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF3164DD-2902-49C5-B787-10FE45CEFC1C}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF3164DD-2902-49C5-B787-10FE45CEFC1C}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{07D69098-64F1-4653-93AD-1CC9CC669846}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07D69098-64F1-4653-93AD-1CC9CC669846}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07D69098-64F1-4653-93AD-1CC9CC669846}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07D69098-64F1-4653-93AD-1CC9CC669846}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BAF22885-9792-4D01-995A-BBF80E223447}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAF22885-9792-4D01-995A-BBF80E223447}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BAF22885-9792-4D01-995A-BBF80E223447}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BAF22885-9792-4D01-995A-BBF80E223447}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FAC3E847-3D58-40FA-A62A-2A912DC79314}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAC3E847-3D58-40FA-A62A-2A912DC79314}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAC3E847-3D58-40FA-A62A-2A912DC79314}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAC3E847-3D58-40FA-A62A-2A912DC79314}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88160DAF-9E67-4723-B771-79E94107C8D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88160DAF-9E67-4723-B771-79E94107C8D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88160DAF-9E67-4723-B771-79E94107C8D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88160DAF-9E67-4723-B771-79E94107C8D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D412531-695D-4A0B-BBD3-FA4623795600}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D412531-695D-4A0B-BBD3-FA4623795600}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D412531-695D-4A0B-BBD3-FA4623795600}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D412531-695D-4A0B-BBD3-FA4623795600}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
