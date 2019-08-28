@@ -1,0 +1,21 @@
+﻿@model Energiforbrug_Umbraco.Models.Forbrugsting
+
+@using (Html.BeginUmbracoForm<Energiforbrug_Umbraco.Controllers.ForbrugSurfaceController>("Forbrug"))
+{
+    @Html.LabelFor(m => m.ForbrugskildeNavn)
+    @Html.TextBoxFor(m => m.ForbrugskildeNavn)
+
+    @Html.LabelFor(m => m.ForbrugMaengde)
+    @Html.TextBoxFor(m => m.ForbrugMaengde)
+
+    @Html.LabelFor(m => m.Forbrugstype)
+    @Html.TextBoxFor(m => m.Forbrugstype)
+
+    @Html.LabelFor(m => m.AntalMinutterIBrug)
+    @Html.TextBoxFor(m => m.AntalMinutterIBrug)
+
+    <button type="submit">Tilføj</button>
+
+
+
+}

@@ -1,0 +1,19 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.Forside>
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@{
+	Layout = "master.cshtml";
+}
+
+<h1 style="background-color: green">Goddag forside</h1>
+
+
+     <h2>Ting du kan beregne:</h2>
+        <ul>
+            @foreach(var barn in CurrentPage.Children)
+            {
+                <li><a href="@barn.Url">@barn.Name</a></li>
+            }
+        </ul>
+
+
+@Html.Action("Index", "ForbrugSurface")

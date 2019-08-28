@@ -1,0 +1,121 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+	Layout = null;
+	var root = Model.Content.Site();
+}
+
+
+<!DOCTYPE html>
+
+<html lang="da">
+<head>
+
+    <title>@CurrentPage.Name er navnet på denne side</title>
+    <meta name="description" content="" />
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <link href="/css/styles.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+        <div class="container">
+            <div class="header-container">
+                <header>
+                    <div class="brand">
+                        <a href="@root.Url"><img src="/Media/1001/logo-forbrug.png" /></a>
+                    </div>
+                    
+                    
+                    @*Søgefelt*@
+                    <div class="search-box">
+                        <form action="">
+                            <input type="text" id="search" name="search" placeholder="Søg..." />
+                            <button></button>
+                        </form>
+                    </div>
+                    
+                    
+                    <nav>
+                        <ul>
+                            <li class="active">
+                                <a href="/">Forsiden</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </header>
+            </div>
+
+           
+
+            </div>
+            <div class="content clearfix">
+                <!-- Content her -->
+                @RenderBody()
+            </div>
+
+            <div class="pre-footer-container">
+                <div class="pre-footer">
+                    <h3>Her er de apperater der tager strøm i et hjem:</h3>
+                    <div class="pre-footer-flex">
+                        <div class="column half">
+                            <ul>
+                               @{
+                                    var page = Umbraco.Content(1077);
+                                }
+                                
+                                <h3>@page.PropertyAlias</h3>
+                                
+                                @foreach (var child in page.Children) { 
+                                    <a href="@child.Url">@child.Name</a>
+                                }
+                            </ul>
+                            <h6>Sociale medier:</h6>
+                           <ul>
+                               <li>Link til Facebook</li>
+                           </ul>
+                                
+
+                        </div>
+                        <div class="column quarter">
+                            <h6>Sider:</h6>
+                            <ul>
+                                <li><a href="galleri.html">Galleri</a></li>
+                                <li><a href="links.html">Links</a></li>
+                                <li><a href="kontakt.html">Kontakt</a></li>
+                                <li><a href="ekstra.html">Ekstra</a></li>
+                            </ul>
+                        </div>
+                        <div class="column quarter">
+                            <h6>Gode links:</h6>
+                            <ul>
+                                <li><a href="http://www.umbraco.com">Umbraco CMS</a></li>
+                                <li><a href="https://our.umbraco.org/documentation/">Umbraco Documentation</a></li>
+                                <li><a href="https://our.umbraco.org/forum/">Umbraco Forum</a></li>
+                                <li><a href="http://umbraco.tv/">Umbraco TV</a></li>
+                                <li><a href="https://our.umbraco.org/projects">Umbraco Projects</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-container">
+                <footer>
+                    <p>&copy;&nbsp;<a href="mailto:ditnavn@mail.dk">Dit navn</a>, kg12webhXXX, webitAarhus</p>
+                    <p><a href="login.html" class="login"><i class="fa fa-lock"></i>&nbsp;Login</a></p>
+                </footer>
+            </div>
+
+        </div>
+
+
+    <script src="/scripts/lightbox.min.js"></script>
+    <script src="/scripts/jquery.nivo.slider.js"></script>
+    <script src="/scripts/NivoSlider.js"></script>
+    <script src="/scripts/headerscroll.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+
+-------------------------------------------------------------------------------
+   ROBOCOPY     ::     Robust File Copy for Windows                              
+-------------------------------------------------------------------------------
+
+  Started : 24. april 2019 13:41:13
+   Source : C:\Users\vill0281\source\repos\Energiforbrug Umbraco\Energiforbrug Umbraco\Umbraco_Client\
+     Dest : C:\Users\vill0281\source\repos\Energiforbrug Umbraco\Energiforbrug Umbraco\App_Data\NuGetBackup\20190424-134107\Umbraco_Client\
+
+    Files : *.*
+	    
+  Options : *.* /S /E /DCOPY:DA /COPY:DAT /R:1000000 /W:30 
+
+------------------------------------------------------------------------------
+
+	                   0	C:\Users\vill0281\source\repos\Energiforbrug Umbraco\Energiforbrug Umbraco\Umbraco_Client\
+
+------------------------------------------------------------------------------
+
+               Total    Copied   Skipped  Mismatch    FAILED    Extras
+    Dirs :         1         0         1         0         0         0
+   Files :         0         0         0         0         0         0
+   Bytes :         0         0         0         0         0         0
+   Times :   0:00:00   0:00:00                       0:00:00   0:00:00
+   Ended : 24. april 2019 13:41:13
+
