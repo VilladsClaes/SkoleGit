@@ -5,9 +5,7 @@ VisualStudioVersion = 15.0.28307.271
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JavaScriptJQuery", "JavaScript_JQuery\JavaScriptJQuery.csproj", "{38F49288-79C5-44A9-842D-412C8BE473FC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hjemmesideøvelse", "Hjemmesideøvelse\Hjemmesideøvelse.csproj", "{04AB5C29-C860-4489-AF25-E2B1054D52F7}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hjemmesideøvelse1", "Hjemmesideøvelse1\Hjemmesideøvelse1.csproj", "{84303063-CA82-46CA-945D-3808A4855FCF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Paralax bootstrap theme", "Hjemmesideøvelse1\Paralax bootstrap theme.csproj", "{84303063-CA82-46CA-945D-3808A4855FCF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Webservices", "Webservices\Webservices.csproj", "{632A8834-3A69-4338-9128-C8E744870FD2}"
 EndProject
@@ -155,8 +153,6 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Festival grid", "Festival g
 		SlnRelativePath = "Festival grid\"
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hjemmesideøvelse 1", "Hjemmesideøvelse 1\Hjemmesideøvelse 1.csproj", "{6FB23AFA-5757-4682-AD69-D25CA0285039}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -167,10 +163,6 @@ Global
 		{38F49288-79C5-44A9-842D-412C8BE473FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{38F49288-79C5-44A9-842D-412C8BE473FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{38F49288-79C5-44A9-842D-412C8BE473FC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{04AB5C29-C860-4489-AF25-E2B1054D52F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{04AB5C29-C860-4489-AF25-E2B1054D52F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{04AB5C29-C860-4489-AF25-E2B1054D52F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{04AB5C29-C860-4489-AF25-E2B1054D52F7}.Release|Any CPU.Build.0 = Release|Any CPU
 		{84303063-CA82-46CA-945D-3808A4855FCF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{84303063-CA82-46CA-945D-3808A4855FCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{84303063-CA82-46CA-945D-3808A4855FCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -239,10 +231,6 @@ Global
 		{3853487D-B312-451D-A750-F978F5576C3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3853487D-B312-451D-A750-F978F5576C3A}.Release|Any CPU.ActiveCfg = Debug|Any CPU
 		{3853487D-B312-451D-A750-F978F5576C3A}.Release|Any CPU.Build.0 = Debug|Any CPU
-		{6FB23AFA-5757-4682-AD69-D25CA0285039}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6FB23AFA-5757-4682-AD69-D25CA0285039}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6FB23AFA-5757-4682-AD69-D25CA0285039}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6FB23AFA-5757-4682-AD69-D25CA0285039}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

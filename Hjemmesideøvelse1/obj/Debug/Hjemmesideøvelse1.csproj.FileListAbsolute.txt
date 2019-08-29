@@ -124,7 +124,6 @@ C:\Users\vill0281\source\repos\SkoleGit\Hjemmesideøvelse1\bin\Microsoft.Extensi
 C:\Users\vill0281\source\repos\SkoleGit\Hjemmesideøvelse1\bin\Microsoft.Extensions.Logging.Abstractions.xml
 C:\Users\vill0281\source\repos\SkoleGit\Hjemmesideøvelse1\bin\Microsoft.Extensions.Options.xml
 C:\Users\vill0281\source\repos\SkoleGit\Hjemmesideøvelse1\bin\Microsoft.Extensions.Primitives.xml
-C:\Users\vill0281\source\repos\SkoleGit\Hjemmesideøvelse1\bin\Newtonsoft.Json.pdb
 C:\Users\vill0281\source\repos\SkoleGit\Hjemmesideøvelse1\bin\Remotion.Linq.xml
 C:\Users\vill0281\source\repos\SkoleGit\Hjemmesideøvelse1\bin\System.Buffers.xml
 C:\Users\vill0281\source\repos\SkoleGit\Hjemmesideøvelse1\bin\System.Collections.Immutable.xml
