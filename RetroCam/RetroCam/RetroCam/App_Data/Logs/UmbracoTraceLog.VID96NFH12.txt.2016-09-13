@@ -1,0 +1,56 @@
+﻿ 2016-09-13 07:14:49,624 [P29648/D37/T190] ERROR Umbraco.Web.Scheduling.KeepAlive - Failed (at "http://localhost:8145/umbraco").
+System.Net.Http.HttpRequestException: Der opstod en fejl under afsendelse af anmodningen. ---> System.Net.WebException: Der kunne ikke oprettes forbindelse til fjernserveren ---> System.Net.Sockets.SocketException: Det blev forsøgt at få adgang til en socket på en måde, der er forbudt af den pågældende sockets adgangstilladelser 127.0.0.1:8145
+   ved System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   ved System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- Slut på staksporing af indre undtagelser ---
+   ved System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   ved System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- Slut på staksporing af indre undtagelser ---
+   ved System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   ved System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   ved Umbraco.Web.Scheduling.KeepAlive.<PerformRunAsync>d__4.MoveNext()
+ 2016-09-13 07:14:49,624 [P29648/D37/T127] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2016-09-12 07:14:49
+ 2016-09-13 07:14:49,640 [P29648/D37/T133] ERROR Umbraco.Web.Scheduling.ScheduledPublishing - Failed (at "http://localhost:8145/umbraco").
+System.Net.Http.HttpRequestException: Der opstod en fejl under afsendelse af anmodningen. ---> System.Net.WebException: Der kunne ikke oprettes forbindelse til fjernserveren ---> System.Net.Sockets.SocketException: Det blev forsøgt at få adgang til en socket på en måde, der er forbudt af den pågældende sockets adgangstilladelser 127.0.0.1:8145
+   ved System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   ved System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- Slut på staksporing af indre undtagelser ---
+   ved System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   ved System.Net.Http.HttpClientHandler.GetRequestStreamCallback(IAsyncResult ar)
+   --- Slut på staksporing af indre undtagelser ---
+   ved System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   ved System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   ved Umbraco.Web.Scheduling.ScheduledPublishing.<PerformRunAsync>d__7.MoveNext()
+ 2016-09-13 07:19:49,631 [P29648/D37/T167] ERROR Umbraco.Web.Scheduling.KeepAlive - Failed (at "http://localhost:8145/umbraco").
+System.Net.Http.HttpRequestException: Der opstod en fejl under afsendelse af anmodningen. ---> System.Net.WebException: Der kunne ikke oprettes forbindelse til fjernserveren ---> System.Net.Sockets.SocketException: Det blev forsøgt at få adgang til en socket på en måde, der er forbudt af den pågældende sockets adgangstilladelser 127.0.0.1:8145
+   ved System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   ved System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- Slut på staksporing af indre undtagelser ---
+   ved System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   ved System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- Slut på staksporing af indre undtagelser ---
+   ved System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   ved System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   ved Umbraco.Web.Scheduling.KeepAlive.<PerformRunAsync>d__4.MoveNext()
+ 2016-09-13 07:19:49,787 [P29648/D37/T129] ERROR Umbraco.Web.Scheduling.ScheduledPublishing - Failed (at "http://localhost:8145/umbraco").
+System.Net.Http.HttpRequestException: Der opstod en fejl under afsendelse af anmodningen. ---> System.Net.WebException: Der kunne ikke oprettes forbindelse til fjernserveren ---> System.Net.Sockets.SocketException: Det blev forsøgt at få adgang til en socket på en måde, der er forbudt af den pågældende sockets adgangstilladelser 127.0.0.1:8145
+   ved System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   ved System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- Slut på staksporing af indre undtagelser ---
+   ved System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   ved System.Net.Http.HttpClientHandler.GetRequestStreamCallback(IAsyncResult ar)
+   --- Slut på staksporing af indre undtagelser ---
+   ved System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   ved System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   ved Umbraco.Web.Scheduling.ScheduledPublishing.<PerformRunAsync>d__7.MoveNext()
+ 2016-09-13 09:04:49,698 [P29648/D37/T220] ERROR Umbraco.Web.Scheduling.ScheduledPublishing - Failed (at "http://localhost:8145/umbraco").
+System.Net.Http.HttpRequestException: Der opstod en fejl under afsendelse af anmodningen. ---> System.Net.WebException: Der kunne ikke oprettes forbindelse til fjernserveren ---> System.Net.Sockets.SocketException: Det blev forsøgt at få adgang til en socket på en måde, der er forbudt af den pågældende sockets adgangstilladelser 127.0.0.1:8145
+   ved System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   ved System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- Slut på staksporing af indre undtagelser ---
+   ved System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   ved System.Net.Http.HttpClientHandler.GetRequestStreamCallback(IAsyncResult ar)
+   --- Slut på staksporing af indre undtagelser ---
+   ved System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   ved System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   ved Umbraco.Web.Scheduling.ScheduledPublishing.<PerformRunAsync>d__7.MoveNext()

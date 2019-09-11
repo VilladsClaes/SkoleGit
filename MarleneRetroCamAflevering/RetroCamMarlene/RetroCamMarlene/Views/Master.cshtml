@@ -1,0 +1,75 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+	Layout = null;
+	 var root = Model.Content.Site();
+
+}
+
+@* the fun starts here *@
+
+<!DOCTYPE html>
+<html>
+<head lang="da">
+    <title>@Umbraco.Field("pageTitle")</title>
+    <meta name="description" content="@Umbraco.Field("pageDescription")">
+
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link href="~/css/normalize.css" rel="stylesheet" />
+    <link href="~/css/styles.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="~/css/main.css" />
+    <link href="~/css/nivo-slider.css" rel="stylesheet" />
+
+</head>
+<body style="background-image: url(@Umbraco.Field("baggrund", recursive: true));">
+    <div id="wrap">
+        <header>
+            <div class="brand">
+                <a href="index.html"><img src="@Umbraco.Field("siteLogo", recursive: true)"/></a>
+            </div>
+            <div class="search-box">
+
+                <form action="@(root.GetPropertyValue<IPublishedContent>("searchResultPage").Url)">
+                    <input type="text" Id="search" name="search" placeholder="Søg..." />
+                    <button></button>
+                </form>
+            </div>
+            @Html.Partial("Navigation")
+
+        </header>
+        <main>
+            @RenderBody()
+        </main>
+        <footer>
+            <div class="bg-black">
+
+
+                <div class="some column half">
+                    @{
+                        var soMe = Model.Content.Site().GetPropertyValue<IEnumerable<IPublishedContent>>("soMe");
+                        if (soMe.Count() > 0)
+                        {
+                            <ul class="social">
+                                @foreach (var soMes in soMe)
+                                {
+                                    <li><a href="@soMes.GetPropertyValue("link")" target="_blank" class="fa @(soMes.GetPropertyValue("className"))"></a></li>
+                                }
+
+                            </ul>
+                        }
+                    }
+                </div>
+            </div>
+            <div class="footer-container">
+                @Model.Content.Site().GetGridHtml("footerText")
+         
+            </div>
+        </footer>
+  </div>
+    <script src="/scripts/jquery.nivo.slider.js"></script>
+    <script src="/scripts/NivoSlider.js"></script>
+
+</body>
+</html>

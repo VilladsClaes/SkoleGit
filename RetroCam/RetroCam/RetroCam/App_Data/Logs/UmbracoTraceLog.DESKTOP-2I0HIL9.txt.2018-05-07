@@ -1,0 +1,56 @@
+﻿ 2018-05-07 01:53:50,443 [P19376/D19/T223] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2018-05-06 01:53:50
+ 2018-05-07 09:05:56,065 [P19376/D19/T12] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: Login attempt succeeded for username admin from IP address ::1
+ 2018-05-07 09:05:56,065 [P19376/D19/T12] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: User: admin logged in from IP address ::1
+ 2018-05-07 09:06:09,150 [P19376/D19/T222] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.Trees.TreeController
+ 2018-05-07 09:06:09,193 [P19376/D19/T222] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.Trees.TreeController, found 0 (took 42ms)
+ 2018-05-07 09:06:09,201 [P19376/D19/T222] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.interfaces.ITree
+ 2018-05-07 09:06:09,205 [P19376/D19/T222] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.interfaces.ITree, found 0 (took 3ms)
+ 2018-05-07 09:06:15,653 [P19376/D19/T222] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'da' with Id '1054' has been published.
+ 2018-05-07 09:06:15,840 [P19376/D19/T222] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.interfaces.ICacheRefresher
+ 2018-05-07 09:06:15,843 [P19376/D19/T222] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.interfaces.ICacheRefresher, found 0 (took 3ms)
+ 2018-05-07 09:06:20,158 [P19376/D19/T226] INFO  umbraco.content - Save Xml to file...
+ 2018-05-07 09:06:20,364 [P19376/D19/T226] INFO  umbraco.content - Saved Xml to file.
+ 2018-05-07 09:06:57,272 [P19376/D19/T121] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'da' with Id '1054' has been published.
+ 2018-05-07 09:07:01,386 [P19376/D19/T34] INFO  umbraco.content - Save Xml to file...
+ 2018-05-07 09:07:01,463 [P19376/D19/T34] INFO  umbraco.content - Saved Xml to file.
+ 2018-05-07 09:28:53,555 [P19376/D19/T179] WARN  Umbraco.Web.UmbracoModule - Status code is 404 yet TrySkipIisCustomErrors is false - IIS will take over.
+ 2018-05-07 10:55:17,660 [P19376/D19/T97] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [KeepAlive] Terminating
+ 2018-05-07 10:55:17,660 [P19376/D19/T97] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [KeepAlive] Waiting for tasks to complete
+ 2018-05-07 10:55:17,667 [P19376/D19/T161] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [KeepAlive] Tasks completed, terminated
+ 2018-05-07 10:55:17,681 [P19376/D19/T97] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [LogScrubber] Terminating
+ 2018-05-07 10:55:17,681 [P19376/D19/T97] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [LogScrubber] Waiting for tasks to complete
+ 2018-05-07 10:55:17,681 [P19376/D19/T97] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledPublishing] Terminating
+ 2018-05-07 10:55:17,681 [P19376/D19/T97] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledPublishing] Waiting for tasks to complete
+ 2018-05-07 10:55:17,681 [P19376/D19/T213] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledPublishing] Tasks completed, terminated
+ 2018-05-07 10:55:17,682 [P19376/D19/T223] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [LogScrubber] Tasks completed, terminated
+ 2018-05-07 10:55:18,043 [P19376/D19/T97] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [Umbraco.Web.Scheduling.IBackgroundTask] Terminating
+ 2018-05-07 10:55:18,043 [P19376/D19/T97] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [Umbraco.Web.Scheduling.IBackgroundTask] Waiting for tasks to complete
+ 2018-05-07 10:55:18,044 [P19376/D19/T166] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [Umbraco.Web.Scheduling.IBackgroundTask] Tasks completed, terminated
+ 2018-05-07 10:55:18,046 [P19376/D19/T97] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledTasks] Terminating
+ 2018-05-07 10:55:18,046 [P19376/D19/T97] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledTasks] Waiting for tasks to complete
+ 2018-05-07 10:55:18,047 [P19376/D19/T203] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledTasks] Tasks completed, terminated
+ 2018-05-07 10:55:48,133 [P19376/D19/T91] INFO  Umbraco.Core.UmbracoApplicationBase - Application shutdown. Details: ConfigurationChange
+
+_shutDownMessage=CONFIG change
+HostingEnvironment initiated shutdown
+CONFIG change
+HostingEnvironment forårsagede nedlukning
+
+_shutDownStack=   ved System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   ved System.Environment.get_StackTrace()
+   ved System.Web.Hosting.HostingEnvironment.InitiateShutdownInternal()
+   ved System.Web.Hosting.HostingEnvironment.InitiateShutdownWithoutDemand()
+   ved System.Web.HttpRuntime.ShutdownAppDomain(String stackTrace)
+   ved System.Web.Configuration.HttpConfigurationSystem.OnConfigurationChanged(Object sender, InternalConfigEventArgs e)
+   ved System.Configuration.Internal.InternalConfigRoot.OnConfigChanged(InternalConfigEventArgs e)
+   ved System.Configuration.BaseConfigurationRecord.OnStreamChanged(String streamname)
+   ved System.Web.Configuration.WebConfigurationHostFileChange.OnFileChanged(Object sender, FileChangeEvent e)
+   ved System.Web.DirectoryMonitor.FireNotifications()
+   ved System.Web.Util.WorkItem.CallCallbackWithAssert(WorkItemCallback callback)
+   ved System.Web.Util.WorkItem.OnQueueUserWorkItemCompletion(Object state)
+   ved System.Threading.QueueUserWorkItemCallback.WaitCallback_Context(Object state)
+   ved System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   ved System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   ved System.Threading.QueueUserWorkItemCallback.System.Threading.IThreadPoolWorkItem.ExecuteWorkItem()
+   ved System.Threading.ThreadPoolWorkQueue.Dispatch()
+   ved System.Threading._ThreadPoolWaitCallback.PerformWaitCallback()

@@ -1,0 +1,16 @@
+
+
+/**umb_name:Overskrift*/
+h1{font-size:1.9rem;
+font-weight:bold;}
+
+/**umb_name:Underrubrik*/
+h2{font-size: 1.6rem;
+font-weight:bold;}
+
+/**umb_name:Mellemrubrik*/
+h3{font-size: 1.3rem;
+font-weighht:bold}
+
+/**umb_name:Brødtekst*/
+p{font-size: 1rem;}

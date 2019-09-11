@@ -1,0 +1,35 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@using Umbraco.Web
+
+
+@{
+    var root = Model.Content.Site();
+}
+<nav>
+   
+    <ul>
+
+        @{
+            <li class="@(Model.Content.Id == root.Id ? " active" : null)">
+                <a href="@root.Url" class="fa fa-home"></a>
+            </li>
+            var selection = root.Children.Where(x => x.IsVisible()).ToArray();
+            if (selection.Length > 0)
+            {
+                foreach (var item in selection)
+                {
+                    if (item.Id == 1092)
+                    {
+
+                    }
+                    else
+                    {
+                        <li class="@(item.IsAncestorOrSelf(Model.Content) ? " active" : null)">
+                            <a href="@item.Url">@item.Name</a>
+                        </li>
+                    }
+                }
+            }
+        }
+    </ul>
+</nav>

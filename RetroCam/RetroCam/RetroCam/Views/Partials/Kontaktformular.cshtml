@@ -1,0 +1,50 @@
+﻿@model RetroCam.Models.KontaktformularModel
+
+@using System.Web.Mvc.Html;
+@using ClientDependency.Core.Mvc;
+@using Umbraco.Web;
+
+@{
+    Html.EnableClientValidation();
+    Html.EnableUnobtrusiveJavaScript();
+    Html.RequiresJs("/umbraco_client/ui/jquery.js");
+    Html.RequiresJs("/Umbraco_Client/Application/JQuery/jquery.validate.min.js");
+    Html.RequiresJs("/Umbraco_Client/Application/JQuery/jquery.validate.unobtrusive.min.js");
+}
+
+@Html.RenderJsHere()
+
+<div class="kontaktformular">
+@if (Convert.ToBoolean(TempData["Success"]) == false)
+{
+    using (Html.BeginUmbracoForm<RetroCam.Controllers.KontaktformularSurfaceController>("KontaktformularAfsendelse"))
+    { 
+        @Html.LabelFor(m => m.Navn)
+        @Html.TextBoxFor(m => m.Navn)
+        @Html.ValidationMessageFor(m => m.Navn, string.Empty, new { @class = "error" })
+        <br />
+        @Html.LabelFor(m => m.Email)
+        @Html.TextBoxFor(m => m.Email)
+        @Html.ValidationMessageFor(m => m.Email, string.Empty, new { @class = "error" })
+        <br />
+        @Html.LabelFor(m => m.Alder)
+        @Html.TextBoxFor(m => m.Alder)
+        @Html.ValidationMessageFor(m => m.Alder, string.Empty, new { @class = "error" })
+        <br />
+        @Html.LabelFor(m => m.Besked)
+        @Html.TextAreaFor(m => m.Besked)
+        @Html.ValidationMessageFor(m => m.Besked, string.Empty, new { @class = "error" })
+        <br />
+        
+        <button type="submit">Send</button>
+        
+        
+    }
+}
+else
+{
+
+    <h3>Tak for din besked!</h3>
+
+}
+</div>

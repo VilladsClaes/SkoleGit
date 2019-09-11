@@ -1,0 +1,92 @@
+﻿ @inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@using Examine.LuceneEngine.SearchCriteria
+@{
+	Layout = "master.cshtml";
+}
+
+<div class="content">
+	
+	
+	@*@{
+		if(!string.IsNullOrEmpty(Request.QueryString["search"]))
+		{
+			var search = Request.QueryString["search"];
+			var searchProvider = ExamineManager.Instance.SearchProviderCollection["WebsiteSearcher"];
+			var resultater = searchProvider.Search(search, true);
+			
+			if(resultater.TotalItemCount == 0)
+			{
+				<p>Ingen resultater fundet!</p>
+			}
+			else
+			{
+				<h1>Din søgning på <span class="blue">@search</span></h1>
+					
+					<h4>Gav @resultater.TotalItemCount resultater:</h4>
+					
+				<ul>
+					@foreach(var resultat in resultater)
+					{
+						<li>
+							<a href="@Umbraco.Content(resultat.Id).Url">@resultat.Fields["nodeName"]</a>
+						</li>
+					}
+				</ul>
+			}
+			
+		}
+	
+	}*@
+	
+    
+
+    @if (!string.IsNullOrEmpty(Request.QueryString["search"]))
+    {
+        try
+        {
+            var search = Request.QueryString["search"];
+            var q = "*" + search.Trim() + "*";
+
+            var Searcher = Examine.ExamineManager.Instance.SearchProviderCollection["WebsiteSearcher"];
+            var searchCriteria = Searcher.CreateSearchCriteria(Examine.SearchCriteria.BooleanOperation.Or);
+
+            var query = searchCriteria.Field("nodeName", q.Fuzzy().Value.Boost(0.5f))
+                        .Or().Field("nodeName", q.MultipleCharacterWildcard())
+                        .Or().Field("pageTitle", q.Boost(0.3f))
+                        .Or().Field("pageDescription", q.Boost(0.2f))
+                        .Or().Field("kortBeskrivelse", q.Boost(0.2f))
+                        .Or().Field("bodyText", q.Boost(0.4f));
+
+            var searchResults = Searcher.Search(query.Compile()).OrderByDescending(x => x.Score)
+                                .TakeWhile(x => x.Score > 0.3f);
+
+            <h1>Din søgning på <span class="blue">@search</span></h1>
+
+            if (searchResults.Count() > 0)
+            {
+
+                <h4>Gav @(searchResults.Count()) resultater:</h4>
+
+                <ul>
+                    @foreach (var resultat in searchResults)
+                    {
+                        <li>
+                            <a href="@umbraco.library.NiceUrl(resultat.Id)">@resultat.Fields["nodeName"]</a>
+                        </li>
+                    }
+                </ul>
+            }
+            else
+            {
+                <h3>Der blev ikke fundet noget...</h3>
+            }
+        }
+        catch (global::System.Exception)
+        {
+            <h3>Der skete en fejl. Måske brugte du et ugyldigt ord, f.eks. &quot;by&quot;?</h3>
+        }
+
+    }
+	
+	
+</div>

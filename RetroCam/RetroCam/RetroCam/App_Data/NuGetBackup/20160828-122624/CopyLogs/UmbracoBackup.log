@@ -1,0 +1,27 @@
+
+-------------------------------------------------------------------------------
+   ROBOCOPY     ::     Robust File Copy for Windows                              
+-------------------------------------------------------------------------------
+
+     Startet : Sun Aug 28 12:26:24 2016
+
+       Kilde : C:\Users\lean\Google Drev\Viden Djurs\Undervisningsmateriale\Umbraco\Testsites mm\RetroCam\RetroCam\Umbraco\
+ Destination : C:\Users\lean\Google Drev\Viden Djurs\Undervisningsmateriale\Umbraco\Testsites mm\RetroCam\RetroCam\App_Data\NuGetBackup\20160828-122624\Umbraco\
+
+       Filer : *.*
+	    
+Indstillinger : *.* /S /E /COPY:DAT /R:1000000 /W:30 
+
+------------------------------------------------------------------------------
+
+	                   0	C:\Users\lean\Google Drev\Viden Djurs\Undervisningsmateriale\Umbraco\Testsites mm\RetroCam\RetroCam\Umbraco\
+
+------------------------------------------------------------------------------
+
+               I alt  KopieretSprunget overUoverensstemmelse MISLYKKET    Ekstra
+   Mapper:         1         0         1         0         0         0
+    Filer:         0         0         0         0         0         0
+     Byte:         0         0         0         0         0         0
+    Gange:   0:00:00   0:00:00                       0:00:00   0:00:00
+
+Afsluttet: Sun Aug 28 12:26:24 2016

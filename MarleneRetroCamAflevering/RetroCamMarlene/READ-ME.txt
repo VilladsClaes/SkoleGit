@@ -1,0 +1,13 @@
+README
+
+Navn: Marlene Ramlov
+EMAIL: krarup90@gmail.com
+PASSWORD: 1234567890
+
+DER ER MASSERE AF STAVE FEJL OG DER ER IKKE STYLET SÅ SUPER PÆNT, MEN FUNKTIONERNE ER DER (DER MANGLES EN RTE PÅ SØGESIDEN OG NOGET MERE CONTENT - MEN DEN VIRKER).
+JEG HAR LAVET MULIGHEDEN FOR AT LAVE LIGNENE PRODUKTER UNDER PRODUKTET, MEN NÅEDE IKKE FLERE AF EKSTRA OPGAVERNE. 
+
+Tak for en spædende forløb og et indblik i umbraco, du sagde at hvis man gerne vil have evt. fremtidige pdf'er kan man give din ens mail. Det vil jeg meget gerne skrives op til. 
+mailen er krarup90@gmail.com.
+
+Go arbejdslyst :)

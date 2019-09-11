@@ -1,0 +1,78 @@
+body {
+
+}
+
+
+/*nyeste 4 produkter*/
+.newest{
+    width: 100%;
+    display: flex;
+    flex-wrap:wrap;
+    padding:0;
+
+}
+
+    .newest li {
+        width: 23%;
+        list-style-type: none;
+        padding:30px 1%;
+
+    }
+
+        .newest li a{
+
+        }
+
+            .newest li a img{
+                display:block;
+                width:100%;
+            }
+
+
+/*Fokus boks*/
+
+.fokus {
+    width: 80%;
+    padding: 20px 0.5%;
+    border: dotted 2px #00b9ba;
+    margin:10px auto;
+}
+    .fokus .header {
+        background-color: #00b9ba;
+        color:#fff;
+        font-weight:600;
+        padding:10px 0;
+        width:100%;
+        text-align:center;
+        margin-bottom:10px;
+    }
+        .fokus .header h6 {
+            text-align: center;
+        }
+
+    .fokus .d-flex{
+        display:flex;
+   
+
+    }
+        .fokus .d-flex .img{
+            
+            width:49%;
+        }
+            .fokus .d-flex .img img{
+                display:block;
+                width:100%;
+            }
+        .fokus .d-flex .info {
+        width:47%;
+        padding: 0 1.5%;
+        margin-left:1%;
+
+        }
+
+table{
+    background-color:#a5a39a;
+}
+table td{
+    border: solid 1px #fff;
+}

@@ -1,0 +1,23 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.Overkategorier>
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@{
+	Layout = "Master.cshtml";
+}
+
+@Umbraco.RenderMacro("Slideshow")
+
+@Umbraco.Field("bodyText")
+
+<h2>Klik på en kategori:</h2>
+<ul class="underKategorier">
+    @foreach(var side in Model.Content.Children("kategori"))
+    {
+        <li><a href="@side.Url">@side.Name (@side.Children.Count())</a></li>
+    }
+   
+</ul>
+
+
+
+<h3>Vores @(Model.Content.Descendants("produkt").Count() < 4 ?  Model.Content.Descendants("produkt").Count() : 4) nyeste @(Model.Content.Name):</h3>
+@Html.Partial("nyeste")

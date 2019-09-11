@@ -1,0 +1,59 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+	Layout = "master.cshtml";
+    int AntalPaaLager = !string.IsNullOrEmpty(CurrentPage.lagerAntal.ToString()) ? Int32.Parse(CurrentPage.lagerAntal.ToString()) : 0;
+}
+
+<article>
+	
+	@Html.Partial("Breadcrumbs")
+	
+			@if(CurrentPage.HasValue("umbracoFile"))
+		{
+			<img src="@CurrentPage.umbracoFile?height=400" alt="@CurrentPage.Name" />
+		}
+	
+
+	
+	
+
+<h1>@Umbraco.Field("pageName")</h1>
+    @if (AntalPaaLager > 0)
+    {
+        <span class="pris">Pris: @(string.Format("DKK {0:0.00}", Convert.ToDecimal(CurrentPage.Pris)))</span>
+        <button class="buy">Køb</button>
+    }
+    else
+    {
+        <span class="udsolgt">Udsolgt</span>
+    }
+
+	
+@Umbraco.Field("bodyText")
+
+	<table class="produkt-tabel">
+        <tr>
+            <td>Produkt ID</td>
+            <td>@CurrentPage.Id</td>
+        </tr>
+        <tr>
+            <td>Mærke</td>
+            <td>@CurrentPage.fabrikat</td>
+        </tr>
+        <tr>
+            <td>Model/type</td>
+            <td>@CurrentPage.modelType</td>
+        </tr>
+        <tr>
+            <td>Vejl. pris</td>
+            <td>@(string.Format("DKK {0:0.00}", Convert.ToDecimal(CurrentPage.Pris)))</td>
+        </tr>
+        <tr>
+            <td>Lagerstatus</td>
+            <td>@(AntalPaaLager > 0 ? "På lager (" + AntalPaaLager + " stk)" : "Udsolgt")</td>
+        </tr>
+    </table>
+
+<div class="clear"></div>
+</article>	
+	

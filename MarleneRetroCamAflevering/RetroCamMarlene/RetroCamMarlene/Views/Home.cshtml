@@ -1,0 +1,37 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.Home>
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@{
+	Layout = "Master.cshtml";
+	
+}
+
+@Umbraco.Field("bodyText")
+
+@{
+    var ValgtSide = Model.Content.GetPropertyValue<IPublishedContent>("contentPicker");
+    if(ValgtSide != null)
+    {
+        <div class="fokus">
+            <div class="header"><h6>I FOKUS</h6></div>
+            <div class="d-flex">
+                <div class="img">
+                    <img src="@ValgtSide.GetPropertyValue("umbracoFile")" alt="Alternate Text" />
+                </div>
+                <div class="info">
+                    <h5>@ValgtSide.Name</h5>
+                    <p>@(ValgtSide.GetPropertyValue<string>("bodyText").Substring(0, (ValgtSide.GetPropertyValue<string>("bodyText").Length < 70 ? ValgtSide.GetPropertyValue<string>("bodyText").Length : 70)))...</p>
+                    <p class="price">PRIS DDK @ValgtSide.GetPropertyValue("price")</p>
+                    <a href="@ValgtSide.Url">Klik for mere information</a>
+
+                </div>
+                
+            </div>
+        </div>
+        
+    }
+
+
+}
+
+<h4>Vores 4 nyeste produkter</h4>
+@Html.Partial("nyeste")

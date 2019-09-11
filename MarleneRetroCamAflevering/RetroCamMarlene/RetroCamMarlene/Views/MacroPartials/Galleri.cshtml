@@ -1,0 +1,37 @@
+﻿@inherits Umbraco.Web.Macros.PartialViewMacroPage
+@{
+    var GalleriNavn = Model.MacroParameters["galleriNavn"] as string;
+    var ValgtMedia = Model.MacroParameters["valgtMedia"] as string;
+ 
+        
+
+}
+@if(GalleriNavn != null)
+{
+    <h3>@GalleriNavn</h3>
+}
+@if(ValgtMedia != null)
+{
+    <div class="galleri">
+        @foreach(var mediaId in ValgtMedia.Split(','))
+        {
+            var media = Umbraco.TypedMedia(mediaId);
+            
+            if(media.DocumentTypeAlias == "Image")
+            {
+                @VisBillede(media as Image, GalleriNavn);
+            }
+            foreach(var image in media.Children<Image>())
+            {
+                @VisBillede(image, GalleriNavn);
+            }
+            
+        }
+    </div>
+}
+@helper VisBillede(Image item, string GalleriNavn)
+{ 
+    <a data-lightbox="@GalleriNavn" href="@item.Url">
+        <img src="@item.GetCropUrl(width:200 , height: 200)" alt="@item.Name" />        
+    </a>
+}

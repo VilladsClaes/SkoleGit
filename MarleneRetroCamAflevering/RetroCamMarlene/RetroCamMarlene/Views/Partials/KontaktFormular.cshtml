@@ -1,0 +1,35 @@
+﻿@model RetroCamMarlene.Models.KontaktformularModel
+
+@if (TempData["Success"] != null)
+{
+    <h3>Tak for din henvendelse! Vi vender tilbage snarest</h3>
+}
+else
+{
+    using (Html.BeginUmbracoForm<RetroCamMarlene.Controllers
+        .KontaktformularSurfaceController>("KontaktformularAfsendelse"))
+
+    {
+        @Html.LabelFor(m => m.Navn)
+        @Html.TextBoxFor(m => m.Navn, new { @class = "input-class", placeholder = "Jens Jensen" })
+        @Html.ValidationMessageFor(m => m.Navn)
+
+        @Html.LabelFor(m => m.Email)
+        @Html.TextBoxFor(m => m.Email, new { @class = "input-class", placeholder = "din@mail.com" })
+        @Html.ValidationMessageFor(m => m.Email)
+
+        @Html.LabelFor(m => m.Tlf)
+        @Html.TextBoxFor(m => m.Tlf, new { @class = "input-class", placeholder = "+45 12345678" })
+        @Html.ValidationMessageFor(m => m.Tlf)
+
+        @Html.LabelFor(m => m.Besked)
+        @Html.TextBoxFor(m => m.Besked, new { @class = "input-class", placeholder = "Skiv Din besked her...." })
+        @Html.ValidationMessageFor(m => m.Besked)
+
+        <button type="submit">Send</button>
+    }
+    if (TempData["Error"] != null)
+    {
+        <h3>@TempData["Error"].ToString()</h3>
+    }
+}

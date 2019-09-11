@@ -1,0 +1,22 @@
+﻿@inherits Umbraco.Web.Macros.PartialViewMacroPage
+
+	@{
+		var produktId = Model.MacroParameters["produkt"] as string;
+        var produkt = Umbraco.TypedContent(produktId);
+	}
+<a class="fokus-produkt" href="@produkt.Url">
+        <div style="text-align:center;background:#00adae;padding: 12px 0;margin-bottom: 15px;border-radius:5px;">
+            <h4 style="margin:0;color:white;letter-spacing:2px;">I fokus:</h4>
+        </div>
+        @if (produkt.HasProperty("umbracoFile") && produkt.HasValue("umbracoFile"))
+        {
+            <img style="float:left;margin-right:20px;border-radius:5px;" src="@(produkt.GetPropertyValue("umbracoFile"))?height=250" />
+        }
+        <h3>@produkt.Name</h3>
+        <p>@Html.Raw(library.ReplaceLineBreaks(produkt.GetPropertyValue<string>("kortBeskrivelse")))</p>
+        <span class="pris">Pris: @(string.Format("DKK {0:0.00}", Convert.ToDecimal(produkt.GetPropertyValue("Pris"))))</span>
+    <br />
+        <br />
+        <span>Klik for yderligere information...</span>
+        <div style="clear:both;"></div>
+</a>    

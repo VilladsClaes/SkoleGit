@@ -1,0 +1,9 @@
+﻿ 2017-11-08 11:08:57,339 [P18268/D2/T197] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: Login attempt succeeded for username admin from IP address ::1
+ 2017-11-08 11:08:57,340 [P18268/D2/T197] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: User: admin logged in from IP address ::1
+ 2017-11-08 11:08:57,608 [P18268/D2/T197] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.Trees.TreeController
+ 2017-11-08 11:08:57,620 [P18268/D2/T197] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.Trees.TreeController, found 0 (took 12ms)
+ 2017-11-08 11:32:17,519 [P18268/D2/T22] WARN  Umbraco.Web.UmbracoModule - Status code is 404 yet TrySkipIisCustomErrors is false - IIS will take over.
+ 2017-11-08 11:33:17,359 [P18268/D2/T129] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: Login attempt succeeded for username admin from IP address ::1
+ 2017-11-08 11:33:17,359 [P18268/D2/T129] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: User: admin logged in from IP address ::1
+ 2017-11-08 11:45:14,229 [P18268/D2/T8] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2017-11-07 11:45:14
+ 2017-11-08 13:03:48,459 [P18268/D2/T199] WARN  Umbraco.Web.UmbracoModule - Status code is 404 yet TrySkipIisCustomErrors is false - IIS will take over.

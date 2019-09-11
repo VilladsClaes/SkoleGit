@@ -1,0 +1,41 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+
+@using Examine.LuceneEngine.SearchCriteria
+
+@if(!string.IsNullOrEmpty(Request.QueryString["search"]))
+{
+    var q = "*" + Request.QueryString["search"].Trim() + "*";
+
+    var Searcher = Examine.ExamineManager.Instance.SearchProviderCollection["WebsiteSearcher"];
+    var searchCriteria = Searcher.CreateSearchCriteria(Examine.SearchCriteria.BooleanOperation.Or);
+
+    var query = searchCriteria.Field("nodeName", q.Fuzzy().Value.Boost(0.5f))
+                .Or().Field("nodeName", q.MultipleCharacterWildcard())
+                .Or().Field("pageTitle", q.Boost(0.3f))
+                .Or().Field("pageDescription", q.Boost(0.2f))
+                .Or().Field("bodyText", q.Boost(0.4f));
+
+    var searchResults = Searcher.Search(query.Compile()).OrderByDescending(x => x.Score);
+    //.TakeWhile(x => x.Score > 0.3f);
+
+    if(searchResults.Count()>0)
+    {
+        <ul>
+            @foreach(var resultat in searchResults)
+            {
+                <li>
+                    
+                    <a href="@umbraco.library.NiceUrl(resultat.Id)">@resultat.Fields["nodeName"]</a>
+                    
+                </li>
+            }
+            
+        </ul>
+    
+    }
+    else
+    {
+        <h3>Der blev ikke fundet noget...</h3>    
+    }
+
+}

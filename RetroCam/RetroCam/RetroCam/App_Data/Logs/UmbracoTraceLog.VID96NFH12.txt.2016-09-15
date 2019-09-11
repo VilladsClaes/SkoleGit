@@ -1,0 +1,204 @@
+﻿ 2016-09-15 12:02:40,196 [P13208/D2/T1] INFO  Umbraco.Core.CoreBootManager - Umbraco 7.5.2 application starting on VID96NFH12
+ 2016-09-15 12:02:40,213 [P13208/D2/T1] INFO  Umbraco.Core.PluginManager - Determining hash of code files on disk
+ 2016-09-15 12:02:40,225 [P13208/D2/T1] INFO  Umbraco.Core.PluginManager - Hash determined (took 12ms)
+ 2016-09-15 12:02:40,305 [P13208/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.interfaces.IApplicationStartupHandler
+ 2016-09-15 12:02:40,478 [P13208/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.interfaces.IApplicationStartupHandler, found 0 (took 173ms)
+ 2016-09-15 12:02:40,552 [P13208/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter
+ 2016-09-15 12:02:40,553 [P13208/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter, found 0 (took 0ms)
+ 2016-09-15 12:02:40,553 [P13208/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyValueConverter
+ 2016-09-15 12:02:40,554 [P13208/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyValueConverter, found 0 (took 0ms)
+ 2016-09-15 12:02:40,565 [P13208/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.Mvc.SurfaceController
+ 2016-09-15 12:02:40,647 [P13208/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.Mvc.SurfaceController, found 0 (took 82ms)
+ 2016-09-15 12:02:40,648 [P13208/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.WebApi.UmbracoApiController
+ 2016-09-15 12:02:40,652 [P13208/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.WebApi.UmbracoApiController, found 0 (took 4ms)
+ 2016-09-15 12:02:40,752 [P13208/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Media.IThumbnailProvider
+ 2016-09-15 12:02:40,752 [P13208/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Media.IThumbnailProvider, found 0 (took 0ms)
+ 2016-09-15 12:02:40,753 [P13208/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Media.IImageUrlProvider
+ 2016-09-15 12:02:40,753 [P13208/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Media.IImageUrlProvider, found 0 (took 0ms)
+ 2016-09-15 12:02:41,627 [P13208/D2/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = True
+ 2016-09-15 12:02:41,909 [P13208/D2/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = True
+ 2016-09-15 12:02:41,940 [P13208/D2/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = True
+ 2016-09-15 12:02:42,075 [P13208/D2/T1] INFO  Umbraco.Web.Cache.CacheRefresherEventHandler - Initializing Umbraco internal event handlers for cache refreshing
+ 2016-09-15 12:02:42,253 [P13208/D2/T1] INFO  Umbraco.Web.Search.ExamineEvents - Initializing Examine and binding to business logic events
+ 2016-09-15 12:02:42,253 [P13208/D2/T1] INFO  Umbraco.Web.Search.ExamineEvents - Adding examine event handlers for index providers: 4
+ 2016-09-15 12:02:42,265 [P13208/D2/T1] INFO  Umbraco.Core.CoreBootManager - Umbraco application startup complete (took 2148ms)
+ 2016-09-15 12:02:43,439 [P13208/D2/T10] INFO  Umbraco.Core.Sync.ApplicationUrlHelper - ApplicationUrl: http://localhost:8145/umbraco (UmbracoModule request)
+ 2016-09-15 12:02:43,825 [P13208/D2/T10] INFO  umbraco.content - Load Xml from file...
+ 2016-09-15 12:02:43,828 [P13208/D2/T10] INFO  umbraco.content - Loaded Xml from file.
+ 2016-09-15 12:02:44,396 [P13208/D2/T10] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IParameterEditor
+ 2016-09-15 12:02:44,397 [P13208/D2/T10] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IParameterEditor, found 0 (took 1ms)
+ 2016-09-15 12:03:43,910 [P13208/D2/T15] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2016-09-14 12:03:43
+ 2016-09-15 12:03:43,988 [P13208/D2/T12] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Persistence.Mappers.BaseMapper
+ 2016-09-15 12:03:43,988 [P13208/D2/T12] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Persistence.Mappers.BaseMapper, found 0 (took 1ms)
+ 2016-09-15 12:47:52,991 [P13208/D2/T98] ERROR Umbraco.Web.Scheduling.ScheduledPublishing - Failed (at "http://localhost:8145/umbraco").
+System.Net.Http.HttpRequestException: Der opstod en fejl under afsendelse af anmodningen. ---> System.Net.WebException: Der kunne ikke oprettes forbindelse til fjernserveren ---> System.Net.Sockets.SocketException: Det blev forsøgt at få adgang til en socket på en måde, der er forbudt af den pågældende sockets adgangstilladelser 127.0.0.1:8145
+   ved System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   ved System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- Slut på staksporing af indre undtagelser ---
+   ved System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   ved System.Net.Http.HttpClientHandler.GetRequestStreamCallback(IAsyncResult ar)
+   --- Slut på staksporing af indre undtagelser ---
+   ved System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   ved System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   ved Umbraco.Web.Scheduling.ScheduledPublishing.<PerformRunAsync>d__7.MoveNext()
+ 2016-09-15 16:55:36,600 [P13208/D2/T221] ERROR Umbraco.Web.Scheduling.KeepAlive - Failed (at "http://localhost:8145/umbraco").
+System.Net.Http.HttpRequestException: Der opstod en fejl under afsendelse af anmodningen. ---> System.Net.WebException: Der kunne ikke oprettes forbindelse til fjernserveren ---> System.Net.Sockets.SocketException: Det blev forsøgt at få adgang til en socket på en måde, der er forbudt af den pågældende sockets adgangstilladelser 127.0.0.1:8145
+   ved System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   ved System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- Slut på staksporing af indre undtagelser ---
+   ved System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   ved System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- Slut på staksporing af indre undtagelser ---
+   ved System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   ved System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   ved Umbraco.Web.Scheduling.KeepAlive.<PerformRunAsync>d__4.MoveNext()
+ 2016-09-15 16:55:37,704 [P13208/D2/T15] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2016-09-14 16:55:36
+ 2016-09-15 18:06:15,277 [P13208/D2/T28] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.Trees.TreeController
+ 2016-09-15 18:06:15,277 [P13208/D2/T28] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.Trees.TreeController, found 0 (took 2ms)
+ 2016-09-15 18:06:15,308 [P13208/D2/T25] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.interfaces.ITree
+ 2016-09-15 18:06:15,323 [P13208/D2/T25] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.interfaces.ITree, found 0 (took 2ms)
+ 2016-09-15 18:06:15,339 [P13208/D2/T25] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.Trees.TreeController
+ 2016-09-15 18:06:15,339 [P13208/D2/T25] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.Trees.TreeController, found 0 (took 0ms)
+ 2016-09-15 18:06:15,343 [P13208/D2/T25] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.interfaces.ITree
+ 2016-09-15 18:06:15,343 [P13208/D2/T25] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.interfaces.ITree, found 0 (took 0ms)
+ 2016-09-15 18:06:15,365 [P13208/D2/T25] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.interfaces.IApplication
+ 2016-09-15 18:06:15,365 [P13208/D2/T25] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.interfaces.IApplication, found 0 (took 1ms)
+ 2016-09-15 18:08:38,860 [P13208/D2/T27] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.interfaces.ICacheRefresher
+ 2016-09-15 18:08:38,860 [P13208/D2/T27] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.interfaces.ICacheRefresher, found 0 (took 1ms)
+ 2016-09-15 18:26:19,953 [P13208/D2/T122] INFO  Umbraco.Core.Logging.OwinLogger - Event Id: 0, state: User logged will be logged out due to timeout: admin, IP Address: ::1
+ 2016-09-15 18:46:27,552 [P13208/D2/T118] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: Login attempt succeeded for username admin from IP address ::1
+ 2016-09-15 18:46:27,554 [P13208/D2/T118] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: User: admin logged in from IP address ::1
+ 2016-09-15 18:49:25,915 [P13208/D2/T127] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.HealthCheck.HealthCheck
+ 2016-09-15 18:49:25,918 [P13208/D2/T127] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.HealthCheck.HealthCheck, found 0 (took 2ms)
+ 2016-09-15 18:50:42,483 [P13208/D2/T122] ERROR Umbraco.Web.WebServices.SaveFileController - An error occurred saving a file. Please make sure that you do not have 2 templates with the same alias
+System.IO.IOException: The process cannot access the file 'C:\Users\lean\Google Drev\Viden Djurs\Undervisningsmateriale\Umbraco\Testsites mm\RetroCam\RetroCam\Views\master.cshtml' because it is being used by another process.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at Umbraco.Core.IO.PhysicalFileSystem.AddFile(String path, Stream stream, Boolean overrideIfExists)
+   at Umbraco.Core.IO.ViewHelper.UpdateViewFile(ITemplate t, String currentAlias)
+   at Umbraco.Core.Persistence.Repositories.TemplateRepository.PersistUpdatedItem(ITemplate entity)
+   at Umbraco.Core.Cache.FullDataSetRepositoryCachePolicy`2.CreateOrUpdate(TEntity entity, Action`1 persistMethod)
+   at Umbraco.Core.Persistence.Repositories.RepositoryBase`2.PersistUpdatedItem(IEntity entity)
+   at Umbraco.Core.Persistence.UnitOfWork.PetaPocoUnitOfWork.Commit(Action`1 transactionCompleting)
+   at Umbraco.Core.Persistence.UnitOfWork.PetaPocoUnitOfWork.Commit()
+   at Umbraco.Core.Services.FileService.SaveTemplate(ITemplate template, Int32 userId)
+   at umbraco.cms.businesslogic.template.Template.Save()
+   at Umbraco.Web.WebServices.SaveFileController.SaveTemplate(String templateName, String templateAlias, String templateContents, Int32 templateId, Int32 masterTemplateId)
+ 2016-09-15 18:55:49,051 [P13208/D2/T96] ERROR Umbraco.Core.UmbracoApplicationBase - An unhandled exception occurred
+System.Web.HttpCompileException (0x80004005): c:\Users\lean\Google Drev\Viden Djurs\Undervisningsmateriale\Umbraco\Testsites mm\RetroCam\RetroCam\Views\master.cshtml(88): error CS0103: Navnet 'node' findes ikke i den aktuelle sammenhæng
+   ved System.Web.Compilation.AssemblyBuilder.Compile()
+   ved System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+   ved System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   ved System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   ved System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   ved System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   ved System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   ved System.Web.WebPages.BuildManagerWrapper.CreateInstanceOfType[T](String virtualPath)
+   ved System.Web.WebPages.VirtualPathFactoryExtensions.CreateInstance[T](IVirtualPathFactory factory, String virtualPath)
+   ved System.Web.WebPages.VirtualPathFactoryManager.CreateInstanceOfType[T](String virtualPath)
+   ved System.Web.WebPages.VirtualPathFactoryExtensions.CreateInstance[T](IVirtualPathFactory factory, String virtualPath)
+   ved System.Web.WebPages.WebPageBase.CreatePageFromVirtualPath(String virtualPath, HttpContextBase httpContext, Func`2 virtualPathExists, DisplayModeProvider displayModeProvider, IDisplayMode displayMode)
+   ved System.Web.WebPages.WebPageBase.<>c__DisplayClass3.<RenderPageCore>b__2(TextWriter writer)
+   ved System.Web.WebPages.HelperResult.WriteTo(TextWriter writer)
+   ved System.Web.WebPages.WebPageBase.Write(HelperResult result)
+   ved System.Web.WebPages.WebPageBase.RenderSurrounding(String partialViewName, Action`1 body)
+   ved System.Web.WebPages.WebPageBase.PopContext()
+   ved System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)
+   ved System.Web.Mvc.RazorView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)
+   ved System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)
+   ved Umbraco.Core.Profiling.ProfilingView.Render(ViewContext viewContext, TextWriter writer)
+   ved System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   ved System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   ved System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   ved System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   ved System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   ved System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   ved System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   ved System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   ved System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+   ved System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   ved System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   ved System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   ved System.Web.Mvc.Controller.<BeginExecuteCore>b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   ved System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   ved System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   ved System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   ved System.Web.Mvc.Controller.<BeginExecute>b__15(IAsyncResult asyncResult, Controller controller)
+   ved System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   ved System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   ved System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   ved System.Web.Mvc.Controller.System.Web.Mvc.Async.IAsyncController.EndExecute(IAsyncResult asyncResult)
+   ved System.Web.Mvc.MvcHandler.<BeginProcessRequest>b__5(IAsyncResult asyncResult, ProcessRequestState innerState)
+   ved System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   ved System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   ved System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   ved System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)
+   ved System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   ved System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+ 2016-09-15 18:56:01,293 [P13208/D2/T136] ERROR Umbraco.Core.UmbracoApplicationBase - An unhandled exception occurred
+System.Web.HttpCompileException (0x80004005): c:\Users\lean\Google Drev\Viden Djurs\Undervisningsmateriale\Umbraco\Testsites mm\RetroCam\RetroCam\Views\master.cshtml(89): error CS1973: 'Umbraco.Core.Models.IPublishedContent' har igen brugbar metode med navnet 'IsAncestorOrSelf', men har tilsyneladende en udvidelsesmetode med dette navn. Udvidelsesmetoder kan ikke sendes dynamisk. Du kan evt. ændre de dynamiske argumenter eller kalde udvidelsesmetoden uden udvidelsesmetodens syntaks.
+   ved System.Web.Compilation.AssemblyBuilder.Compile()
+   ved System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+   ved System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   ved System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   ved System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   ved System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   ved System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   ved System.Web.WebPages.BuildManagerWrapper.CreateInstanceOfType[T](String virtualPath)
+   ved System.Web.WebPages.VirtualPathFactoryExtensions.CreateInstance[T](IVirtualPathFactory factory, String virtualPath)
+   ved System.Web.WebPages.VirtualPathFactoryManager.CreateInstanceOfType[T](String virtualPath)
+   ved System.Web.WebPages.VirtualPathFactoryExtensions.CreateInstance[T](IVirtualPathFactory factory, String virtualPath)
+   ved System.Web.WebPages.WebPageBase.CreatePageFromVirtualPath(String virtualPath, HttpContextBase httpContext, Func`2 virtualPathExists, DisplayModeProvider displayModeProvider, IDisplayMode displayMode)
+   ved System.Web.WebPages.WebPageBase.<>c__DisplayClass3.<RenderPageCore>b__2(TextWriter writer)
+   ved System.Web.WebPages.HelperResult.WriteTo(TextWriter writer)
+   ved System.Web.WebPages.WebPageBase.Write(HelperResult result)
+   ved System.Web.WebPages.WebPageBase.RenderSurrounding(String partialViewName, Action`1 body)
+   ved System.Web.WebPages.WebPageBase.PopContext()
+   ved System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)
+   ved System.Web.Mvc.RazorView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)
+   ved System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)
+   ved Umbraco.Core.Profiling.ProfilingView.Render(ViewContext viewContext, TextWriter writer)
+   ved System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   ved System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   ved System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   ved System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   ved System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   ved System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   ved System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   ved System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   ved System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+   ved System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   ved System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   ved System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   ved System.Web.Mvc.Controller.<BeginExecuteCore>b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   ved System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   ved System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   ved System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   ved System.Web.Mvc.Controller.<BeginExecute>b__15(IAsyncResult asyncResult, Controller controller)
+   ved System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   ved System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   ved System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   ved System.Web.Mvc.Controller.System.Web.Mvc.Async.IAsyncController.EndExecute(IAsyncResult asyncResult)
+   ved System.Web.Mvc.MvcHandler.<BeginProcessRequest>b__5(IAsyncResult asyncResult, ProcessRequestState innerState)
+   ved System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   ved System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   ved System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   ved System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)
+   ved System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   ved System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+ 2016-09-15 18:56:55,927 [P13208/D2/T137] ERROR Umbraco.Web.WebServices.SaveFileController - An error occurred saving a file. Please make sure that you do not have 2 templates with the same alias
+System.IO.IOException: The process cannot access the file 'C:\Users\lean\Google Drev\Viden Djurs\Undervisningsmateriale\Umbraco\Testsites mm\RetroCam\RetroCam\Views\master.cshtml' because it is being used by another process.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at Umbraco.Core.IO.PhysicalFileSystem.AddFile(String path, Stream stream, Boolean overrideIfExists)
+   at Umbraco.Core.IO.ViewHelper.UpdateViewFile(ITemplate t, String currentAlias)
+   at Umbraco.Core.Persistence.Repositories.TemplateRepository.PersistUpdatedItem(ITemplate entity)
+   at Umbraco.Core.Cache.FullDataSetRepositoryCachePolicy`2.CreateOrUpdate(TEntity entity, Action`1 persistMethod)
+   at Umbraco.Core.Persistence.Repositories.RepositoryBase`2.PersistUpdatedItem(IEntity entity)
+   at Umbraco.Core.Persistence.UnitOfWork.PetaPocoUnitOfWork.Commit(Action`1 transactionCompleting)
+   at Umbraco.Core.Persistence.UnitOfWork.PetaPocoUnitOfWork.Commit()
+   at Umbraco.Core.Services.FileService.SaveTemplate(ITemplate template, Int32 userId)
+   at umbraco.cms.businesslogic.template.Template.Save()
+   at Umbraco.Web.WebServices.SaveFileController.SaveTemplate(String templateName, String templateAlias, String templateContents, Int32 templateId, Int32 masterTemplateId)

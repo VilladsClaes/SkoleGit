@@ -1,0 +1,36 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+	Layout = "master.cshtml";
+	var root = CurrentPage.Site();
+}
+
+<div class="content">
+	@Umbraco.Field("bodyText")
+
+	
+
+	<div class="nyeste-produkter">
+        <div style="text-align:center;width:100%;">
+            <h3>Vores 4 nyeste produkter:</h3>
+        </div>
+		
+	@foreach(var produkt in root.Descendants("produkt").Where("Visible").OrderBy("createDate desc").Take(4))
+	{
+		<div class="produkt">
+			<a href="@produkt.Url">
+				
+				@if(produkt.HasValue("umbracoFile"))
+				{
+					<img src="@produkt.umbracoFile" alt="@produkt.Name" />
+				}
+		
+				<h4>@produkt.Name</h4>
+                <p>@Html.Raw(@umbraco.library.ReplaceLineBreaks(produkt.kortBeskrivelse))</p>
+				<span class="pris rotate">Pris: <strong>@(string.Format("DKK {0:0.00}", Convert.ToDecimal(produkt.Pris)))</strong></span>
+					
+			</a>
+		</div>
+	}
+</div>
+	
+	</div>

@@ -1,0 +1,15 @@
+﻿@inherits Umbraco.Web.Macros.PartialViewMacroPage
+
+@if(Model.Content.HasValue("slides"))
+{
+var Billeder = Model.Content.GetPropertyValue<IEnumerable<IPublishedContent>>("slides");
+<div class="slider">
+    <div id="slides" class="nivoSlider">
+        @foreach(var billede in Billeder)
+        {
+        <img src="@billede.GetCropUrl("umbracoFile", "slideshowSlide")" title="@billede.GetPropertyValue("caption")"/>
+        }
+    </div>
+    
+</div>
+}

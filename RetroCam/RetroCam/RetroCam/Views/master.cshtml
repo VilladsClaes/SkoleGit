@@ -1,0 +1,99 @@
+﻿@*@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.Master>
+ @using ContentModels = Umbraco.Web.PublishedContentModels; *@
+@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+	Layout = null;
+	var root = CurrentPage.Site();
+	
+}
+
+<!DOCTYPE html>
+	<html lang="da">
+	<head>
+	<title>@Umbraco.Field("pageTitle")</title>
+	<meta name="description" content="@Umbraco.Field("pageDescription")" />
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+	<link href="https://fonts.googleapis.com/css?family=Merriweather|Open+Sans" rel="stylesheet">
+	<link rel="stylesheet" href="/css/normalize.css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link href="/css/lightbox.css" rel="stylesheet" />   
+	<link href="/css/nivo-slider.css" rel="stylesheet" type="text/css" />  	
+	<link href="/css/lightbox.css" rel="stylesheet" type="text/css" />	
+	<link rel="stylesheet" href="/css/styles.css" />
+	
+	<!--[if lt IE 9]>
+    	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<script src="/scripts/lightbox.min.js"></script>	
+	<script src="/scripts/jquery.nivo.slider.js"></script>
+	<script src="/scripts/nivoslider.js"></script>
+	
+	</head>
+	<body>
+		<div class="bckgrd" style="background-image:url(@root.baggrundsbillede)">
+			<header>
+				<a href="@root.Url">
+				@* <span class="brand">Retro<span class="blue">Cam</span></span> *@
+				<img src="@Umbraco.Field("logo", recursive: true)" alt="Logo" />
+				</a>
+					<form class="search-form" action="@Umbraco.Content(Convert.ToInt32(@root.searchPage)).Url" method="get">
+						<input type="text" id="searchText" name="search" placeholder="Find kamera/film.." />
+						<button id="btnSearch"><i class="fa fa-search"></i></button>
+					</form>			
+			</header>
+			<div class="wrapper">
+				
+				
+				<nav>
+					<ul>
+					<li class="@(root.Id == CurrentPage.Id ? "active" : null)"><a href="@root.Url"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+
+					@foreach(var side in root.Children.Where("Visible"))
+					{
+						<li class="@(side.IsAncestorOrSelf(CurrentPage) ? "active" : null)"><a href="@side.Url">@side.Name</a></li>
+					}
+					</ul>
+				</nav>
+				@Html.Partial("Slideshow")
+				@RenderBody()
+			</div>
+			<div class="sociale-medier">
+				<ul>
+					<li><a href="#" class="fa fa-facebook-square"></a></li>
+					<li><a href="#" class="fa fa-instagram"></a></li>
+					<li><a href="#" class="fa fa-twitter-square"></a></li>
+				</ul>
+			</div>
+            <footer>				
+				<div class="footer-col last">
+					<span class="info-header"><i class="fa fa-info-circle" aria-hidden="true"></i>&nbsp;&nbsp;@Umbraco.Field("#oplysninger"):</span>
+					Dette website er et skoleprojekt.<br />De viste varer er ikke til salg og er udelukkende vist til demonstrationsformål.<br />
+					Websitet er opbygget i Umbraco CMS af Dit Navn, november 2017.
+				</div>
+				<div class="footer-col">
+					@Umbraco.Field("adresse", recursive: true)
+				</div>
+
+					@*
+					@{ var alleSprog = Umbraco.ContentAtXPath("//home");}	
+	
+					@if(alleSprog.Count() > 1)
+					{
+						<div class="language-selector">
+							<h5>Vælg sprog:</h5>
+							<ul>
+							@foreach(var sprog in alleSprog)
+							{
+								var n = Umbraco.Content(sprog.Id);
+								<li class="@(n.IsAncestorOrSelf(CurrentPage) ? "active" : null)"><a href="@n.Url">@n.Name</a></li>
+							}
+						</ul>
+						</div>
+					}
+					*@
+
+            </footer>
+		</div>
+	</body>
+	</html>

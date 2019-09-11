@@ -1,0 +1,425 @@
+/*
+Stylesheet for Demo Umbraco Site - Leif Andersen, 2015 - 2019
+*/
+
+@import url('normalize.css');
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web:400,600,700);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600,700);
+
+*:focus {
+    outline: 0;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: ' ';
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+
+h1,h2,h3,h4,h5,h6,.brand {
+    font-family: 'Titillium Web', sans-serif;
+}
+
+p,a,address,label,input{
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+    font-size: 38px;
+    margin-top: 0.2em;
+    margin-bottom: 0.6em;
+}
+
+h2 {
+    margin-top: 0;
+    margin-bottom: 1.5em;
+}
+
+h3 {
+    margin-top: 2em;
+    margin-bottom: 0.6em;
+}
+
+h6 {
+    font-size: 14px;
+    margin: 0 0 0.8em;
+   text-transform: uppercase;
+}
+
+p {
+    margin: 0 0 1.2em;
+    line-height: 1.5;
+}
+
+
+
+header
+{
+    width: 960px;
+    margin: 0 auto;
+    display:flex;
+    flex-wrap:wrap;
+}
+
+
+
+.brand
+{
+    float: left;
+    margin-top: 10px;
+    line-height: 48px;
+}
+
+.brand a {
+    font-size: 26px;
+    text-decoration: none;
+    color: #000;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+.brand img{
+    float: left;
+    margin-right: 10px;
+    max-height: 45px;
+}
+
+nav {
+    margin: 30px 0;
+    width:100%;
+    background-color: #00b9ba;
+    padding:0;
+}
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        background-color: #00b9ba;
+        margin:0;
+    }
+
+nav ul li {
+    padding:10px 20px;
+    
+   
+
+}
+
+nav ul li a {
+    font-size: 13px;
+    text-decoration: none;
+    color: #ccc;
+}
+
+nav ul li a:hover {
+    color: White;
+}
+
+
+    nav ul li.active {
+        background-color:#7befef;
+    }
+
+nav ul li.active a, nav ul li.active a:hover {
+    color: white;
+}
+
+
+/* Søge feltet */
+
+.search-box{
+   
+    margin: 20px 0 0 20px;
+    width: 180px;
+}
+
+.search-box input[type="text"]{
+    height: 26px; width: 140px;
+    border-radius: 16px;
+    border-top: 1px solid #999;
+    border-left: 1px solid #aaa;
+    border-right: 1px solid #aaa;
+    border-bottom: 1px solid #ccc;
+    line-height: 26px;
+    padding: 0 30px 0 10px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.search-box input[type="text"]:focus{
+    background: #fffef2;
+}
+
+.search-box input[type="submit"], .search-box button {
+    border: none;
+    height: 26px; width: 20px;
+    background: url('../images/search-icon.png') no-repeat center center;
+    position: absolute;
+    top: 1px; right: 6px;
+    opacity: 0.6;
+}
+
+.search-box input[type="submit"]:hover, .search-box button:hover {
+    opacity: 1;
+}
+
+
+/* Content */
+
+main{
+    background-color: White;
+    width:960px;
+    margin: 0 auto;
+    min-height:60vh;
+}
+.underKategorier{
+   
+    border-bottom: dotted #00b9ba 2px;
+}
+    .underKategorier li a {
+        color: #00b9ba;
+    }
+.breadcrumb{
+    list-style-type:none;
+    padding-top:30px;
+}
+    .breadcrumb li{
+        display:inline;
+    }
+        .breadcrumb li a {
+            color: #00b9ba;
+        }
+
+.pro-img{
+    display:block;
+    width:70%;
+}
+
+.buy {
+    display: flex;
+}
+.price {
+    font-weight: 800;
+    background-color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    padding: 0 20px;
+
+}
+.buy-btn {
+    background-color: #00b9ba;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    margin-left: 30px;
+    padding:0 20px;
+    text-decoration:none;
+    color:#fff;
+}
+
+
+/*footer*/
+    .footer-container {
+        width: 98%;
+        height: auto;
+        min-height: 60px;
+        background: #00b9ba;
+        padding: 1%;
+        line-height: 100%;
+    }
+
+footer
+{
+    width: 960px; 
+    margin: 0 auto 40px;
+}
+
+.bg-black {
+    background-color: black;
+    width:100%;
+    padding:7px 0;
+}
+
+.column {
+    display: table; /* Allow the centering to work */
+    margin: 0 auto;
+   
+}
+
+.column ul{
+    padding: 0; margin: 0;
+    list-style: none;
+
+
+}
+
+    .column ul li {
+        padding: 2px 0;
+        display: inline;
+    }
+
+.column p, .column a {
+    font-size: 12px;
+}
+
+    .column a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+
+.column ul.social li {
+     margin-right: 12px;
+}
+
+.column ul.social a {
+    font-size: 34px;
+   
+   
+}
+
+    .column ul.social a:hover {
+        color: #00b9ba;
+    }
+
+
+
+
+/* Slideshow - Nivo Slider */
+
+.slider
+{
+    width: 960px; height: auto;
+    margin: 0 auto;
+    position: relative;
+    box-shadow: 0 2px 2px rgba(0,0,0,0.2);
+}
+
+.nivo-caption
+{
+	background: rgba(0,0,0,0.0) !important;
+	color: #ffffff !important;
+    bottom: 20px; left: 20px;
+    font-weight: 700;
+    max-width: 400px;
+    font-size: 24px;
+    text-shadow: 1px 2px 2px rgba(0,0,0,0.6);
+}
+
+
+/* Galleri */
+
+.galleri {
+    margin-bottom: 70px;
+}
+
+.galleri img {
+    max-width: 300px;
+    margin: 0 16px 10px 0;
+}
+
+
+/* Formularer */
+.content{
+    width:400px;
+    margin: 30px auto;
+    padding:6px;
+    border-radius:10px;
+    background-color:#ddd;
+}
+.content label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    margin: 16px 0 3px;
+    text-transform: uppercase;
+}
+
+.content input[type="text"],
+.content input[type="password"],
+.content textarea {
+    width: 95%;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+}
+
+.content input[type="text"]:focus,
+.content input[type="password"]:focus,
+.content textarea:focus {
+    background: #fffef2;
+}
+
+.content input[type="text"],
+.content input[type="password"] {
+    padding: 0 8px;
+    height: 30px;
+}
+
+.content textarea {
+    padding: 4px 8px;
+    min-height:40px;
+    resize: none;
+}
+
+    .content input[type="submit"],
+    .content button {
+        text-transform: uppercase;
+        display: block;
+        margin: 25px 0;
+        width:100%;
+        padding: 12px 35px;
+        background: #00b9ba;
+        border-radius: 4px;
+        border: none;
+        color: white;
+        font-size: 14px;
+        box-shadow: 1px 2px 3px rgba(0,0,0,0.4);
+    }
+
+        .content input[type="submit"]:hover,
+        .content button:hover {
+            background: #055d5e;
+        }
+
+.RememberMe {
+	display: block;
+		margin-top: 15px;
+	}
+	
+.content input[type="checkbox"] {
+    display: inline;
+}	
+	
+.RememberMe label {
+	margin-left: 10px;
+	display: inline;
+	}
+
+.error {
+    color: #db0b0b;
+}
+
+.row {
+	display: flex;
+	}
+
+.column img {
+		max-width: 100%;
+	}
+
+.form {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 25px;
+    display: inline-block;
+    margin-bottom: 35px;
+    box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+

@@ -1,0 +1,283 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<map>
+  <item key="L3VtYnJhY28vYXNzZXRzL2Nzcy91bWJyYWNvLmNzczsvdW1icmFjb19jbGllbnQvdHJlZS90cmVlaWNvbnMuY3NzOy91bWJyYWNvL2xpYi9ib290c3RyYXAtc29jaWFsL2Jvb3RzdHJhcC1zb2NpYWwuY3NzOy91bWJyYWNvL2xpYi9mb250LWF3ZXNvbWUvY3NzL2ZvbnQtYXdlc29tZS5taW4uY3NzOw" file="C:\Users\marl1684\Desktop\webit\10Umbraco\RetroCamMarlene\RetroCamMarlene\App_Data\TEMP\ClientDependency\1_bdfd00d67e68476ca35a25e9b87fcd9c.cdC" compression="gzip" version="1">
+    <files>
+      <file name="/umbraco/assets/css/umbraco.css" />
+      <file name="/umbraco_client/tree/treeicons.css" />
+      <file name="/umbraco/lib/bootstrap-social/bootstrap-social.css" />
+      <file name="/umbraco/lib/font-awesome/css/font-awesome.min.css" />
+    </files>
+  </item>
+  <item key="L3VtYnJhY28vbGliL2pxdWVyeS9qcXVlcnkubWluLmpzOy91bWJyYWNvL2xpYi9hbmd1bGFyLzEuMS41L2FuZ3VsYXIubWluLmpzOy91bWJyYWNvL2xpYi91bmRlcnNjb3JlL3VuZGVyc2NvcmUtbWluLmpzOy91bWJyYWNvL2xpYi9tb21lbnQvbW9tZW50Lm1pbi5qczsvdW1icmFjby9saWIvanF1ZXJ5LXVpL2pxdWVyeS11aS5taW4uanM7L3VtYnJhY28vbGliL2pxdWVyeS11aS10b3VjaC1wdW5jaC9qcXVlcnkudWkudG91Y2gtcHVuY2guanM7L3VtYnJhY28vbGliL2FuZ3VsYXIvMS4xLjUvYW5ndWxhci1jb29raWVzLm1pbi5qczsvdW1icmFjby9saWIvYW5ndWxhci8xLjEuNS9hbmd1bGFyLW1vYmlsZS5qczsvdW1icmFjby9saWIvYW5ndWxhci8xLjEuNS9hbmd1bGFyLXNhbml0aXplLm1pbi5qczsvdW1icmFjby9saWIvYW5ndWxhci9hbmd1bGFyLXVpLXNvcnRhYmxlLmpzOy91bWJyYWNvL2xpYi9hbmd1bGFyLWR5bmFtaWMtbG9jYWxlL3RtaER5bmFtaWNMb2NhbGUubWluLmpzOy91bWJyYWNvL2xpYi9uZy1maWxlLXVwbG9hZC9uZy1maWxlLXVwbG9hZC5taW4uanM7L3VtYnJhY28vbGliL2FuZ3VsYXItbG9jYWwtc3RvcmFnZS9hbmd1bGFyLWxvY2FsLXN0b3JhZ2UubWluLmpzOy91bWJyYWNvL2xpYi9ib290c3RyYXAvanMvYm9vdHN0cmFwLjIuMy4yLm1pbi5qczsvdW1icmFjby9saWIvYm9vdHN0cmFwLXRhYmRyb3AvYm9vdHN0cmFwLXRhYmRyb3AuanM7L3VtYnJhY28vbGliL3VtYnJhY28vRXh0ZW5zaW9ucy5qczsvdW1icmFjby9saWIvdW1icmFjby9OYW1lc3BhY2VNYW5hZ2VyLmpzOy91bWJyYWNvL2xpYi91bWJyYWNvL0xlZ2FjeVVtYkNsaWVudE1nci5qczsvdW1icmFjby9saWIvdW1icmFjby9MZWdhY3lTcGVlY2hCdWJibGUuanM7L3VtYnJhY28vanMvYXBwLmpzOy91bWJyYWNvL2pzL3VtYnJhY28ucmVzb3VyY2VzLmpzOy91bWJyYWNvL2pzL3VtYnJhY28uZGlyZWN0aXZlcy5qczsvdW1icmFjby9qcy91bWJyYWNvLmZpbHRlcnMuanM7L3VtYnJhY28vanMvdW1icmFjby5zZXJ2aWNlcy5qczsvdW1icmFjby9qcy91bWJyYWNvLnNlY3VyaXR5LmpzOy91bWJyYWNvL2pzL3VtYnJhY28uY29udHJvbGxlcnMuanM7L3VtYnJhY28vanMvcm91dGVzLmpzOy91bWJyYWNvL2pzL2luaXQuanM7L0FwcF9QbHVnaW5zL01vZGVsc0J1aWxkZXIvbW9kZWxzYnVpbGRlci5jb250cm9sbGVyLmpzOy9BcHBfUGx1Z2lucy9Nb2RlbHNCdWlsZGVyL21vZGVsc2J1aWxkZXIucmVzb3VyY2UuanM7L3VtYnJhY28vZGV2ZWxvcGVyL1JlbGF0aW9uVHlwZXMvVHJlZU1lbnUvQWN0aW9uRGVsZXRlUmVsYXRpb25UeXBlLmpzOy91bWJyYWNvL2RldmVsb3Blci9SZWxhdGlvblR5cGVzL1RyZWVNZW51L0FjdGlvbk5ld1JlbGF0aW9uVHlwZS5qczs" file="C:\Users\marl1684\Desktop\webit\10Umbraco\RetroCamMarlene\RetroCamMarlene\App_Data\TEMP\ClientDependency\1_cda384aeed814d73b67dc3d31df2e329.cdJ" compression="gzip" version="1">
+    <files>
+      <file name="/umbraco/lib/jquery/jquery.min.js" />
+      <file name="/umbraco/lib/angular/1.1.5/angular.min.js" />
+      <file name="/umbraco/lib/underscore/underscore-min.js" />
+      <file name="/umbraco/lib/moment/moment.min.js" />
+      <file name="/umbraco/lib/jquery-ui/jquery-ui.min.js" />
+      <file name="/umbraco/lib/jquery-ui-touch-punch/jquery.ui.touch-punch.js" />
+      <file name="/umbraco/lib/angular/1.1.5/angular-cookies.min.js" />
+      <file name="/umbraco/lib/angular/1.1.5/angular-mobile.js" />
+      <file name="/umbraco/lib/angular/1.1.5/angular-sanitize.min.js" />
+      <file name="/umbraco/lib/angular/angular-ui-sortable.js" />
+      <file name="/umbraco/lib/angular-dynamic-locale/tmhDynamicLocale.min.js" />
+      <file name="/umbraco/lib/ng-file-upload/ng-file-upload.min.js" />
+      <file name="/umbraco/lib/angular-local-storage/angular-local-storage.min.js" />
+      <file name="/umbraco/lib/bootstrap/js/bootstrap.2.3.2.min.js" />
+      <file name="/umbraco/lib/bootstrap-tabdrop/bootstrap-tabdrop.js" />
+      <file name="/umbraco/lib/umbraco/Extensions.js" />
+      <file name="/umbraco/lib/umbraco/NamespaceManager.js" />
+      <file name="/umbraco/lib/umbraco/LegacyUmbClientMgr.js" />
+      <file name="/umbraco/lib/umbraco/LegacySpeechBubble.js" />
+      <file name="/umbraco/js/app.js" />
+      <file name="/umbraco/js/umbraco.resources.js" />
+      <file name="/umbraco/js/umbraco.directives.js" />
+      <file name="/umbraco/js/umbraco.filters.js" />
+      <file name="/umbraco/js/umbraco.services.js" />
+      <file name="/umbraco/js/umbraco.security.js" />
+      <file name="/umbraco/js/umbraco.controllers.js" />
+      <file name="/umbraco/js/routes.js" />
+      <file name="/umbraco/js/init.js" />
+      <file name="/App_Plugins/ModelsBuilder/modelsbuilder.controller.js" />
+      <file name="/App_Plugins/ModelsBuilder/modelsbuilder.resource.js" />
+      <file name="/umbraco/developer/RelationTypes/TreeMenu/ActionDeleteRelationType.js" />
+      <file name="/umbraco/developer/RelationTypes/TreeMenu/ActionNewRelationType.js" />
+    </files>
+  </item>
+  <item key="L3VtYnJhY28vYXNzZXRzL2Nzcy91bWJyYWNvLmNzczs" file="C:\Users\marl1684\Desktop\webit\10Umbraco\RetroCamMarlene\RetroCamMarlene\App_Data\TEMP\ClientDependency\1_bfceb1524a3942c2a37096dbf350911c.cdC" compression="gzip" version="1">
+    <files>
+      <file name="/umbraco/assets/css/umbraco.css" />
+    </files>
+  </item>
+  <item key="L3VtYnJhY29fY2xpZW50L0FwcGxpY2F0aW9uL05hbWVzcGFjZU1hbmFnZXIuanM7L3VtYnJhY29fY2xpZW50L0FwcGxpY2F0aW9uL1VtYnJhY29VdGlscy5qczsvdW1icmFjb19jbGllbnQvdWkvanNvbjIuanM7L3VtYnJhY29fY2xpZW50L3VpL2Jhc2UyLmpzOy91bWJyYWNvX2NsaWVudC9VSS9rbm9ja291dC5qczsvdW1icmFjb19jbGllbnQvVUkva25vY2tvdXQubWFwcGluZy5qczs" file="C:\Users\marl1684\Desktop\webit\10Umbraco\RetroCamMarlene\RetroCamMarlene\App_Data\TEMP\ClientDependency\1_7eaff07ca88345b5ad251bc7e813e25d.cdJ" compression="gzip" version="1">
+    <files>
+      <file name="/umbraco_client/Application/NamespaceManager.js" />
+      <file name="/umbraco_client/Application/UmbracoUtils.js" />
+      <file name="/umbraco_client/ui/json2.js" />
+      <file name="/umbraco_client/ui/base2.js" />
+      <file name="/umbraco_client/UI/knockout.js" />
+      <file name="/umbraco_client/UI/knockout.mapping.js" />
+    </files>
+  </item>
+  <item key="L3VtYnJhY29fY2xpZW50L3VpL2pxdWVyeS5qczsvdW1icmFjb19jbGllbnQvdWkvanF1ZXJ5dWkuanM7L3VtYnJhY28vbGliL2pxdWVyeS1taWdyYXRlL2pxdWVyeS1taWdyYXRlLm1pbi5qczs" file="C:\Users\marl1684\Desktop\webit\10Umbraco\RetroCamMarlene\RetroCamMarlene\App_Data\TEMP\ClientDependency\1_92ea28fc9fdc4ce4b4bd7d8059a9f999.cdJ" compression="gzip" version="1">
+    <files>
+      <file name="/umbraco_client/ui/jquery.js" />
+      <file name="/umbraco_client/ui/jqueryui.js" />
+      <file name="/umbraco/lib/jquery-migrate/jquery-migrate.min.js" />
+    </files>
+  </item>
+  <item key="L3VtYnJhY29fY2xpZW50L0FwcGxpY2F0aW9uL0V4dGVuc2lvbnMuanM7L3VtYnJhY29fY2xpZW50L0FwcGxpY2F0aW9uL1VtYnJhY29BcHBsaWNhdGlvbkFjdGlvbnMuanM7L3VtYnJhY29fY2xpZW50L0FwcGxpY2F0aW9uL0hpc3RvcnlNYW5hZ2VyLmpzOw" file="C:\Users\marl1684\Desktop\webit\10Umbraco\RetroCamMarlene\RetroCamMarlene\App_Data\TEMP\ClientDependency\1_5cfbf53bb91643db900bd6723a21985a.cdJ" compression="gzip" version="1">
+    <files>
+      <file name="/umbraco_client/Application/Extensions.js" />
+      <file name="/umbraco_client/Application/UmbracoApplicationActions.js" />
+      <file name="/umbraco_client/Application/HistoryManager.js" />
+    </files>
+  </item>
+  <item key="L3VtYnJhY29fY2xpZW50L3VpL2RlZmF1bHQuanM7" file="C:\Users\marl1684\Desktop\webit\10Umbraco\RetroCamMarlene\RetroCamMarlene\App_Data\TEMP\ClientDependency\1_25eeaced5e824120b37967c79ce144c8.cdJ" compression="gzip" version="1">
+    <files>
+      <file name="/umbraco_client/ui/default.js" />
+    </files>
+  </item>
+  <item key="L3VtYnJhY29fY2xpZW50L0FwcGxpY2F0aW9uL1VtYnJhY29DbGllbnRNYW5hZ2VyLmpzOw" file="C:\Users\marl1684\Desktop\webit\10Umbraco\RetroCamMarlene\RetroCamMarlene\App_Data\TEMP\ClientDependency\1_af414d4617594918bf1da13c9634a348.cdJ" compression="gzip" version="1">
+    <files>
+      <file name="/umbraco_client/Application/UmbracoClientManager.js" />
+    </files>
+  </item>
+  <item key="L3VtYnJhY28vbGliL0NvZGVNaXJyb3IvYWRkb24vZGlhbG9nL2RpYWxvZy5jc3M7L3VtYnJhY28vbGliL0NvZGVNaXJyb3IvbGliL2NvZGVtaXJyb3IuY3NzOy91bWJyYWNvX2NsaWVudC9Db2RlQXJlYS9zdHlsZXMuY3NzOy91bWJyYWNvL2Fzc2V0cy9jc3MvdW1icmFjby5jc3M7" file="C:\Users\marl1684\Desktop\webit\10Umbraco\RetroCamMarlene\RetroCamMarlene\App_Data\TEMP\ClientDependency\1_efa96a77026e43a7924558591043e82d.cdC" compression="gzip" version="1">
+    <files>
+      <file name="/umbraco/lib/CodeMirror/addon/dialog/dialog.css" />
+      <file name="/umbraco/lib/CodeMirror/lib/codemirror.css" />
+      <file name="/umbraco_client/CodeArea/styles.css" />
+      <file name="/umbraco/assets/css/umbraco.css" />
+    </files>
+  </item>
+  <item key="L3VtYnJhY29fY2xpZW50L0FwcGxpY2F0aW9uL2pRdWVyeS9qcXVlcnkuYmEtYmJxLm1pbi5qczsvdW1icmFjb19jbGllbnQvdWkvalF1ZXJ5V3Jlc2l6ZS5qczsvdW1icmFjb19jbGllbnQvbW9kYWwvanF1ZXJ5LnNpbXBsZW1vZGFsLjEuNC4xLmN1c3RvbS5qczsvdW1icmFjb19jbGllbnQvQXBwbGljYXRpb24valF1ZXJ5L2pxdWVyeS5jb29raWUuanM7L3VtYnJhY29fY2xpZW50L0FwcGxpY2F0aW9uL0pRdWVyeS9qcXVlcnkubWV0YWRhdGEubWluLmpzOy91bWJyYWNvX2NsaWVudC9BcHBsaWNhdGlvbi9qUXVlcnkvanF1ZXJ5LmhvdGtleXMuanM7" file="C:\Users\marl1684\Desktop\webit\10Umbraco\RetroCamMarlene\RetroCamMarlene\App_Data\TEMP\ClientDependency\1_c25f38c893ee4c509520d59b12f3c75f.cdJ" compression="gzip" version="1">
+    <files>
+      <file name="/umbraco_client/Application/jQuery/jquery.ba-bbq.min.js" />
+      <file name="/umbraco_client/ui/jQueryWresize.js" />
+      <file name="/umbraco_client/modal/jquery.simplemodal.1.4.1.custom.js" />
+      <file name="/umbraco_client/Application/jQuery/jquery.cookie.js" />
+      <file name="/umbraco_client/Application/JQuery/jquery.metadata.min.js" />
+      <file name="/umbraco_client/Application/jQuery/jquery.hotkeys.js" />
+    </files>
+  </item>
+  <item key="L3VtYnJhY28vbGliL0NvZGVNaXJyb3IvbGliL2NvZGVtaXJyb3IuanM7L3VtYnJhY28vbGliL0NvZGVNaXJyb3IvYWRkb24vZWRpdC9tYXRjaGJyYWNrZXRzLmpzOy91bWJyYWNvL2xpYi9Db2RlTWlycm9yL21vZGUvY3NzL2Nzcy5qczsvdW1icmFjby9saWIvQ29kZU1pcnJvci9hZGRvbi9zZWFyY2gvc2VhcmNoLmpzOy91bWJyYWNvL2xpYi9Db2RlTWlycm9yL2FkZG9uL3NlYXJjaC9zZWFyY2hjdXJzb3IuanM7L3VtYnJhY28vbGliL0NvZGVNaXJyb3IvYWRkb24vZGlhbG9nL2RpYWxvZy5qczsvdW1icmFjb19jbGllbnQvbW9kYWwvbW9kYWwuanM7L3VtYnJhY29fY2xpZW50L3VpL2RlZmF1bHQuanM7L3VtYnJhY28vbGliL2Jvb3RzdHJhcC9qcy9ib290c3RyYXAuMi4zLjIubWluLmpzOy91bWJyYWNvL2xpYi91bWJyYWNvL2NvbXBhdC5qczsvdW1icmFjb19jbGllbnQvRWRpdG9ycy9FZGl0U3R5bGVTaGVldC5qczsvdW1icmFjb19jbGllbnQvQ29kZUFyZWEvamF2YXNjcmlwdC5qczsvdW1icmFjb19jbGllbnQvQ29kZUFyZWEvVW1icmFjb0VkaXRvci5qczsvdW1icmFjb19jbGllbnQvQXBwbGljYXRpb24valF1ZXJ5L2pxdWVyeS1maWVsZHNlbGVjdGlvbi5qczs" file="C:\Users\marl1684\Desktop\webit\10Umbraco\RetroCamMarlene\RetroCamMarlene\App_Data\TEMP\ClientDependency\1_5f6131b495d34e6387a6aac8b6dea38c.cdJ" compression="gzip" version="1">
+    <files>
+      <file name="/umbraco/lib/CodeMirror/lib/codemirror.js" />
+      <file name="/umbraco/lib/CodeMirror/addon/edit/matchbrackets.js" />
+      <file name="/umbraco/lib/CodeMirror/mode/css/css.js" />
+      <file name="/umbraco/lib/CodeMirror/addon/search/search.js" />
+      <file name="/umbraco/lib/CodeMirror/addon/search/searchcursor.js" />
+      <file name="/umbraco/lib/CodeMirror/addon/dialog/dialog.js" />
+      <file name="/umbraco_client/modal/modal.js" />
+      <file name="/umbraco_client/ui/default.js" />
+      <file name="/umbraco/lib/bootstrap/js/bootstrap.2.3.2.min.js" />
+      <file name="/umbraco/lib/umbraco/compat.js" />
+      <file name="/umbraco_client/Editors/EditStyleSheet.js" />
+      <file name="/umbraco_client/CodeArea/javascript.js" />
+      <file name="/umbraco_client/CodeArea/UmbracoEditor.js" />
+      <file name="/umbraco_client/Application/jQuery/jquery-fieldselection.js" />
+    </files>
+  </item>
+  <item key="L3VtYnJhY29fY2xpZW50L0VkaXRvcnMvRWRpdE1hY3JvLmNzczsvdW1icmFjby9hc3NldHMvY3NzL3VtYnJhY28uY3NzOw" file="C:\Users\marl1684\Desktop\webit\10Umbraco\RetroCamMarlene\RetroCamMarlene\App_Data\TEMP\ClientDependency\1_ddf6a27ffd2542388099cbd8c191b3aa.cdC" compression="gzip" version="1">
+    <files>
+      <file name="/umbraco_client/Editors/EditMacro.css" />
+      <file name="/umbraco/assets/css/umbraco.css" />
+    </files>
+  </item>
+  <item key="L3VtYnJhY29fY2xpZW50L21vZGFsL21vZGFsLmpzOy91bWJyYWNvX2NsaWVudC91aS9kZWZhdWx0LmpzOy91bWJyYWNvL2xpYi9ib290c3RyYXAvanMvYm9vdHN0cmFwLjIuMy4yLm1pbi5qczsvdW1icmFjby9saWIvdW1icmFjby9jb21wYXQuanM7" file="C:\Users\marl1684\Desktop\webit\10Umbraco\RetroCamMarlene\RetroCamMarlene\App_Data\TEMP\ClientDependency\1_68b35b558f07465bbe45c5f4dc339893.cdJ" compression="gzip" version="1">
+    <files>
+      <file name="/umbraco_client/modal/modal.js" />
+      <file name="/umbraco_client/ui/default.js" />
+      <file name="/umbraco/lib/bootstrap/js/bootstrap.2.3.2.min.js" />
+      <file name="/umbraco/lib/umbraco/compat.js" />
+    </files>
+  </item>
+  <item key="L3VtYnJhY28vYXNzZXRzL2Nzcy91bWJyYWNvLmNzczsvdW1icmFjb19jbGllbnQvdHJlZS90cmVlaWNvbnMuY3NzOy91bWJyYWNvL2xpYi9ib290c3RyYXAtc29jaWFsL2Jvb3RzdHJhcC1zb2NpYWwuY3NzOy91bWJyYWNvL2xpYi9mb250LWF3ZXNvbWUvY3NzL2ZvbnQtYXdlc29tZS5taW4uY3NzOw" file="C:\Users\marl1684\Desktop\webit\10Umbraco\RetroCamMarlene\RetroCamMarlene\App_Data\TEMP\ClientDependency\1585536316_4c35afa7218e4ff2808bec602521a21c.cdC" compression="gzip" version="1585536316">
+    <files>
+      <file name="/umbraco/assets/css/umbraco.css" />
+      <file name="/umbraco_client/tree/treeicons.css" />
+      <file name="/umbraco/lib/bootstrap-social/bootstrap-social.css" />
+      <file name="/umbraco/lib/font-awesome/css/font-awesome.min.css" />
+    </files>
+  </item>
+  <item key="L3VtYnJhY28vbGliL2pxdWVyeS9qcXVlcnkubWluLmpzOy91bWJyYWNvL2xpYi9hbmd1bGFyLzEuMS41L2FuZ3VsYXIubWluLmpzOy91bWJyYWNvL2xpYi91bmRlcnNjb3JlL3VuZGVyc2NvcmUtbWluLmpzOy91bWJyYWNvL2xpYi9tb21lbnQvbW9tZW50Lm1pbi5qczsvdW1icmFjby9saWIvanF1ZXJ5LXVpL2pxdWVyeS11aS5taW4uanM7L3VtYnJhY28vbGliL2pxdWVyeS11aS10b3VjaC1wdW5jaC9qcXVlcnkudWkudG91Y2gtcHVuY2guanM7L3VtYnJhY28vbGliL2FuZ3VsYXIvMS4xLjUvYW5ndWxhci1jb29raWVzLm1pbi5qczsvdW1icmFjby9saWIvYW5ndWxhci8xLjEuNS9hbmd1bGFyLW1vYmlsZS5qczsvdW1icmFjby9saWIvYW5ndWxhci8xLjEuNS9hbmd1bGFyLXNhbml0aXplLm1pbi5qczsvdW1icmFjby9saWIvYW5ndWxhci9hbmd1bGFyLXVpLXNvcnRhYmxlLmpzOy91bWJyYWNvL2xpYi9hbmd1bGFyLWR5bmFtaWMtbG9jYWxlL3RtaER5bmFtaWNMb2NhbGUubWluLmpzOy91bWJyYWNvL2xpYi9uZy1maWxlLXVwbG9hZC9uZy1maWxlLXVwbG9hZC5taW4uanM7L3VtYnJhY28vbGliL2FuZ3VsYXItbG9jYWwtc3RvcmFnZS9hbmd1bGFyLWxvY2FsLXN0b3JhZ2UubWluLmpzOy91bWJyYWNvL2xpYi9ib290c3RyYXAvanMvYm9vdHN0cmFwLjIuMy4yLm1pbi5qczsvdW1icmFjby9saWIvYm9vdHN0cmFwLXRhYmRyb3AvYm9vdHN0cmFwLXRhYmRyb3AuanM7L3VtYnJhY28vbGliL3VtYnJhY28vRXh0ZW5zaW9ucy5qczsvdW1icmFjby9saWIvdW1icmFjby9OYW1lc3BhY2VNYW5hZ2VyLmpzOy91bWJyYWNvL2xpYi91bWJyYWNvL0xlZ2FjeVVtYkNsaWVudE1nci5qczsvdW1icmFjby9saWIvdW1icmFjby9MZWdhY3lTcGVlY2hCdWJibGUuanM7L3VtYnJhY28vanMvYXBwLmpzOy91bWJyYWNvL2pzL3VtYnJhY28ucmVzb3VyY2VzLmpzOy91bWJyYWNvL2pzL3VtYnJhY28uZGlyZWN0aXZlcy5qczsvdW1icmFjby9qcy91bWJyYWNvLmZpbHRlcnMuanM7L3VtYnJhY28vanMvdW1icmFjby5zZXJ2aWNlcy5qczsvdW1icmFjby9qcy91bWJyYWNvLnNlY3VyaXR5LmpzOy91bWJyYWNvL2pzL3VtYnJhY28uY29udHJvbGxlcnMuanM7L3VtYnJhY28vanMvcm91dGVzLmpzOy91bWJyYWNvL2pzL2luaXQuanM7L0FwcF9QbHVnaW5zL0ZvbnRBd2Vzb21lSWNvbnNERC9Gb250QXdlc29tZUljb25zREQuY29udHJvbGxlci5qczsvQXBwX1BsdWdpbnMvTW9kZWxzQnVpbGRlci9tb2RlbHNidWlsZGVyLmNvbnRyb2xsZXIuanM7L0FwcF9QbHVnaW5zL01vZGVsc0J1aWxkZXIvbW9kZWxzYnVpbGRlci5yZXNvdXJjZS5qczsvdW1icmFjby9kZXZlbG9wZXIvUmVsYXRpb25UeXBlcy9UcmVlTWVudS9BY3Rpb25EZWxldGVSZWxhdGlvblR5cGUuanM7L3VtYnJhY28vZGV2ZWxvcGVyL1JlbGF0aW9uVHlwZXMvVHJlZU1lbnUvQWN0aW9uTmV3UmVsYXRpb25UeXBlLmpzOw" file="C:\Users\marl1684\Desktop\webit\10Umbraco\RetroCamMarlene\RetroCamMarlene\App_Data\TEMP\ClientDependency\1585536316_4f64465fb53d4627a1cde40b65d6bb19.cdJ" compression="gzip" version="1585536316">
+    <files>
+      <file name="/umbraco/lib/jquery/jquery.min.js" />
+      <file name="/umbraco/lib/angular/1.1.5/angular.min.js" />
+      <file name="/umbraco/lib/underscore/underscore-min.js" />
+      <file name="/umbraco/lib/moment/moment.min.js" />
+      <file name="/umbraco/lib/jquery-ui/jquery-ui.min.js" />
+      <file name="/umbraco/lib/jquery-ui-touch-punch/jquery.ui.touch-punch.js" />
+      <file name="/umbraco/lib/angular/1.1.5/angular-cookies.min.js" />
+      <file name="/umbraco/lib/angular/1.1.5/angular-mobile.js" />
+      <file name="/umbraco/lib/angular/1.1.5/angular-sanitize.min.js" />
+      <file name="/umbraco/lib/angular/angular-ui-sortable.js" />
+      <file name="/umbraco/lib/angular-dynamic-locale/tmhDynamicLocale.min.js" />
+      <file name="/umbraco/lib/ng-file-upload/ng-file-upload.min.js" />
+      <file name="/umbraco/lib/angular-local-storage/angular-local-storage.min.js" />
+      <file name="/umbraco/lib/bootstrap/js/bootstrap.2.3.2.min.js" />
+      <file name="/umbraco/lib/bootstrap-tabdrop/bootstrap-tabdrop.js" />
+      <file name="/umbraco/lib/umbraco/Extensions.js" />
+      <file name="/umbraco/lib/umbraco/NamespaceManager.js" />
+      <file name="/umbraco/lib/umbraco/LegacyUmbClientMgr.js" />
+      <file name="/umbraco/lib/umbraco/LegacySpeechBubble.js" />
+      <file name="/umbraco/js/app.js" />
+      <file name="/umbraco/js/umbraco.resources.js" />
+      <file name="/umbraco/js/umbraco.directives.js" />
+      <file name="/umbraco/js/umbraco.filters.js" />
+      <file name="/umbraco/js/umbraco.services.js" />
+      <file name="/umbraco/js/umbraco.security.js" />
+      <file name="/umbraco/js/umbraco.controllers.js" />
+      <file name="/umbraco/js/routes.js" />
+      <file name="/umbraco/js/init.js" />
+      <file name="/App_Plugins/FontAwesomeIconsDD/FontAwesomeIconsDD.controller.js" />
+      <file name="/App_Plugins/ModelsBuilder/modelsbuilder.controller.js" />
+      <file name="/App_Plugins/ModelsBuilder/modelsbuilder.resource.js" />
+      <file name="/umbraco/developer/RelationTypes/TreeMenu/ActionDeleteRelationType.js" />
+      <file name="/umbraco/developer/RelationTypes/TreeMenu/ActionNewRelationType.js" />
+    </files>
+  </item>
+  <item key="L3VtYnJhY28vbGliL0NvZGVNaXJyb3IvYWRkb24vZGlhbG9nL2RpYWxvZy5jc3M7L3VtYnJhY28vbGliL0NvZGVNaXJyb3IvbGliL2NvZGVtaXJyb3IuY3NzOy91bWJyYWNvX2NsaWVudC9Db2RlQXJlYS9zdHlsZXMuY3NzOy91bWJyYWNvL2Fzc2V0cy9jc3MvdW1icmFjby5jc3M7" file="C:\Users\marl1684\Desktop\webit\10Umbraco\RetroCamMarlene\RetroCamMarlene\App_Data\TEMP\ClientDependency\1585536316_153ebb5f09c4471785d388edfd95cc28.cdC" compression="gzip" version="1585536316">
+    <files>
+      <file name="/umbraco/lib/CodeMirror/addon/dialog/dialog.css" />
+      <file name="/umbraco/lib/CodeMirror/lib/codemirror.css" />
+      <file name="/umbraco_client/CodeArea/styles.css" />
+      <file name="/umbraco/assets/css/umbraco.css" />
+    </files>
+  </item>
+  <item key="L3VtYnJhY29fY2xpZW50L0FwcGxpY2F0aW9uL05hbWVzcGFjZU1hbmFnZXIuanM7L3VtYnJhY29fY2xpZW50L0FwcGxpY2F0aW9uL1VtYnJhY29VdGlscy5qczsvdW1icmFjb19jbGllbnQvdWkvanNvbjIuanM7L3VtYnJhY29fY2xpZW50L3VpL2Jhc2UyLmpzOy91bWJyYWNvX2NsaWVudC9VSS9rbm9ja291dC5qczsvdW1icmFjb19jbGllbnQvVUkva25vY2tvdXQubWFwcGluZy5qczs" file="C:\Users\marl1684\Desktop\webit\10Umbraco\RetroCamMarlene\RetroCamMarlene\App_Data\TEMP\ClientDependency\1585536316_7c2dd89ef8ce4d7d928c179a31c040b2.cdJ" compression="gzip" version="1585536316">
+    <files>
+      <file name="/umbraco_client/Application/NamespaceManager.js" />
+      <file name="/umbraco_client/Application/UmbracoUtils.js" />
+      <file name="/umbraco_client/ui/json2.js" />
+      <file name="/umbraco_client/ui/base2.js" />
+      <file name="/umbraco_client/UI/knockout.js" />
+      <file name="/umbraco_client/UI/knockout.mapping.js" />
+    </files>
+  </item>
+  <item key="L3VtYnJhY29fY2xpZW50L0FwcGxpY2F0aW9uL1VtYnJhY29DbGllbnRNYW5hZ2VyLmpzOw" file="C:\Users\marl1684\Desktop\webit\10Umbraco\RetroCamMarlene\RetroCamMarlene\App_Data\TEMP\ClientDependency\1585536316_453171fda71a473791bb64f92e17d92e.cdJ" compression="gzip" version="1585536316">
+    <files>
+      <file name="/umbraco_client/Application/UmbracoClientManager.js" />
+    </files>
+  </item>
+  <item key="L3VtYnJhY29fY2xpZW50L0FwcGxpY2F0aW9uL0V4dGVuc2lvbnMuanM7L3VtYnJhY29fY2xpZW50L0FwcGxpY2F0aW9uL1VtYnJhY29BcHBsaWNhdGlvbkFjdGlvbnMuanM7L3VtYnJhY29fY2xpZW50L0FwcGxpY2F0aW9uL0hpc3RvcnlNYW5hZ2VyLmpzOw" file="C:\Users\marl1684\Desktop\webit\10Umbraco\RetroCamMarlene\RetroCamMarlene\App_Data\TEMP\ClientDependency\1585536316_e10ec78adec647eaae17b6a43a48c71d.cdJ" compression="gzip" version="1585536316">
+    <files>
+      <file name="/umbraco_client/Application/Extensions.js" />
+      <file name="/umbraco_client/Application/UmbracoApplicationActions.js" />
+      <file name="/umbraco_client/Application/HistoryManager.js" />
+    </files>
+  </item>
+  <item key="L3VtYnJhY29fY2xpZW50L3VpL2pxdWVyeS5qczsvdW1icmFjb19jbGllbnQvdWkvanF1ZXJ5dWkuanM7L3VtYnJhY28vbGliL2pxdWVyeS1taWdyYXRlL2pxdWVyeS1taWdyYXRlLm1pbi5qczs" file="C:\Users\marl1684\Desktop\webit\10Umbraco\RetroCamMarlene\RetroCamMarlene\App_Data\TEMP\ClientDependency\1585536316_f9fef69a9a43492c9c6d6d748260685a.cdJ" compression="gzip" version="1585536316">
+    <files>
+      <file name="/umbraco_client/ui/jquery.js" />
+      <file name="/umbraco_client/ui/jqueryui.js" />
+      <file name="/umbraco/lib/jquery-migrate/jquery-migrate.min.js" />
+    </files>
+  </item>
+  <item key="L3VtYnJhY29fY2xpZW50L0FwcGxpY2F0aW9uL2pRdWVyeS9qcXVlcnkuYmEtYmJxLm1pbi5qczsvdW1icmFjb19jbGllbnQvdWkvalF1ZXJ5V3Jlc2l6ZS5qczsvdW1icmFjb19jbGllbnQvbW9kYWwvanF1ZXJ5LnNpbXBsZW1vZGFsLjEuNC4xLmN1c3RvbS5qczsvdW1icmFjb19jbGllbnQvQXBwbGljYXRpb24valF1ZXJ5L2pxdWVyeS5jb29raWUuanM7L3VtYnJhY29fY2xpZW50L0FwcGxpY2F0aW9uL0pRdWVyeS9qcXVlcnkubWV0YWRhdGEubWluLmpzOy91bWJyYWNvX2NsaWVudC9BcHBsaWNhdGlvbi9qUXVlcnkvanF1ZXJ5LmhvdGtleXMuanM7" file="C:\Users\marl1684\Desktop\webit\10Umbraco\RetroCamMarlene\RetroCamMarlene\App_Data\TEMP\ClientDependency\1585536316_e7145a354b534e3a8fc6ad2f8c2ea2fd.cdJ" compression="gzip" version="1585536316">
+    <files>
+      <file name="/umbraco_client/Application/jQuery/jquery.ba-bbq.min.js" />
+      <file name="/umbraco_client/ui/jQueryWresize.js" />
+      <file name="/umbraco_client/modal/jquery.simplemodal.1.4.1.custom.js" />
+      <file name="/umbraco_client/Application/jQuery/jquery.cookie.js" />
+      <file name="/umbraco_client/Application/JQuery/jquery.metadata.min.js" />
+      <file name="/umbraco_client/Application/jQuery/jquery.hotkeys.js" />
+    </files>
+  </item>
+  <item key="L3VtYnJhY28vbGliL0NvZGVNaXJyb3IvbGliL2NvZGVtaXJyb3IuanM7L3VtYnJhY28vbGliL0NvZGVNaXJyb3IvYWRkb24vZWRpdC9tYXRjaGJyYWNrZXRzLmpzOy91bWJyYWNvL2xpYi9Db2RlTWlycm9yL21vZGUvY3NzL2Nzcy5qczsvdW1icmFjby9saWIvQ29kZU1pcnJvci9hZGRvbi9zZWFyY2gvc2VhcmNoLmpzOy91bWJyYWNvL2xpYi9Db2RlTWlycm9yL2FkZG9uL3NlYXJjaC9zZWFyY2hjdXJzb3IuanM7L3VtYnJhY28vbGliL0NvZGVNaXJyb3IvYWRkb24vZGlhbG9nL2RpYWxvZy5qczsvdW1icmFjb19jbGllbnQvbW9kYWwvbW9kYWwuanM7L3VtYnJhY29fY2xpZW50L3VpL2RlZmF1bHQuanM7L3VtYnJhY28vbGliL2Jvb3RzdHJhcC9qcy9ib290c3RyYXAuMi4zLjIubWluLmpzOy91bWJyYWNvL2xpYi91bWJyYWNvL2NvbXBhdC5qczsvdW1icmFjb19jbGllbnQvRWRpdG9ycy9FZGl0U3R5bGVTaGVldC5qczsvdW1icmFjb19jbGllbnQvQ29kZUFyZWEvamF2YXNjcmlwdC5qczsvdW1icmFjb19jbGllbnQvQ29kZUFyZWEvVW1icmFjb0VkaXRvci5qczsvdW1icmFjb19jbGllbnQvQXBwbGljYXRpb24valF1ZXJ5L2pxdWVyeS1maWVsZHNlbGVjdGlvbi5qczs" file="C:\Users\marl1684\Desktop\webit\10Umbraco\RetroCamMarlene\RetroCamMarlene\App_Data\TEMP\ClientDependency\1585536316_3062e963fe514a6e82740976ef1ced35.cdJ" compression="gzip" version="1585536316">
+    <files>
+      <file name="/umbraco/lib/CodeMirror/lib/codemirror.js" />
+      <file name="/umbraco/lib/CodeMirror/addon/edit/matchbrackets.js" />
+      <file name="/umbraco/lib/CodeMirror/mode/css/css.js" />
+      <file name="/umbraco/lib/CodeMirror/addon/search/search.js" />
+      <file name="/umbraco/lib/CodeMirror/addon/search/searchcursor.js" />
+      <file name="/umbraco/lib/CodeMirror/addon/dialog/dialog.js" />
+      <file name="/umbraco_client/modal/modal.js" />
+      <file name="/umbraco_client/ui/default.js" />
+      <file name="/umbraco/lib/bootstrap/js/bootstrap.2.3.2.min.js" />
+      <file name="/umbraco/lib/umbraco/compat.js" />
+      <file name="/umbraco_client/Editors/EditStyleSheet.js" />
+      <file name="/umbraco_client/CodeArea/javascript.js" />
+      <file name="/umbraco_client/CodeArea/UmbracoEditor.js" />
+      <file name="/umbraco_client/Application/jQuery/jquery-fieldselection.js" />
+    </files>
+  </item>
+  <item key="L3VtYnJhY29fY2xpZW50L0RpYWxvZ3MvUHVibGlzaERpYWxvZy5jc3M7L3VtYnJhY28vYXNzZXRzL2Nzcy91bWJyYWNvLmNzczs" file="C:\Users\marl1684\Desktop\webit\10Umbraco\RetroCamMarlene\RetroCamMarlene\App_Data\TEMP\ClientDependency\1585536316_9b3fd42104bd4eabbcce63bfa5950f85.cdC" compression="gzip" version="1585536316">
+    <files>
+      <file name="/umbraco_client/Dialogs/PublishDialog.css" />
+      <file name="/umbraco/assets/css/umbraco.css" />
+    </files>
+  </item>
+  <item key="L3VtYnJhY29fY2xpZW50L3VpL2RlZmF1bHQuanM7L3VtYnJhY28vanMvdW1icmFjb0NoZWNrS2V5cy5qczsvdW1icmFjb19jbGllbnQvRGlhbG9ncy9QdWJsaXNoRGlhbG9nLmpzOw" file="C:\Users\marl1684\Desktop\webit\10Umbraco\RetroCamMarlene\RetroCamMarlene\App_Data\TEMP\ClientDependency\1585536316_85c2ca05f53b4a61803d446adb8b77d7.cdJ" compression="gzip" version="1585536316">
+    <files>
+      <file name="/umbraco_client/ui/default.js" />
+      <file name="/umbraco/js/umbracoCheckKeys.js" />
+      <file name="/umbraco_client/Dialogs/PublishDialog.js" />
+    </files>
+  </item>
+  <item key="L3VtYnJhY28vYXNzZXRzL2Nzcy91bWJyYWNvLmNzczs" file="C:\Users\marl1684\Desktop\webit\10Umbraco\RetroCamMarlene\RetroCamMarlene\App_Data\TEMP\ClientDependency\1585536316_8a0099a24eb448ada31cce362e914d90.cdC" compression="gzip" version="1585536316">
+    <files>
+      <file name="/umbraco/assets/css/umbraco.css" />
+    </files>
+  </item>
+  <item key="L3VtYnJhY29fY2xpZW50L3VpL2RlZmF1bHQuanM7" file="C:\Users\marl1684\Desktop\webit\10Umbraco\RetroCamMarlene\RetroCamMarlene\App_Data\TEMP\ClientDependency\1585536316_92fa346ab40649458d95086e3d248eb2.cdJ" compression="gzip" version="1585536316">
+    <files>
+      <file name="/umbraco_client/ui/default.js" />
+    </files>
+  </item>
+  <item key="L3VtYnJhY29fY2xpZW50L21vZGFsL21vZGFsLmpzOy91bWJyYWNvX2NsaWVudC91aS9kZWZhdWx0LmpzOy91bWJyYWNvL2xpYi9ib290c3RyYXAvanMvYm9vdHN0cmFwLjIuMy4yLm1pbi5qczsvdW1icmFjby9saWIvdW1icmFjby9jb21wYXQuanM7" file="C:\Users\marl1684\Desktop\webit\10Umbraco\RetroCamMarlene\RetroCamMarlene\App_Data\TEMP\ClientDependency\1585536316_52d2e51f693744cf8d9096c205c5b458.cdJ" compression="gzip" version="1585536316">
+    <files>
+      <file name="/umbraco_client/modal/modal.js" />
+      <file name="/umbraco_client/ui/default.js" />
+      <file name="/umbraco/lib/bootstrap/js/bootstrap.2.3.2.min.js" />
+      <file name="/umbraco/lib/umbraco/compat.js" />
+    </files>
+  </item>
+  <item key="L3VtYnJhY29fY2xpZW50L0VkaXRvcnMvRWRpdE1hY3JvLmNzczsvdW1icmFjby9hc3NldHMvY3NzL3VtYnJhY28uY3NzOw" file="C:\Users\marl1684\Desktop\webit\10Umbraco\RetroCamMarlene\RetroCamMarlene\App_Data\TEMP\ClientDependency\1585536316_83ac9ddedbd14dd8b2de4bd463b3f970.cdC" compression="gzip" version="1585536316">
+    <files>
+      <file name="/umbraco_client/Editors/EditMacro.css" />
+      <file name="/umbraco/assets/css/umbraco.css" />
+    </files>
+  </item>
+</map>

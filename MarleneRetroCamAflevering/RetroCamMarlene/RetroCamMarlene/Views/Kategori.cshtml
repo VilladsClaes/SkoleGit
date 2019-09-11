@@ -1,0 +1,28 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.Kategori>
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@{
+	Layout = "Master.cshtml";
+}
+
+@Html.Partial("Breadcrumbs")
+
+@Umbraco.Field("bodyText")
+
+<ul class="newest">
+    @foreach(var side in Model.Content.Descendants("produkt").Where("Visible").OrderBy("CreateDate desc"))
+    {
+        
+             int price = side.GetPropertyValue<int>("price");
+    
+        
+        <li >
+            <a href="@side.Url">
+                <img src="@side.GetPropertyValue("umbracoFile")" />
+                <h4>@side.Name</h4>
+                <p>@(side.GetPropertyValue<string>("bodyText").Substring(0, (side.GetPropertyValue<string>("bodyText").Length < 70 ? side.GetPropertyValue<string>("bodyText").Length : 70)))...</p>
+                <p class="price">PRIS DDK @price</p>    
+              
+            </a>
+        </li>
+    }
+</ul>

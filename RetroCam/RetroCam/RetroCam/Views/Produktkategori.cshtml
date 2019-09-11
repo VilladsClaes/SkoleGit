@@ -1,0 +1,32 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+	Layout = "master.cshtml";
+}
+
+<div class="content">
+	
+	@Html.Partial("Breadcrumbs")
+	
+<h1>@Umbraco.Field("pageName")</h1>
+	
+	@Umbraco.Field("bodyText")
+	
+	<div class="produkter">
+		<h3>Produkter i kategorien @CurrentPage.Name:</h3>
+		@foreach(var produkt in CurrentPage.Children.Where("Visible"))
+		{
+			
+				<div class="produkt">
+					<a href="@produkt.Url">
+					@if(produkt.HasValue("umbracoFile"))
+					{
+						<img src="@produkt.umbracoFile" alt="@produkt.Name" />
+					}
+					<h4>@produkt.Name</h4>
+					<span class="pris">Pris DKK: <strong>@(string.Format("{0:n0},-", Convert.ToDecimal(@produkt.Pris)))</strong></span>
+						</a>
+				</div>
+			
+		}
+	</div>
+</div>

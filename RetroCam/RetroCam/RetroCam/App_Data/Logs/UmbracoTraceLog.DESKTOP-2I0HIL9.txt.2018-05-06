@@ -1,0 +1,11 @@
+﻿ 2018-05-06 01:53:50,309 [P19376/D19/T98] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2018-05-05 01:53:50
+ 2018-05-06 05:53:50,333 [P19376/D19/T98] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2018-05-05 05:53:50
+ 2018-05-06 09:06:23,343 [P19376/D19/T232] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: Login attempt succeeded for username admin from IP address ::1
+ 2018-05-06 09:06:23,349 [P19376/D19/T232] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: User: admin logged in from IP address ::1
+ 2018-05-06 09:06:24,010 [P19376/D19/T232] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.interfaces.IApplication
+ 2018-05-06 09:06:24,052 [P19376/D19/T232] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.interfaces.IApplication, found 0 (took 41ms)
+ 2018-05-06 09:25:58,190 [P19376/D19/T122] INFO  Umbraco.Core.Logging.OwinLogger - Event Id: 0, state: User logged will be logged out due to timeout: admin, IP Address: ::1
+ 2018-05-06 09:53:50,352 [P19376/D19/T235] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2018-05-05 09:53:50
+ 2018-05-06 13:53:50,371 [P19376/D19/T162] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2018-05-05 13:53:50
+ 2018-05-06 17:53:50,394 [P19376/D19/T188] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2018-05-05 17:53:50
+ 2018-05-06 21:53:50,424 [P19376/D19/T134] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2018-05-05 21:53:50

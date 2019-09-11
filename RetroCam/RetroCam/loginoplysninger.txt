@@ -1,0 +1,7 @@
+Her er mit retrocam projekt. Det har et par år på bagen, så der kan muligvis være et par koder hist og her, som ikke direkte kan bruges i nyere Umbraco versioner.
+
+Login på: /umbraco
+
+Login/username: admin
+Adgangskode: 1234567890
+

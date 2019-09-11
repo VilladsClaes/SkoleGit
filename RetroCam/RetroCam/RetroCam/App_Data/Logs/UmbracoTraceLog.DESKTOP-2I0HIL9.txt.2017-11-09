@@ -1,0 +1,5 @@
+﻿ 2017-11-09 08:58:49,569 [P18268/D2/T71] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: Login attempt succeeded for username admin from IP address ::1
+ 2017-11-09 08:58:49,569 [P18268/D2/T71] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: User: admin logged in from IP address ::1
+ 2017-11-09 09:24:01,478 [P18268/D2/T228] WARN  Umbraco.Web.UmbracoModule - Status code is 404 yet TrySkipIisCustomErrors is false - IIS will take over.
+ 2017-11-09 10:25:27,662 [P18268/D2/T8] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2017-11-08 10:25:27
+ 2017-11-09 22:15:07,861 [P18268/D2/T8] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2017-11-08 22:15:07

@@ -1,0 +1,13 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+
+
+@if(CurrentPage.HasProperty("slideSelector") && CurrentPage.HasValue("slideSelector"))
+{
+		<div id="slides" class="nivoSlider">
+			@foreach(var slide in CurrentPage.slideSelector.ToString().Split(','))
+			{
+				var mediaNode = Umbraco.Media(Int32.Parse(@slide));
+				<img src="@mediaNode.GetCropUrl("umbracoFile", "slide")" title="" />
+			}
+		</div>
+}

@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<umbPackage>
+  <files>
+    <file>
+      <guid>Galleri.cshtml</guid>
+      <orgPath>/Views/MacroPartials</orgPath>
+      <orgName>Galleri.cshtml</orgName>
+    </file>
+  </files>
+  <info>
+    <package>
+      <name>GalleriPackage</name>
+      <version>0.1</version>
+      <iconUrl />
+      <license url="http://opensource.org/licenses/MIT">MIT License</license>
+      <url>www.videndjurs.dk</url>
+      <requirements type="strict">
+        <major>7</major>
+        <minor>5</minor>
+        <patch>3</patch>
+      </requirements>
+    </package>
+    <author>
+      <name>Leif Andersen</name>
+      <website>www.videndjurs.dk</website>
+    </author>
+    <readme><![CDATA[Her får du et komplet system til gallerier i Umbraco.
+Du kan indsætte galleriet og få det vist i forskellige størrelser]]></readme>
+  </info>
+  <DocumentTypes />
+  <Templates />
+  <Stylesheets />
+  <Macros>
+    <macro>
+      <name>Galleri</name>
+      <alias>Galleri</alias>
+      <scriptType />
+      <scriptAssembly />
+      <scriptingFile>~/Views/MacroPartials/Galleri.cshtml</scriptingFile>
+      <xslt />
+      <useInEditor>True</useInEditor>
+      <dontRender>False</dontRender>
+      <refreshRate>0</refreshRate>
+      <cacheByMember>False</cacheByMember>
+      <cacheByPage>False</cacheByPage>
+      <properties>
+        <property name="Skriv galleriets navn" alias="galleriNavn" sortOrder="0" propertyType="Umbraco.Textbox" />
+        <property name="Billed højde i pixels" alias="height" sortOrder="2" propertyType="Umbraco.Integer" />
+        <property name="Vælg mappe eller billeder" alias="valgtMedia" sortOrder="1" propertyType="Umbraco.MultipleMediaPicker" />
+        <property name="Billed bredde i pixels" alias="width" sortOrder="3" propertyType="Umbraco.Integer" />
+      </properties>
+    </macro>
+  </Macros>
+  <DictionaryItems />
+  <Languages />
+  <DataTypes />
+</umbPackage>

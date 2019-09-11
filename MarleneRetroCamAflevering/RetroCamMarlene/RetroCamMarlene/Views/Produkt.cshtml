@@ -1,0 +1,93 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.Produkt>
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@{
+                /**/
+
+                Layout = "Master.cshtml";
+}
+
+@Html.Partial("Breadcrumbs")
+
+<img class="pro-img" src="@Umbraco.Field("umbracoFile")" alt="@Umbraco.Field("pageName")" />
+
+<h1>
+
+    @Umbraco.Field("pageName")
+</h1>
+
+<div class="buy">
+    <p class="price">Pris: DKK @Umbraco.Field("price")</p> <a class="buy-btn" href="#">KØB</a>
+</div>
+
+<p>@Umbraco.Field("bodyText", convertLineBreaks: true)</p>
+
+@Umbraco.Field("galleri")
+
+<hr>
+
+<table>
+    <tr>
+        <td>Podukt Id</td>
+        <td>@Umbraco.Field("pageID")</td>
+    </tr>
+    <tr>
+        <td>Mærke</td>
+        <td>@Umbraco.Field("type")</td>
+    </tr>
+    <tr>
+        <td>Model Type</td>
+        <td>@Umbraco.Field("modelType")</td>
+    </tr>
+    <tr>
+        <td>Vejl. pris</td>
+        <td>DKK @Umbraco.Field("vejlPris"),-</td>
+    </tr>
+    <tr>
+        <td>Lagerstatus</td>
+        @{
+            int a = Model.Content.GetPropertyValue<int>("lagerStatus");
+
+            if (a > 10)
+            {
+
+                <td>Der er (+10) på lager</td>
+            }
+            else
+            {
+                <td>Der er (@a) på lager</td>
+            }
+
+
+        }
+    </tr>
+</table>
+
+@{
+    var lignenede = Model.Content.GetPropertyValue<IEnumerable<IPublishedContent>>("multiNodeTreePicker");
+    if (lignenede.Count() > 0)
+    {
+        <h3>Produkter der ligner</h3>
+        <ul class="newest">
+            @foreach (var side in lignenede)
+            {
+
+            int price = side.GetPropertyValue
+            <int>
+                ("price");
+
+
+                <li>
+                    <a href="@side.Url">
+                        <img src="@side.GetPropertyValue("umbracoFile")" />
+                        <h4>@side.Name</h4>
+                        <p>@(side.GetPropertyValue<string>("bodyText").Substring(0, (side.GetPropertyValue<string>("bodyText").Length < 70 ? side.GetPropertyValue<string>("bodyText").Length : 70)))...</p>
+                        <p class="price">PRIS DDK @price</p>
+
+                    </a>
+                </li>
+                }
+        </ul>
+     
+
+    }
+}

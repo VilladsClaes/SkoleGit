@@ -1,0 +1,48 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+	Layout = "master.cshtml";
+    var AlleProdukterIKategorien = CurrentPage.Descendants("produkt").Where("Visible");
+    int AntalProdukter = AlleProdukterIKategorien.Count();
+    int MaxAntal = AntalProdukter >= 4 ? 4 : AntalProdukter;
+    
+}
+
+	<div class="content">
+		
+		@Html.Partial("Breadcrumbs")
+		
+		<h1>@Umbraco.Field("pageName")</h1>
+		@Umbraco.Field("bodyText")
+		
+		<h4>Klik på en kategori:</h4>
+		<ul>
+		@foreach(var kat in CurrentPage.Children.Where("Visible"))
+		{
+			<li><a href="@kat.Url">@kat.Name (@(@kat.Children.Count() > 1 ? @kat.Children.Count().ToString()  + " produkter" : "1 produkt"))</a></li>
+				
+		}
+		</ul>
+
+
+        <div class="nyeste-produkter">
+            <h3>Vores @(MaxAntal > 1 ? MaxAntal.ToString() + " " : "")nyeste @(CurrentPage.Name.ToLower()):</h3>
+            @foreach (var produkt in CurrentPage.Descendants("produkt").Where("Visible").OrderBy("createDate desc").Take(MaxAntal))
+            {
+                <div class="produkt">
+                    <a href="@produkt.Url">
+
+                        @if (produkt.HasValue("umbracoFile"))
+                        {
+                            <img src="@produkt.umbracoFile" alt="@produkt.Name" />
+                        }
+
+                        <h4>@produkt.Name</h4>
+                        <p>@Html.Raw(@umbraco.library.ReplaceLineBreaks(produkt.kortBeskrivelse))</p>
+                        <span class="pris">Pris DKK: <strong>@(string.Format("{0:n0},-", Convert.ToDecimal(@produkt.Pris)))</strong></span>
+
+                    </a>
+                </div>
+            }
+        </div>
+
+</div>

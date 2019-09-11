@@ -1,0 +1,91 @@
+
+-------------------------------------------------------------------------------
+   ROBOCOPY     ::     Robust File Copy for Windows                              
+-------------------------------------------------------------------------------
+
+     Startet : Sun Aug 28 12:11:56 2016
+
+       Kilde : C:\Users\lean\Google Drev\Viden Djurs\Undervisningsmateriale\Umbraco\Testsites mm\RetroCam\RetroCam\bin\
+ Destination : C:\Users\lean\Google Drev\Viden Djurs\Undervisningsmateriale\Umbraco\Testsites mm\RetroCam\RetroCam\App_Data\NuGetBackup\20160828-121156\bin\
+
+       Filer : *.*
+	    
+Indstillinger : *.* /S /E /COPY:DAT /R:1000000 /W:30 
+
+------------------------------------------------------------------------------
+
+	                  60	C:\Users\lean\Google Drev\Viden Djurs\Undervisningsmateriale\Umbraco\Testsites mm\RetroCam\RetroCam\bin\
+	    Ny fil  		  144384	AutoMapper.dll  0%   90%  100%  
+	    Ny fil  		   28160	AutoMapper.Net4.dll  0%  100%  
+	    Ny fil  		  118784	businesslogic.dll  0%  100%  
+	    Ny fil  		  147456	ClientDependency.Core.dll  0%   88%  100%  
+	    Ny fil  		   23552	ClientDependency.Core.Mvc.dll  0%  100%  
+	    Ny fil  		  512000	cms.dll  0%   25%   51%   76%  100%  
+	    Ny fil  		   52224	controls.dll  0%  100%  
+	    Ny fil  		  122880	CookComputing.XmlRpcV2.dll  0%  100%  
+	    Ny fil  		   98816	Examine.dll  0%  100%  
+	    Ny fil  		  134656	HtmlAgilityPack.dll  0%   97%  100%  
+	    Ny fil  		  200704	ICSharpCode.SharpZipLib.dll  0%   65%  100%  
+	    Ny fil  		  178176	ImageProcessor.dll  0%   73%  100%  
+	    Ny fil  		  112128	ImageProcessor.Web.dll  0%  100%  
+	    Ny fil  		   24576	interfaces.dll  0%  100%  
+	    Ny fil  		  258048	log4net.dll  0%   50%  100%  
+	    Ny fil  		  786432	Lucene.Net.dll  0%   33%   66%  100%  
+	    Ny fil  		   54784	MarkdownSharp.dll  0%  100%  
+	    Ny fil  		   11264	Microsoft.ApplicationBlocks.Data.dll  0%  100%  
+	    Ny fil  		  171672	Microsoft.AspNet.Identity.Core.dll  0%   76%  100%  
+	    Ny fil  		   54944	Microsoft.AspNet.Identity.Owin.dll  0%  100%  
+	    Ny fil  		   3.8 m	Microsoft.CodeAnalysis.CSharp.dll  0%   13%   26%   39%   52%   65%   78%   91%  100%  
+	    Ny fil  		   1.6 m	Microsoft.CodeAnalysis.dll  0%   15%   30%   45%   60%   76%   91%  100%  
+	    Ny fil  		   29344	Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll  0%  100%  
+	    Ny fil  		    1805	Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml  0%  100%  
+	    Ny fil  		  101032	Microsoft.Owin.dll  0%  100%  
+	    Ny fil  		  133288	Microsoft.Owin.Host.SystemWeb.dll  0%   98%  100%  
+	    Ny fil  		   36520	Microsoft.Owin.Security.Cookies.dll  0%  100%  
+	    Ny fil  		   53416	Microsoft.Owin.Security.dll  0%  100%  
+	    Ny fil  		   77488	Microsoft.Owin.Security.OAuth.dll  0%  100%  
+	    Ny fil  		   45416	Microsoft.Web.Infrastructure.dll  0%  100%  
+	    Ny fil  		  396288	MiniProfiler.dll  0%   33%   66%   99%  100%  
+	    Ny fil  		  424448	MySql.Data.dll  0%   30%   61%   92%  100%  
+	    Ny fil  		  513536	Newtonsoft.Json.dll  0%   25%   51%   76%  100%  
+	    Ny fil  		    4608	Owin.dll  0%  100%  
+	    Ny fil  		   10240	Semver.dll  0%  100%  
+	    Ny fil  		   19968	SQLCE4Umbraco.dll  0%  100%  
+	    Ny fil  		  204544	System.Collections.Immutable.dll  0%   64%  100%  
+	    Ny fil  		  470696	System.Data.SqlServerCe.dll  0%   27%   55%   83%  100%  
+	    Ny fil  		  240808	System.Data.SqlServerCe.Entity.dll  0%   54%  100%  
+	    Ny fil  		  185544	System.Net.Http.Formatting.dll  0%   70%  100%  
+	    Ny fil  		  262896	System.Reflection.Metadata.dll  0%   49%   99%  100%  
+	    Ny fil  		  139976	System.Web.Helpers.dll  0%   93%  100%  
+	    Ny fil  		  471240	System.Web.Http.dll  0%   27%   55%   83%  100%  
+	    Ny fil  		   82120	System.Web.Http.WebHost.dll  0%  100%  
+	    Ny fil  		  566472	System.Web.Mvc.dll  0%   46%   92%  100%  
+	    Ny fil  		  272072	System.Web.Razor.dll  0%   48%   96%  100%  
+	    Ny fil  		   41672	System.Web.Webpages.Deployment.dll  0%  100%  
+	    Ny fil  		  211656	System.Web.Webpages.dll  0%   61%  100%  
+	    Ny fil  		   39624	System.Web.Webpages.Razor.dll  0%  100%  
+	    Ny fil  		  192512	TidyNet.dll  0%   68%  100%  
+	    Ny fil  		   2.3 m	Umbraco.Core.dll  0%   20%   41%   62%   83%  100%  
+	    Ny fil  		   38400	umbraco.DataLayer.dll  0%  100%  
+	    Ny fil  		   2.1 m	umbraco.dll  0%   23%   46%   70%   93%  100%  
+	    Ny fil  		  372736	umbraco.editorControls.dll  0%   35%   70%  100%  
+	    Ny fil  		  131584	umbraco.MacroEngines.dll  0%   99%  100%  
+	    Ny fil  		   98304	Umbraco.ModelsBuilder.dll  0%  100%  
+	    Ny fil  		   38400	umbraco.providers.dll  0%  100%  
+	    Ny fil  		   57344	Umbraco.Web.UI.dll  0%  100%  
+	    Ny fil  		   59904	UmbracoExamine.dll  0%  100%  
+	    Ny fil  		   22528	UrlRewritingNet.UrlRewriter.dll  0%  100%  
+
+------------------------------------------------------------------------------
+
+               I alt  KopieretSprunget overUoverensstemmelse MISLYKKET    Ekstra
+   Mapper:         1         0         1         0         0         0
+    Filer:        60        60         0         0         0         0
+     Byte:   18.84 m   18.84 m         0         0         0         0
+    Gange:   0:00:00   0:00:00                       0:00:00   0:00:00
+
+
+Hastighed:           158096040 Byte/sek.
+Hastighed:            9046.327 MB/min.
+
+Afsluttet: Sun Aug 28 12:11:56 2016
