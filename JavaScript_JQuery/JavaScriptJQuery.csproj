@@ -214,16 +214,6 @@
     <Content Include="img\winter.jpg" />
     <Content Include="img\winter_small.jpg" />
     <Content Include="Global.asax" />
-    <Content Include="Models\PopupModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>PopupModel.edmx</DependentUpon>
-      <LastGenOutput>PopupModel.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Models\PopupModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>PopupModel.edmx</DependentUpon>
-      <LastGenOutput>PopupModel.cs</LastGenOutput>
-    </Content>
     <Content Include="sample.snippet" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
@@ -235,13 +225,6 @@
     <Content Include="Scripts\jquery-3.4.1.slim.js" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
     <Content Include="XML\Film.xml" />
-    <EntityDeploy Include="Models\PopupModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>PopupModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\PopupModel.edmx.diagram">
-      <DependentUpon>PopupModel.edmx</DependentUpon>
-    </Content>
     <Content Include="Scripts\esm\popper-utils.js" />
     <Content Include="Scripts\esm\popper-utils.min.js" />
     <Content Include="Scripts\esm\popper.js" />
@@ -361,28 +344,12 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\PopupModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>PopupModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\PopupModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>PopupModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\PopupModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>PopupModel.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Models\tblPopup.cs">
-      <DependentUpon>PopupModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\web.config" />
+    <Content Include="Views\web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <None Include="compilerconfig.json" />
     <None Include="compilerconfig.json.defaults">
       <DependentUpon>compilerconfig.json</DependentUpon>
@@ -512,7 +479,6 @@
     <Content Include="Views\jQuery\opg09.cshtml" />
     <Content Include="Views\jQuery\opg10.cshtml" />
     <Content Include="Views\jQuery\opg01.cshtml" />
-    <Content Include="Views\jQuery\Popup.cshtml" />
     <Content Include="Views\jQuery\slider.cshtml" />
     <Content Include="Views\jQuery\Vendespil.cshtml" />
     <Content Include="Scripts\umd\popper.min.js.map" />

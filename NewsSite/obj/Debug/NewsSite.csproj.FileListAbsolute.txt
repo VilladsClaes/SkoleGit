@@ -73,7 +73,6 @@ C:\Users\vill0281\source\repos\SkoleGit\NewsSite\bin\EntityFramework.xml
 C:\Users\vill0281\source\repos\SkoleGit\NewsSite\bin\EntityFramework.SqlServer.xml
 C:\Users\vill0281\source\repos\SkoleGit\NewsSite\bin\Microsoft.AspNet.TelemetryCorrelation.xml
 C:\Users\vill0281\source\repos\SkoleGit\NewsSite\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\vill0281\source\repos\SkoleGit\NewsSite\bin\Newtonsoft.Json.pdb
 C:\Users\vill0281\source\repos\SkoleGit\NewsSite\bin\Newtonsoft.Json.xml
 C:\Users\vill0281\source\repos\SkoleGit\NewsSite\bin\System.Diagnostics.DiagnosticSource.xml
 C:\Users\vill0281\source\repos\SkoleGit\NewsSite\bin\System.Net.Http.Formatting.xml

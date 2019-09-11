@@ -14,8 +14,8 @@
 <table class="table">
     <thead class="thead-dark">
         <tr>
-            <th scope="col">Cartoon ID</th>
-            <th scope="col">Cartoon Navn</th>
+            <th scope="col">Tegnefilmsfigurens Navn</th>
+            <th scope="col">Tegnefilmsfigurens Beskrivelse</th>
             <th scope="col">Ret</th>
             <th scope="col">slet</th>
         </tr>
@@ -30,8 +30,8 @@
         @foreach (var item in Model)
         {
             <tr>
-                <th scope="row">@item.TegnefilmsfigurID</th>
-                <td>@item.TegnefilmsfigurID</td>
+                <th scope="row">@item.TegnefilmfigurNavn</th>
+                <td>@item.TegnefilmfigurBeskrivelse</td>
 
 
                 <td>

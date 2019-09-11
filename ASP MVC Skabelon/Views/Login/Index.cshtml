@@ -1,0 +1,37 @@
+﻿@model List<ASP_MVC_Skabelon.Models.LoginTabel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Bruger forsiden</h2>
+
+
+    @* Link til at oprette ny bruger *@
+    <a href="Login/Opret">Opret en ny bruger</a>
+
+<table class="table">
+    <tr>
+        <th>Brugernavn        </th>
+        <th>kodeord        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @item.UserName
+            </td>
+            <td>
+                @item.Password
+            </td>
+            <td>
+                <a href="/Login/Ret/?id=@item.ID">Ret</a>
+                <a href="/Login/Vis/?id=@item.ID">Detalje</a>
+                <a href="/Login/Slet/?id=@item.ID">Slet</a>
+            </td>
+        </tr>
+    }
+
+</table>

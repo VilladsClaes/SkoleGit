@@ -90,5 +90,4 @@ C:\Users\vill0281\source\repos\SkoleGit\LP Butik MVC Repetetion\bin\roslyn\Syste
 C:\Users\vill0281\source\repos\SkoleGit\LP Butik MVC Repetetion\bin\roslyn\System.Net.Sockets.dll
 C:\Users\vill0281\source\repos\SkoleGit\LP Butik MVC Repetetion\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
 C:\Users\vill0281\source\repos\SkoleGit\LP Butik MVC Repetetion\bin\roslyn\System.Threading.Tasks.Extensions.dll
-C:\Users\vill0281\source\repos\SkoleGit\LP Butik MVC Repetetion\bin\Newtonsoft.Json.pdb
 C:\Users\vill0281\source\repos\SkoleGit\LP Butik MVC Repetetion\obj\Debug\LP Butik MVC Repetetion.csprojAssemblyReference.cache

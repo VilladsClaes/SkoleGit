@@ -19,6 +19,5 @@ namespace CartoonSite.Models
         public string TegnefilmfigurBeskrivelse { get; set; }
         public System.DateTime TegnefilmfigurFoedt { get; set; }
         public string TegnefilmfigurBillede { get; set; }
-
     }
 }

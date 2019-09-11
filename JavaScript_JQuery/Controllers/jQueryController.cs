@@ -1,12 +1,11 @@
-﻿using JavaS.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.IO;
 
-namespace JavaS.Controllers
+namespace JavaScriptJQuery.Controllers
 {
     public class jQueryController : Controller
     {
@@ -54,14 +53,7 @@ namespace JavaS.Controllers
             return View();
         }
 
-        PopopDatabaseEntities db = new PopopDatabaseEntities();
-        public ActionResult Popup()
-        {
-            //Instantiér en liste items og fyld den med indholdet fra databasen som en liste
-            List<Models.tblPopup> items = db.tblPopup.ToList();
-
-            return View(items);
-        }
+      
         public ActionResult slider()
         {
             return View();

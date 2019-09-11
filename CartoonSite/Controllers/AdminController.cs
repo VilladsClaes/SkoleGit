@@ -44,7 +44,7 @@ namespace CartoonSite.Controllers
             Photo.SaveAs(ImgSti);
 
             // gem i Db
-            NyCartoon.Photo = ImgNavn; // fx hest.jpg
+            NyCartoon.TegnefilmfigurBillede = ImgNavn; // fx hest.jpg
             Db.TegnefilmsfigurTabel.Add(NyCartoon);
             Db.SaveChanges();
 
@@ -85,7 +85,7 @@ namespace CartoonSite.Controllers
                 return RedirectToAction("Index");
 
             // slet fysisk fil/img
-            string ImgSti = System.IO.Path.Combine(Server.MapPath("~/Content/Img/"),CartoonSlettes.Photo);
+            string ImgSti = System.IO.Path.Combine(Server.MapPath("~/Content/Img/"),CartoonSlettes.TegnefilmfigurBillede);
 
 
             // hvis der img i den angivet sti
@@ -123,12 +123,12 @@ namespace CartoonSite.Controllers
             //hvis det er ikke udfyldt korrekt
             if (!ModelState.IsValid)
             {
-                ViewBag.Besked = "Der er noget galt,Prøve igen.....";
+                ViewBag.Besked = "Der er noget galt,Prøv igen.....";
                 return View(CartoonRettet);// return til formularen. send den allrede udfyldt med retur,
             }
             if(NytPhoto != null)
             {
-                string imgsti = System.IO.Path.Combine(Server.MapPath("~/Content/Img/"), CartoonRettet.TegnefilmfigurBillede);
+                string imgsti = System.IO.Path.Combine(Server.MapPath("Content/Img"), CartoonRettet.TegnefilmfigurBillede);
 
                 if (System.IO.File.Exists(imgsti))
                     System.IO.File.Delete(imgsti);// imgsti slettet
@@ -136,7 +136,7 @@ namespace CartoonSite.Controllers
 
 
                 string ImgNavn = System.IO.Path.GetFileName(NytPhoto.FileName);
-                imgsti = System.IO.Path.Combine(Server.MapPath("~/Content/Img/"), ImgNavn);
+                imgsti = System.IO.Path.Combine(Server.MapPath("Content/Img"), ImgNavn);
 
                 NytPhoto.SaveAs(imgsti);//gemme selve filen
                 CartoonRettet.TegnefilmfigurBillede = ImgNavn; // gemme navnet i modellen -som næste step sends til Db

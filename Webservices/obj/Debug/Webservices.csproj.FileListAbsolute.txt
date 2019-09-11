@@ -80,5 +80,4 @@ C:\Users\vill0281\source\repos\SkoleGit\Webservices\bin\roslyn\System.Net.Http.d
 C:\Users\vill0281\source\repos\SkoleGit\Webservices\bin\roslyn\System.Net.Sockets.dll
 C:\Users\vill0281\source\repos\SkoleGit\Webservices\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
 C:\Users\vill0281\source\repos\SkoleGit\Webservices\bin\roslyn\System.Threading.Tasks.Extensions.dll
-C:\Users\vill0281\source\repos\SkoleGit\Webservices\bin\Newtonsoft.Json.pdb
 C:\Users\vill0281\source\repos\SkoleGit\Webservices\obj\Debug\Webservices.csprojAssemblyReference.cache

@@ -1,0 +1,40 @@
+﻿@model ASP_MVC_Skabelon.Models.LoginTabel
+
+@{
+    ViewBag.Title = "Ændr din bruger";
+}
+
+
+
+<form action="/Login/Ret" method="post">
+
+    <div class="form-horizontal">
+        <h4>Ændr lidt</h4>
+
+        <div class="form-group">
+            <label class="control-label col-md-2" for="UserName">Ændr Brugernavn:</label>
+            <div class="col-md-10">
+                <input class="form-control" type="text" name="UserName" value="" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2" for="Password">Ændr kodeord:</label>
+            <div class="col-md-10">
+                <input class="form-control" type="password" name="Password" value="" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Opret" class="btn btn-info" />
+            </div>
+        </div>
+    </div>
+
+</form>
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+

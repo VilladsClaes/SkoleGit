@@ -12,28 +12,28 @@
         <div class="form-row">
 
             <div class="form-group col-md-6">
-                <label for="CartoonName">Overskrift</label>
-                <input type="text" name="CartoonName" id="CartoonName" value="@Model.CartoonName" class="form-control" />
-                <span class="text-danger">@Html.ValidationMessageFor(m => m.CartoonName)</span>
+                <label for="TegnefilmfigurNavn">Overskrift</label>
+                <input type="text" name="TegnefilmfigurNavn" id="TegnefilmfigurNavn" value="@Model.TegnefilmfigurNavn" class="form-control" />
+                <span class="text-danger">@Html.ValidationMessageFor(m => m.TegnefilmfigurNavn)</span>
             </div>
 
             <div class="form-group col-md-6">
-                <label for="CreatedYear">Created Year</label>
-                <input type="datetime" name="CreatedYear" id="CreatedYear" value="@Model.CreatedYear" class="form-control" />
+                <label for="TegnefilmfigurFoedt">Hvornår blev den til?</label>
+                <input type="datetime" name="TegnefilmfigurFoedt" id="TegnefilmfigurFoedt" value="@Model.TegnefilmfigurFoedt" class="form-control" />
             </div>
         </div>
 
         <div class="form-row">
-            <label for="CartoonsSubscribe">Cartoons Subscribe</label>
-            <textarea class="form-control" id="CartoonsSubscribe" name="CartoonsSubscribe" rows="3"></textarea>
-            <span class="text-danger">@Html.ValidationMessageFor(m => m.CartoonsSubscribe)</span>
+            <label for="TegnefilmfigurBeskrivelse">Beskrivesle?</label>
+            <textarea class="form-control" id="TegnefilmfigurBeskrivelse" name="TegnefilmfigurBeskrivelse" rows="3"></textarea>
+            <span class="text-danger">@Html.ValidationMessageFor(m => m.TegnefilmfigurBeskrivelse)</span>
         </div>
 
         <div class="form-row">
             <div class="form-group col-md-6">
-                <label for="Photo">Vælg en Photo</label>
-                <input type="file" name="Photo" id="Photo"  class="form-control" />
-                <span class="text-danger">@Html.ValidationMessageFor(m => m.Photo)</span>
+                <label for="TegnefilmfigurBillede">Vælg en Photo</label>
+                <input type="file" name="TegnefilmfigurBillede" id="TegnefilmfigurBillede"  class="form-control" />
+                <span class="text-danger">@Html.ValidationMessageFor(m => m.TegnefilmfigurBillede)</span>
             </div>
         </div>
         <button type="submit" class="btn btn-primary">Opret ny</button>

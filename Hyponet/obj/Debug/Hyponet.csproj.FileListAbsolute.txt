@@ -69,7 +69,6 @@ C:\Users\vill0281\source\repos\SkoleGit\Hyponet\bin\System.Web.WebPages.Razor.dl
 C:\Users\vill0281\source\repos\SkoleGit\Hyponet\bin\WebGrease.dll
 C:\Users\vill0281\source\repos\SkoleGit\Hyponet\bin\Microsoft.AspNet.TelemetryCorrelation.xml
 C:\Users\vill0281\source\repos\SkoleGit\Hyponet\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\vill0281\source\repos\SkoleGit\Hyponet\bin\Newtonsoft.Json.pdb
 C:\Users\vill0281\source\repos\SkoleGit\Hyponet\bin\Newtonsoft.Json.xml
 C:\Users\vill0281\source\repos\SkoleGit\Hyponet\bin\System.Diagnostics.DiagnosticSource.xml
 C:\Users\vill0281\source\repos\SkoleGit\Hyponet\bin\System.Net.Http.Formatting.xml

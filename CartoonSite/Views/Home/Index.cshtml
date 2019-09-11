@@ -1,4 +1,4 @@
-﻿@model List<CartoonSite.Models.CartoonTable>
+﻿@model List<CartoonSite.Models.TegnefilmsfigurTabel>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -8,8 +8,8 @@
     @foreach (var Item in Model)
     {
     <div id="overskrift">
-        <h3><a href="/Home/CartoonInfo/@Item.CartoonID">@Item.CartoonName</a></h3>
-        <img class="" src="~/Content/Img/@Item.Photo" alt="Foto af @Item.CartoonName" />
+        <h3><a href="/Home/CartoonInfo/@Item.TegnefilmsfigurID">@Item.TegnefilmfigurNavn</a></h3>
+        <img class="" src="~/Content/Img/@Item.TegnefilmfigurBillede" alt="Foto af @Item.TegnefilmfigurNavn" />
     </div>
     }
 </div>
