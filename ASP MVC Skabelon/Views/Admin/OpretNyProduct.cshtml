@@ -1,0 +1,61 @@
+﻿@model ASP_MVC_Skabelon.Models.ProductViewModel
+@{
+    ViewBag.Title = "OpretNyProduct";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>OpretNyProduct</h2>
+
+
+
+<div class="container bg-light p-5">
+    <h2>Opret Ny Product</h2>
+    <form action="/Admin/OpretNyProduct" method="post" enctype="multipart/form-data">
+        <div class="text-danger">@Html.ValidationSummary()</div>
+        <div class="text-info">@ViewBag.Besked</div>
+        <div class="form-row">
+
+            <div class="form-group col-md-6">
+                <label for="Navn">Product Name</label>
+                <input type="text" name="Product.Navn" id="Navn" value="@Model.Product.Navn" class="form-control" />
+                <span class="text-danger">@Html.ValidationMessageFor(m => m.Product.Navn)</span>
+            </div>
+
+            <div class="form-group col-md-6">
+                <label for="Pris"> Price</label>
+                <input type="number" name="Product.Pris" id="Pris" value="@Model.Product.Pris" class="form-control" />
+                <span class="text-danger">@Html.ValidationMessageFor(m => m.Product.Pris)</span>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <label for="Beskrivelse">Produktbeskrivelse</label>
+            <textarea class="form-control" id="Beskrivelse" name="Product.Beskrivelse" rows="4"></textarea>
+
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="Produktbilleder">Vælg flere billeder</label>
+                <input type="file" multiple name="Produktbilleder" id="Produktbilleder" class="form-control" />
+                <span class="text-danger">@Html.ValidationMessageFor(m => m.Photos)</span>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="Kategori">Vælg Kategori</label>
+                <select id="Kategori" name="Product.FK_ProductCategoryID" class="form-control">
+                    @foreach (var item in Model.Categories)
+                    {
+                        <option value="@item.ID">@item.Kategori</option>
+
+                    }
+                </select>
+                <span class="text-danger">@Html.ValidationMessageFor(m => m.Product.FK_ProductCategoryID)</span>
+                @*Loop alle kategorier ud som option i dropdown'en*@
+
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Opret ny</button>
+    </form>
+</div>

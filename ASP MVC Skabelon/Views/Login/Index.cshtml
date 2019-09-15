@@ -1,4 +1,4 @@
-﻿@model List<ASP_MVC_Skabelon.Models.LoginTabel>
+﻿@model List<ASP_MVC_Skabelon.Models.LoginTable>
 
 @{
     ViewBag.Title = "Index";
@@ -6,10 +6,34 @@
 
 <h2>Bruger forsiden</h2>
 
+<h2>Opret Bruger:</h2>
+<a href="/Login/Opret">Opret en ny bruger</a>
 
-    @* Link til at oprette ny bruger *@
-    <a href="Login/Opret">Opret en ny bruger</a>
 
+<h2>Login:</h2>
+<p>Indtast Brugernavn og password.....</p>
+<h4 class="text-danger">@ViewBag.Besked</h4>
+
+<form action="/Login/Index" method="post">
+    @*brugerNavn*@
+    <div class=" form-group m-5">
+        <label class="col-4" for="username">Brugernavn:</label>
+        <input class="col-5 " type="text" name="username" id="username"  />
+    </div>
+
+
+
+    @*Password*@
+    <div class="row">
+        <label class="col-4" for="password">Kodeord:</label>
+        <input class="col-5 " type="password" name="password" id="password"  />
+
+    </div>
+    <button class="btn btn-info" type="submit">Log ind</button>
+
+</form>
+
+@* Oprettede brugere/medlemmer *@
 <table class="table">
     <tr>
         <th>Brugernavn        </th>
@@ -21,10 +45,10 @@
     {
         <tr>
             <td>
-                @item.UserName
+                @item.username
             </td>
             <td>
-                @item.Password
+                @item.password
             </td>
             <td>
                 <a href="/Login/Ret/?id=@item.ID">Ret</a>

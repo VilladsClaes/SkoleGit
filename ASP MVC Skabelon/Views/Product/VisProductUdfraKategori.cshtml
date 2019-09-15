@@ -1,0 +1,31 @@
+﻿@model ASP_MVC_Skabelon.Models.ProductViewModel
+@{
+    ViewBag.Title = "VisProductUdfraKategori";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>VisProductUdfraKategori</h2>
+
+
+<div class="container">
+    <h2 class="text-center">Vis Product i den valgte kategori</h2>
+    <div class="row">
+        @foreach (var item in Model.Products)
+        {
+            <div class="col-sm-6">
+                <div class="card mb-4" style="width:18em;">
+                    @foreach (var billede in Model.Photos)
+                    {
+                        <img class="card-img-top" src="~/Content/grafik//Produktbilleder/@billede.Foto" />
+                    }
+
+                    <h5 class="card-title pl-3">@item.Navn</h5>
+
+                    <span class="alert-dark font-weight-bold text-lg-center">@item.Pris DKK</span>
+                    <a href="/Views/Product/VisProduct/@item.ID" class="btn btn-primary">Se mere</a>
+                </div>
+            </div>
+
+        }
+    </div>
+</div>

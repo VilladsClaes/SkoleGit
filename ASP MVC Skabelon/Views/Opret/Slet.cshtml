@@ -1,0 +1,18 @@
+﻿@model ASP_MVC_Skabelon.Models.OpretTable
+@{
+    ViewBag.Title = "Slet";
+    Layout = "~/Views/Shared/_AdminLayout1.cshtml";
+}
+
+<h2>Advarsel for sletning</h2>
+<h4>Er du sikker at du vil slette den</h4>
+<div class="card my-4">
+    <div class="card-body">
+        <h4>@Model.Navn</h4>
+    </div>
+</div>
+<form action="/Opret/Slet" method="post">
+    <input type="hidden" name="ID" id="ID"  value="@Model.ID" />
+    <button type="submit" class="btn btn-danger">Slet</button>
+    <a href="/Opret/" class="btn btn-success">fortryd uden sletning</a>
+</form>

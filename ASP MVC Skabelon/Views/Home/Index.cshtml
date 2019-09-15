@@ -2,4 +2,122 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<h1>Hejsa</h1>
+<h1>Forsiden på Home</h1>
+<ul>
+    <li>Admin-controller</li>
+    <ul>
+        <li><a href="/Admin/Index">Adminforside <b>uden session-cookie bliver du sendt til Login-forsiden</b></a></li>
+    </ul>
+    <li>Login-controller</li>
+    <ul>
+        <li><a href="/Login/Index">Loginforside med oversigt over brugere</a></li>
+    </ul>
+    <li>Opret-controller</li>
+    <ul>
+        <li><a href="/Opret/Index">Opret-forsiden med loop af indhold</a></li>
+    </ul>
+
+</ul>
+
+
+<div class="container">
+
+
+    <label for="soegefelt">Opret ting i JSON via API</label>
+
+    <input type="text" name="soegefelt" id="soegefelt" placeholder="skriv noget her..." value="" />
+
+
+    <div id="historik"></div>
+
+</div>
+
+
+<script type="text/javascript">
+    $(document).ready(function () { //Vent til siden er indlæst
+
+        var apiurl = "/api/NoderAPI"; //Gem adressen til API'en
+
+        GenafspilAPIkald(); //Print til skærmen
+
+        function GenafspilAPIkald() { //GET fra API'en i form af JSON fra apiurl og kør udskrivdata
+
+
+            $.ajax({
+                type: "GET",
+                dataType: "json",
+                url: apiurl,
+                success: function (detdufandt) {
+                    console.log("Nu henter vi fra API-adressen: " + apiurl); //API-adressen
+                    console.log("Det der gemmer sig på API-adressen, set i JSON: " + detdufandt); //Se hvad der gemmer sig i den API
+                    SendAPIdata(detdufandt); //Gør noget med den data
+                },
+                error: function () { alert("Måske virker: " + detdufandt + " ikke") }
+            })
+        }
+
+        function SendAPIdata(nogetfraAPIopkaldet) {
+
+            console.log("Der sendes API-data: " + nogetfraAPIopkaldet);
+
+
+            for (var x in nogetfraAPIopkaldet) {
+
+                $("#historik").append("<p>" + nogetfraAPIopkaldet[x].Citat_Tekst + " </p>") //spyt indholdet i databasen ud i historikken
+
+            };
+
+        };
+
+
+        //Skriv i inputfelt
+        $("input").keyup(Soeg);
+
+
+        function Soeg() {
+
+            $("#historik").html("<h2 style='color:green;' >Søgeresultater</h2>");
+
+            var soegeord = $("input").val();
+            var soegeurl = apiurl + "?soegeord=" + soegeord;
+
+
+            if (soegeord.length > 0) {
+
+                $.ajax({
+                    type: "GET",
+                    dataType: "json",
+                    url: soegeurl,
+                    success: function (detsomderblevsoegt) {
+                        console.log(soegeurl);
+                        FundneData(detsomderblevsoegt);
+                    }
+                })
+
+
+                function FundneData(detderblevfundet) {
+
+                    for (var x in detderblevfundet) {
+
+                        $("#historik").append("<h2>" + detderblevfundet[x].Citat_Overskrift + " </h2>").append("<p>" + detderblevfundet[x].Citat_Tekst + " </p>")
+
+
+
+                    };
+
+                    if (detderblevfundet.count == 0) {
+                        $("#historik").append("<div>Ingen resultater</div>");
+                    }
+
+                };
+
+            };
+
+
+
+
+        };
+
+    });
+</script>
+

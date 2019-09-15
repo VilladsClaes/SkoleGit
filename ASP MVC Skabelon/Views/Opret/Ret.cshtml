@@ -1,0 +1,63 @@
+﻿@model ASP_MVC_Skabelon.Models.OpretTable
+@{
+    ViewBag.Title = "Rettelse";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container bg-light">
+    <h2>Ret Cartoon</h2>
+    <form action="/Opret/Ret" method="post" enctype="multipart/form-data">
+        <div class="text-danger">@Html.ValidationSummary()</div>
+        <div class="form-row">
+            @*ID*@
+            <div class="form-group col-md-6">
+                <label for="ID">ID:</label>
+                <input type="text" name="ID" id="TegnefilmsfigurID" readonly value="@Model.ID" />
+            </div>
+        </div>
+            @*Navn*@
+            <div class="form-group col-md-6">
+                <label for="Navn">navn:</label>
+                <input type="text" name="Navn" id="Navn" value="@Model.Navn" class="form-control" />
+                <span class="text-danger">@Html.ValidationMessageFor(m => m.Navn)</span>
+            </div>
+
+            @*Beskrivelse*@
+            <div class="form-row">
+                <label for="Beskrivelse">Beksrivelse</label>
+                <textarea class="form-control" id="Beskrivelse" name="Beskrivelse" va rows="3">@Model.Beskrivelse</textarea>
+                <span class="text-danger">@Html.ValidationMessageFor(m => m.Beskrivelse)</span>
+            </div>
+        
+            @*billede*@
+        <div class="form-row">
+            <div class="form-group col-md-6">
+
+                @*nuværende billede*@
+                <img src="~/Content/Img/@Model.Billede" width="100" />
+
+
+                @*hvis brugeren vil beholde det eksistende billede*@
+                <input type="hidden" name="Billede" id="Billede" value="@Model.Billede" />
+
+                @*hvis brugeren vil have et andet billede*@
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="Billede">Vælg en Photo</label>
+                        <input type="file" name="Billede" id="Billede" class="form-control" />
+                        <span class="text-danger">@Html.ValidationMessageFor(m => m.Billede)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+                    @*submit button*@
+                    <div class="form-row ">
+                        <div class="form-group col-md-6">
+                            <button type="submit" class="btn btn-primary">Ret Nu</button>
+                            <a href="/Opret/" class="btn btn-success">fortryd uden Retelse</a>
+                        </div>
+                    </div>
+                
+            
+        
+    </form>
+</div>

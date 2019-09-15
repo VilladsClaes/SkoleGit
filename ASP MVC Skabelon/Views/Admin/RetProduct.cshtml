@@ -1,0 +1,78 @@
+﻿@model ASP_MVC_Skabelon.Models.ProductViewModel
+@{
+    ViewBag.Title = "RetProduct";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container bg-light p-5">
+    <h2>Ret Product</h2>
+    <form action="/Admin/RetProduct" method="post" enctype="multipart/form-data">
+        <div class="text-danger">@Html.ValidationSummary()</div>
+        <div class="form-row">
+
+            <div class="form-group col-md-6">
+                <label for="ProductID">Product ID</label>
+                <input type="text" readonly name="Product.ProductID" id="PoductID" value="@Model.Product.ID" class="form-control" />
+
+            </div>
+
+            <div class="form-group col-md-6">
+                <label for="Navn">Product Name</label>
+                <input type="text" name="Product.Navn" id="Navn" value="@Model.Product.Navn" class="form-control" />
+                <span class="text-danger">@Html.ValidationMessageFor(m => m.Product.Navn)</span>
+            </div>
+
+            <div class="form-group col-md-6">
+                <label for="Pris"> Price</label>
+                <input type="number" name="Product.Pris" id="Pris" value="@Model.Product.Pris" class="form-control" />
+                <span class="text-danger">@Html.ValidationMessageFor(m => m.Product.Pris)</span>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <label for="Beskrivelse">Productbeskrivelse</label>
+            <textarea class="form-control" id="Beskrivelse" name="Product.Beskrivelse" rows="4">@Model.Product.Beskrivelse</textarea>
+
+        </div>
+
+        @*billeder*@
+        <div class="form-row">
+            <div class="form-group col-md-6">
+
+                @*nuværende billede*@
+                <img src="~/Content/grafik/Produktbilleder/@Model.Photos.FirstOrDefault()" width="100" />
+
+
+                @*hvis brugeren vil beholde det eksistende billede*@
+                <input type="hidden" name="Photos.FirstOrDefault()" id="Photo" value="@Model.Photos.FirstOrDefault()" />
+
+                @*hvis brugeren vil have et andet billede*@
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="Photo">Vælg en Photo</label>
+                        <input type="file" name="NyPhoto" id="Photo" class="form-control" />
+                        <span class="text-danger">@Html.ValidationMessageFor(m => m.Photos.FirstOrDefault())</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="Kategori">Vælg Kategori</label>
+                <select id="Kategori" name="Product.FK_KategoriID" class="form-control">
+                    @foreach (var item in Model.Categories)
+                    {
+                        <option value="@item.ID">@item.Kategori</option>
+
+                    }
+                </select>
+                <span class="text-danger">@Html.ValidationMessageFor(m => m.Product.FK_ProductCategoryID)</span>
+                @*Loop alle kategorier ud som option i dropdown'en*@
+
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Ret Productet</button>
+    </form>
+</div>
+

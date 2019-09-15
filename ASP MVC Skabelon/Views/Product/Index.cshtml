@@ -1,0 +1,48 @@
+﻿@model ASP_MVC_Skabelon.Models.ProductViewModel
+
+@{
+    ViewBag.Title = "Produktforsiden";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Her kan du se alle produkterne</h2>
+
+
+
+<table class="table bg-light">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">Product ID</th>
+            <th scope="col">Product Navn</th>
+            <th scope="col">Ret</th>
+            <th scope="col">slet</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+
+            <td colspan="2"><a href="/AdminProduct/OpretNyProduct" class="btn btn-primary">Opret Ny Product</a></td>
+            <td colspan="2"><Span class="text-danger">besked til admin:@ViewBag.Besked</Span></td>
+
+        </tr>
+        @foreach (var item in Model.Products)
+        {
+            <tr>
+                <th scope="row">@item.ID</th>
+                <td>@item.Navn</td>
+
+
+                <td>
+                    <a href="/Product/Ret/@item.ID"> <img src="/Content/grafik/ret.png" alt="Ændring af produkt" /></a>
+                </td>
+
+
+                <td>
+                    <a href="/Product/Slet/@item.ID"> <img src="/Content/grafik/slet.png" alt="Sletning af produkt" /></a>
+                </td>
+            </tr>
+        }
+
+
+    </tbody>
+</table>

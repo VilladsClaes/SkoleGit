@@ -1,0 +1,15 @@
+﻿@model ASP_MVC_Skabelon.Models.OpretTable
+
+@{
+    ViewBag.Title = "Detalje";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Detalje</h2>
+
+
+<div class="container" id="info">
+    <h3>@Model.Navn (@Model.Aarstal)</h3>
+    <p>@Model.Beskrivelse</p>
+    <img src="/Content/grafik/Oprettelser/@Model.Billede" alt="Foto af @Model.Navn" />
+</div>

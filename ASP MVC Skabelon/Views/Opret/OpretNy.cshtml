@@ -1,0 +1,46 @@
+﻿@model ASP_MVC_Skabelon.Models.OpretTable
+@{
+    ViewBag.Title = "Ny Oprettelse";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="container bg-light p-5">
+    <h2 >Opret Ny </h2>
+    <span>@ViewBag.Besked</span>
+    @* Formular med mulighed for fil-upload *@
+    <form action="/Opret/OpretNy" method="post" enctype="multipart/form-data">
+      
+
+        <div class="form-row">
+
+            <div class="form-group col-md-6">
+                <label for="Navn">Overskrift</label>
+                <input type="text" name="Navn" id="Navn" value="@Model.Navn" class="form-control" />
+                <span class="text-danger">@Html.ValidationMessageFor(m => m.Navn)</span>
+            </div>
+
+            <div class="form-group col-md-6">
+                <label for="Aarstal">Årstal</label>
+                <input type="datetime-local" name="Aarstal" id="Aarstal" value="@Model.Aarstal" class="form-control" />
+                <span class="text-danger">@Html.ValidationMessageFor(m => m.Aarstal)</span>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <label for="Beskrivelse">Beskrivelse?</label>
+            <textarea class="form-control" id="Beskrivelse" name="Beskrivelse" rows="3"></textarea>
+            <span class="text-danger">@Html.ValidationMessageFor(m => m.Beskrivelse)</span>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="Billede">Vælg en Photo</label>
+                @* name-attributten skal hedde det samme som Httppostedfilebase-attributten fra controlleren *@
+                <input type="file" name="GrafikFil" id="Billede"  class="form-control" />
+                <span class="text-danger">@Html.ValidationMessageFor(m => m.Billede)</span>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Opret ny</button>
+    </form>
+</div>

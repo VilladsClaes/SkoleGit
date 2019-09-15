@@ -13,8 +13,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MinegenAPI", "MinegenAPI\Mi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Opgave REST CRUD API", "Opgave REST CRUD API\Opgave REST CRUD API.csproj", "{CA8EE669-27E5-411A-B414-4204B2344F48}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hyponet", "Hyponet\Hyponet.csproj", "{FAC3E847-3D58-40FA-A62A-2A912DC79314}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LP Butik MVC Repetetion", "LP Butik MVC Repetetion\LP Butik MVC Repetetion.csproj", "{88160DAF-9E67-4723-B771-79E94107C8D6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewsSite", "NewsSite\NewsSite.csproj", "{F32B8FA9-0BB9-450D-8B5D-F088F34A2319}"
@@ -39,8 +37,6 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "yoga", "yoga\", "{05DEAE1C-
 		VWDPort = "1133"
 		SlnRelativePath = "yoga\"
 	EndProjectSection
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCcitater", "MVCcitater\MVCcitater.csproj", "{6714E8D5-B138-40AE-80C7-5EC2D0FA426D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PotteryWeb", "PotteryWeb\PotteryWeb.csproj", "{C93D06EF-0F90-4187-AAFC-C34945F21FCF}"
 EndProject
@@ -130,8 +126,6 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "CV", "CV\", "{A6B88463-39E6
 		SlnRelativePath = "CV\"
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CartoonSite", "CartoonSite\CartoonSite.csproj", "{07D69098-64F1-4653-93AD-1CC9CC669846}"
-EndProject
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Festival grid", "Festival grid\", "{3853487D-B312-451D-A750-F978F5576C3A}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
@@ -181,10 +175,6 @@ Global
 		{CA8EE669-27E5-411A-B414-4204B2344F48}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CA8EE669-27E5-411A-B414-4204B2344F48}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CA8EE669-27E5-411A-B414-4204B2344F48}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FAC3E847-3D58-40FA-A62A-2A912DC79314}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FAC3E847-3D58-40FA-A62A-2A912DC79314}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FAC3E847-3D58-40FA-A62A-2A912DC79314}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FAC3E847-3D58-40FA-A62A-2A912DC79314}.Release|Any CPU.Build.0 = Release|Any CPU
 		{88160DAF-9E67-4723-B771-79E94107C8D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{88160DAF-9E67-4723-B771-79E94107C8D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{88160DAF-9E67-4723-B771-79E94107C8D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -197,10 +187,6 @@ Global
 		{05DEAE1C-7190-4467-AC5A-17EE425A5F98}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{05DEAE1C-7190-4467-AC5A-17EE425A5F98}.Release|Any CPU.ActiveCfg = Debug|Any CPU
 		{05DEAE1C-7190-4467-AC5A-17EE425A5F98}.Release|Any CPU.Build.0 = Debug|Any CPU
-		{6714E8D5-B138-40AE-80C7-5EC2D0FA426D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6714E8D5-B138-40AE-80C7-5EC2D0FA426D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6714E8D5-B138-40AE-80C7-5EC2D0FA426D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6714E8D5-B138-40AE-80C7-5EC2D0FA426D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C93D06EF-0F90-4187-AAFC-C34945F21FCF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C93D06EF-0F90-4187-AAFC-C34945F21FCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C93D06EF-0F90-4187-AAFC-C34945F21FCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -225,10 +211,6 @@ Global
 		{A6B88463-39E6-404F-8EFC-A7CF19547018}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A6B88463-39E6-404F-8EFC-A7CF19547018}.Release|Any CPU.ActiveCfg = Debug|Any CPU
 		{A6B88463-39E6-404F-8EFC-A7CF19547018}.Release|Any CPU.Build.0 = Debug|Any CPU
-		{07D69098-64F1-4653-93AD-1CC9CC669846}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{07D69098-64F1-4653-93AD-1CC9CC669846}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{07D69098-64F1-4653-93AD-1CC9CC669846}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{07D69098-64F1-4653-93AD-1CC9CC669846}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3853487D-B312-451D-A750-F978F5576C3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3853487D-B312-451D-A750-F978F5576C3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3853487D-B312-451D-A750-F978F5576C3A}.Release|Any CPU.ActiveCfg = Debug|Any CPU

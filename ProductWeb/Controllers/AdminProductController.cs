@@ -19,6 +19,7 @@ namespace ProductWeb.Controllers
             ProductList = Db.ProductTable.ToList();
             return View(ProductList);
         }
+
         public ActionResult OpretNyProduct()
         {
             AdminProductViewModel NyProduct = new AdminProductViewModel();

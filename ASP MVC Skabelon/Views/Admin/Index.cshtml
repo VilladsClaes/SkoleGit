@@ -1,8 +1,54 @@
-﻿
+﻿@model ASP_MVC_Skabelon.Models.ProductViewModel
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    if (TempData["Besked"] != null)
+    {
+        ViewBag.Besked = TempData["Besked"];
+    }
 }
 
-<h2>Index</h2>
 
+<h2>Velkommen i Admin side</h2>
+
+<table class="table bg-light">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">Product ID</th>
+            <th scope="col">Product Navn</th>
+            <th scope="col">Ret</th>
+            <th scope="col">slet</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+
+            <td colspan="2"><a href="/Admin/OpretNyProduct" class="btn btn-primary">Opret Ny Product</a></td>
+            <td colspan="2"><Span class="text-danger">besked til admin:@ViewBag.Besked</Span></td>
+
+        </tr>
+        @foreach (var item in Model.Products)
+        {
+            <tr>
+                <th scope="row">@item.ID</th>
+                <td><a href="/Product/VisProduct/@item.ID">@item.Navn</a></td>
+
+
+                <td>
+                    <a href="/Admin/RetProduct/@item.ID"> <img src="~/Content/grafik/ret.png" alt="Alternate Text" /></a>
+                </td>
+
+
+                <td>
+                    @* Slet her og nu uden et view med bekræftelse *@
+                    <form action="/Admin/SletProduct/@item.ID" method="post">
+                        <button type="submit"><img src="~/Content/grafik/slet.png" alt="Alternate Text" /></button>
+                    </form>
+                    
+                </td>
+            </tr>
+        }
+
+
+    </tbody>
+</table>

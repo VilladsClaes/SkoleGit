@@ -11,6 +11,9 @@
 <body>
     <nav>Her er navigationen</nav>
     <div class="container body-content">
+        <div>
+            En velkomst kan stå her. Brugerens navn er:  @Session["BrugerSession"].ToString()
+        </div>
         @RenderBody()
         <footer>
             Her er footeren

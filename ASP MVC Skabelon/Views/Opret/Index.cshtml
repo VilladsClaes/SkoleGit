@@ -1,0 +1,24 @@
+﻿@model List<ASP_MVC_Skabelon.Models.OpretTable>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<div class="container">
+    <h2>Oprettelser</h2>
+    @* Link til at oprette ny ting *@
+    <a href="/Opret/OpretNy">Opret en ny</a>
+   
+    @foreach (var Item in Model)
+    {
+        <div id="overskrift">
+            @* Link der viser detalje for det ID der loopes ud *@
+            <h3><a href="/Opret/Detalje/@Item.ID">@Item.Navn</a></h3>
+            <img class="" src="/Content/grafik/Oprettelser/@Item.Billede" alt="Foto af @Item.Navn" />
+        </div>
+    }
+</div>
+

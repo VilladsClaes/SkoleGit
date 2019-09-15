@@ -1,4 +1,4 @@
-﻿@model LP_Butik_MVC_Repetetion.Logins
+﻿@model ASP_MVC_Skabelon.Models.LoginTable
 
 @{
     ViewBag.Title = "Details";
@@ -11,24 +11,24 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.BrugerNavn)
+            @Html.DisplayNameFor(model => model.username)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.BrugerNavn)
+            @Html.DisplayFor(model => model.username)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Kodeord)
+            @Html.DisplayNameFor(model => model.password)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Kodeord)
+            @Html.DisplayFor(model => model.password)
         </dd>
 
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Edit", "Ret", new { id = Model.ID }) |
     @Html.ActionLink("Back to List", "Index")
 </p>

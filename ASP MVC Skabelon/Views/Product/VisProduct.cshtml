@@ -1,0 +1,31 @@
+﻿@model ASP_MVC_Skabelon.Models.ProductViewModel
+@{
+    ViewBag.Title = "VisProduct";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>VisProduct</h2>
+
+
+<div class="container">
+    <div class="col">
+        <div class="">
+            @foreach (var billede in Model.Photos)
+            {
+                <img class="img-fluid img-thumbnail" src="~/Content/grafik/ProduktBilleder/@billede.Foto" style="width:100%;" />
+
+            }
+
+
+            <h2 class="p-3 m-2">@Model.Product.Navn</h2>
+
+
+            <p class="text-dark bg-light rounded p-5">
+                @Model.Product.Beskrivelse
+            </p>
+
+            <span class="bg-info">Price:@Model.Product.Pris DKK</span>
+
+        </div>
+</div>
+</div>

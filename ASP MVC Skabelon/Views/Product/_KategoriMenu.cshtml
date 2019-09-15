@@ -1,0 +1,6 @@
+﻿@model ASP_MVC_Skabelon.Models.ProductViewModel
+
+@foreach (var item in Model.Categories)
+{
+    <a class="dropdown-item" href="/Home/VisProductUdFraKategori/@item.ID">@item.Kategori</a>
+}

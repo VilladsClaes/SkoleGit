@@ -10,21 +10,10 @@ namespace ASP_MVC_Skabelon.Controllers
     {
         public ActionResult Index()
         {
+            //Forsiden
             return View();
         }
 
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
-        }
+     
     }
 }

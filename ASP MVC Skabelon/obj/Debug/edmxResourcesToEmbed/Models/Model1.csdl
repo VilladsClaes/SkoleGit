@@ -1,15 +1,144 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-  <EntityType Name="LoginTabel">
+  <EntityType Name="LoginTable">
     <Key>
       <PropertyRef Name="ID" />
     </Key>
     <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="UserName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
-    <Property Name="Password" Type="String" MaxLength="550" FixedLength="false" Unicode="true" />
-    <Property Name="Salt" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="username" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="password" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="salt" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
   </EntityType>
-  <EntityContainer Name="MVC_Skabelon_DatabaseEntities" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="LoginTabel" EntityType="Self.LoginTabel" />
+  <EntityContainer Name="ASP_MVC_SkabelonEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="LoginTable" EntityType="Self.LoginTable" />
+    <EntitySet Name="OpretTable" EntityType="Model.OpretTable" />
+    <EntitySet Name="ProductCategoryTable" EntityType="Model.ProductCategoryTable" />
+    <EntitySet Name="ProductPhotoTable" EntityType="Model.ProductPhotoTable" />
+    <EntitySet Name="ProductTable" EntityType="Model.ProductTable" />
+    <EntitySet Name="sysdiagrams" EntityType="Model.sysdiagrams" />
+    <AssociationSet Name="FK_Product_Category" Association="Model.FK_Product_Category">
+      <End Role="ProductCategoryTable" EntitySet="ProductCategoryTable" />
+      <End Role="ProductTable" EntitySet="ProductTable" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Photo_Product" Association="Model.FK_Photo_Product">
+      <End Role="ProductTable" EntitySet="ProductTable" />
+      <End Role="ProductPhotoTable" EntitySet="ProductPhotoTable" />
+    </AssociationSet>
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(Model.sp_helpdiagramdefinition_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(Model.sp_helpdiagrams_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
   </EntityContainer>
+  <EntityType Name="OpretTable">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Navn" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Beskrivelse" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Oprettelsestidspunkt" Type="DateTime" Precision="3" />
+    <Property Name="Aarstal" Type="DateTime" Precision="3" />
+    <Property Name="Billede" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ProductCategoryTable">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Kategori" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="ProductTable" Relationship="Model.FK_Product_Category" FromRole="ProductCategoryTable" ToRole="ProductTable" />
+  </EntityType>
+  <EntityType Name="ProductPhotoTable">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Foto" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="FK_ProductID" Type="Int32" />
+    <NavigationProperty Name="ProductTable" Relationship="Model.FK_Photo_Product" FromRole="ProductPhotoTable" ToRole="ProductTable" />
+  </EntityType>
+  <EntityType Name="ProductTable">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Navn" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Beskrivelse" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Pris" Type="Int32" />
+    <Property Name="Antal" Type="Int32" />
+    <Property Name="FK_ProductCategoryID" Type="Int32" />
+    <NavigationProperty Name="ProductCategoryTable" Relationship="Model.FK_Product_Category" FromRole="ProductTable" ToRole="ProductCategoryTable" />
+    <NavigationProperty Name="ProductPhotoTable" Relationship="Model.FK_Photo_Product" FromRole="ProductTable" ToRole="ProductPhotoTable" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <Association Name="FK_Product_Category">
+    <End Type="Model.ProductCategoryTable" Role="ProductCategoryTable" Multiplicity="0..1" />
+    <End Type="Model.ProductTable" Role="ProductTable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductCategoryTable">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProductTable">
+        <PropertyRef Name="FK_ProductCategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Photo_Product">
+    <End Type="Model.ProductTable" Role="ProductTable" Multiplicity="0..1" />
+    <End Type="Model.ProductPhotoTable" Role="ProductPhotoTable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductTable">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ProductPhotoTable">
+        <PropertyRef Name="FK_ProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <ComplexType Name="sp_helpdiagramdefinition_Result">
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="Binary" Name="definition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+  </ComplexType>
 </Schema>
