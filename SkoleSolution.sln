@@ -19,69 +19,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewsSite", "NewsSite\NewsSi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductWeb", "ProductWeb\ProductWeb.csproj", "{1C6C942B-B936-40DE-A5E5-F43330919D4F}"
 EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "wisdom", "wisdom\", "{C24F2EA9-0207-46DE-82EA-AA209059F5C4}"
-	ProjectSection(WebsiteProperties) = preProject
-		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
-		Debug.AspNetCompiler.VirtualPath = "/localhost_1324"
-		Debug.AspNetCompiler.PhysicalPath = "wisdom\"
-		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_1324\"
-		Debug.AspNetCompiler.Updateable = "true"
-		Debug.AspNetCompiler.ForceOverwrite = "true"
-		Debug.AspNetCompiler.FixedNames = "false"
-		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.VirtualPath = "/localhost_1324"
-		Release.AspNetCompiler.PhysicalPath = "wisdom\"
-		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_1324\"
-		Release.AspNetCompiler.Updateable = "true"
-		Release.AspNetCompiler.ForceOverwrite = "true"
-		Release.AspNetCompiler.FixedNames = "false"
-		Release.AspNetCompiler.Debug = "False"
-		VWDPort = "1324"
-		SlnRelativePath = "wisdom\"
-	EndProjectSection
-EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "stuff", "stuff\", "{A073F783-0881-47E7-9A0B-56136E8B005F}"
-	ProjectSection(WebsiteProperties) = preProject
-		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
-		Debug.AspNetCompiler.VirtualPath = "/localhost_1361"
-		Debug.AspNetCompiler.PhysicalPath = "stuff\"
-		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_1361\"
-		Debug.AspNetCompiler.Updateable = "true"
-		Debug.AspNetCompiler.ForceOverwrite = "true"
-		Debug.AspNetCompiler.FixedNames = "false"
-		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.VirtualPath = "/localhost_1361"
-		Release.AspNetCompiler.PhysicalPath = "stuff\"
-		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_1361\"
-		Release.AspNetCompiler.Updateable = "true"
-		Release.AspNetCompiler.ForceOverwrite = "true"
-		Release.AspNetCompiler.FixedNames = "false"
-		Release.AspNetCompiler.Debug = "False"
-		VWDPort = "1361"
-		SlnRelativePath = "stuff\"
-	EndProjectSection
-EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "startbootstrap-new-age-gh-pages", "startbootstrap-new-age-gh-pages\", "{CF412C29-B9AF-4FC2-9D9A-51067087280C}"
-	ProjectSection(WebsiteProperties) = preProject
-		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
-		Debug.AspNetCompiler.VirtualPath = "/localhost_1385"
-		Debug.AspNetCompiler.PhysicalPath = "startbootstrap-new-age-gh-pages\"
-		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_1385\"
-		Debug.AspNetCompiler.Updateable = "true"
-		Debug.AspNetCompiler.ForceOverwrite = "true"
-		Debug.AspNetCompiler.FixedNames = "false"
-		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.VirtualPath = "/localhost_1385"
-		Release.AspNetCompiler.PhysicalPath = "startbootstrap-new-age-gh-pages\"
-		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_1385\"
-		Release.AspNetCompiler.Updateable = "true"
-		Release.AspNetCompiler.ForceOverwrite = "true"
-		Release.AspNetCompiler.FixedNames = "false"
-		Release.AspNetCompiler.Debug = "False"
-		VWDPort = "1385"
-		SlnRelativePath = "startbootstrap-new-age-gh-pages\"
-	EndProjectSection
-EndProject
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "CV", "CV\", "{A6B88463-39E6-404F-8EFC-A7CF19547018}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
@@ -164,18 +101,6 @@ Global
 		{1C6C942B-B936-40DE-A5E5-F43330919D4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1C6C942B-B936-40DE-A5E5-F43330919D4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1C6C942B-B936-40DE-A5E5-F43330919D4F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C24F2EA9-0207-46DE-82EA-AA209059F5C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C24F2EA9-0207-46DE-82EA-AA209059F5C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C24F2EA9-0207-46DE-82EA-AA209059F5C4}.Release|Any CPU.ActiveCfg = Debug|Any CPU
-		{C24F2EA9-0207-46DE-82EA-AA209059F5C4}.Release|Any CPU.Build.0 = Debug|Any CPU
-		{A073F783-0881-47E7-9A0B-56136E8B005F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A073F783-0881-47E7-9A0B-56136E8B005F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A073F783-0881-47E7-9A0B-56136E8B005F}.Release|Any CPU.ActiveCfg = Debug|Any CPU
-		{A073F783-0881-47E7-9A0B-56136E8B005F}.Release|Any CPU.Build.0 = Debug|Any CPU
-		{CF412C29-B9AF-4FC2-9D9A-51067087280C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CF412C29-B9AF-4FC2-9D9A-51067087280C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CF412C29-B9AF-4FC2-9D9A-51067087280C}.Release|Any CPU.ActiveCfg = Debug|Any CPU
-		{CF412C29-B9AF-4FC2-9D9A-51067087280C}.Release|Any CPU.Build.0 = Debug|Any CPU
 		{A6B88463-39E6-404F-8EFC-A7CF19547018}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A6B88463-39E6-404F-8EFC-A7CF19547018}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A6B88463-39E6-404F-8EFC-A7CF19547018}.Release|Any CPU.ActiveCfg = Debug|Any CPU
