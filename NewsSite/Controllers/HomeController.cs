@@ -23,9 +23,10 @@ namespace NewsSite.Controllers
             MyViewModel myViewModel = new MyViewModel();
             myViewModel.AllNews = db.NyhederTable.ToList();
             myViewModel.AllVidsteDu = db.VidsteDuTable.ToList();
-            myViewModel.AllGaader = db.GaadeTabel.ToList();
-
-
+            //Viser kun de første fem
+            myViewModel.AllGaader = db.GaadeTabel.OrderBy(p => p.Price).Take(5).ToList());
+            
+     
 
             return View(myViewModel);
         }

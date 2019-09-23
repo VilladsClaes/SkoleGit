@@ -10,37 +10,16 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Starwars", "Starwars", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>
-            </div>
-        </div>
-    </div>
+
+    <a href="/Home/Byvejr">~/Views/Home/Byvejr.cshtml</a>
+    <a href="/Home/FilmAPI">~/Views/Home/FilmAPI.cshtml</a>
+    <a href="/Home/Folketinget">~/Views/Home/Folketinget.cshtml</a>
+    <a href="/Home/Index">~/Views/Home/Index.cshtml</a>
+    <a href="/Home/PostnummerOpslag">~/Views/Home/PostnummerOpslag.cshtml</a>
+    <a href="/Home/Starwars">~/Views/Home/Starwars.cshtml</a>
     <div class="container body-content">
         @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
     </div>
 
-
-
-    @*@Scripts.Render("~/bundles/jquery")
-        @Scripts.Render("~/bundles/bootstrap")
-        @RenderSection("scripts", required: false)*@
 </body>
 </html>

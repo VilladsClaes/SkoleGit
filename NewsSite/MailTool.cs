@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+//HUSK using (NameSpace eller bibliotek) Husk System.net.mail
 using System.Net.Mail;
 using System.Web;
 
@@ -11,15 +12,14 @@ public class MailTool
     {
         try
         {       
-        //En instans af .net classen mailmessage (kend den på den grønne farve (kaldes et andet sted fra))
-        // starter på en ny mail (laver en ny instans af mailmessage).. 
-        //HUSK using (NameSpace eller bibliotek) Husk System.net.mail i toppen af controleren (intelesans tjek)
+       
+        // starter på en ny mail (laver en ny instans af mailmessage)      
         MailMessage mail = new MailMessage();
 
         // From er = mailens afsender. Det er ikke mailens afsender når vi bruger gmails smtp, CHeck ved webhost.
         mail.From = new MailAddress(MailFrom);
 
-        //Dette er den mail som man besvare til (tilbage til kd efter kontakt med hjemmeside staf(input MailFrom i Contact form))
+        //Dette er den mail som man besvarer
         mail.ReplyToList.Add(MailFrom);
 
         //er den mail add der modtager mail fra form
@@ -55,11 +55,11 @@ public class MailTool
 
         //Her pakker vi hele instansen(alt data tastet ovenfor) "mail" ned som parameter til metoden send.
         smtp.Send(mail);
-            return ("Mailen er sendt");
+            return ("Beskeden er sendt");
         }
         catch (Exception)
         {
-            return ("Mailen er ikke sendt");
+            return ("Beskeden er ikke sendt");
         }
 
     }

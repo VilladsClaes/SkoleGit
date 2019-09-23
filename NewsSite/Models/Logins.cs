@@ -11,10 +11,13 @@ namespace NewsSite.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Logins
     {
         public int Id { get; set; }
+        // Tilføj Dataannotations for at lave validering på modellen
+        [Required(ErrorMessage = "Udfyld venligst")]
         public string BrugerNavn { get; set; }
         public string Kodeord { get; set; }
         public string Salt { get; set; }

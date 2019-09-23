@@ -6,7 +6,18 @@
 
     var request = new XMLHttpRequest;
 
-    $.ajax({ type: "GET", dataType: "json", url: wsurl, success: function (data) { udskrivData(data); }, error: function (jqXHR, textStatus, errorThrown) { alert("FEJL: " + jqXHR + textStatus + errorThrown) } })
+    $.ajax(
+        {
+            type: "GET",
+            dataType: "json",
+            url: wsurl,
+            success: function (data) {
+                udskrivData(data);
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                alert("FEJL: " + jqXHR + textStatus + errorThrown)
+            }
+        })
 
     function udskrivData(data) {
 

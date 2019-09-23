@@ -21,6 +21,8 @@
                 <div class="card-body">
                     <h5 class="card-title">@item.NyhederOverskrift</h5>
                     <p class="card-text">@item.NyhederTeaser</p>
+                    @* Man kan forkorte teksten ved at lave en Math.Min()-metode *@
+                    @*<p class="lead text-black-50">@item.Beskrivelse.Substring(0, Math.Min(70, @item.Beskrivelse.Length))...</p>*@
                     <a href="/Home/EnkeltNyhed/@item.id" class="btn btn-primary">Læs resten...</a>
                 </div>
             </div>
