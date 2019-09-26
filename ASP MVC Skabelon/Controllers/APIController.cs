@@ -1,39 +1,60 @@
-﻿using System;
+﻿//Brug af modellen
+using ASP_MVC_Skabelon.Models;
 using System.Collections.Generic;
+using System.Data.Entity.Migrations;
 using System.Linq;
-using System.Net;
-using System.Net.Http;
 using System.Web.Http;
 
-namespace ASP_MVC_Skabelon.Controllers
+namespace MinegenAPI.Controllers
 {
-    public class APIController : ApiController
+    public class OpretController : ApiController
     {
-        // GET api/NoderAPI
-        public IEnumerable<string> Get()
+        //Hvad er der i databasen?
+        ASP_MVC_SkabelonEntities db = new ASP_MVC_SkabelonEntities();
+
+
+        // GET api/Product
+        //http://localhost:1163/api/Note
+        public List<OpretTable> Get()
         {
-            return new string[] { "value1", "value2" };
+            List<OpretTable> mineOprettelser = new List<OpretTable>();
+            mineOprettelser = db.OpretTable.ToList();
+
+            return mineOprettelser;
         }
 
-        // GET api/NoderAPI/5
-        public string Get(int id)
+        // GET api/Opret/5
+        //public string Get(int id)
+        //{
+        //    return "value";
+        //}
+
+        // POST api/Opret/5
+        public void Post([FromBody]OpretTable Opret)
         {
-            return "value";
+            db.OpretTable.Add(Opret);
+            db.SaveChanges();
+            return;
+
         }
 
-        // POST api/NoderAPI
-        public void Post([FromBody]string value)
+        // PUT api/<controller>/5
+        public void Put([FromBody]OpretTable Rettelse)
         {
+
+            db.OpretTable.AddOrUpdate(Rettelse);       
+            db.SaveChanges();
+            return;
+
         }
 
-        // PUT api/NoderAPI/5
-        public void Put(int id, [FromBody]string value)
-        {
-        }
-
-        // DELETE api/NoderAPI/5
+        // DELETE api/Note/5
         public void Delete(int id)
         {
+            OpretTable Sletnoget = db.OpretTable.Find(id);
+
+            db.OpretTable.Remove(Sletnoget);
+            db.SaveChanges();
         }
     }
 }

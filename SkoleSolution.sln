@@ -5,63 +5,23 @@ VisualStudioVersion = 15.0.28307.271
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JavaScriptJQuery", "JavaScript_JQuery\JavaScriptJQuery.csproj", "{38F49288-79C5-44A9-842D-412C8BE473FC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Paralax bootstrap theme", "Hjemmesideøvelse1\Paralax bootstrap theme.csproj", "{84303063-CA82-46CA-945D-3808A4855FCF}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Webservices", "Webservices\Webservices.csproj", "{632A8834-3A69-4338-9128-C8E744870FD2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MinegenAPI", "MinegenAPI\MinegenAPI.csproj", "{4D412531-695D-4A0B-BBD3-FA4623795600}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Opgave REST CRUD API", "Opgave REST CRUD API\Opgave REST CRUD API.csproj", "{CA8EE669-27E5-411A-B414-4204B2344F48}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LP Butik MVC Repetetion", "LP Butik MVC Repetetion\LP Butik MVC Repetetion.csproj", "{88160DAF-9E67-4723-B771-79E94107C8D6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewsSite", "NewsSite\NewsSite.csproj", "{F32B8FA9-0BB9-450D-8B5D-F088F34A2319}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductWeb", "ProductWeb\ProductWeb.csproj", "{1C6C942B-B936-40DE-A5E5-F43330919D4F}"
 EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "CV", "CV\", "{A6B88463-39E6-404F-8EFC-A7CF19547018}"
-	ProjectSection(WebsiteProperties) = preProject
-		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
-		Debug.AspNetCompiler.VirtualPath = "/localhost_1655"
-		Debug.AspNetCompiler.PhysicalPath = "CV\"
-		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_1655\"
-		Debug.AspNetCompiler.Updateable = "true"
-		Debug.AspNetCompiler.ForceOverwrite = "true"
-		Debug.AspNetCompiler.FixedNames = "false"
-		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.VirtualPath = "/localhost_1655"
-		Release.AspNetCompiler.PhysicalPath = "CV\"
-		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_1655\"
-		Release.AspNetCompiler.Updateable = "true"
-		Release.AspNetCompiler.ForceOverwrite = "true"
-		Release.AspNetCompiler.FixedNames = "false"
-		Release.AspNetCompiler.Debug = "False"
-		VWDPort = "1655"
-		SlnRelativePath = "CV\"
-	EndProjectSection
-EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Festival grid", "Festival grid\", "{3853487D-B312-451D-A750-F978F5576C3A}"
-	ProjectSection(WebsiteProperties) = preProject
-		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
-		Debug.AspNetCompiler.VirtualPath = "/localhost_1915"
-		Debug.AspNetCompiler.PhysicalPath = "Festival grid\"
-		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_1915\"
-		Debug.AspNetCompiler.Updateable = "true"
-		Debug.AspNetCompiler.ForceOverwrite = "true"
-		Debug.AspNetCompiler.FixedNames = "false"
-		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.VirtualPath = "/localhost_1915"
-		Release.AspNetCompiler.PhysicalPath = "Festival grid\"
-		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_1915\"
-		Release.AspNetCompiler.Updateable = "true"
-		Release.AspNetCompiler.ForceOverwrite = "true"
-		Release.AspNetCompiler.FixedNames = "false"
-		Release.AspNetCompiler.Debug = "False"
-		VWDPort = "1915"
-		SlnRelativePath = "Festival grid\"
-	EndProjectSection
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASP MVC Skabelon", "ASP MVC Skabelon\ASP MVC Skabelon.csproj", "{72B0C159-C2BD-4BA1-9ED0-7FF674F949C8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DenLilleHojskole", "Eksamen\DenLilleHojskole\DenLilleHojskole\DenLilleHojskole.csproj", "{51E3ED9B-FD8A-4A4C-9629-26C9B36C9383}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewsSite1", "Newssite Marlene\NewsSite\NewsSite\NewsSite1.csproj", "{EC0A8579-A6F5-46EE-82DF-EACDD3486638}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RetroCamMarlene", "RetroCamMarlene\RetroCamMarlene\RetroCamMarlene.csproj", "{BAB9CFEB-5E72-4A64-BD71-506C77A8F85F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RetroCam", "RetroCam\RetroCam\RetroCam\RetroCam.csproj", "{A64616C3-EFA1-4C79-8282-0F4117EFEE7A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -73,26 +33,14 @@ Global
 		{38F49288-79C5-44A9-842D-412C8BE473FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{38F49288-79C5-44A9-842D-412C8BE473FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{38F49288-79C5-44A9-842D-412C8BE473FC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{84303063-CA82-46CA-945D-3808A4855FCF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{84303063-CA82-46CA-945D-3808A4855FCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{84303063-CA82-46CA-945D-3808A4855FCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{84303063-CA82-46CA-945D-3808A4855FCF}.Release|Any CPU.Build.0 = Release|Any CPU
 		{632A8834-3A69-4338-9128-C8E744870FD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{632A8834-3A69-4338-9128-C8E744870FD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{632A8834-3A69-4338-9128-C8E744870FD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{632A8834-3A69-4338-9128-C8E744870FD2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4D412531-695D-4A0B-BBD3-FA4623795600}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4D412531-695D-4A0B-BBD3-FA4623795600}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4D412531-695D-4A0B-BBD3-FA4623795600}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4D412531-695D-4A0B-BBD3-FA4623795600}.Release|Any CPU.Build.0 = Release|Any CPU
 		{CA8EE669-27E5-411A-B414-4204B2344F48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{CA8EE669-27E5-411A-B414-4204B2344F48}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CA8EE669-27E5-411A-B414-4204B2344F48}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CA8EE669-27E5-411A-B414-4204B2344F48}.Release|Any CPU.Build.0 = Release|Any CPU
-		{88160DAF-9E67-4723-B771-79E94107C8D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{88160DAF-9E67-4723-B771-79E94107C8D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{88160DAF-9E67-4723-B771-79E94107C8D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{88160DAF-9E67-4723-B771-79E94107C8D6}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F32B8FA9-0BB9-450D-8B5D-F088F34A2319}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F32B8FA9-0BB9-450D-8B5D-F088F34A2319}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F32B8FA9-0BB9-450D-8B5D-F088F34A2319}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -101,18 +49,26 @@ Global
 		{1C6C942B-B936-40DE-A5E5-F43330919D4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1C6C942B-B936-40DE-A5E5-F43330919D4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1C6C942B-B936-40DE-A5E5-F43330919D4F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A6B88463-39E6-404F-8EFC-A7CF19547018}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A6B88463-39E6-404F-8EFC-A7CF19547018}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A6B88463-39E6-404F-8EFC-A7CF19547018}.Release|Any CPU.ActiveCfg = Debug|Any CPU
-		{A6B88463-39E6-404F-8EFC-A7CF19547018}.Release|Any CPU.Build.0 = Debug|Any CPU
-		{3853487D-B312-451D-A750-F978F5576C3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3853487D-B312-451D-A750-F978F5576C3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3853487D-B312-451D-A750-F978F5576C3A}.Release|Any CPU.ActiveCfg = Debug|Any CPU
-		{3853487D-B312-451D-A750-F978F5576C3A}.Release|Any CPU.Build.0 = Debug|Any CPU
 		{72B0C159-C2BD-4BA1-9ED0-7FF674F949C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{72B0C159-C2BD-4BA1-9ED0-7FF674F949C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{72B0C159-C2BD-4BA1-9ED0-7FF674F949C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{72B0C159-C2BD-4BA1-9ED0-7FF674F949C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51E3ED9B-FD8A-4A4C-9629-26C9B36C9383}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51E3ED9B-FD8A-4A4C-9629-26C9B36C9383}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51E3ED9B-FD8A-4A4C-9629-26C9B36C9383}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51E3ED9B-FD8A-4A4C-9629-26C9B36C9383}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC0A8579-A6F5-46EE-82DF-EACDD3486638}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC0A8579-A6F5-46EE-82DF-EACDD3486638}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC0A8579-A6F5-46EE-82DF-EACDD3486638}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC0A8579-A6F5-46EE-82DF-EACDD3486638}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BAB9CFEB-5E72-4A64-BD71-506C77A8F85F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAB9CFEB-5E72-4A64-BD71-506C77A8F85F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BAB9CFEB-5E72-4A64-BD71-506C77A8F85F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BAB9CFEB-5E72-4A64-BD71-506C77A8F85F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A64616C3-EFA1-4C79-8282-0F4117EFEE7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A64616C3-EFA1-4C79-8282-0F4117EFEE7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A64616C3-EFA1-4C79-8282-0F4117EFEE7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A64616C3-EFA1-4C79-8282-0F4117EFEE7A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

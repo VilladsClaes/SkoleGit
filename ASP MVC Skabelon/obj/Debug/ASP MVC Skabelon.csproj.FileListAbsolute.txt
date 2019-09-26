@@ -176,3 +176,7 @@ C:\Users\VilladsClaes\source\repos\SkoleGit\ASP MVC Skabelon\obj\Debug\ASP MVC S
 C:\Users\VilladsClaes\source\repos\SkoleGit\ASP MVC Skabelon\obj\Debug\ASP MVC Skabelon.dll
 C:\Users\VilladsClaes\source\repos\SkoleGit\ASP MVC Skabelon\obj\Debug\ASP MVC Skabelon.pdb
 C:\Users\VilladsClaes\source\repos\SkoleGit\ASP MVC Skabelon\obj\Debug\ASP MVC Skabelon.csprojAssemblyReference.cache
+C:\Users\VilladsClaes\source\repos\SkoleGit\ASP MVC Skabelon\bin\PagedList.dll
+C:\Users\VilladsClaes\source\repos\SkoleGit\ASP MVC Skabelon\bin\PagedList.Mvc.dll
+C:\Users\VilladsClaes\source\repos\SkoleGit\ASP MVC Skabelon\bin\PagedList.xml
+C:\Users\VilladsClaes\source\repos\SkoleGit\ASP MVC Skabelon\bin\PagedList.Mvc.xml

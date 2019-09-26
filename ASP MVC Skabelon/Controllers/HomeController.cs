@@ -14,6 +14,12 @@ namespace ASP_MVC_Skabelon.Controllers
             return View();
         }
 
-     
+        public ActionResult Api1()
+        {
+            //Hent data fra model med API og ikke med ADO
+            return View();
+        }
+
+
     }
 }

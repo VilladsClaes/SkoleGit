@@ -1,0 +1,181 @@
+﻿@{
+    ViewBag.Title = "API leg";
+    Layout = "";
+
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+
+    <link href="/Content/bootstrap.css" rel="stylesheet" />
+    <script src="/Scripts/jquery-3.4.1.js"></script>
+    <script src="/Scripts/bootstrap.js"></script>
+
+    <link href="/Content/Site.css" rel="stylesheet" />
+
+    <style>
+        .sletdiv {
+            background-color: red;
+            width: 30px;
+            height: 30px;
+            border: 2px solid black;
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="container body-content">
+
+
+        <script>
+            $(document).ready(function () {
+                //Kalder op til egen controller under API-controlleren
+                var wsurl = "/api/Opret/";
+
+                //HENT fra API
+                KaldWebservice();
+
+                function KaldWebservice() {
+
+
+                    $.ajax({
+                        type: "GET",
+                        dataType: "json",
+                        url: wsurl,
+                        success: function (data) {
+                            console.log(wsurl); //API-adressen
+                            console.log(data); //Se hvad der gemmer sig i den API
+                            udskrivData(data); //Gør noget med den data
+                        },
+                        error: function () { alert("nå da da") }
+                    })
+                }
+
+                function udskrivData(data) {
+
+                    $("#resultat").html("");
+
+                    for (var x in data) {
+                        $("#resultat").prepend("<div class='note' data-id='" + data[x].ID + "' class='card'><h2>" + data[x].Navn + "</h2><p data-id='" + data[x].ID + "' class='derhvordetskalskrives'>" + data[x].Beskrivelse + "</p>" + "<div data-id='" + data[x].ID + "' class='sletdiv'></div></div>");
+                        $(".derhvordetskalskrives").attr("contenteditable", "true")
+                        $(".derhvordetskalskrives").keydown(function (Nogetsker) {
+                            if (Nogetsker.keyCode === 13) {
+                                Nogetsker.preventDefault();
+                                KaldWebserviceRet($(this))
+                                console.log($(this).html())
+                            }
+                        });
+                        $(".sletdiv").html("&#x26F3");
+                        $(".sletdiv").on("click", function () {
+                            console.log("Du slettede " + $(".derhvordetskalskrives").html())
+                            KaldWebserviceSlet($(this).attr('data-id'));
+
+                        });
+
+                    }
+
+
+
+                };
+
+                //OPRET i API
+                $("#inputfelt").on('keydown', function (EtEventSker) {
+
+                    if (EtEventSker.keyCode == 13) {
+
+                        KaldWebserviceOpret($(this));
+                    }
+
+                });
+                function KaldWebserviceOpret(DenneBoks) {
+
+                    $.ajax({
+                        type: "POST",
+                        dataType: "json",
+                        url: wsurl,
+                        contentType: 'application/x-www-form-urlencoded; charset=utc-8',
+                        data: 'Note=' + DenneBoks.val(),
+                        success: function () {
+                            KaldWebservice();
+                        },
+                        error: function () { alert("nå da da opret virker ik") }
+
+                    })
+
+                }
+
+                //SLET i API
+                function KaldWebserviceSlet(id) {
+
+                    $.ajax({
+                        type: "DELETE",
+                        dataType: "json",
+                        url: wsurl + "/" + id,
+                        headers: {
+                            'Accept': 'application/json',
+                            'Content-type': 'application/x-www-form-urlencoded; charset=utc-8'
+                        },
+                        success: function () {
+                            KaldWebservice();
+                        },
+                        error: function () {
+                            alert("nå da da opret virker ik")
+                        }
+
+                    })
+
+                };
+                //RET i API
+
+
+
+                function KaldWebserviceRet(Boksen) {
+                    console.log("vi har fat i " + Boksen);
+
+                    $.ajax({
+                        type: "PUT",
+                        dataType: "json",
+                        url: wsurl,
+                        contentType: 'application/x-www-form-urlencoded; charset=utc-8',
+                        data: 'Note=' + Boksen.html() + "&id=" + Boksen.attr("data-id"),
+                        success: function () {
+                            KaldWebservice();
+                        },
+                        error: function () { alert("nå da da det der med at rette virker ik") }
+                    })
+                };                
+            });
+        </script>
+
+
+        <div class="jumbotron">
+            <h1 id="overskrift">Test på API</h1>
+            <input type="text" name="nynote" id="inputfelt" placeholder="Skriv her..." value="" />
+            <p class="lead">GET og POST til Model via API</p>
+        </div>
+
+        <div id="resultat">
+
+
+                @*<div>
+                    <h2>Overskrift</h2>
+                    <p> tekst</p>
+                  </div>*@
+
+
+        </div>
+
+        <script>
+            document.getElementById("overskrift").innerHTML = "Denne overskrift er skrevet med Javascript"
+
+        </script>
+    </div>
+
+
+</body>
+</html>
